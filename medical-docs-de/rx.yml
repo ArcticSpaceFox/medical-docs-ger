@@ -1,0 +1,129 @@
+matches:
+  - trigger: ":rxpre"
+    word: true
+    replace: |
+      Sehr geehrte Damen und Herren,
+
+      hiermit wird bestätigt, dass der/die oben genannte Patient/in untersucht wurde
+      und aufgrund eines medizinischen Zustands von Folgendem profitieren wird:
+
+  - trigger: ":rxpost"
+    word: true
+    replace: |
+      Bei Fragen oder Rückfragen
+      zögern Sie bitte nicht, mich zu kontaktieren.
+
+  - trigger: ":rxcompression"
+    word: true
+    replace: |
+      {{rxpre}}
+      Kompressionsstrümpfe für beide unteren Extremitäten
+
+      Druckgradient: 30-40 mmHg
+      Diagnose: Varizen
+      Anwendung: Aktivitäten des täglichen Lebens (ADL) sowie ganztägig während der Arbeit
+      Dauer: 1 Jahr
+
+      {{rxpost}}
+
+    vars:
+      - name: rxpre
+        type: match
+        params:
+          trigger: ":rxpre"
+      - name: rxpost
+        type: match
+        params:
+          trigger: ":rxpost"
+
+  - trigger: ":rxorthotic"
+    word: true
+    replace: |
+      {{rxpre}}
+      Maßgefertigte Einlagen für beide Füße
+
+      Diagnose: Plantarfasziitis, Plattfuß (Pes planus)
+      Anwendung: Aktivitäten des täglichen Lebens (ADL) sowie ganztägig während der Arbeit
+      Dauer: 1 Jahr
+
+      {{rxpost}}
+
+    vars:
+      - name: rxpre
+        type: match
+        params:
+          trigger: ":rxpre"
+      - name: rxpost
+        type: match
+        params:
+          trigger: ":rxpost"
+
+  - trigger: ":rxphysio"
+    word: true
+    replace: |
+      {{rxpre}}
+      Physiotherapie
+
+      Diagnose: Mechanische Kreuzschmerzen
+
+      Details:
+      Bitte Kreuzschmerzen untersuchen und behandeln
+
+      {{rxpost}}
+
+    vars:
+      - name: rxpre
+        type: match
+        params:
+          trigger: ":rxpre"
+      - name: rxpost
+        type: match
+        params:
+          trigger: ":rxpost"
+
+  - trigger: ":rxmassage"
+    word: true
+    replace: |
+      {{rxpre}}
+      Massagetherapie
+
+      Diagnose: Mechanische Kreuzschmerzen
+
+      Details:
+      Bitte Kreuzschmerzen untersuchen und behandeln
+
+      {{rxpost}}
+
+    vars:
+      - name: rxpre
+        type: match
+        params:
+          trigger: ":rxpre"
+      - name: rxpost
+        type: match
+        params:
+          trigger: ":rxpost"
+
+  - trigger: ":rxchiro"
+    word: true
+    replace: |
+      {{rxpre}}
+      Chiropraktische Behandlung
+
+      Diagnose: Mechanische Kreuzschmerzen
+
+      Details:
+      Bitte Kreuzschmerzen untersuchen und behandeln
+
+      {{rxpost}}
+
+    vars:
+      - name: rxpre
+        type: match
+        params:
+          trigger: ":rxpre"
+      - name: rxpost
+        type: match
+        params:
+          trigger: ":rxpost"
+

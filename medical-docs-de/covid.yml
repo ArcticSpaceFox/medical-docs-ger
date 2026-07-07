@@ -1,0 +1,137 @@
+matches:
+  - trigger: "cv"
+    replace: "COVID-19"
+    word: true
+
+  - trigger: ":covidphone"
+    replace: |
+      COVID-TELEFONKONTAKT
+
+      Startzeit: {{mytime}}
+
+      Grund des Anrufs: Anstelle eines Praxisbesuchs aufgrund von COVID-19-Bedenken
+
+      Notizen:
+      {{sp}} keine Reisetätigkeit
+      {{sp}} kein Kontakt zu kürzlich Reisenden oder Verdachtsfällen von COVID-19
+      {{sp}} keine COVID-Symptome (Husten, Fieber, Kurzatmigkeit, Schnupfen oder Halsschmerzen),
+      die nicht auf eine vorbestehende Erkrankung oder Gesundheitsstörung zurückzuführen sind
+
+      Fortsetzung der sozialen Distanzierung empfohlen.
+
+      Endzeit:
+    vars:
+    - name: mytime
+      type: match
+      params:
+        trigger: ":time"
+
+# Diese COVID-Risikoeinschätzung und -Überwachung basiert auf dem
+# COVID-19 Positive Primary Care Pathway
+# Veröffentlicht auf www.specialistlink.ca
+  - trigger: ":covidrisk"
+    replace: |
+      COVID-TELEFONISCHE RISIKOEINSCHÄTZUNG
+
+      Startzeit: {{mytime}}
+
+      Grund des Anrufs: Risikostratifizierung bei vermutetem oder bestätigtem COVID-Fall
+
+      Sicherheitsnetz-Prüfung:
+        {{sp}} keine soziale Isolation
+        {{sp}} keine fehlende Unterstützung durch Betreuungspersonen
+        {{sp}} keine Unfähigkeit, die Flüssigkeitszufuhr aufrechtzuerhalten
+        {{sp}} keine Ernährungs-/finanzielle Notlage
+        {{sp}} keine häusliche Pflege
+        {{sp}} keine Schwierigkeiten mit Gesundheitskompetenz oder Bedenken bezüglich Selbstmanagement
+
+      Hochrisikomerkmale:
+        {{sp}} keine kürzliche Entlassung aus tertiärer Versorgung (Krankenhaus, Complex-Care-Zentrum)
+        {{sp}} kein fehlendes Sicherheitsnetz
+        {{sp}} kein Alter >70 Jahre
+        {{sp}} kein Alter >60 Jahre mit Begleiterkrankungen
+        {{sp}} keine Symptomverschlechterung
+
+      Durchschnittsrisikomerkmale:
+        {{sp}} kein Alter <18 Jahre
+        {{sp}} keine Schwangerschaft
+        {{sp}} kein Fehlen von Symptomen (bei positivem Abstrich)
+
+      Falls alle oben genannten Punkte negativ sind, gilt niedriges Risiko
+
+      Gesamtrisikoeinschätzung:
+         Hohes Risiko - erfordert tägliche Überwachung über 14 Tage
+         Durchschnittliches Risiko - erfordert Überwachung alle 2 Tage über 7 Tage
+         Niedriges Risiko - Selbstüberwachung erwägen - Merkblatt ausgehändigt
+
+      Endzeit:
+    vars:
+    - name: mytime
+      type: match
+      params:
+        trigger: ":time"
+
+  - trigger: ":covidredflags"
+    replace: |
+      {{sp}} keine schwere Atemnot in Ruhe
+      {{sp}} keine Atembeschwerden
+      {{sp}} keine Schmerzen oder Druckgefühl im Brustkorb
+      {{sp}} keine kalte, feuchte oder blass-marmorierte Haut
+      {{sp}} keine neu aufgetretene Verwirrtheit
+      {{sp}} keine blauen Lippen oder blaues Gesicht
+      {{sp}} zunehmend erschwerte Erweckbarkeit verneint
+      {{sp}} kein Bluthusten
+      {{sp}} keine verminderte Urinausscheidung
+      {{sp}} kein Wiederauftreten von Husten nach Besserungsphase (kann auf Entwicklung einer COVID-Pneumonie hindeuten)
+      {{sp}} kein Wiederauftreten von Fieber nach fieberfreier Phase (kann auf Entwicklung einer COVID-Pneumonie hindeuten)
+      {{sp}} keine niedrige Sauerstoffsättigung (<92 % bei zuvor Gesunden, <90 % bei vorbestehender Lungenerkrankung)
+      {{sp}} kein erhöhter O2-Bedarf bei Heim-O2-Therapie
+
+  - trigger: ":covidmonitor"
+    replace: |
+     COVID-TELEFONISCHE ÜBERWACHUNG
+
+      Startzeit: {{mytime}}
+
+      Grund des Anrufs: Überwachung bei vermutetem oder bestätigtem COVID-Fall
+
+      Vorherige Risikostratifizierung: Hoch  Durchschnittlich  Niedrig
+
+      {{sp}} insgesamt fühlt sich der Patient  schlechter  unverändert  besser
+
+      Falls nicht schlechter, wurde ein Fragebogen zur Atmung ausgefüllt:
+        Wie ist Ihre Atmung?
+        Ist sie heute schlechter als gestern?
+        Woran hindert Sie Ihre Atmung?
+
+      Bei insgesamt schlechterem Zustand oder positiven Atemfragen wurden Warnzeichen überprüft:
+
+      {{sp}} Warnzeichen vorhanden, dringende bzw. notfallmäßige Überweisung erforderlich
+      {{sp}} keine Warnzeichen, jedoch aufgrund sich verschlechternder Symptome nun als Hochrisiko eingestuft
+      Insgesamt nicht schlechter und Atemfragen negativ, daher weiterhin Überwachung
+      Hohes Risiko      - alle 24 h über insgesamt 14 Tage
+      Durchschnittliches Risiko   - alle 48 h über insgesamt 7 Tage
+      Niedriges Risiko     - Selbstüberwachung anhand der Selbstüberwachungs-Checkliste erwägen
+
+      Isolation für mindestens 10 Tage ab Symptombeginn erforderlich
+      oder bis die Symptome abgeklungen sind, je nachdem, was länger dauert.
+
+      Endzeit:
+    vars:
+    - name: mytime
+      type: match
+      params:
+        trigger: ":time"
+
+  - trigger: ":covidtest"
+    word: true
+    replace: |
+             Es wird empfohlen, eine COVID-19-Testung über das Online-Beurteilungstool zu vereinbaren:
+             {{covidwebsite}}
+
+  - trigger: ":covidremind"
+    word: true
+    replace: |
+       Wir erinnern alle Patientinnen und Patienten daran, ihren Beitrag zur Eindämmung
+       der Ausbreitung von COVID-19 zu leisten, indem sie Abstand halten, sich häufig
+       die Hände waschen und bei Krankheitsgefühl zu Hause bleiben.

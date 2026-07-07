@@ -1,0 +1,199 @@
+matches:
+  - trigger: ":delayedejac"
+    replace:  |
+     Subjektiv:
+       {{cc}} verzögerte Ejakulation seit DAUER
+       {{sp}} keine Ejakulationsschwierigkeiten bei Masturbation
+       {{sp}} keine Ejakulationsschwierigkeiten mit Partner(in)
+       {{sp}} keine Angstsymptomatik in der Anamnese
+       {{sp}} keine serotonerg wirksamen Medikamente
+         Beispiele:
+           SSRI, SNRI, Bupropion, Trizyklika, MAO-Hemmer
+           Antipsychotika,
+           Triptane, Carbamazepin, Valproinsäure, Lithium
+           Opioide,
+           Metoclopramid, Ondansetron
+           Cyclobenzaprin, Dextromethorphan
+           LSD, Ecstasy, Kokain, Amphetamine
+
+     Beurteilung:
+       {{ap}} Primäre verzögerte Ejakulation (wahrscheinlich zumindest teilweise sekundär bei serotonerger Medikation)
+       Die primäre verzögerte Ejakulation ist schwer zu behandeln, sofern sie nicht direkt mit einer Medikation zusammenhängt.
+       Bei Verdacht auf eine medikamentöse Ursache kommen folgende Strategien infrage:
+       1) Umstellung von SSRI auf Vilazodon (Viibryd) oder niedrig dosiertes Vortioxetin (Trintellix)
+       2) Umstellung von SSRI auf SNRI - Duloxetin (Cymbalta) oder Levomilnacipran (Fetzima) vermutlich am besten geeignet
+       3) Zusätzliche Gabe von Mirtazapin (Remeron) oder Bupropion (Wellbutrin) zu einem SSRI
+
+       Besteht kein medikamentöser Zusammenhang, liegt die Ursache meist in Angstsymptomatik sowie überkontrollierenden oder zwanghaften Persönlichkeitszügen.
+       Eine intensive Beratung/Psychotherapie kann hilfreich sein.
+
+       Die meisten Männer können beim Alleinsein spezifische Stimuli finden, die ihnen helfen, ihre besonders hohe Ejakulationsschwelle zu erreichen.
+       Wenn der/die Partner(in) diese Techniken nachahmt, kann dies die Ejakulation mit Partner(in) ermöglichen.
+
+       Schließlich kann ein Stimulans (z. B. Dexedrine 5-10 mg) 1 Stunde vor sexueller Aktivität hilfreich sein.
+       Sollte dieser Ansatz wirksam sein, sollte ein Screening auf ADHS erwogen werden.
+
+     Plan:
+       {{pp}} Selbstüberweisung zur Beratung/Psychotherapie
+       {{pp}} versuchsweise Umstellung der Medikation auf Vilazodon (Viibryd), Vortioxetin (Trintellix), Duloxetin (Cymbalta) oder Levomilnacipran (Fetzima)
+       {{pp}} versuchsweise zusätzliche Gabe von Mirtazapin (Remeron) oder Bupropion (Wellbutrin)
+       {{pp}} versuchsweise Dexedrine 5 mg, eingenommen eine Stunde vor sexueller Aktivität
+       {{pp}} Verlaufskontrolle innerhalb eines Monats bezüglich Wirksamkeit der Behandlung, bei Bedenken früher
+
+
+  - trigger: ":lowtest"
+    word: true
+    replace:  |
+      Subjektiv:
+        {{cc}} möglicher Testosteronmangel
+
+        Sexuelle Symptome:
+        {{sp}} keine verminderte Libido
+        {{sp}} keine erektile Dysfunktion
+        {{sp}} keine verminderte Häufigkeit morgendlicher Erektionen
+        {{sp}} keine verminderte sexuelle Leistungsfähigkeit
+
+        Somatische Symptome:
+        {{sp}} keine Zunahme des viszeralen Körperfetts/Adipositas,
+        {{sp}} keine Abnahme der fettfreien Muskelmasse,
+        {{sp}} keine verminderte Kraft,
+        {{sp}} keine Müdigkeit/Energieverlust,
+        {{sp}} keine verminderte körperliche Aktivität/Vitalität,
+        {{sp}} keine verminderte Knochendichte,
+        {{sp}} keine Anämie,
+        {{sp}} keine Hitzewallungen,
+        {{sp}} kein Verlust von Gesichts-, Achsel- und Schambehaarung/verlangsamtes Bartwachstum
+        {{sp}} keine Abnahme des allgemeinen Wohlbefindens
+
+        Psychische Symptome:
+        {{sp}} keine Depression/gedrückte Stimmung,
+        {{sp}} keine Stimmungsschwankungen,
+        {{sp}} keine Reizbarkeit,
+        {{sp}} keine Konzentrationsstörungen
+        {{sp}} keine Schlaflosigkeit/Schlafstörungen
+
+      Objektiv:
+        {{op}} keine Gonadenatrophie,
+        {{op}} keine Abnahme der Scham- und Gesichtsbehaarung,
+        {{op}} keine Abnahme der Muskelmasse,
+        {{op}} keine Zunahme des viszeralen Fetts
+
+      Beurteilung:
+        {{ap}} Testosteronmangelsyndrom
+
+      Plan:
+        {{pp}} Testosteronspiegel bestimmen (empfohlen zwischen 7 und 11 Uhr oder innerhalb von 3 Stunden nach dem Aufwachen bei Schichtarbeit)
+        sowie weitere Werte zur Bestätigung der Diagnose und zur Verlaufskontrolle während der Behandlung
+        (FSH, LH, Prolaktin, SHBG, Albumin (cFT bzw. cBAT), TSH, Ferritin (bzw. % Eisensättigung), Blutbild, PSA)
+
+  # Dies ist eine allgemeine Übersicht zum Testosteronmangelsyndrom als Referenz
+  # Diese Informationen sind nicht zwingend aktuell oder leitliniengerecht
+  - trigger: ":lowtestinfo"
+    word: true
+    replace:  |
+        Testung:
+        Testosteron zwischen 7 und 11 Uhr oder innerhalb von 3 Stunden nach dem Aufstehen bei Schichtarbeit
+        Bei Grenzwerten bioverfügbares Testosteron verwenden - Selbstzahlerleistung oder Berechnung aus Testosteron, SHBG, Albumin
+        www.issam.ch/freetesto.htm
+        Normbereich für bioverfügbares Testosteron (4,0 - 16,0)
+        Bei Normwert nicht substituieren, da dies die körpereigene Produktion unterdrücken und der Patient sich schlechter fühlen kann!
+
+        Zusätzliche Untersuchungen: FSH, LH, Prolaktin, SHBG, Albumin (cFT bzw. cBAT), TSH, Ferritin (bzw. %
+        Eisensättigung), Blutbild, PSA
+
+        Niedriges FSH, LH spricht für sekundären Hypogonadismus
+
+        Ursachen des sekundären Hypogonadismus:
+        Kallmann-Syndrom - assoziiert mit Farbenblindheit, Anosmie
+        Hypophysenerkrankungen - Hypophysentumor oder dessen Behandlung
+        Entzündliche Erkrankungen - Sarkoidose, Histiozytose, Tuberkulose
+        HIV/AIDS
+        Medikamente - Opiate, Hormone, Glukokortikoide, Ketoconazol
+        Substanzen - Alkohol, Heroin
+        Adipositas
+        Normales Alterungsprozess
+        Begleiterkrankungen - schwere OSAS, Lebererkrankung, Hämochromatose, schwere Erkrankung, Operation, emotionale Belastung
+
+        Behandlung:
+        Lebensstil: Ausdauertraining und Krafttraining, gesunde Ernährung, Schlaf, Stressbewältigung
+        Große Überschneidung von Prädiabetes/Diabetes/metabolischem Syndrom, erektiler Dysfunktion, niedrigem Testosteron
+        Die Behandlung sollte die sexuelle Funktion verbessern und den Bedarf an PDE-5-Hemmern reduzieren
+
+        Testosteronersatztherapie (TRT):
+        Kontraindikationen: metastasiertes Prostatakarzinom, Z. n. Mammakarzinom
+        Nebenwirkungen:
+        Fertilität: TRT unterdrückt die Spermienzahl, ist jedoch vollständig reversibel. Entweder absetzen oder Clomifen verwenden
+        Kardiovaskuläres Risiko: keine überzeugende Evidenz für erhöhtes Risiko, jedoch widersprüchliche Studienlage. Manche Studien deuten auf einen protektiven Effekt bei Patienten mit niedrigem Testosteron zu Beginn hin
+        Prostatakarzinom: verursacht es nicht, könnte aber das Wachstum fördern, falls bereits vorhanden
+
+        Delatestryl: 1 ml (200 mg) alle 2 Wochen, 0,5 ml (100 mg) wöchentlich
+        Testosteron-Cypionat: 2 ml (200 mg) alle 2 Wochen, 1 ml (100 mg) wöchentlich
+        Orale Gabe hat schlechte Resorption: Andriol 80 mg 2x täglich mit fetthaltigen Mahlzeiten, Fischöl- oder Olivenölpräparat
+        Topisch: Androgel/Testim beginnend mit 5 g/Tag, Axiron 3-6 g/Tag (axilläre Anwendung),
+                     Androderm-Pflaster 5 g/zur Nacht
+        Intranasal: Natesto (Testosteron-Nasengel 4,5 %) 1 Hub (5,5 mg) pro Nasenloch bzw. 2 Hübe insgesamt 2x täglich (22 mg/Tag) zu Beginn
+
+        Kontrollen
+        Vor Behandlungsbeginn: DRU als Ausgangsbefund, nach 6 Monaten, 12 Monaten, dann jährlich
+        Laborkontrolle (Blutbild, Leberwerte, Kreatinin, BZ/HbA1c, Lipide, PSA) vor Beginn, nach 3, 6, 12 Monaten, dann jährlich
+
+        Falls PSA über den altersabhängigen Grenzwert ansteigt oder um >0,75/Jahr zunimmt, Testosteron absetzen,
+             PSA erneut kontrollieren und bei weiterhin erhöhtem Wert urologische Überweisung veranlassen (Rapid Access PSA Klinik in Calgary)
+
+        Testspiegel bei oraler/transdermaler Gabe - idealerweise 2 Stunden nach Einnahme (relativer Spitzenspiegel)
+        Bei Injektion - Tag vor oder Tag der Injektion (Talspiegel)
+        Ziel: mittlerer Bereich (Norm 10-29) ohne Nebenwirkungen, verbessertes allgemeines Wohlbefinden und sexuelle Gesundheit
+
+        Organsystem                      Nutzen                        Risiken
+        Erektile Funktion/Libido          Verbesserung                 Keine
+        Depression/Stimmung/Müdigkeit     Verbesserung                 Aggressives Verhalten
+        Erythropoese                      Anstieg des Hämatokrit       Erhöhtes Risiko für Polyzythämie,
+                                                                                              Embolie
+        Skelettmuskulatur                 Zunahme der fettfreien Masse  Keine
+        Knochenstoffwechsel               Vorbeugung von Osteoporose    Keine
+        Herz-Kreislauf-System             Verbesserung bei Herz-        Erhöhtes Risiko für thromboembolische
+                                          insuffizienz,                 kardiovaskuläre Ereignisse
+                                          Belastbarkeit
+
+        Prostata
+        Benigne Prostatahyperplasie   Kein Nutzen über die              Geringe Zunahme von Volumen und
+                                       Manifestationen des               PSA-Wert
+                                       Testosteronmangelsyndroms hinaus
+        Karzinom (metastasiert oder hohes Rezidivrisiko) Absolute Kontraindikation
+                                                       Rezidiv und rasche Progression
+
+
+        Karzinom (lokalisiert und behandelt)   Kein Nutzen über die     Mögliche Verschlechterung eines
+                                                Manifestationen des      subklinischen Resttumors
+                                                Testosteronmangelsyndroms hinaus
+
+        Hoden                            Kein Nutzen über die                  Atrophie oder Beeinträchtigung
+                                        Manifestationen des Testosteronmangelsyndroms hinaus   der Spermatogenese
+
+        Siehe auch: CMAJ-Leitlinien 2015
+
+  - trigger: ":cialis"
+    word: true
+    replace: |
+       Es wird empfohlen, das verordnete Cialis (Tadalafil) versuchsweise einzunehmen, beginnend mit
+       10 mg (1/2 Tablette), bei Bedarf mindestens 30 Minuten vor sexueller Aktivität. Es wird erwartet,
+       dass dieses Medikament die Funktion für bis zu 36 Stunden nach einer Einzeldosis verbessert.
+       Wirkt 10 mg gut, kann versuchsweise auf 5 mg (1/4 Tablette) reduziert werden, um Kosten
+       und mögliche Nebenwirkungen zu verringern.
+       Falls 10 mg nur eine teilweise Wirkung zeigt, kann auf 20 mg (ganze Tablette) erhöht werden.
+       Zeigt 20 mg keine Wirkung, wird eine Verlaufskontrolle zur Besprechung alternativer Behandlungen empfohlen.
+       20 mg nicht überschreiten.
+
+       Falls die tägliche Einnahme praktischer ist als die Einnahme bei Bedarf,
+       beträgt die empfohlene Tagesdosis 2,5 mg (1/8 Tablette) bis 5 mg (1/4 Tablette).
+       Ein Tablettenteiler kann beim Zerteilen auf 1/8 Tablette helfen; üblicherweise werden
+       20-mg-Tabletten verordnet, da diese am kostengünstigsten sind, es sind jedoch bei Bedarf
+       auch kleinere Dosierungen (2,5 mg, 5 mg, 10 mg) erhältlich.
+
+       Da Sie dieses Medikament zum ersten Mal einnehmen, wird empfohlen, zunächst nur eine
+       Mindestmenge (4 Tabletten) abzuholen, um die Wirksamkeit zu prüfen, bevor weitere bezogen werden,
+       auch wenn das Rezept über eine größere Menge ausgestellt ist, damit bei guter Wirkung fortgesetzt werden kann.
+
+       Bitte vereinbaren Sie eine Verlaufskontrolle bei Ihrem Hausarzt/Ihrer Hausärztin, um eine angemessene
+       Überwachung der vaskulären Risikofaktoren sicherzustellen, um zu klären, ob eine Hormonsubstitution
+       infrage kommt, und um bei der Raucherentwöhnung zu unterstützen.

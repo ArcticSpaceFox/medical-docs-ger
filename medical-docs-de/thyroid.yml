@@ -1,0 +1,25 @@
+matches:
+  - triggers: [":hyperthyroid", ":lotsh"]
+    word: true
+    replace: |
+     {{sp}} keine Palpitationen, keinen schnellen Herzschlag (Tachykardie) oder Vorhofflimmern
+     {{sp}} keine verbreiterte Blutdruckamplitude (>100mmHg zwischen systolischem und diastolischem Druck)
+     {{sp}} keine Nervosität und keinen Tremor
+     {{sp}} keine Hitzeintoleranz
+     {{sp}} keinen Gewichtsverlust
+     {{sp}} keine Muskelschwäche
+     {{sp}} keine Struma
+
+  - triggers: [":hyperthyroid", ":hitsh"]
+    word: true
+    replace: |
+     {{sp}} keine Gewichtszunahme
+     {{sp}} keine Lethargie
+     {{sp}} keine Kälteintoleranz
+     {{sp}} keine Menstruationsunregelmäßigkeiten
+     {{sp}} keine Depression
+     {{sp}} keine Obstipation
+     {{sp}} keine trockene Haut
+
+
+

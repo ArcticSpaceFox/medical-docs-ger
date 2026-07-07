@@ -1,0 +1,58 @@
+matches:
+  - trigger: ":back"
+    replace:  |
+      Anamnese:
+        {{cc}} Schmerzen im oberen mittleren unteren Rücken seit [DAUER]
+
+        Red Flags:
+        {{sp}} keine Harn- oder Stuhlinkontinenz oder Harnverhalt
+        {{sp}} keine neue Schwäche in den Beinen
+        {{sp}} keine Reithosenanästhesie (Taubheit oder Kribbeln im Bereich der Genitalien, des Gesäßes oder der Oberschenkelinnenseiten)
+        {{sp}} kein unbeabsichtigter Gewichtsverlust
+        {{sp}} keine Schmerzverstärkung im Liegen
+        {{sp}} kein nächtliches Erwachen durch Rückenschmerzen
+        {{sp}} keine anhaltende Müdigkeit
+        {{sp}} keine starken Nachtschweiße
+        {{sp}} kein Fieber
+        {{sp}} kein Gefühl schweren Krankseins
+        {{sp}} keine in den Rücken ausstrahlenden Bauchschmerzen
+
+        {{pain}}
+
+        {{sp}} keine Harnsymptome wie Schmerzen beim Wasserlassen, erhöhte Miktionsfrequenz oder -drang, Blut im Urin
+        {{sp}} keine Nierensteine in der Vorgeschichte
+        {{sp}} keine Hodenschmerzen
+        {{sp}} keine in die Leiste ausstrahlenden Schmerzen
+        {{sp}} kein Verkehrsunfall oder Hochrasanztrauma in der Vorgeschichte
+        {{sp}} keine Überlastung wie schweres Heben in der Vorgeschichte
+
+      Untersuchung:
+        {{op}} deutliche Beeinträchtigung durch die Rückenschmerzen.
+        {{op}} keine paravertebrale Muskeldruckschmerzhaftigkeit
+        {{op}} keine Überwärmung oder Rötung am Rücken
+        {{op}} unauffällige Beweglichkeit der Wirbelsäule
+        {{op}} unauffällige Beweglichkeit der Hüften
+        {{op}} unauffällige Kraft der unteren Extremitäten
+        {{op}} unauffällige Muskeleigenreflexe
+        {{op}} unauffälliges (negatives) Babinski-Zeichen beidseits
+        {{op}} unauffälliges Gangbild (einschließlich Zehen- und Hackengang)
+        {{op}} unauffälliger (negativer) Lasègue-Test beidseits
+        {{op}} unauffälliger (negativer) FABER-Test beidseits
+
+      Beurteilung:
+        {{ap}} Mechanisch bedingte Kreuzschmerzen
+
+      Plan:
+        {{pp}} Paracetamol, kurzfristig NSAR, topisches Diclofenac, kurzfristig Cyclobenzaprin vor dem Schlafengehen
+        {{pp}} Wärmekissen oder Kühlung zur symptomatischen Linderung
+        {{pp}} aktiv bleiben und Übungen zur Kräftigung und Dehnung des Rückens erlernen.
+        {{pp}} Heben mit den Beinen statt mit dem Rücken erlernen.
+        {{pp}} zu langes Sitzen oder Stehen in derselben Position vermeiden.
+        {{pp}} auf das Auftreten der oben genannten Red Flags achten
+        {{pp}} bei Beschwerden über 6 Wochen, Verschlechterung oder Auftreten neuer Symptome ärztliche Hilfe aufsuchen.
+
+    vars:
+      - name: pain
+        type: match
+        params:
+          trigger: ":pain"

@@ -1,0 +1,144 @@
+matches:
+  - trigger: "ya"
+    replace: "Sie befinden sich zu Hause in"
+    word: true
+
+  - trigger: "yaa"
+    word: true
+    replace: |
+       Sie befinden sich zu Hause in XXXX in Begleitung Ihrer Mutter (XXX).
+
+  - trigger: "yar"
+    word: true
+    replace: "Es wird empfohlen,"
+
+  - trigger: "ym"
+    replace: "Ihr Hauptanliegen heute ist"
+    word: true
+
+  - trigger: "yfut"
+    replace: "Ihr Hauptanliegen heute ist die Besprechung der Untersuchungsergebnisse"
+    word: true
+
+  - trigger: "yh"
+    replace: "Sie hatten"
+    word: true
+
+  - trigger: "yn"
+    replace: "Sie hatten kein(e)"
+    word: true
+
+  - trigger: "yrx"
+    replace: "Sie bitten um ein Rezept für"
+    word: true
+
+  - trigger: "yw"
+    replace: "Sie wirken wohlauf, ohne erkennbare Beeinträchtigung"
+    word: true
+
+  - trigger: "trx"
+    replace: "Bitte nehmen Sie die verordneten Medikamente wie angegeben ein"
+    word: true
+
+  - trigger: "ymhx"
+    replace: "Ihre Krankengeschichte umfasst maßgeblich"
+    word: true
+
+  - trigger: "yfhx"
+    replace: "Ihre Familienanamnese umfasst maßgeblich"
+    word: true
+
+  - trigger: "ymed"
+    replace: "Ihre aktuellen Medikamente umfassen"
+    word: true
+
+  - trigger: "ynhx"
+    replace: "Sie haben keine relevante Vorerkrankung, keine verordneten Medikamente und keine relevante Familienanamnese"
+    word: true
+
+  - trigger: "ymnd"
+    replace: "Sie wurden von Ihrer Mutter und Ihrem Vater begleitet."
+    word: true
+
+  - trigger: "vutd"
+    replace: "Impfungen sind auf dem aktuellen Stand"
+    word: true
+
+  - trigger: "cpl"
+    replace: "Bitte kopieren Sie den folgenden Link in Ihren Browser:"
+    word: true
+
+  - trigger: ":results"
+    word: true
+    replace: |
+      Sobald Ihre Untersuchungen abgeschlossen sind und die Ergebnisse vorliegen,
+      werden wir uns bei Ihnen melden.
+      Bei manchen Untersuchungen ist dies innerhalb von 2-3 TAGEN nach Abschluss
+      der Untersuchung der Fall, bei anderen kann es länger dauern. Manche
+      Blutuntersuchungen dauern bis zu 7 ARBEITSTAGE, MRT-Untersuchungen können
+      bis zu 10 ARBEITSTAGE in Anspruch nehmen.
+
+      Sie werden unabhängig davon kontaktiert, ob die Ergebnisse eine weitere
+      Abklärung erfordern oder nicht. Bitte warten Sie, bis wir uns bezüglich
+      der Ergebnisse gemeldet haben, bevor Sie einen Folgetermin vereinbaren.
+
+      Falls Sie INNERHALB VON 5 TAGEN nach Abschluss Ihrer Untersuchungen keine
+      Rückmeldung von uns bezüglich Ihrer Ergebnisse erhalten haben, kontaktieren
+      Sie uns bitte:
+        E-Mail: {{myemail}}
+        Telefon: {{myphone}}
+
+      Sollte sich Ihr Zustand während des Wartens auf die Ergebnisse deutlich
+      verändern oder verschlechtern, warten Sie bitte nicht auf die Ergebnisse,
+      sondern lassen Sie sich erneut untersuchen. Bitte suchen Sie umgehend
+      medizinische Hilfe auf, falls sich Ihr Zustand deutlich verschlechtert.
+
+  - trigger: ":findfp"
+    word: true
+    replace: |
+             Es wird empfohlen, einen Hausarzt/eine Hausärztin zu finden. Folgende Website kann dabei hilfreich sein:
+             {{findfpwebsite}}
+
+  - trigger: ":refer"
+    word: true
+    replace: |
+       Eine Überweisung an FACHRICHTUNG wurde heute versendet.
+       Sie sollten innerhalb von zwei Wochen eine Rückmeldung zum Status Ihrer
+       Überweisung sowie zur voraussichtlichen Wartezeit erhalten.
+
+       Falls Sie innerhalb von 2 Wochen keine Rückmeldung erhalten haben, kontaktieren
+       Sie uns bitte:
+        E-Mail: {{myemail}}
+        Telefon: {{myphone}}
+
+       {{findfp}}
+       {{covidremind}}
+
+       Sollte sich Ihr Zustand während des Wartens auf die Ergebnisse deutlich
+       verändern oder verschlechtern, warten Sie bitte nicht, sondern lassen Sie
+       sich erneut untersuchen. Bitte suchen Sie umgehend medizinische Hilfe auf,
+       falls sich Ihr Zustand deutlich verschlechtert.
+    vars:
+      - name: findfp
+        type: match
+        params:
+          trigger: ":findfp"
+      - name: covidremind
+        type: match
+        params:
+          trigger: ":covidremind"
+
+  - trigger: ":noshow"
+    word: true
+    replace: |
+       Leider konnten wir die heutige Konsultation nicht durchführen,
+       da ich Sie nicht erreichen konnte.
+       Ich habe versucht, Sie über die App per Videoanruf zu kontaktieren,
+       und habe dabei zweimal über 60 Sekunden gewartet.
+       Anschließend habe ich versucht, Sie telefonisch auf Ihrem Mobiltelefon
+       zu erreichen, Sie haben jedoch nicht abgenommen.
+       Danach habe ich erneut versucht, Sie über die App per Videoanruf zu
+       erreichen, und habe über 60 Sekunden gewartet.
+
+       Falls Sie Ihr Anliegen nicht bereits auf anderem Weg geklärt haben,
+       vereinbaren Sie bitte einen neuen Termin.

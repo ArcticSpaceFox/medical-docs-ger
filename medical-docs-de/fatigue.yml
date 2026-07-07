@@ -1,0 +1,57 @@
+matches:
+  - trigger: ":fatigue"
+    word: true
+    replace: |
+       {{menses}}
+
+       Sie hatten kein häufiges Nasenbluten.
+       Sie hatten kein Blut im Urin.
+       Sie hatten kein Blut im Stuhl und keinen schwarzen/teerartigen Stuhl (Meläna).
+
+       Sie ernähren sich abwechslungsreich, einschließlich rotem Fleisch.
+       Sie nehmen aktuell keine Eisenpräparate ein.
+
+       Sie hatten kein verschwommenes Sehen.
+       Sie hatten keine häufigen Kopfschmerzen.
+       Sie hatten keinen häufigen Harndrang.
+       Bei Ihnen liegt keine Diabetes-Erkrankung in der Familienanamnese vor.
+
+       Hinsichtlich möglicher Anzeichen einer Schilddrüsenunterfunktion:
+       {{hitsh}}
+       Bei Ihnen liegt keine Schilddrüsenerkrankung in der Familienanamnese vor.
+
+       {{noother}}
+
+       Angesichts Ihrer bekannten Vorgeschichte eines Eisenmangels ist Ihre aktuelle
+       Müdigkeit wahrscheinlich ebenfalls auf einen Eisenmangel zurückzuführen. Wir sollten
+       jedoch weitere Untersuchungen durchführen, um dies zu bestätigen und andere
+       mögliche Ursachen auszuschließen.
+
+       Bitte beachten Sie außerdem, dass zu den Faktoren, die Müdigkeit begünstigen können,
+       psychischer Stress, Angst, gedrückte Stimmung, unzureichende Erholungsphasen,
+       ungesunde Ernährung oder übermäßiger Alkoholkonsum zählen können.
+       Ein gesunder Lebensstil ist wichtig, einschließlich Stressreduktion und
+       ausreichender Zeit für Entspannung und Schlaf. Auch wenn Sie sich bereits
+       erschöpft fühlen, hilft eine schrittweise Steigerung der körperlichen
+       Aktivität häufig zusätzlich.
+
+       {{finish}}
+
+    vars:
+      - name: menses
+        type: match
+        params:
+          trigger: ":menses"
+      - name: hitsh
+        type: match
+        params:
+          trigger: ":hitsh"
+      - name: noother
+        type: match
+        params:
+          trigger: ":noother"
+      - name: finish
+        type: match
+        params:
+          trigger: ":finish"
+

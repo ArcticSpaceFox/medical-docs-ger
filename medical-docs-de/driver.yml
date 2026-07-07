@@ -1,0 +1,41 @@
+matches:
+  - trigger: ":driver"
+    word: true
+    replace: |
+      Subjektiv:
+        {{cc}} Ärztliche Untersuchung für den Führerschein
+        Erforderliche Führerscheinklasse:
+          Klasse 1 : Berufsführerschein zum Führen jeglicher Fahrzeuge
+          Klasse 2 : Berufsführerschein für Busse
+          Klasse 3 : Fahrzeuge mit 3 oder mehr Achsen - LKW
+          Klasse 4 : Berufsführerschein für Taxi, Krankenwagen, Kleinbus
+          Klasse 5 : Standardführerschein für PKW, leichte LKW, Wohnmobile
+          Klasse 6 : Motorräder und Mopeds
+
+        {{sp}} keine Bedenken bezüglich des Fahrens
+        {{sp}} keine Sehbeeinträchtigung
+        {{sp}} keine Schwierigkeiten, Fernseher oder Telefon zu hören oder Gespräche in einem vollen Raum zu verstehen
+        {{sp}} keine Bewegungseinschränkung von Nacken, Schultern, Ellbogen, Handgelenken oder Sprunggelenken
+        {{sp}} keine ischämische Herzerkrankung in der Vorgeschichte (Angina pectoris, Herzinfarkt)
+        {{sp}} kein Diabetes mellitus in der Vorgeschichte
+        {{sp}} keine Unterzuckerung (Hypoglykämie) in der Vorgeschichte
+        {{sp}} keine transitorische ischämische Attacke oder Bewusstlosigkeit in der Vorgeschichte.
+        {{sp}} keine Krampfanfälle im vergangenen Jahr.
+        {{sp}} keine Verkehrsverstöße, Unfälle oder knappe Zwischenfälle im vergangenen Jahr
+
+      Objektiv:
+        {{op}} normale Beweglichkeit von Nacken, Schultern, Ellbogen, Handgelenken, Fingern und Sprunggelenken.
+        {{op}} normale Kraft (5/5) durchgehend, einschließlich Handgriffkraft
+        {{op}} keine abdominellen Pulsationen
+        {{op}} normale Herztöne (S1/S2)
+        {{op}} keine zusätzlichen Herztöne
+        {{op}} keine Herzgeräusche
+        {{op}} gutes Atemgeräusch beidseits
+        {{op}} keine pathologischen Atemgeräusche (Nebengeräusche)
+
+      Beurteilung:
+        {{ap}} keine Bedenken bezüglich der Fahrtauglichkeit
+
+      Plan:
+        Formular ausgefüllt und ausgehändigt
+        {{pp}} Nachkontrolle nach Bedarf

@@ -1,0 +1,177 @@
+matches:
+  - trigger: ":ocp"
+    word: true
+    replace: |
+      Anamnese:
+        {{cc}} Rezept für orale Kontrazeptiva
+
+        {{sp}} derzeit keine Kontrazeption
+
+        {{sp}} keine Lebererkrankung
+        {{sp}} keine Migräne
+        {{sp}} keine vorbekannte Krebserkrankung
+        {{sp}} keine Brustauffälligkeiten
+        {{sp}} keine Gerinnungsstörungen
+        {{sp}} kein Tabakkonsum
+
+        {{sp}} letzte Regelblutung am DATUM
+        {{sp}} regelmäßige Menstruation
+        {{sp}} kein erhöhtes Risiko für sexuell übertragbare Infektionen (STI)
+        {{sp}} letzter STI-Test vor DAUER
+        {{sp}} derzeit keine Notwendigkeit für einen Schwangerschaftstest
+
+      Untersuchung:
+        {{op}} aktueller Blutdruck von SBP/DBP
+
+      Beurteilung:
+        {{ap}} Bedarf an fortlaufender kontrazeptiver Medikation
+        ohne Kontraindikationen
+
+      Plan:
+        {{pp}} Fortführung der bisher verordneten oralen Kontrazeption
+        Rezept ausgestellt für XXX
+
+        {{pp}} Verweis auf folgende Links für weitere Informationen:
+        https://www.sexandu.ca/
+        https://www.plannedparenthood.org/learn/birth-control
+
+        {{pp}} Verweis auf folgende Links bei vergessener Einnahme:
+        https://www.sexandu.ca/sos/
+        https://www.plannedparenthood.org/online-tools/missed-birth-control-pill
+
+        {{pp}} Wiedervorstellung bei weiteren Fragen oder Beschwerden
+
+
+  - trigger: ":ffertility"
+    word: true
+    replace: |
+      Anamnese:
+        {{cc}} ausbleibende Konzeption nach DAUER
+
+        Menstruationsanamnese:
+          {{sp}} Menarche im Alter von XX Jahren
+          {{sp}} unregelmäßiger Zyklus im Bereich von XX bis YY Tagen
+          {{sp}} regelmäßiger Zyklus alle XX Tage
+          {{sp}} Regelblutung von XX Tagen Dauer
+
+        Schwangerschaftsanamnese:
+          {{sp}} keine vorausgegangenen Schwangerschaften
+          {{sp}} keine vorausgegangenen Schwangerschaften mit dem aktuellen Partner
+
+        {{sp}} Geschlechtsverkehr jeden zweiten Tag
+        um den Zeitpunkt des Eisprungs
+        {{sp}} Zeitpunkt des Eisprungs mittels Ovulationstests verifiziert
+
+        {{sp}} keine Laktation
+        {{sp}} keine Mamillensekretion
+        {{sp}} Symptome eines PCOS (abnorme Behaarung, tiefe Stimme,
+               Akne, unregelmäßige Menstruation)
+        {{sp}} Symptome einer Endometriose (starke Regelschmerzen,
+               Schmerzen beim Geschlechtsverkehr, übermäßige oder unregelmäßige Blutung)
+        {{sp}} keine Symptome einer Hypothyreose:
+          {{hitsh}}
+
+        {{sp}} keine Vorgeschichte einer entzündlichen Beckenerkrankung (PID)
+        {{sp}} keine Vorgeschichte eines polyzystischen Ovarialsyndroms (PCOS)
+        {{sp}} keine Voroperationen im Beckenbereich
+        {{sp}} keine vorausgegangene Bestrahlung des Beckens
+        {{sp}} keine vorausgegangene Kürettage (Abrasio)
+
+        {{sp}} keine vorausgegangenen Untersuchungen oder Behandlungen
+
+      Beurteilung:
+        {{ap}} primäre weibliche Infertilität
+
+      Plan:
+        {{pp}} vollständige Abklärung einschließlich:
+          Blutbild, TSH, Prolaktin, FSH, LH, Progesteron, Testosteron, DHEA
+        {{pp}} Wiedervorstellung nach Vorliegen der Ergebnisse
+        Überweisung an Kinderwunschklinik zur weiteren Abklärung veranlasst
+    vars:
+      - name: hitsh
+        type: match
+        params:
+          trigger: ":hitsh"
+
+  - trigger: ":menses"
+    word: true
+    replace: |
+       Ihre letzte Regelblutung war am XXXX XX, vor XXX Tagen
+       Üblicherweise tritt sie regelmäßig alle XXXX Tage ein.
+       Ihr Zyklus ist seit XXXXX unregelmäßig
+       Sie dauert XXX Tage.
+       Die stärksten Tage sind die Tage XXXX - XXXX
+       An diesen Tagen benötigen Sie üblicherweise XXXX Binden/Tampons pro Tag.
+       Es besteht keine Zwischenblutung zwischen den Regelblutungen.
+       Es besteht keine Blutung nach dem Geschlechtsverkehr.
+       Es besteht ein deutliches Krampfen zu Beginn der Menstruation.
+       Es bestehen keine wesentlichen Schmerzen während der Menstruation.
+
+  - trigger: ":aub"
+    word: true
+    replace: |
+       Ihr Hauptanliegen heute ist eine unregelmäßige Regelblutung.
+
+       {{menses}}
+
+       Ihr Gewicht ist stabil geblieben.
+       Sie haben keinen erhöhten Stress.
+       Sie hatten keine kürzliche Erkrankung.
+       Sie haben Ihr Ausmaß an körperlicher Aktivität nicht gesteigert.
+       Sie hatten kein Trauma im Beckenbereich.
+
+       Ihre aktuelle Verhütungsmethode ist
+       Sie halten eine Schwangerschaft für unwahrscheinlich, weil
+       Ihr letzter Geschlechtsverkehr war vor
+       Ihr letzter PAP-Abstrich (Zervixkarzinom-Screening) war
+       und war unauffällig.
+
+       Ihr letzter STI-Test (sexuell übertragbare Infektion) war
+       und war negativ.
+       Sie haben keine Unterbauchschmerzen, kein Fieber und keinen abnormen vaginalen Ausfluss.
+
+       Sie haben keine Veränderungen der Blasen- oder Darmfunktion.
+       Sie haben keinen milchigen Ausfluss aus der Brust (Galaktorrhoe)
+       Sie haben keine Hitze- oder Kälteintoleranz.
+       Sie haben keine abnorme Behaarung (Hirsutismus).
+       Sie haben keine Hitzewallungen.
+
+       Sie sind sich sehr sicher, dass die Blutung ausschließlich aus der Scheide stammt.
+
+       Bei Ihnen wurden bisher keine Erkrankungen der
+       Gebärmutter wie Myome oder Polypen diagnostiziert.
+       Sie hatten nie eine Operation im Beckenbereich, wie z. B. einen Kaiserschnitt.
+       Sie haben keine sonstigen Blutungsprobleme wie übermäßige Blutungen
+       bei zahnärztlichen Eingriffen oder häufiges Nasenbluten.
+
+       Ihnen sind keine Familienmitglieder mit unregelmäßiger Regelblutung
+       oder frühzeitiger Menopause (vor dem 40. Lebensjahr) bekannt.
+       Ihnen sind keine Familienmitglieder mit Krebserkrankungen im
+       Beckenbereich, wie Gebärmutter- oder Zervixkarzinom, bekannt.
+       Ihnen ist keine Familienanamnese für Gerinnungsstörungen,
+       Schilddrüsenerkrankungen oder Zöliakie bekannt.
+
+       {{noother}}
+
+       Bei Ihnen besteht eine unregelmäßige Menstruation, möglicherweise bedingt durch
+
+       Es wird empfohlen, weitere Untersuchungen zur Abklärung möglicher Ursachen
+       durchzuführen, einschließlich Blutuntersuchungen (Beta-HCG, Blutbild, Ferritin, TSH, Prolaktin,
+       Testosteron, 17-Hydroxyprogesteron, FSH, LH, Östradiol, INR, PTT)
+       sowie einer Becken-Ultraschalluntersuchung.
+
+       {{finish}}
+
+    vars:
+      - name: menses
+        type: match
+        params:
+          trigger: ":menses"
+      - name: noother
+        type: match
+        params:
+          trigger: ":noother"
+      - name: finish
+        type: match
+        params:
+          trigger: ":finish"

@@ -1,0 +1,48 @@
+matches:
+  - trigger: ":depain"
+    word: true
+    replace: |
+      {{op}} kein Krankheitsgefühl
+      {{op}} normale Wachheit
+      {{op}} normale Mobilisationsfähigkeit
+      {{op}} normale Fähigkeit, zur Toilette zu mobilisieren
+
+  - trigger: ":demental"
+    word: true
+    replace: |
+      {{op}} normaler Blickkontakt
+      {{op}} unauffälliges Verhalten
+      {{op}} unauffälliger Affekt
+      {{op}} unauffälliges Erscheinungsbild und Pflegezustand
+      {{op}} unauffällige Wahrnehmung der Umgebung
+      {{op}} unauffällige Interaktion mit anderen
+
+  - trigger: ":depeds"
+    word: true
+    replace: |
+      {{op}} normale Wachheit
+      {{op}} normales Spielverhalten
+      {{op}} normales Interesse an der Umgebung
+      {{op}} kein erkennbares Unbehagen beim Blick ins Licht
+      {{op}} normale Atemfrequenz
+      {{op}} keine erhöhte Atemarbeit
+      {{op}} normale Hautfarbe
+      {{op}} keine Beschwerden beim Blick nach oben (keine Nackensteifigkeit)
+
+  - trigger: ":deresp"
+    word: true
+    replace: |
+      {{op}} normale Fähigkeit, in ganzen Sätzen zu sprechen
+      {{op}} normale Atemfrequenz
+      {{op}} normaler Atemrhythmus
+      {{op}} normale Hautfarbe
+      {{op}} keine erhöhte Atemarbeit
+             (kein Einsatz der Atemhilfsmuskulatur, kein trachealer Zug,
+             keine sub-/interkostalen Einziehungen)
+
+  - trigger: ":deabdo"
+    word: true
+    replace: |
+      {{op}} normale Fähigkeit zu hüpfen
+      {{op}} kein erkennbarer Schmerz bei Husten oder Niesen
+      {{op}} normale Fähigkeit, den eigenen Bauch selbst zu palpieren

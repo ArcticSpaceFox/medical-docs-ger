@@ -1,0 +1,50 @@
+matches:
+  - trigger: ":nosebleed"
+    word: true
+    replace: |
+      Subjektiv:
+        {{cc}} Nasenbluten aus der rechten Seite seit DAUER
+        {{sp}} wiederkehrende Blutungen etwa alle INTERVALL
+        mit einer Dauer von etwa DAUER
+        {{sp}} keine erkennbaren Auslöser
+                 (Trauma, Nasenoperation, Nasebohren, Fremdkörper,
+                  Infekt der oberen Atemwege, allergische Rhinitis)
+
+        Alarmzeichen:
+        {{sp}} keine Brustschmerzen
+        {{sp}} keine Atemnot
+        {{sp}} kein Schwindel
+
+        {{sp}} keine Gerinnungsstörung
+        {{sp}} kein Bluthochdruck
+        {{sp}} keine Leberzirrhose
+        {{sp}} keine koronare Herzkrankheit
+        {{sp}} keine Anwendung von intranasalen Kortikosteroiden
+        {{sp}} keine Einnahme von Thrombozytenaggregationshemmern wie
+              Aspirin, Clopidogrel oder Ticagrelor
+        {{sp}} keine Einnahme von Antikoagulanzien wie Heparin, Warfarin,
+               Rivaroxaban, Apixaban, Edoxaban oder Dabigatran
+
+      Objektiv:
+        {{op}} insgesamt gutes Allgemeinbefinden
+        {{op}} kein Hämatom (Ekchymose)
+        {{op}} kein Ausschlag im Sinne einer Thrombozytenfunktionsstörung (Petechien)
+        {{op}} keine auffälligen Gefäßneubildungen (Teleangiektasien)
+        {{op}} keine aktive Blutung
+        {{op}} kein Hinweis auf kürzliche Blutung in der Nase (im Bereich des Locus Kiesselbachi)
+        {{op}} kein Blut im Mund oder Rachen (Oropharynx)
+
+        Watte mit Lidocain 2% und Adrenalin getränkt und angelegt,
+        anschließend Ätzung mit Silbernitrat
+
+      Beurteilung:
+        {{ap}} vordere Epistaxis ohne Alarmzeichen
+
+      Plan:
+        {{pp}} bei aktiver Blutung nach vorne beugen und Nase zusammendrücken
+        {{pp}} bei anhaltender Blutung über 10 Minuten ärztliche Hilfe aufsuchen
+        {{pp}} intranasales Kortikosteroid-Spray absetzen
+        {{pp}} Nasenspray von der Nasenscheidewand weg richten
+        {{pp}} in befeuchteter Umgebung schlafen
+        {{pp}} topisches Antibiotikum (Bactroban) mit Wattestäbchen in das Nasenloch einbringen
+        {{pp}} Wiedervorstellung bei Verschlechterung oder weiteren Beschwerden

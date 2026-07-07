@@ -1,0 +1,103 @@
+matches:
+  - trigger: "PERRLA"
+    word: true
+    replace: |
+      Pupillen isokor, rund, lichtreagibel und mit erhaltener Akkommodation (PERRLA)
+
+  - trigger: "EOM"
+    word: true
+    replace: |
+      Augenmuskelbeweglichkeit (EOM)
+
+
+  - trigger: ":opsredflag"
+    word: true
+    replace: |
+      Alarmsymptome:
+        {{sp}} keine starken Schmerzen
+        {{sp}} keine deutlichen Schmerzen oder Sehverschlechterung beim Tragen von Kontaktlinsen
+        {{sp}} keine tiefen Schmerzen im Auge
+        {{sp}} keine Lichtunverträglichkeit (Photophobie)
+        {{sp}} kein Sehverlust
+        {{sp}} keine farbigen Halos um Lichtquellen
+        {{sp}} kein Trauma oder Fremdkörper
+        {{sp}} keine Verätzung
+        {{sp}} keine kürzliche Augenoperation
+
+  - trigger: ":oporedflag"
+    word: true
+    replace: |
+      Alarmsymptome:
+        {{op}} keine verminderte Sehschärfe
+        {{op}} keine Pupillenunregelmäßigkeit
+        {{op}} keine träge Pupillenreaktion auf Licht
+        {{op}} keine Hornhauttrübung
+        {{op}} kein Blut in der Vorderkammer des Auges (Hyphäma)
+        {{op}} kein Eiter in der Vorderkammer des Auges (Hypopyon)
+        {{op}} kein erhöhter Augeninnendruck
+
+  - trigger: ":redeye"
+    word: true
+    replace: |
+      Subjektiv:
+        {{cc}} rotes Auge seit DAUER
+        {{sp}} Rötung am RECHTEN LINKEN BEIDEN Auge(n)
+        {{sp}} kein dickflüssiger, eitriger Ausfluss
+        {{sp}} kein wässriger Ausfluss
+        {{sp}} Augen morgens beim Aufwachen nicht verklebt
+        {{sp}} kein Sandgefühl/Reizung
+        {{sp}} kein Juckreiz
+
+        {{sp}} keine Kontaktlinsennutzung
+        {{sp}} kein Fremdkörpergefühl im Auge
+        {{sp}} keine starken Kopfschmerzen
+        {{sp}} keine Übelkeit
+
+        {{sredflags}}
+
+      Objektiv:
+        {{op}} konjunktivale Injektion am RECHTEN LINKEN BEIDEN Auge(n)
+        {{op}} kein Ausfluss
+        {{op}} Pupillen isokor, rund, lichtreagibel und mit erhaltener Akkommodation (PERRLA)
+        {{op}} normale Augenbewegungen (Augenmuskelbeweglichkeit (EOM))
+        {{op}} keine repetitiven, unkontrollierten Bewegungen (Nystagmus)
+        {{op}} keine wesentlichen Schmerzen bei Augenbewegung
+        {{op}} keine Doppelbilder (Diplopie)
+        {{op}} kein sichtbarer Fremdkörper
+        {{op}} keine Photophobie.
+        {{op}} unauffällige Hornhaut und Vorderkammer
+
+        {{oredflags}}
+
+      Beurteilung:
+        {{ap}} Virale Konjunktivitis
+        {{ap}} Bakterielle Konjunktivitis
+        {{ap}} Allergische Konjunktivitis
+        Keine Alarmsymptome/-zeichen vorhanden
+
+      Plan:
+        {{pp}} Anwendung topischer Antibiotika wie verordnet
+        Dosis kann bei Besserung der Symptome nach einigen Tagen
+        von 4-mal täglich auf zweimal täglich reduziert werden.
+        Eine Abnahme von Ausfluss, Rötung und Reizung sollte innerhalb von 1-2 Tagen eintreten
+        {{pp}} Anwendung von Antihistaminika mit mastzellstabilisierenden Eigenschaften (Pataday)
+        {{pp}} Anwendung frei verkäuflicher Augentropfen zur Befeuchtung, 1-2 Tropfen alle 1-6 Stunden bei Bedarf
+
+        {{pp}} Anwendung von warmen oder kühlen Kompressen
+        {{pp}} Augenreiben vermeiden
+        {{pp}} Verzicht auf Kontaktlinsen während der Symptomatik
+        {{pp}} gemeinsame Nutzung von Taschentüchern, Handtüchern, Kosmetika, Bettwäsche oder Essbesteck vermeiden
+
+        {{pp}} bei Persistenz, Verschlechterung der aktuellen Symptome oder neuen Symptomen erneut vorstellen
+        {{pp}} bei Auftreten von Alarmsymptomen (wie oben beschrieben) umgehend erneut vorstellen
+
+    vars:
+      - name: sredflags
+        type: match
+        params:
+          trigger: ":opsredflag"
+
+      - name: oredflags
+        type: match
+        params:
+          trigger: ":oporedflag"

@@ -1,0 +1,12 @@
+name: medical-docs-de
+title: Medical Documentation (Deutsch)
+description: Textbausteine und Vorlagen für die medizinische Dokumentation auf Deutsch, basierend auf medical-docs von Bill Ressl.
+version: 1.0.0
+author: ArcticSpaceFox
+tags:
+  - medical
+  - german
+  - deutsch
+  - documentation
+  - clinical
+homepage: https://github.com/ArcticSpaceFox/medical-docs-ger

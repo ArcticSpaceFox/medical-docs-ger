@@ -1,0 +1,95 @@
+matches:
+  - trigger: ":headachefu"
+    word: true
+    replace:  |
+     {{pp}} umgehend ärztliche Hilfe aufsuchen, wenn:
+       Ihr Kopfschmerz plötzlich einsetzt, schnell sehr stark wird,
+            oder als "der schlimmste Kopfschmerz Ihres Lebens" beschrieben werden könnte
+       Ihr Kopfschmerz stark ist und Sie zusätzlich Fieber oder einen steifen Nacken haben
+       Sie einen Krampfanfall, Persönlichkeitsveränderungen oder Verwirrtheit haben, oder bewusstlos werden
+       Ihr Kopfschmerz unmittelbar nach körperlicher Anstrengung oder einer leichten Verletzung begann
+       Sie Schwäche, Taubheitsgefühl oder Sehstörungen haben
+
+  - trigger: ":headacheredflag"
+    word: true
+    replace:  |
+     {{sp}} kein schlagartiger ("Donnerschlag"-)Beginn
+       {{sp}} kein Fieber
+       {{sp}} kein Hautausschlag
+       {{sp}} keine Nackensteifigkeit
+       {{sp}} keine fokale Schwäche
+       {{sp}} keine Taubheit
+       {{sp}} keine Sprachstörungen
+       {{sp}} keine Gleichgewichtsstörungen
+       {{sp}} keine Augenschmerzen
+       {{sp}} keine Nachtschweiße
+       {{sp}} kein ungewollter Gewichtsverlust
+
+  - trigger: ":headache"
+    word: true
+    replace:  |
+      Subjektiv:
+        {{cc}} Kopfschmerzen seit DAUER
+
+        Warnzeichen:
+        {{redflags}}
+
+        {{pain}}
+
+        {{sp}} keine Aura (neurologische Symptome vor Beginn des Kopfschmerzes)
+        {{sp}} keine vorherige Kopfverletzung
+        {{sp}} keine relevante Vorgeschichte (z. B. Bluthochdruck, Diabetes, Schlafstörungen)
+        {{sp}} keine Analgetika-Übergebrauch (>14 Tage/Monat bei reinem Paracetamol oder NSAR,
+               >9 Tage/Monat bei Triptanen, Opioiden oder Kombinationspräparaten)
+        {{sp}} kein übermäßiger Alkoholkonsum
+
+      Objektiv:
+        {{op}} normaler Blutdruck
+        {{op}} kein Fieber
+        {{op}} keine Druckschmerzhaftigkeit der Kopfhaut
+        {{op}} keine Nackenschmerzen bei Palpation
+        {{op}} keine Druckschmerzhaftigkeit der Nasennebenhöhlen
+        {{op}} kein Klicken oder Druckschmerz im Kiefergelenk (TMG)
+        {{op}} normale schmerzfreie Beweglichkeit des Nackens
+
+        {{neuroexam}}
+
+      Beurteilung:
+        {{ap}} zervikogener Kopfschmerz
+        {{ap}} Migräne ohne Aura
+        Es liegen KEINE Warnzeichen vor
+
+      Plan:
+        {{pp}} ein Kopfschmerztagebuch beginnen
+        {{pp}} Koffeinkonsum reduzieren
+        {{pp}} regelmäßige körperliche Bewegung steigern
+        {{pp}} regelmäßigen Schlaf und regelmäßige Mahlzeiten einhalten
+        {{pp}} rezeptfreie Medikation bei leichten Attacken verwenden:
+          Paracetamol 1 g bei Bedarf, Ibuprofen 400 mg bei Bedarf, oder Naproxen 550 mg bei Bedarf
+        {{pp}} verschreibungspflichtige Medikation bei schweren Attacken verwenden: Zolmitriptan
+        {{pp}} Medikamentenübergebrauch vermeiden: (>14 Tage/Monat für
+               Paracetamol oder Ibuprofen, >9 Tage/Monat für Triptane)
+        {{pp}} tägliche Migräneprophylaxe beginnen: Propranolol
+        {{pp}} Kochsalz-Nasenspülung mit destilliertem Wasser
+               sowie intranasales Kortikosteroidspray versuchen
+        {{pp}} Wiedervorstellung in 2 Wochen zur Beurteilung der Behandlungswirksamkeit
+
+        {{followup}}
+
+    vars:
+      - name: redflags
+        type: match
+        params:
+          trigger: ":headacheredflag"
+      - name: followup
+        type: match
+        params:
+          trigger: ":headachefu"
+      - name: neuroexam
+        type: match
+        params:
+          trigger: ":neuroexam"
+      - name: pain
+        type: match
+        params:
+          trigger: ":pain"

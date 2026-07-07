@@ -1,0 +1,197 @@
+matches:
+  - trigger: ":rice"
+    word: true
+    replace: |
+       Es wird empfohlen, eine Schiene zur Unterstützung von XXXXX zu besorgen und die Stelle ruhigzustellen.
+       Es wird empfohlen, für 20-30 Minuten alle 3-4 Stunden über 2-3 Tage
+       Eisbeutel auf die betroffene Stelle aufzulegen, bis der Schmerz nachlässt.
+       Es wird empfohlen, die betroffene Stelle hochzulagern, um die Schwellung zu reduzieren.
+       Es wird empfohlen, wie verordnet ein topisches entzündungshemmendes Medikament zu verwenden
+       (Diclofenac 10% Gel bei Bedarf 4-mal täglich aufgetragen) zur Schmerzlinderung
+       Es wird empfohlen, wie verordnet ein entzündungshemmendes Medikament einzunehmen
+       (Naproxen 250mg 1-2 Tabletten bei Bedarf alle 24 Stunden) zur Schmerzlinderung
+       Es wird empfohlen, ein frei verkäufliches entzündungshemmendes Medikament
+       wie Ibuprofen oder Naproxen zur Schmerzlinderung zu verwenden
+
+  - trigger: ":xray"
+    word: true
+    replace: |
+       Es wird empfohlen, eine Röntgenaufnahme von XXXXX anfertigen zu lassen. Sie werden
+       kontaktiert, um die Details zu vereinbaren. Sobald die Untersuchungen abgeschlossen
+       sind und die Ergebnisse vorliegen, werden Sie von uns hören.
+
+       Sollten Sie INNERHALB VON 2 TAGEN nach Abschluss der Untersuchungen keine
+       Benachrichtigung über Ihre Ergebnisse von uns erhalten haben, kontaktieren Sie uns bitte:
+         E-Mail: {{myemail}}
+         Telefon: {{myphone}}
+
+  - trigger: ":physio"
+    word: true
+    replace: |
+       Es wird empfohlen, sich auf folgende Informationsmaterialien mit Dehn- und
+       Übungsanleitungen zur Unterstützung Ihrer Genesung zu beziehen:
+       https://www.primarycaresportsmedicine.com/wp-content/uploads/2016/12/WRIST-WRIST-SPRAIN.pdf
+
+       https://www.primarycaresportsmedicine.com/wp-content/uploads/2016/12/WRIST-WRIST-TENDONITIS.pdf
+
+       https://www.primarycaresportsmedicine.com/wp-content/uploads/2016/12/WRIST-DE-QUERVAINS-TENOSYNOVITIS.pdf
+
+       http://www.primarycaresportsmedicine.com/wp-content/uploads/2016/12/BACK-LOW-BACK-PAIN.pdf
+
+       Falls möglich, wird empfohlen, einen Physiotherapeuten zu konsultieren, um
+       Ihre Rehabilitation zu unterstützen und das Risiko einer erneuten Verletzung zu verringern.
+       Eine Überweisung zur Physiotherapie wird Ihnen zugesandt, um bei einem
+       Versicherungsanspruch gegebenenfalls zu helfen.
+
+  - trigger: ":wrist"
+    word: true
+    replace: |
+       Ihr Hauptanliegen heute sind RECHTS LINKS Handgelenkschmerzen, die vor etwa
+       begonnen haben. Es handelt sich nicht um eine arbeitsbedingte Erkrankung.
+       Sie hatten keine vorherigen Verletzungen des Handgelenks.
+
+       {{pain}}
+
+       {{noother}}
+
+       Ihr Handgelenk ist nicht geschwollen.
+       Ihr Handgelenk weist keine Hämatome auf.
+       Ihr Handgelenk hat vollen Bewegungsumfang.
+
+       Ihr Handgelenk hat einen eingeschränkten Bewegungsumfang.
+       Die Extension ist im Vergleich zur Gegenseite um etwa 10 Grad eingeschränkt.
+       Die Flexion ist im Vergleich zur Gegenseite um etwa 10 Grad eingeschränkt.
+       Die Radialabduktion ist im Vergleich zur Gegenseite um etwa 10 Grad eingeschränkt.
+       Die Ulnarabduktion ist im Vergleich zur Gegenseite um etwa 10 Grad eingeschränkt.
+
+       Es besteht kein Schmerz bei Extension gegen Widerstand
+       Es besteht kein Schmerz bei Flexion gegen Widerstand
+
+       Anamnese und Symptomatik sind am ehesten mit einer RECHTS LINKS Handgelenkzerrung vereinbar.
+       Anamnese und Symptomatik sind am ehesten mit einer RECHTS LINKS Handgelenk-Tendinitis vereinbar.
+       Anamnese und Symptomatik sind am ehesten mit einer RECHTS LINKS De-Quervain-Tenosynovitis vereinbar.
+       Angesichts der Anamnese besteht auch der Verdacht auf eine mögliche Fraktur der Handwurzelknochen.
+
+       {{xray}}
+
+       {{rice}}
+
+       {{physio}}
+
+       {{finish}}
+    vars:
+      - name: pain
+        type: match
+        params:
+          trigger: ":pain"
+      - name: noother
+        type: match
+        params:
+          trigger: ":noother"
+      - name: xray
+        type: match
+        params:
+          trigger: ":xray"
+      - name: rice
+        type: match
+        params:
+          trigger: ":rice"
+      - name: physio
+        type: match
+        params:
+          trigger: ":physio"
+      - name: finish
+        type: match
+        params:
+          trigger: ":finish"
+
+  - trigger: ":hernia"
+    word: true
+    replace: |
+       Ihr Hauptanliegen heute ist ein Leistenbruch/Hernie, der zunehmend schmerzhafter wird
+       Sie haben erstmals vor etwa XX eine Vorwölbung um den Bauchnabel (Nabel) bemerkt
+       Sie hat sich allmählich verschlechtert und ist in den letzten XX schmerzhafter geworden
+       Ihr Schmerz beträgt in Ruhe XX/10 und steigt beim Bücken auf XX/10.
+       Die Vorwölbung ist druckempfindlich.
+       Es besteht keine Farbveränderung oder Stuhlgangsveränderung.
+
+       Ihre Größe beträgt XX cm und Ihr Gewicht XX kg
+       für einen Body-Mass-Index (BMI) von XX
+
+       Bei der Untersuchung zeigt sich eine reponible Vorwölbung um den Nabel
+       mit einem Durchmesser von etwa XX cm ohne
+       Farbveränderung oder Hautveränderungen.
+
+       Sie haben eine symptomatische Nabelhernie, die nun
+       Ihre Funktionsfähigkeit erheblich beeinträchtigt.
+
+       {{refer}}
+
+       Sollten Sie insbesondere starke Schmerzen haben, die Hernie die Farbe ändern
+       und Ihr Stuhlgang aussetzen, rufen Sie bitte
+       den Notruf oder begeben Sie sich sofort in die nächste Notaufnahme.
+    vars:
+      - name: noother
+        type: match
+        params:
+          trigger: ":noother"
+      - name: refer
+        type: match
+        params:
+          trigger: ":refer"
+
+  - trigger: ":gout"
+    word: true
+    replace: |
+       Ihr Hauptanliegen heute ist ein möglicher Gichtanfall an LOKALISATION
+
+       Sie haben seit Schmerzen und Schwellung
+       Es besteht auch Rötung
+       Das Gehen fällt schmerzbedingt schwer.
+       Es begann nach
+       Bisher haben Sie folgende Behandlungen versucht
+
+       Sie haben seit DAUER Gicht
+       Die Anfälle bzw. Schübe treten etwa XXX Mal pro Jahr auf
+       Sie haben folgende Auslöser identifiziert
+       Diese Anfälle betreffen üblicherweise Ihre LINKE RECHTE GROSSZEHE SPRUNGGELENK
+
+       Ihre Anfälle werden üblicherweise erfolgreich behandelt mit
+
+       Dies fühlt sich wie Ihre vorherigen Anfälle an.
+
+       {{noother}}
+
+       Ihre LINKE RECHTE GROSSZEHE SPRUNGGELENK erscheint geschwollen, mit verstärkter Rötung
+       und ist druckempfindlich.
+
+       Basierend auf Anamnese und Untersuchung handelt es sich sehr wahrscheinlich um einen Gichtschub.
+
+       Es wird empfohlen, das verordnete Medikament zu verwenden,
+       Indometacin 50mg bei Bedarf bis zu dreimal täglich zur Schmerzlinderung
+
+       Es wird außerdem empfohlen, das verordnete Medikament
+       Colchicin 0,6mg zweimal täglich zu verwenden, bis die Symptome vollständig abgeklungen sind,
+       üblicherweise etwa zwei Wochen.
+
+       Es kann mitunter schwierig sein, den Auslöser für Gicht zu bestimmen, und
+       Anfälle können trotz größter Bemühungen, Auslöser zu vermeiden, weiter auftreten.
+       Sollten Sie mehr als drei Gichtanfälle pro Jahr haben, sollten Sie eine
+       tägliche Dauermedikation, wie Allopurinol, zur Vorbeugung von Gichtschüben in Betracht ziehen.
+       Bitte sprechen Sie mit dem Arzt, wenn Sie dies weiter besprechen möchten.
+
+       {{finish}}
+
+       Sollten sich Ihre Symptome innerhalb von 3 Tagen nicht bessern oder Sie weitere Bedenken haben,
+       vereinbaren Sie bitte einen Kontrolltermin.
+
+    vars:
+      - name: noother
+        type: match
+        params:
+          trigger: ":noother"
+      - name: finish
+        type: match
+        params:
+          trigger: ":finish"
+

@@ -1,0 +1,21 @@
+matches:
+  - trigger: ":intro"
+    replace: |
+      Erstvorstellung (Kennenlerngespräch):
+
+      Vorstellung und allgemeine Informationen zur Praxis sowie Praxisrichtlinien
+      (Sprechzeiten, offene Sprechstunde, Notdienst außerhalb der Sprechzeiten, nicht kassenärztliche Leistungen) besprochen.
+
+      Etwaige Probleme in der Beziehung zum vorherigen Hausarzt besprochen.
+
+      Vereinbarung zur Behandlungsbeziehung, Erwartungen und Grenzen besprochen.
+      Fragen der Patientin/des Patienten beantwortet.
+
+      Anamnese zu Vorerkrankungen, Medikation, Allergien, Familien- und Sozialanamnese erhoben.
+
+      Plan:
+        Patientin/Patient unterschriebene Anforderung für Vorbefunde ausgehändigt, an vorherigen Behandler gefaxt
+        Labor-/Bildgebungsüberweisung nach Bedarf ausgestellt
+        Patientin/Patient soll Vorsorgeuntersuchung vereinbaren
+        Beratung erfolgt, Wiedervorstellung empfohlen.
+

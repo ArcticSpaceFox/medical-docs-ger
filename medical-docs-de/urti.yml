@@ -1,0 +1,39 @@
+matches:
+  - trigger: ":urti"
+    word: true
+    replace: |
+      Subjektiv:
+        {{cc}} Erkältungs-/grippeähnliche Symptome seit XX Tagen
+        {{sp}} keine Halsschmerzen
+        {{sp}} kein Husten
+        {{sp}} kein Fieber
+        {{sp}} keine verstopfte Nase
+        {{sp}} keine Ohrenschmerzen
+        {{sp}} keine Kopfschmerzen
+        {{sp}} keine Nasennebenhöhlenschmerzen
+        {{sp}} keine Zahnschmerzen
+        {{sp}} keine Übelkeit/Erbrechen
+        {{sp}} keine Diarrhoe
+        {{sp}} keine erkrankten Kontaktpersonen
+        {{sp}} keine kürzliche Reise
+        {{sp}} keine Grippeimpfung in diesem Jahr
+
+      Objektiv:
+        {{op}} unauffällige Trommelfelle beidseits
+        {{op}} unauffälliger Rachenbefund (Oropharynx) (keine Rötung, keine Schwellung, keine Beläge)
+        {{op}} keine geschwollenen Halslymphknoten (keine zervikale Lymphadenopathie)
+        {{op}} unauffällige Lungenauskultation (kein Giemen, keine Rasselgeräusche)
+        {{op}} keine erhöhte Atemarbeit
+
+      Beurteilung:
+        {{ap}} Virale Infektion der oberen Atemwege
+           Es bestehen jedoch Hinweise auf eine mögliche bakterielle Racheninfektion.
+
+      Plan:
+         {{pp}} weiterhin unterstützende Maßnahmen mit ausreichend Flüssigkeit und Ruhe
+         {{pp}} Paracetamol/Ibuprofen zur Beschwerdelinderung
+         {{pp}} zweimal täglich Nasenspülungen mit Kochsalzlösung und abends ein Kortison-Nasenspray
+         {{pp}} Ergebnis des Rachenabstrichs abwarten, Antibiotikum nur bei positivem Befund
+         {{pp}} Wiedervorstellung bei zunehmenden Symptomen nach 7 Tagen
+         {{pp}} 112 anrufen oder Notaufnahme aufsuchen bei Atemnot
+

@@ -1,0 +1,269 @@
+matches:
+  - trigger: ":cthead"
+    word: true
+    replace:  |
+      Canadian Head CT Rule
+        (nicht anzuwenden bei Alter <16 Jahre, Antikoagulation oder Gerinnungsstörung, Schwangerschaft)
+      CT indiziert bei Vorliegen von:
+        Fraktur der Schädelbasis
+        Zwei- oder mehrmaligem Erbrechen
+        Alter von 65 Jahren oder älter
+        GCS-Wert <15 zwei Stunden nach dem Trauma
+        Verdacht auf offene oder impressionsfraktur des Schädels
+        Zeichen einer Schädelbasisfraktur
+           (Hämotympanon, Brillenhämatom, Liquorotorrhoe/-rhinorrhoe, Battle-Zeichen)
+        Amnesie vor dem Ereignis von 30 Minuten oder mehr
+        Gefährlicher Unfallmechanismus (Fußgänger angefahren, aus Fahrzeug geschleudert, Sturz aus Höhe >=3 Fuß bzw. 5 Stufen)
+
+  - trigger: ":gcs"
+    word: true
+    replace:  |
+      Glasgow Coma Scale
+      Augenöffnung:
+        4: Spontan
+        3: Auf Ansprache
+        2: Auf Schmerzreiz
+        1: Keine Reaktion
+      Verbal:
+        5: Orientiert
+        4: Desorientiert
+        3: Inadäquate Wortäußerungen
+        2: Unverständliche Laute (Stöhnen)
+        1: Keine Reaktion
+      Motorisch:
+        6: Befolgt Aufforderungen
+        5: Gezielte Abwehr auf Schmerzreiz
+        4: Ungezielte Abwehr auf Schmerzreiz
+        3: Beugesynergismen
+           (steif mit angewinkelten Armen, geballten Fäusten und gestreckten Beinen)
+        2: Strecksynergismen
+           (Arme und Beine gestreckt, Zehen nach unten gerichtet, Kopf und Hals nach hinten überstreckt)
+        1: Keine Reaktion
+
+  - trigger: ":neuroexam"
+    word: true
+    replace:  |
+      {{op}} unauffälliges Bewusstsein
+        {{op}} unauffällige Untersuchung von Kopf, Augen, Ohren, Nase und Rachen
+        {{op}} unauffälliger Hirnnervenstatus
+        {{op}} unauffällige Kraft der oberen und unteren Extremitäten
+        {{op}} unauffällige Muskeleigenreflexe der oberen und unteren Extremitäten
+        {{op}} unauffällige zerebelläre Untersuchung (einschließlich Finger-Nase-Versuch und Diadochokinese)
+        {{op}} unauffälliges Gangbild, einschließlich Hacken-Zehen-Gang
+        {{op}} unauffällige Fähigkeit, das Gleichgewicht bei geschlossenen Augen zu halten (negatives Rhomberg-Zeichen)
+
+  - trigger: ":neuroredflag"
+    word: true
+    replace:  |
+      {{sp}} keine Sprechstörung (Dysarthrie)
+        {{sp}} keine Doppelbilder (Diplopie)
+        {{sp}} keine Schluckstörung (Dysphagie)
+        {{sp}} keine Schwierigkeiten bei präzisen Bewegungen wie dem Finger-Nase-Versuch (Dysmetrie)
+        {{sp}} keine Unfähigkeit, rasche alternierende Bewegungen auszuführen (Dysdiadochokinese)
+
+
+  - trigger: ":vertigo"
+    word: true
+    replace:  |
+      Anamnese:
+        {{cc}} Schwindel seit DAUER
+        {{sp}} ein Gefühl, dass sich der Raum dreht
+        Die Beschwerden sind intermittierend und dauern jeweils XX Sekunden
+        {{sp}} keine erkennbaren Auslöser - keine kürzliche Erkrankung oder Erkältung und kein Trauma.
+        Begleitend besteht Übelkeit
+        {{sp}} keine weiteren Symptome.
+
+        Red Flags:
+        {{neuroredflag}}
+
+      Untersuchung:
+        {{neuroexam}}
+        {{op}} Symptome durch rasches Hinlegen mit zur Seite gedrehtem Kopf provozierbar (Dix-Hallpike-Manöver)
+               Verstärkt bei Drehung nach RECHTS, einschließlich Schwindel, Übelkeit, unwillkürlicher Augenbewegungen (Nystagmus)
+
+      Beurteilung:
+        {{ap}} Benigner paroxysmaler Lagerungsschwindel (BPLS)
+
+      Plan:
+        {{pp}} Durchsicht der bereitgestellten Aufklärungsmaterialien
+        {{pp}} Versuch einer Selbstbehandlung gemäß bereitgestelltem Merkblatt
+        {{pp}} Physiotherapie erwägen, falls unwirksam.
+        {{pp}} Ausreichende Flüssigkeitszufuhr beibehalten.
+        {{pp}} Verwendung des bereitgestellten Rezepts (Betahistin) zur symptomatischen Behandlung nach Bedarf
+
+    vars:
+      - name: neuroexam
+        type: match
+        params:
+          trigger: ":neuroexam"
+      - name: neuroredflag
+        type: match
+        params:
+          trigger: ":neuroredflag"
+
+  - trigger: ":tremor"
+    word: true
+    replace:  |
+      Anamnese:
+        {{cc}} Tremor der LINKEN HAND seit DAUER
+        {{sp}} kein Ruhetremor
+        {{sp}} keine Einschränkung bei Aktivitäten des täglichen Lebens
+        {{sp}} keine progrediente Verschlechterung der Symptome
+        {{sp}} keine Besserung durch Alkoholkonsum
+        {{sp}} keine Vorbehandlung
+        {{sp}} keine Familienanamnese für Tremor
+
+      Untersuchung:
+        Psychogener Tremor:
+        Bei raschen alternierenden Bewegungen der kontralateralen Extremität ist der Tremor
+        BESSER SCHLECHTER UNVERÄNDERT bei Öffnen/Schließen der Faust
+        BESSER SCHLECHTER UNVERÄNDERT bei Pronation/Supination des Unterarms
+        BESSER SCHLECHTER UNVERÄNDERT bei Fußklopfen auf dem Boden
+
+        Hinweis: Typischerweise wird der Ruhetremor bei Morbus Parkinson deutlicher ausgeprägt,
+         während der psychogene Tremor verschwindet oder den Rhythmus der Willkürbewegung der Extremität annimmt (Entrainment).
+
+        Aktionstremor:
+        Der Tremor ist:
+        BESSER SCHLECHTER UNVERÄNDERT beim Zeichnen einer Spirale innerhalb einer anderen Spirale,
+        BESSER SCHLECHTER UNVERÄNDERT beim Verbinden zweier Punkte zwischen eng beieinanderliegenden geraden Linien
+        BESSER SCHLECHTER UNVERÄNDERT beim Umgießen von Wasser von einem Glas in ein anderes
+
+        Haltetremor:
+        Der Tremor ist:
+        BESSER SCHLECHTER UNVERÄNDERT bei ausgestreckten Armen für 10-15s, mit einem losen Blatt Papier auf der Hand/den Händen
+
+        Intentionstremor (kinetischer Tremor)
+        Der Tremor ist:
+        BESSER SCHLECHTER UNVERÄNDERT bei der Finger-Nase-Finger-Bewegung
+        BESSER SCHLECHTER UNVERÄNDERT bei der Knie-Hacke-Schienbein-Bewegung
+
+        Intentionstremor
+        Der Tremor ist bei zielgerichteten Bewegungen NICHT vorhanden.
+        Die Tremoramplitude ist ZUNEHMEND ABNEHMEND UNVERÄNDERT, während sich die Hand dem Ziel nähert.
+
+        Einfacher kinetischer Tremor
+        Der Tremor tritt bei allen nicht zielgerichteten Bewegungen NICHT auf,
+        wie etwa wiederholter Flexion-Extension des Ellenbogens oder Pronation-Supination
+        des Unterarms.
+        Es besteht KEINE Zunahme der Amplitude in der Endphase.
+
+        Aufgabenspezifischer Tremor
+        Der Tremor TRITT AUF VERSCHLECHTERT SICH BESSERT SICH IST UNVERÄNDERT beim Schreiben.
+        Der Tremor TRITT AUF VERSCHLECHTERT SICH BESSERT SICH IST UNVERÄNDERT beim Spielen eines Musikinstruments
+        Der Tremor TRITT AUF VERSCHLECHTERT SICH BESSERT SICH IST UNVERÄNDERT beim Halten eines Tons.
+
+        Isometrischer Tremor
+        Der Tremor tritt NICHT als Folge einer Muskelkontraktion
+        gegen ein starres, feststehendes Objekt auf.
+
+      Beurteilung:
+        Es besteht eine rhythmische, unwillkürliche Oszillation der LINKEN RECHTEN OBEREN UNTEREN Extremität,
+        vorwiegend am HANDGELENK UND DISTALEN FINGERANTEIL, NICHT in Ruhe vorhanden,
+        ZUNEHMEND ABNEHMEND UNVERÄNDERT bei Aktivität, LANGSAM MITTEL SCHNELL in der Frequenz,
+        LEICHT MITTEL SCHWER in der Amplitude, ZUNEHMEND ABNEHMEND UNVERÄNDERT durch ablenkende Bewegungen
+        anderer Extremitäten und ohne Entrainment.
+
+        Zusammenfassend handelt es sich um einen RUHE- AKTIONS-Tremor.
+        Die Tremorcharakteristik ist am ehesten vereinbar mit einem HALTE- KINETISCHEN PSYCHOGENEN Tremor.
+        Der kinetische Tremor erscheint als EINFACHER KINETISCHER INTENTIONS- AUFGABENSPEZIFISCHER ISOMETRISCHER Tremor.
+
+        {{ap}} Benigner essentieller Tremor
+
+      Plan:
+        {{pp}} Beginn eines Behandlungsversuchs mit Propranolol
+        {{pp}} Alkohol nicht zur Behandlung einsetzen
+        {{pp}} Wiedervorstellung innerhalb eines Monats zur Beurteilung des Behandlungserfolgs
+
+  - trigger: ":tremorinfo"
+    word: true
+    replace:  |
+        DD:
+        Tremor: rhythmische, unwillkürliche Oszillationen eines Körperteils
+          Ruhetremor: bei nicht willkürlich aktiviertem Körperteil vorhanden, vollständig
+               gegen die Schwerkraft abgestützt (z. B. auf Armlehne des Stuhls abgestützt)
+          Aktionstremor: bei willkürlicher Muskelaktivität sichtbar.
+             Haltetremor: bei willkürlicher Aufrechterhaltung einer Haltung gegen die Schwerkraft
+             Kinetischer Tremor: bei willkürlichen Bewegungen vorhanden
+                 Einfacher kinetischer Tremor: bei allen nicht zielgerichteten willkürlichen
+                       Bewegungen vorhanden
+                 Intentionstremor: bei zielgerichteten Bewegungen vorhanden
+                       Verstärkt sich bei Annäherung an das Ziel.
+                 Aufgabenspezifischer Tremor: durch bestimmte Tätigkeiten verstärkt
+                 Isometrisch: bei Muskelkontraktion gegen ein starres, feststehendes Objekt.
+
+        Myoklonus: nichtrhythmisch, rasch, ruckartig, schockartig
+        Stereotypie: wiederholte und kontinuierliche komplexe motorische Handlungen
+        Epilepsia partialis continua: kann rhythmisch sein, jedoch ändern sich die Bewegungen
+               NICHT durch Positions- oder Aktivitätsänderung.
+        Klonus: rhythmische Oszillationen um ein Gelenk als Reaktion auf
+                plötzliche passive Dehnung.
+                Nimmt in Amplitude und Kraft bei passiver Muskeldehnung zu
+        Dystonie: anhaltende Muskelkontraktionen, die häufig zu
+                  Verdrehungen und abnormer Haltung eines Körperteils führen
+        Tic: kurze, nichtrhythmische, rasche Bewegungen, meist orofazial, können
+             willkürlich unterdrückt werden, mit anschließendem Rebound-Anstieg.
+        Chorea: nichtrhythmische, nicht-stereotype, semipurposive, relativ langsame Bewegungen,
+               die von einem Körperteil zum anderen fließen.
+
+  - trigger: ":bellsp"
+    word: true
+    replace: |
+       Ihr Hauptanliegen heute ist eine Schwäche auf einer Gesichtshälfte,
+       die sich in den vergangenen [Zeitraum] entwickelt hat
+
+       Sie hatten keine Schwierigkeiten, das Auge auf der betroffenen Seite zu schließen.
+       Sie hatten keine Beeinträchtigung Ihres normalen Geschmacksempfindens
+       Sie hatten keine verminderte Tränenproduktion
+       Sie hatten keine erhöhte Geräuschempfindlichkeit.
+       Sie hatten keine Ohrenschmerzen.
+       Sie hatten keinen Hautausschlag.
+       Sie hatten keine sonstigen Schmerzen.
+       Sie hatten kein Trauma im Bereich von Gesicht, Kopf oder Hals.
+       Sie hatten keine vergleichbaren Beschwerden zuvor.
+
+       {{noother}}
+
+       Es besteht eine deutliche Asymmetrie zwischen den beiden Gesichtshälften,
+       insbesondere bei aktiver Bewegung.
+       Das Auge schließt sich vollständig, jedoch nicht fest.
+       Es besteht nur eine sehr geringe Stirnbewegung auf der betroffenen Seite.
+       Es sind keine sichtbaren Hautausschläge vorhanden.
+
+       Ihre Anamnese und der Untersuchungsbefund sind vereinbar mit einer Fazialisparese (Bell's Palsy),
+       einer akuten Schädigung des Gesichtsnervs unklarer Ursache.
+       Die Behandlung ist am wirksamsten, wenn sie innerhalb von 72 Stunden nach Symptombeginn eingeleitet wird.
+       Diese Erkrankung kann jedoch mehrere Wochen bis Monate bis zur vollständigen Erholung benötigen.
+
+       Die primäre Behandlung besteht aus einem oralen Kortikosteroid (Prednison), um die
+       für die Nervenschädigung verantwortliche Entzündung zu reduzieren.
+       Da in manchen Fällen eine virale Ursache vermutet wird, wird bei schweren Verläufen,
+       bei denen kaum Bewegung möglich ist und das Auge nicht vollständig geschlossen werden kann,
+       zusätzlich ein Virostatikum empfohlen.
+
+       Es wird empfohlen, die verordneten Medikamente einzunehmen:
+       Prednison 60mg einmal täglich für 7 Tage sowie
+       Valaciclovir (Valtrex) 1000mg dreimal täglich für 7 Tage
+
+       Zudem wird empfohlen, künstliche Tränenflüssigkeit (Tropfen oder Gel) stündlich
+       tagsüber sowie eine Salbe nachts anzuwenden.
+       Zusätzlich sollte das Auge nachts mit einer Augenklappe abgedeckt werden, um es weiter zu schützen.
+       Bitte wenden Sie sich an Ihre Apotheke, um diese rezeptfreien Produkte zu erhalten.
+
+       {{finish}}
+
+       Es wird eine Wiedervorstellung zur persönlichen Untersuchung innerhalb von 3 Wochen empfohlen,
+       sofern Sie sich nicht bereits vorher vollständig erholt haben.
+
+       Bitte stellen Sie sich früher erneut vor, falls sich Ihre Symptome unter der
+       Behandlung verschlechtern oder weitere Beschwerden auftreten.
+    vars:
+      - name: noother
+        type: match
+        params:
+          trigger: ":noother"
+      - name: finish
+        type: match
+        params:
+          trigger: ":finish"
+
