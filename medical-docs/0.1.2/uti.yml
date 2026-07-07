@@ -5,90 +5,90 @@ matches:
   - trigger: ":uti"
     word: true
     replace: |
-     Subjective:
-       {{cc}} possible urinary tract infection for the past XX days
-       {{sp}} no dysuria
-       {{sp}} no frequency
-       {{sp}} no urgency,
-       {{sp}} no hematuria
-       {{sp}} no fever
-       {{sp}} no chills
-       {{sp}} no nausea and vomiting
-       {{sp}} no flank pain
-       {{sp}} no abdominal pain
+     Subjektiv:
+       {{cc}} mögliche Harnwegsinfektion seit XX Tagen
+       {{sp}} keine Dysurie
+       {{sp}} keine Pollakisurie
+       {{sp}} kein Harndrang,
+       {{sp}} keine Hämaturie
+       {{sp}} kein Fieber
+       {{sp}} kein Schüttelfrost
+       {{sp}} keine Übelkeit und kein Erbrechen
+       {{sp}} keine Flankenschmerzen
+       {{sp}} keine Bauchschmerzen
 
-       {{sp}} no vaginal discharge
-       {{sp}} no vaginal bleeding
-       {{sp}} no bowel changes
+       {{sp}} kein vaginaler Ausfluss
+       {{sp}} keine vaginale Blutung
+       {{sp}} keine Stuhlgangsveränderungen
 
-       {{sp}} no urinary tract infections (uti) in the past 6 month (and none in the past year)
-              (recurrent uti defined as ≥2 infections in six months or ≥3 infections in one year)
-       {{sp}} no antibiotic use within 4 weeks
-       {{sp}} no immunocompromised state
-       {{sp}} no allergies to antibiotics
-       {{sp}} no pregnancy
+       {{sp}} keine Harnwegsinfektionen (HWI) in den letzten 6 Monaten (und keine im letzten Jahr)
+              (rezidivierender HWI definiert als ≥2 Infektionen in sechs Monaten oder ≥3 Infektionen in einem Jahr)
+       {{sp}} keine Antibiotikaeinnahme innerhalb der letzten 4 Wochen
+       {{sp}} keine Immunsuppression
+       {{sp}} keine Allergien gegen Antibiotika
+       {{sp}} keine Schwangerschaft
 
-     Objective:
-       {{op}} no suprapubic tenderness (overlying bladder)
-       {{op}} no costavertebral angle tenderness (overlying kidneys)
-       {{op}} no leukocytes (white blood cells) on urine dip
-       {{op}} no nitrites (byproduct of bacterial infection) on urine dip
+     Objektiv:
+       {{op}} keine suprapubische Druckschmerzhaftigkeit (über der Blase)
+       {{op}} keine Klopfschmerzhaftigkeit im Nierenlager (über den Nieren)
+       {{op}} keine Leukozyten (weiße Blutkörperchen) im Urinstix
+       {{op}} keine Nitrite (Stoffwechselprodukt bakterieller Infektion) im Urinstix
 
-     Assessment:
-       {{ap}} Uncomplicated Urinary Tract Infection
+     Beurteilung:
+       {{ap}} Unkomplizierte Harnwegsinfektion
 
      Plan:
-       {{pp}} increase fluids
-       {{pp}} start prescribed antibiotic: Macrobid Ciprofloxacin Septra  Monurol Cephalexin
-       A urine culture has been sent to guide treatment in case symptoms do not improve
+       {{pp}} vermehrte Flüssigkeitszufuhr
+       {{pp}} verordnetes Antibiotikum beginnen: Macrobid Ciprofloxacin Septra  Monurol Cephalexin
+       Eine Urinkultur wurde eingesandt, um die Behandlung zu leiten, falls die Symptome sich nicht bessern
 
-       {{pp}} monitor for symptoms of kidney infection (pyelonephritis) including fever, nausea, and back pain
-       {{pp}} seek reassessment if current symptoms worsen, persist, or new symptoms develop.
+       {{pp}} auf Symptome einer Nierenbeckenentzündung (Pyelonephritis) achten, einschließlich Fieber, Übelkeit und Rückenschmerzen
+       {{pp}} bei Verschlechterung, Persistenz der aktuellen Symptome oder neuen Symptomen erneut vorstellen
 
   - trigger: ":uti2"
     word: true
     replace: |
-       {{cc}} possible urinary tract infection for the past XX days
-       {{sp}} no dysuria
-       {{sp}} no frequency
-       {{sp}} no urgency,
-       {{sp}} no hematuria
-       {{sp}} no fever
-       {{sp}} no chills
-       {{sp}} no nausea and vomiting
-       {{sp}} no flank pain
-       {{sp}} no abdominal pain
+       {{cc}} mögliche Harnwegsinfektion seit XX Tagen
+       {{sp}} keine Dysurie
+       {{sp}} keine Pollakisurie
+       {{sp}} kein Harndrang,
+       {{sp}} keine Hämaturie
+       {{sp}} kein Fieber
+       {{sp}} kein Schüttelfrost
+       {{sp}} keine Übelkeit und kein Erbrechen
+       {{sp}} keine Flankenschmerzen
+       {{sp}} keine Bauchschmerzen
 
-       {{sp}} no vaginal discharge
-       {{sp}} no vaginal bleeding
-       {{sp}} no bowel changes
+       {{sp}} kein vaginaler Ausfluss
+       {{sp}} keine vaginale Blutung
+       {{sp}} keine Stuhlgangsveränderungen
 
-       {{sp}} no urinary tract infections (uti) in the past 6 month (and none in the past year)
-              (recurrent uti defined as ≥2 infections in six months or ≥3 infections in one year)
-       {{sp}} no antibiotic use within 4 weeks
-       {{sp}} no immunocompromised state
-       {{sp}} no allergies to antibiotics
-       {{sp}} no pregnancy
+       {{sp}} keine Harnwegsinfektionen (HWI) in den letzten 6 Monaten (und keine im letzten Jahr)
+              (rezidivierender HWI definiert als ≥2 Infektionen in sechs Monaten oder ≥3 Infektionen in einem Jahr)
+       {{sp}} keine Antibiotikaeinnahme innerhalb der letzten 4 Wochen
+       {{sp}} keine Immunsuppression
+       {{sp}} keine Allergien gegen Antibiotika
+       {{sp}} keine Schwangerschaft
 
-       {{op}} no suprapubic tenderness (overlying bladder)
+       {{op}} keine suprapubische Druckschmerzhaftigkeit (über der Blase)
 
-       Based on your symptoms it is very likely you have a urinary tract infection and
-       treatment can be started now.
-       However, it would also be useful to submit a sample of urine for culture to confirm the infection
-       and help guide treatment if the initial treatment is not working.
-       On discussion, you have responded well to previous treatments for urinary tract infection and
-       do not want to pursue this additional testing at this time.
+       Basierend auf Ihren Symptomen liegt sehr wahrscheinlich eine Harnwegsinfektion vor und
+       die Behandlung kann jetzt begonnen werden.
+       Es wäre jedoch auch sinnvoll, eine Urinprobe zur Kultur einzusenden, um die Infektion zu bestätigen
+       und die Behandlung zu leiten, falls die initiale Behandlung nicht wirkt.
+       In der Besprechung haben Sie angegeben, dass Sie auf frühere Behandlungen von Harnwegsinfektionen gut angesprochen haben und
+       diese zusätzliche Untersuchung derzeit nicht wünschen.
 
-       You are recommended to submit a sample of urine for culture to confirm the diagnosis and
-       guide treatment in case symptoms do not improve.  You will be contacted to arrange this testing.
+       Es wird empfohlen, eine Urinprobe zur Kultur einzusenden, um die Diagnose zu bestätigen und
+       die Behandlung zu leiten, falls die Symptome sich nicht bessern. Sie werden kontaktiert, um diese Untersuchung zu vereinbaren.
 
-       {{pp}} start the prescribed antibiotic: Macrobid (nitrofurantoin) 100mg twice daily for 7 days
-       {{pp}} increase fluids and consider cranberry pills as these can help clear the infection faster.
+       {{pp}} verordnetes Antibiotikum beginnen: Macrobid (Nitrofurantoin) 100mg zweimal täglich für 7 Tage
+       {{pp}} vermehrte Flüssigkeitszufuhr und Erwägung von Preiselbeerkapseln, da diese helfen können, die Infektion schneller zu beseitigen.
 
        {{finish}}
 
-       {{pp}} monitor for symptoms of kidney infection (pyelonephritis) including fever, nausea, and back pain
-       and seek reassessment urgently if these symptoms develop. 
+       {{pp}} auf Symptome einer Nierenbeckenentzündung (Pyelonephritis) achten, einschließlich Fieber, Übelkeit und Rückenschmerzen
+       und bei Auftreten dieser Symptome umgehend erneut vorstellen.
 
     vars:
       - name: finish

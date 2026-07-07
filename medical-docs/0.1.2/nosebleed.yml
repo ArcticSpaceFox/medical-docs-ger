@@ -5,49 +5,49 @@ matches:
   - trigger: ":nosebleed"
     word: true
     replace: |
-      Subjective: 
-        {{cc}} nose bleed from RIGHT side for past DURATION
-        {{sp}} recurrent bleeds about every INTERVAL
-        lasting about DURATION
-        {{sp}} no identified triggers
-                 (trauma, nasal surgery, nasal picking, foreign body,
-                  upper respiratory tract infection, allergic rhinitis)
+      Subjektiv:
+        {{cc}} Nasenbluten aus der rechten Seite seit DAUER
+        {{sp}} wiederkehrende Blutungen etwa alle INTERVALL
+        mit einer Dauer von etwa DAUER
+        {{sp}} keine erkennbaren Auslöser
+                 (Trauma, Nasenoperation, Nasebohren, Fremdkörper,
+                  Infekt der oberen Atemwege, allergische Rhinitis)
 
-        Red Flags:
-        {{sp}} no chest pain
-        {{sp}} no shortness of breath
-        {{sp}} no dizziness
+        Alarmzeichen:
+        {{sp}} keine Brustschmerzen
+        {{sp}} keine Atemnot
+        {{sp}} kein Schwindel
 
-        {{sp}} no bleeding disorder
-        {{sp}} no high blood pressure
-        {{sp}} no liver cirrhosis
-        {{sp}} no coronary artery disease
-        {{sp}} no use of intranasal corticosteroid
-        {{sp}} no use of anti-platelet drugs such as
-              aspirin, clopidigrel, or ticagrelor
-        {{sp}} no use of anti-coagulants such as heparin, warfarin,
-               rivaroxaban, apixaban, edoxaban, or dabigatran
+        {{sp}} keine Gerinnungsstörung
+        {{sp}} kein Bluthochdruck
+        {{sp}} keine Leberzirrhose
+        {{sp}} keine koronare Herzkrankheit
+        {{sp}} keine Anwendung von intranasalen Kortikosteroiden
+        {{sp}} keine Einnahme von Thrombozytenaggregationshemmern wie
+              Aspirin, Clopidogrel oder Ticagrelor
+        {{sp}} keine Einnahme von Antikoagulanzien wie Heparin, Warfarin,
+               Rivaroxaban, Apixaban, Edoxaban oder Dabigatran
 
-      Objective: 
-        {{op}} generally well appearance
-        {{op}} no bruising (ecchymosis)
-        {{op}} no rash suggestive of platelet dysfunction (petechiae)
-        {{op}} no abnormal blood vessel growth (telangiectasia)
-        {{op}} no active bleeding
-        {{op}} no evidence of recent bleeding in nose (at Kiesselbachs plexus)
-        {{op}} no blood in the mouth or throat (oropharynx)
+      Objektiv:
+        {{op}} insgesamt gutes Allgemeinbefinden
+        {{op}} kein Hämatom (Ekchymose)
+        {{op}} kein Ausschlag im Sinne einer Thrombozytenfunktionsstörung (Petechien)
+        {{op}} keine auffälligen Gefäßneubildungen (Teleangiektasien)
+        {{op}} keine aktive Blutung
+        {{op}} kein Hinweis auf kürzliche Blutung in der Nase (im Bereich des Locus Kiesselbachi)
+        {{op}} kein Blut im Mund oder Rachen (Oropharynx)
 
-        cotton soaked in lidocaine 2% with epi applied
-        followed by cautery using silver nitrate
+        Watte mit Lidocain 2% und Adrenalin getränkt und angelegt,
+        anschließend Ätzung mit Silbernitrat
 
-      Assessment:
-        {{ap}} anterior nasal bleeding with no red flags
+      Beurteilung:
+        {{ap}} vordere Epistaxis ohne Alarmzeichen
 
       Plan:
-        {{pp}} lean forward and clamp nose if active bleeding
-        {{pp}} seek medical attention if bleeding doesn't stop in 10 minutes
-        {{pp}} stop intranasal corticosteroid spray
-        {{pp}} direct nasal spray away from septum
-        {{pp}} sleep in a humidified environment
-        {{pp}} apply topical antibiotic (bactroban) in nostril using cotton swab
-        {{pp}} follow-up if symptoms worsening or other concerns
+        {{pp}} bei aktiver Blutung nach vorne beugen und Nase zusammendrücken
+        {{pp}} bei anhaltender Blutung über 10 Minuten ärztliche Hilfe aufsuchen
+        {{pp}} intranasales Kortikosteroid-Spray absetzen
+        {{pp}} Nasenspray von der Nasenscheidewand weg richten
+        {{pp}} in befeuchteter Umgebung schlafen
+        {{pp}} topisches Antibiotikum (Bactroban) mit Wattestäbchen in das Nasenloch einbringen
+        {{pp}} Wiedervorstellung bei Verschlechterung oder weiteren Beschwerden

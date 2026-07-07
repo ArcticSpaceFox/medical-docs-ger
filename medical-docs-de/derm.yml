@@ -1,0 +1,367 @@
+matches:
+  - trigger: ":hairloss"
+    word: true
+    replace: |
+     Subjektiv:
+      {{cc}} Haarausfall an [Lokalisation] seit DAUER
+
+     Objektiv:
+      {{op}} glatter, umschriebener Bereich mit vollständigem Haarausfall an [Lokalisation]
+      {{op}} negativer Haarzupftest.
+      {{op}} keine Entzündung oder Vernarbung.
+
+     Beurteilung:
+      {{ap}} Alopecia areata.
+
+     Plan:
+      Eine Überweisung an die Dermatologie wurde veranlasst
+
+  - trigger: ":rxkeflex"
+    word: true
+    replace: |
+       Sie werden gebeten, das Medikament wie verordnet einzunehmen:
+       Cephalexin (Keflex) 500 mg eine Tablette alle 6 Stunden für bis zu 7 Tage
+       Wenn Sie nach 3 Tagen vollständig beschwerdefrei sind, können Sie es nach 5 Tagen absetzen.
+
+       Wenn nach 48 Stunden keine Besserung eingetreten ist, vereinbaren Sie bitte
+       einen Termin zur persönlichen Wiedervorstellung.
+
+  - trigger: ":skininfection"
+    word: true
+    replace: |
+      Subjektiv:
+        {{cc}} möglicher Hautinfekt seit DAUER
+        Die Lokalisation ist
+        Die Symptome begannen nach
+        {{sp}} kein Fieber (zu Hause gemessene Temperatur XX°C)
+        {{sp}} keine Übelkeit oder Erbrechen
+        {{sp}} keine Diarrhoe
+        {{sp}} keine Schmerzen
+        {{sp}} kein Eiteraustritt
+        {{sp}} keine Schwellung
+        {{sp}} keine Rötung
+        {{sp}} keine Überwärmung
+        {{sp}} bisher keine Behandlung
+        {{sp}} keine Progredienz in den letzten 48 Stunden
+        {{sp}} kein nahegelegenes Gelenkimplantat oder Gefäßtransplantat
+        {{sp}} keine vorherigen Hautinfektionen
+        {{sp}} kein Diabetes
+        {{sp}} kein Immunsuppressionszustand
+        {{sp}} keine MRSA-Risikofaktoren (z. B. vorheriger MRSA-Nachweis, kürzliche
+               Krankenhausaufnahme, Pflegeeinrichtung, Hämodialyse, HIV-Infektion,
+               fehlendes Ansprechen auf Therapie ohne MRSA-Abdeckung)
+        {{sp}} keine Antibiotikaallergien
+
+      Objektiv:
+        {{op}} Temperatur von XX°C
+        {{op}} Blutdruck von XXX/YY und Herzfrequenz von XXX
+        Der betroffene Bereich befindet sich an XXXX
+        und erstreckt sich XXXXXXX
+        {{op}} kein Eiteraustritt
+        {{op}} keine Ulzeration
+        {{op}} kein Abszess
+        {{op}} kein Erythem
+        {{op}} keine Überwärmung
+        {{op}} keine Druckschmerzhaftigkeit
+        {{op}} keine Schwellung
+        {{op}} keine Induration
+        {{op}} keine klare Abgrenzung des Infektionsbereichs
+        {{op}} kein aufgeworfenes Erythem
+
+      Beurteilung:
+        {{ap}} Nicht-purulente Cellulitis
+        {{ap}} Erysipel
+        {{ap}} Hautabszess
+        {{ap}} Entzündete intradermale Zyste
+        {{ap}} Paronychie
+        ohne systemische Zeichen, die eine stationäre Aufnahme oder eine
+        parenterale Antibiotikatherapie erfordern, und ohne Hinweis auf
+        eine notwendige MRSA-Abdeckung.
+
+      Plan:
+        Ein Wundabstrich wurde zur Steuerung der Antibiotikatherapie eingesandt,
+        falls unter der initialen Behandlung keine Besserung eintritt.
+        {{pp}} heute mit oralem Antibiotikum wie verordnet beginnen
+        {{pp}} Termin zur Inzision und Drainage des Abszesses vereinbaren
+        {{pp}} Vorstellung in der Notaufnahme zur parenteralen Antibiotikatherapie und
+               möglichen stationären Aufnahme
+        {{pp}} betroffenen Bereich hochgelagert halten
+        {{pp}} Wiedervorstellung bei fehlender Besserung nach 72 Stunden,
+               Verschlechterung trotz 48-stündiger Antibiotikatherapie oder neuen
+               systemischen Symptomen (Fieber, Übelkeit)
+        {{pp}} bei rascher Ausbreitung der Rötung, starker Übelkeit oder hohem
+               Fieber die Notaufnahme aufsuchen
+
+  - trigger: ":eczemamgt"
+    word: true
+    replace: |
+      Anleitung zur Ekzempflege:
+      1. Baden
+        a. Nicht die Häufigkeit, sondern die Dauer ist entscheidend. Muss zwischen 5-15 Minuten liegen.
+        b. Warm – lauwarm/mäßig warm
+        c. Nicht trockenreiben – nur trockentupfen. Etwas Feuchtigkeit auf der Haut belassen
+
+      2. Keine Seife verwenden – nur einmal wöchentlich eine hypoallergene Baby-Waschlotion
+         verwenden (z. B. Cetaphil, Cerave, Avène, Aveeno)
+
+      3. Bei Bedarf einer medikamentösen Creme (Kortikosteroid (Betamethason, Hydrocortison,
+         Mometason usw.) oder Tacrolimus-basierte Creme (Protopic/Elidel)) – als erste Schicht auftragen.
+        a. Kortikosteroid muss durchgehend täglich verwendet werden, dann absetzen, sobald
+           kontrolliert (nicht intermittierend anwenden).
+        b. Maximale tägliche Anwendungsdauer beträgt 2 Wochen
+        c. Nach 2-wöchiger Anwendung von Kortikosteroiden muss eine 1-2-wöchige Pause
+           eingelegt werden, danach kann die Anwendung wieder aufgenommen werden.
+        d. Tacrolimus-basierte Präparate können bis zur vollständigen Kontrolle unbegrenzt
+           verwendet werden.
+        e. Direkte Sonnenexposition während der Anwendung medikamentöser Cremes minimieren.
+
+      4. Feuchtigkeitscremes auftragen (Cerave Creme, Vaseline Creamy, Avène Creme) – Lotionen
+         vermeiden (enthalten meist Alkohol, der die Haut zusätzlich austrocknet)
+
+      5. Zusätzliche Schicht Vaseline auftragen. Muss bei Schüben verwendet werden und kann
+         auch in der Erhaltungsphase eingesetzt werden.
+
+      6. Erhaltungstherapie – sobald das Ekzem kontrolliert ist, NIEMALS die Feuchtigkeitspflege
+         (z. B. Cerave) absetzen, die bei Ihnen am besten wirkt.
+
+      7. DAS RÜCKFALLRISIKO IST SEHR HOCH, WENN DIE ERHALTUNGSTHERAPIE ABGESETZT WIRD!
+
+      8. Feuchtigkeitshaushalt verbessern durch Verwendung eines Luftbefeuchters, vermehrte
+         Flüssigkeitszufuhr und gesunde Ernährung (mehr Obst und Gemüse).
+
+
+  - trigger: ":shingles"
+    word: true
+    replace: |
+      Subjektiv:
+        {{cc}} Hautausschlag mit Verdacht auf Gürtelrose seit DAUER
+        Die Lokalisation des Ausschlags ist LOKALISATION
+        {{sp}} keine Schmerzen
+        {{sp}} keine Bläschen
+        {{sp}} kein vorheriger ähnlicher Ausschlag
+        {{sp}} keine vorher diagnostizierte Gürtelrose
+        {{sp}} keine vorherige Gürtelrose-Impfung (Shingrix oder Zostavax)
+        {{sp}} keine vorherigen Windpocken
+
+      Objektiv:
+        {{op}} unilateral (auf einer Körperseite) multiple Bläschen auf erythematösem
+               Grund an LOKALISATION
+
+      Beurteilung:
+        {{ap}} Gürtelrose (Herpes Zoster)
+
+      Plan:
+        {{pp}} Valaciclovir für 7 Tage einnehmen (1 g dreimal täglich)
+        {{pp}} Paracetamol (Tylenol) bei Bedarf gegen Schmerzen einnehmen
+        {{pp}} Wiedervorstellung bei fehlendem Ansprechen auf die Therapie oder
+               weiteren Beschwerden
+
+  - trigger: ":rxmastitis"
+    word: true
+    replace: |
+      Rezeptur: Mupirocin-Salbe 2% (15 g)
+                             + Betamethason-Salbe 0,1% (15 g)
+                             + Miconazol-Pulver auf 2%
+      Zweimal täglich auf die betroffenen Bereiche auftragen
+      Falls möglich mit Frischhaltefolie umwickeln, um die Aufnahme zu maximieren
+
+  - trigger: ":nailfungus"
+    word: true
+    replace: |
+       Ihr heutiges Hauptanliegen ist ein möglicher Nagelpilz am Zehennagel.
+       Ihr LINKER RECHTER Zehennagel ist seit XX verfärbt und verdickt
+       Sie haben keine weiteren betroffenen Nägel und keine vorherigen Nagelpilzinfektionen.
+       Sie haben keine Schmerzen, keinen Juckreiz und keine Blutung.
+       Sie hatten kein vorheriges Trauma an den betroffenen Nägeln.
+
+       Sie haben einige rezeptfreie Behandlungen mit begrenztem Erfolg versucht.
+       Sie hatten bisher keine verordneten Behandlungen.
+
+       Bei Ihnen liegen frühere Blutwerte mit normalen Leberenzymwerten vor.
+
+       {{noother}}
+
+       Ihr Nagel erscheint verdickt mit einer gelblichen Verfärbung.
+
+       Angesichts Ihrer Vorgeschichte und des Nagelbefunds ist ein Nagelpilz sehr wahrscheinlich.
+
+       Nagelpilz kann unangenehm sein und beeinträchtigt sicherlich das äußere
+       Erscheinungsbild, wir erwarten jedoch nicht, dass er unbehandelt zu einer
+       ernsthaften gesundheitlichen Beeinträchtigung führt.
+       Manche Patienten entscheiden sich angesichts anderer Prioritäten gegen eine Behandlung.
+       Die Behandlung von Nagelpilz kann topisch oder oral erfolgen.
+       Bei Infektionen mit Beteiligung nur weniger Nägel und weniger als der Hälfte
+       jedes Nagels kann eine topische Behandlung wirksam sein, muss jedoch bis zum
+       vollständigen Herauswachsen des Nagels fortgeführt werden. Bei Zehennägeln
+       dauert dies in der Regel etwa 48 Wochen.
+       Die orale Behandlung gilt als die wirksamste Behandlung, insbesondere wenn
+       viele Nägel betroffen sind oder mehr als die Hälfte der Nagelfläche betroffen ist.
+       Die orale Behandlung ist zudem kürzer: 6 Wochen bei Fingernägeln
+       und 12 Wochen bei Zehennägeln
+       Die orale Behandlung ist außerdem in der Regel kostengünstiger als die topische Behandlung.
+       Der mögliche Nachteil der oralen Behandlung besteht darin, dass sie den gesamten
+       Körper einem Medikament aussetzt, das selten Nebenwirkungen verursachen kann.
+       Insbesondere besteht ein gewisses Bedenken hinsichtlich möglicher Auswirkungen
+       auf die Leber, weshalb sie bei Personen mit vorbestehender Lebererkrankung
+       möglicherweise nicht empfohlen wird.
+
+       In Ihrem Fall haben Sie keine vorherigen medizinischen Probleme und keinen
+       übermäßigen Alkoholkonsum, weshalb wir bei Ihnen von einem geringen Risiko
+       für diese Nebenwirkungen ausgehen.
+
+       Nach Besprechung des Vorstehenden bevorzugen Sie eine orale Behandlung.
+       Nach Besprechung des Vorstehenden bevorzugen Sie eine topische Behandlung.
+
+       Zur Bestätigung der Diagnose wird Ihnen empfohlen, eine Nagelprobe zur
+       Pilzkultur einzureichen. Sie werden zur Terminvereinbarung für diese
+       Untersuchung kontaktiert.
+       Vorläufige Ergebnisse liegen meist innerhalb von 3 Tagen vor, das
+       endgültige Ergebnis dieser Untersuchung kann jedoch bis zu 6 Wochen dauern.
+
+       Ihnen wird empfohlen, eine Basiskontrolle Ihrer Leberenzyme
+       (ALT und AST) durchführen zu lassen. Sie werden zur Terminvereinbarung
+       für diese Blutuntersuchung kontaktiert.
+
+       Sie werden gebeten, das verordnete Medikament wie verschrieben einzunehmen,
+       Terbinafin (Lamisil) 250 mg einmal täglich für 12 Wochen wie verordnet.
+       Efinaconazol (Jublia) einmal täglich für 48 Wochen wie verordnet aufgetragen.
+
+       {{finish}}
+
+       Wenn Sie sich unwohl fühlen und den Eindruck haben, dass Nebenwirkungen des
+       Medikaments auftreten, setzen Sie das Medikament sofort ab und suchen Sie
+       zur Wiedervorstellung einen Arzt auf.
+       Achten Sie insbesondere auf anhaltende Übelkeit, Appetitlosigkeit
+       (verminderter Appetit), Müdigkeit, Erbrechen, Schmerzen im rechten
+       Oberbauch, Gelbfärbung (gelblicher Farbton der Augen oder der Haut),
+       dunklen Urin oder hellen Stuhlgang.
+    vars:
+      - name: noother
+        type: match
+        params:
+          trigger: ":noother"
+      - name: finish
+        type: match
+        params:
+          trigger: ":finish"
+
+  - trigger: ":canker"
+    word: true
+    replace: |
+       Ihr heutiges Hauptanliegen sind weiße Flecken in Ihrem Mund.
+       Diese befinden sich
+       und bestehen seit
+       Sie sind nicht schmerzhaft.
+       Sie haben nicht geblutet.
+       Sie könnten ausgelöst worden sein durch
+       Sie können sich nicht erinnern, wodurch sie ausgelöst worden sein könnten.
+       Sie haben keine Angewohnheit, sich auf die Lippe zu beißen, und können sich
+       nicht erinnern, sich auf die Lippe gebissen zu haben.
+       Sie tragen keine Zahnspange, Aufbissschiene oder sonstige Zahnapparaturen.
+       Sie hatten so etwas noch nie zuvor.
+       Sie haben keine sonstigen Ausschläge oder Flecken anderswo auf der Haut oder an den Augen.
+       Sie haben keine bekannte Glutenunverträglichkeit oder sonstige
+       Magen-Darm-Beschwerden.
+
+       {{noother}}
+
+       Das von Ihnen übermittelte Foto zeigt einige unregelmäßig geformte weiße
+       Flecken auf der Innenseite (Schleimhaut) der Oberlippe. Aufgrund der
+       Bildschärfe ist es etwas schwer zu beurteilen, es scheint jedoch eine
+       geringe Ulzeration vorzuliegen.
+       Diese Flecken sind höchstwahrscheinlich aphthöse Ulzera.
+       Es handelt sich um eine gutartige Erkrankung, die üblicherweise durch
+       Stress oder Trauma (Beißen) oder möglicherweise durch saure Speisen
+       ausgelöst wird und in der Regel innerhalb von 7-14 Tagen von selbst abheilt.
+       Wir können jedoch Behandlungen einsetzen, um die Symptome zu lindern und
+       die Heilung zu unterstützen.
+
+
+       Ihnen wird empfohlen, jegliches Trauma im Mund zu vermeiden, das Beißen
+       auf Wangen oder Lippen zu vermeiden und Speisen zu meiden, die die
+       Symptome verschlimmern (typischerweise sehr säurehaltige oder scharfe Speisen).
+
+       Ihnen wird empfohlen, die verordneten topischen Medikamente zur
+       Symptomlinderung zu verwenden:
+       Lidocain viskös 2% 15 ml spülen und ausspucken (nicht schlucken), nicht
+       häufiger als alle 3 Stunden vor den Mahlzeiten zur Beschwerdelinderung.
+       (150 ml Abgabe mit einer Wiederholung)
+
+       Oracort (Triamcinolon 0,1%) Paste nach den Mahlzeiten auf die Läsionen
+       auftragen, um die Heilung zu unterstützen.
+       Danach mindestens 30 Minuten nichts essen oder trinken. (7,5 g Abgabe ohne Wiederholung)
+
+       {{finish}}
+    vars:
+      - name: noother
+        type: match
+        params:
+          trigger: ":noother"
+      - name: finish
+        type: match
+        params:
+          trigger: ":finish"
+
+
+  - trigger: ":stye"
+    word: true
+    replace: |
+       Ihr heutiges Hauptanliegen sind Rötung und Schwellung am RECHTEN OBEREN Augenlid
+       Dies begann vor etwa XXXX Tagen
+
+       Es ist kein Fremdkörper in Ihr Auge gelangt.
+       Ihre Sehkraft ist nicht beeinträchtigt.
+       Sie hatten keinen Ausfluss oder Sekretion.
+       Der Augapfel selbst erscheint nicht gerötet.
+       Augenbewegungen sind nicht schmerzhaft
+       Das Augenlid ist in Ruhe nicht schmerzhaft, jedoch druckschmerzhaft.
+
+       Sie tragen keine Kontaktlinsen.
+       Sie hatten keine vorherigen ähnlichen Symptome.
+       Sie hatten bisher keine Behandlung.
+
+       {{noother}}
+
+       Ihr Augenlid erscheint etwas gerötet.
+       Es besteht eine größere Vorwölbung nahe dem Lidrand sowie
+       ein sichtbarer eitriger Pfropf.
+
+       Ihre Symptome sind vereinbar mit einem Hordeolum (Gerstenkorn).
+       Diese können fast immer erfolgreich ohne Antibiotika behandelt werden.
+
+       Ihnen wird empfohlen, mehrmals täglich warme Kompressen anzuwenden:
+       Verwenden Sie einen sauberen Waschlappen, befeuchten Sie ihn mit warmem
+       Wasser und legen Sie ihn auf das Gerstenkorn. Sobald der Lappen abkühlt,
+       erwärmen Sie ihn erneut und wiederholen Sie dies für insgesamt 15 Minuten,
+       mindestens 4-mal täglich.
+
+       Ihnen wird empfohlen, das Gerstenkorn nicht auszudrücken oder aufzustechen
+       und keine Kontaktlinsen oder Kosmetikprodukte im Augenbereich zu verwenden,
+       bis Ihre Symptome vollständig abgeklungen sind.
+
+       {{findfp}}
+       {{covidremind}}
+
+       Bitte vereinbaren Sie einen Termin zur Wiedervorstellung, falls:
+       Ihre Symptome nach 2 Wochen Anwendung warmer Kompressen nicht abklingen
+       Ihre Sehkraft beeinträchtigt ist.
+       Ihr Gerstenkorn deutlich größer wird oder blutet.
+       Sich die Rötung vom Augenlid auf das Auge
+       oder andere Bereiche des Gesichts ausbreitet
+    vars:
+      - name: noother
+        type: match
+        params:
+          trigger: ":noother"
+      - name: findfp
+        type: match
+        params:
+          trigger: ":findfp"
+      - name: covidremind
+        type: match
+        params:
+          trigger: ":covidremind"
+
+
+
+

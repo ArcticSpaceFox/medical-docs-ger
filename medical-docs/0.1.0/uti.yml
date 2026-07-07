@@ -5,43 +5,42 @@ matches:
   - trigger: ":uti"
     word: true
     replace: |
-     Subjective:
-       {{cc}} possible urinary tract infection for the past XX days
-       {{sp}} no dysuria
-       {{sp}} no frequency
-       {{sp}} no urgency,
-       {{sp}} no hematuria
-       {{sp}} no fever
-       {{sp}} no chills
-       {{sp}} no nausea and vomiting
-       {{sp}} no flank pain
-       {{sp}} no abdominal pain
+     Anamnese:
+       {{cc}} möglicher Harnwegsinfekt seit XX Tagen
+       {{sp}} keine Dysurie
+       {{sp}} keine erhöhte Miktionsfrequenz
+       {{sp}} kein Harndrang
+       {{sp}} keine Hämaturie
+       {{sp}} kein Fieber
+       {{sp}} kein Schüttelfrost
+       {{sp}} keine Übelkeit und Erbrechen
+       {{sp}} keine Flankenschmerzen
+       {{sp}} keine Bauchschmerzen
 
-       {{sp}} no vaginal discharge
-       {{sp}} no vaginal bleeding
-       {{sp}} no bowel changes
+       {{sp}} kein vaginaler Ausfluss
+       {{sp}} keine vaginale Blutung
+       {{sp}} keine Stuhlveränderungen
 
-       {{sp}} no urinary tract infections (uti) in the past 6 month (and none in the past year)
-              (recurrent uti defined as ≥2 infections in six months or ≥3 infections in one year)
-       {{sp}} no antibiotic use within 4 weeks
-       {{sp}} no immunocompromised state
-       {{sp}} no allergies to antibiotics
-       {{sp}} no pregnancy
+       {{sp}} keine Harnwegsinfekte in den letzten 6 Monaten (und keine im letzten Jahr)
+              (rezidivierender HWI definiert als ≥2 Infektionen in sechs Monaten oder ≥3 Infektionen in einem Jahr)
+       {{sp}} keine Antibiotikaeinnahme innerhalb der letzten 4 Wochen
+       {{sp}} keine Immunsuppression
+       {{sp}} keine Antibiotika-Allergien
+       {{sp}} keine Schwangerschaft
 
-     Objective:
-       {{op}} no suprapubic tenderness (overlying bladder)
-       {{op}} no costavertebral angle tenderness (overlying kidneys)
-       {{op}} no leukocytes (white blood cells) on urine dip
-       {{op}} no nitrites (byproduct of bacterial infection) on urine dip
+     Untersuchungsbefund:
+       {{op}} keine suprapubische Druckschmerzhaftigkeit (über der Blase)
+       {{op}} keine Klopfschmerzhaftigkeit im Nierenlager (über den Nieren)
+       {{op}} keine Leukozyten im Urin-Streifentest
+       {{op}} keine Nitrite (Stoffwechselprodukt bakterieller Infektion) im Urin-Streifentest
 
-     Assessment:
-       {{ap}} Uncomplicated Urinary Tract Infection
+     Beurteilung:
+       {{ap}} unkomplizierter Harnwegsinfekt
 
      Plan:
-       {{pp}} increase fluids
-       {{pp}} start prescribed antibiotic: Macrobid Ciprofloxacin Septra  Monurol Cephalexin
-       A urine culture has been sent to guide treatment in case symptoms do not improve
+       {{pp}} Flüssigkeitszufuhr erhöhen
+       {{pp}} verordnetes Antibiotikum einnehmen: Nitrofurantoin Ciprofloxacin Cotrimoxazol Fosfomycin Cefalexin
+       Eine Urinkultur wurde eingesendet, um die Behandlung zu steuern, falls sich die Symptome nicht bessern
 
-       {{pp}} monitor for symptoms of kidney infection (pyelonephritis) including fever, nausea, and back pain
-       {{pp}} seek reassessment if current symptoms worsen, persist, or new symptoms develop.
-
+       {{pp}} auf Symptome einer Nierenbeckenentzündung (Pyelonephritis) achten, einschließlich Fieber, Übelkeit und Rückenschmerzen
+       {{pp}} bei Verschlechterung, Persistenz der aktuellen Symptome oder Auftreten neuer Symptome Wiedervorstellung

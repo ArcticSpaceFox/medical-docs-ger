@@ -7,33 +7,36 @@ matches:
     replace: |
        {{menses}}
 
-       You have had no frequent nose bleeds.
-       You have had no blood in your urine.
-       You have had no blood in your stool, or any black/tarry stool (melena).
+       Sie hatten kein häufiges Nasenbluten.
+       Sie hatten kein Blut im Urin.
+       Sie hatten kein Blut im Stuhl und keinen schwarzen/teerartigen Stuhl (Meläna).
 
-       You have a varied diet, which includes red meats.
-       You are not currently taking any iron supplementation.
+       Sie ernähren sich abwechslungsreich, einschließlich rotem Fleisch.
+       Sie nehmen aktuell keine Eisenpräparate ein.
 
-       You have had no blurry vision.
-       You have had no frequent headaches.
-       You have had no frequent urination.
-       You have no family history of diabetes.
+       Sie hatten kein verschwommenes Sehen.
+       Sie hatten keine häufigen Kopfschmerzen.
+       Sie hatten keinen häufigen Harndrang.
+       Bei Ihnen liegt keine Diabetes-Erkrankung in der Familienanamnese vor.
 
-       Considering possible signs of low thyroid:
+       Hinsichtlich möglicher Anzeichen einer Schilddrüsenunterfunktion:
        {{hitsh}}
-       You have no family history of thyroid disease.
+       Bei Ihnen liegt keine Schilddrüsenerkrankung in der Familienanamnese vor.
 
        {{noother}}
 
-       Given your previous history of low iron, your current fatigue is also
-       likely due to low iron.  However we should complete testing to be sure
-       and also confirm there are not other causes contributing.
+       Angesichts Ihrer bekannten Vorgeschichte eines Eisenmangels ist Ihre aktuelle
+       Müdigkeit wahrscheinlich ebenfalls auf einen Eisenmangel zurückzuführen. Wir sollten
+       jedoch weitere Untersuchungen durchführen, um dies zu bestätigen und andere
+       mögliche Ursachen auszuschließen.
 
-       Also, note that factors contributing to fatigue may include psychological stress,
-       anxiety, low mood, inadequate time for relaxation, poor diet, or too much alcohol.
-       A healthy lifestyle is important, including stress reduction, and setting aside
-       time for adequate relaxation and sleep. As well, even though you are already tired,
-       gradually increasing physical exercise often helps.
+       Bitte beachten Sie außerdem, dass zu den Faktoren, die Müdigkeit begünstigen können,
+       psychischer Stress, Angst, gedrückte Stimmung, unzureichende Erholungsphasen,
+       ungesunde Ernährung oder übermäßiger Alkoholkonsum zählen können.
+       Ein gesunder Lebensstil ist wichtig, einschließlich Stressreduktion und
+       ausreichender Zeit für Entspannung und Schlaf. Auch wenn Sie sich bereits
+       erschöpft fühlen, hilft eine schrittweise Steigerung der körperlichen
+       Aktivität häufig zusätzlich.
 
        {{finish}}
 

@@ -1,0 +1,7 @@
+matches:
+  - trigger: ":ironho"
+    word: true
+    replace: |
+      {{pp}} folgende Links zur Eisenzufuhr über die Ernährung konsultieren:
+      https://www.albertahealthservices.ca/assets/info/nutrition/if-nfs-iron-and-your-health.pdf
+      https://www.healthlinkbc.ca/sites/hlbcprox-prod.health.gov.bc.ca/files/documents/healthfiles/hfile68d.pdf

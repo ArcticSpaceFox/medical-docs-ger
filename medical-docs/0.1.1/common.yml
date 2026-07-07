@@ -3,13 +3,13 @@ parent: default
 
 matches:
   - trigger: "S:"
-    replace: "Subjective:"
+    replace: "Subjektiv:"
     word: true
   - trigger: "O:"
-    replace: "Objective:"
+    replace: "Objektiv:"
     word: true
   - trigger: "A:"
-    replace: "Assessment:"
+    replace: "Beurteilung:"
     word: true
   - trigger: "P:"
     replace: "Plan:"
@@ -18,13 +18,13 @@ matches:
   - trigger: ":SOAP"
     word: true
     replace: |
-      Subjective:
-      Objective:
-      Assessment:
+      Subjektiv:
+      Objektiv:
+      Beurteilung:
       Plan:
 
-      Start Time: {{mytime}}
-      End Time:
+      Beginnzeit: {{mytime}}
+      Endzeit:
     vars:
       - name: mytime
         type: date
@@ -34,41 +34,41 @@ matches:
   - trigger: ":FIFE"
     word: true
     replace: |
-      Feelings: What are concerned most about? Specific fears or worries?
-      Ideas: What do you think might be going on?
-      Function: How has this affected you day to day? What have you given up?
-      Expectations: What do expect or hope I can do for you today?
+      Gefühle: Was bereitet Ihnen die größten Sorgen? Konkrete Ängste oder Bedenken?
+      Vorstellungen: Was, denken Sie, könnte dahinterstecken?
+      Funktion: Wie hat sich das auf Ihren Alltag ausgewirkt? Worauf mussten Sie verzichten?
+      Erwartungen: Was erwarten oder erhoffen Sie sich heute von mir?
 
-  - trigger: "Rt"
-    replace: "right"
+  - trigger: "re"
+    replace: "rechts"
     word: true
 
-  - trigger: "Lt"
-    replace: "left"
+  - trigger: "li"
+    replace: "links"
     word: true
 
-  - trigger: "sec"
-    replace: "seconds"
+  - trigger: "sek"
+    replace: "Sekunden"
     word: true
 
   - trigger: "min"
-    replace: "minutes"
+    replace: "Minuten"
     word: true
 
-  - trigger: "hr"
-    replace: "hours"
+  - trigger: "std"
+    replace: "Stunden"
     word: true
 
-  - trigger: "wk"
-    replace: "weeks"
+  - trigger: "wo"
+    replace: "Wochen"
     word: true
 
-  - trigger: "mo"
-    replace: "months"
+  - trigger: "mon"
+    replace: "Monate"
     word: true
 
-  - trigger: "yr"
-    replace: "years"
+  - trigger: "jr"
+    replace: "Jahre"
     word: true
 
   - trigger: ":myn"
@@ -87,109 +87,109 @@ matches:
     replace: "{{myphone}}"
     word: true
 
-  - trigger: "labreq"
-    replace: "Laboratory Requistion"
+  - trigger: "laborantr"
+    replace: "Laboranforderung"
     word: true
 
   - trigger: "prn"
-    replace: "as needed"
+    replace: "bei Bedarf"
     word: true
 
-  - trigger: "rx"
-    replace: "prescription"
+  - trigger: "rez"
+    replace: "Rezept"
     word: true
 
-  - trigger: "rxhld"
-    replace: "Please do not fill until requested by patient"
+  - trigger: "rezhalt"
+    replace: "Bitte erst auf Wunsch des Patienten einlösen"
     word: true
 
-  - trigger: "pf"
-    replace: "puffs"
+  - trigger: "hub"
+    replace: "Hübe"
     word: true
 
   - trigger: ":od"
-    replace: "once daily"
+    replace: "einmal täglich"
     word: true
 
   - trigger: ":bid"
-    replace: "twice daily"
+    replace: "zweimal täglich"
     word: true
 
   - trigger: ":tid"
-    replace: "three times daily"
+    replace: "dreimal täglich"
     word: true
 
   - trigger: ":qid"
-    replace: "four times daily"
+    replace: "viermal täglich"
     word: true
 
   - trigger: ":qhs"
-    replace: "at bed-time"
+    replace: "zur Nacht"
     word: true
 
-  - trigger: "bp"
-    replace: "blood pressure"
+  - trigger: "rr"
+    replace: "Blutdruck"
     word: true
 
   - trigger: ":temp"
-    replace: "temperature"
+    replace: "Temperatur"
     word: true
 
-  - trigger: "appt"
-    replace: "appointment"
+  - trigger: "termin"
+    replace: "Termin"
     word: true
 
-  - trigger: "f/u"
-    replace: "follow-up"
+  - trigger: "wv"
+    replace: "Wiedervorstellung"
     word: true
     propagate_case: true
 
-  - trigger: "wic"
-    replace: "walk-in clinic"
+  - trigger: "notfpra"
+    replace: "Akutsprechstunde"
     word: true
 
-  - trigger: "fp"
-    replace: "Family Physician"
+  - trigger: "ha"
+    replace: "Hausarzt"
     word: true
 
   - trigger: ":fufp"
-    replace: "{{pp}} follow-up with your regular Family Physician."
+    replace: "{{pp}} Wiedervorstellung bei Ihrem Hausarzt."
     word: true
 
   - trigger: "amit"
-    replace: "Amitriptyline (Elavil)"
+    replace: "Amitriptylin (Saroten)"
     word: true
 
   - trigger: "nort"
-    replace: "Nortriptyline (Avantyl)"
+    replace: "Nortriptylin (Nortrilen)"
     word: true
 
   - trigger: "valt"
-    replace: "Valacyclovir (Valtrex)"
+    replace: "Valaciclovir (Valtrex)"
     word: true
 
   - trigger: "vrx"
-    replace: "2-4 puffs four times daily as needed"
+    replace: "2-4 Hübe viermal täglich bei Bedarf"
     word: true
 
   - trigger: "ocp"
-    replace: "oral contraceptive pill"
+    replace: "orale Kontrazeptionspille"
     word: true
 
-  - trigger: "bcp"
-    replace: "birth control pill"
+  - trigger: "verhp"
+    replace: "Verhütungspille"
     word: true
 
   - trigger: "lmp"
-    replace: "last menstrual period (LMP)"
+    replace: "letzte Menstruationsperiode (LMP)"
     word: true
 
   - trigger: "otc"
-    replace: "over-the-counter"
+    replace: "rezeptfrei"
     word: true
 
-  - trigger: "ds"
-    replace: "drug-store"
+  - trigger: "apo"
+    replace: "Apotheke"
     word: true
 
   - trigger: "pn"
@@ -201,29 +201,29 @@ matches:
     word: true
 
   - trigger: "oeph"
-    replace: "On examination of the photo provided, "
+    replace: "Bei Untersuchung des vorliegenden Fotos, "
     word: true
 
   - trigger: ":fuwr"
-    replace: "{{pp}} follow-up when results are available"
+    replace: "{{pp}} Wiedervorstellung, sobald die Befunde vorliegen"
     word: true
 
   - trigger: ":life"
     word: true
     replace: |
-      {{pp}} set a regular time to bed and to wake even on days off
-      {{pp}} set regular meal times, eating a variety of non-processed foods
-      {{pp}} get regular physical exercise, aiming for at least 30 minutes per day, 5 days per week
-      {{pp}} reduce or eliminate use of substances, including alcohol
-      Guidelines suggest a maximum 2 drinks/day and 10 drinks/week for women and 3 drinks/day and 15 drinks/week for men.
-      {{pp}} keep up with your hobbies
-      {{pp}} invest time in friendships and social contacts
-      {{pp}} maintain your connection to spirituality and personal values
+      {{pp}} feste Zubettgeh- und Aufstehzeiten einhalten, auch an freien Tagen
+      {{pp}} regelmäßige Mahlzeiten mit abwechslungsreicher, unverarbeiteter Kost
+      {{pp}} regelmäßige körperliche Bewegung, mindestens 30 Minuten täglich an 5 Tagen pro Woche
+      {{pp}} Substanzkonsum, einschließlich Alkohol, reduzieren oder vermeiden
+      Leitlinien empfehlen maximal 2 Getränke/Tag und 10 Getränke/Woche für Frauen sowie 3 Getränke/Tag und 15 Getränke/Woche für Männer.
+      {{pp}} Hobbys weiter nachgehen
+      {{pp}} Zeit in Freundschaften und soziale Kontakte investieren
+      {{pp}} Verbindung zu Spiritualität und persönlichen Werten aufrechterhalten
 
   - trigger: ":snet"
     word: true
     replace: |
-      {{pp}} book for follow-up if worsening or new symptoms
+      {{pp}} Wiedervorstellung vereinbaren bei Verschlechterung oder neuen Symptomen
 
 
   # Dates
@@ -233,7 +233,7 @@ matches:
       - name: mydate
         type: date
         params:
-          format: "%m/%d/%Y"
+          format: "%d.%m.%Y"
 
   - trigger: ":time"
     replace: "{{mytime}}"
@@ -246,13 +246,13 @@ matches:
   - trigger: ":phone"
     word: true
     replace:  |
-      PHONE COMMUNICATION
-      Reason for call: 
-      Notes:
+      TELEFONKONTAKT
+      Grund des Anrufs:
+      Notizen:
 
 
   - trigger: "lmom"
-    replace: "{{mytime}} Phoned but no answer. Left voice mail to call clinic when available."
+    replace: "{{mytime}} Angerufen, aber keine Antwort. Nachricht auf Mailbox hinterlassen, Praxis zurückzurufen, sobald verfügbar."
     word: true
     vars:
       - name: mytime
@@ -262,95 +262,94 @@ matches:
 
   - trigger: ":pain"
     replace: |
-      The pain is located in 
-        and it radiates to 
-        The pain is associated with nausea vomitting sweating shortness of breath
-        It has been present for 
-        and started when
-        The symptoms are getting better  staying the same  getting worse
-        It is constant intermittent
-        The pain is better in the morning  evening  the same throughout the day
-        It usually occurs about X times a day
-        When it comes, each episode lasts for 
-        The character of the pain is 
-        The intensity is X out of 10 pain (where 10 is the worst pain imaginable)
-        The pain gets worse when 
-        The pain gets better when 
-        Treatments tried so far include
+      Der Schmerz ist lokalisiert in
+        und strahlt aus nach
+        Der Schmerz ist begleitet von Übelkeit Erbrechen Schwitzen Atemnot
+        Er besteht seit
+        und begann als
+        Die Symptome werden besser  bleiben gleich  werden schlechter
+        Er ist konstant intermittierend
+        Der Schmerz ist morgens  abends  ganztägig gleich stärker
+        Er tritt gewöhnlich etwa X mal täglich auf
+        Wenn er auftritt, dauert jede Episode
+        Der Schmerzcharakter ist
+        Die Intensität beträgt X von 10 (wobei 10 der schlimmste vorstellbare Schmerz ist)
+        Der Schmerz verschlimmert sich bei
+        Der Schmerz bessert sich bei
+        Bisher versuchte Behandlungen umfassen
 
   - trigger: ":PQRST"
     word: true
     replace: |
-      Provokes, palliates - What causes the pain?
-                   What makes it better or worse?
-      Quality - What exactly is it like? (stinging, dull, sharp, burning, crushing)
-      Radiation - Is the pain focal or does it spread anywhere?
-      Severity - How severe is it? (scale 1 - 10)
-                 How much does it affect your life?
-      TIming - Is it there all the time or does it come and go?
-               When does it start and how long does it last?
-               When was the last pain medication?
+      Provokation, Linderung - Was löst den Schmerz aus?
+                   Was macht ihn besser oder schlechter?
+      Qualität - Wie fühlt er sich genau an? (stechend, dumpf, scharf, brennend, drückend)
+      Radiation - Ist der Schmerz umschrieben oder strahlt er aus?
+      Schwere - Wie stark ist er? (Skala 1 - 10)
+                 Wie stark beeinträchtigt er Ihr Leben?
+      Zeitverlauf - Ist er ständig vorhanden oder kommt und geht er?
+               Wann beginnt er und wie lange hält er an?
+               Wann war die letzte Schmerzmedikation?
 
   - trigger: ":OLDCARTS"
     word: true
     replace: |
-      Onset:
-      Location:
-      Duration:
-      Characteristic:
-      Aggravating Factors:
-      Relieving Factors:
-      Therapies Tried:
-      Severity:
+      Beginn:
+      Lokalisation:
+      Dauer:
+      Charakter:
+      Verstärkende Faktoren:
+      Lindernde Faktoren:
+      Versuchte Therapien:
+      Schwere:
 
   - trigger: ":SOCRATES"
     word: true
     replace: |
-      Site:
-      Onset:
-      Character:
-      Radiates:
-      Associated Symptoms:
-      Time/duration:
-      Exacerbating/relieving factors:
-      Severity:
+      Sitz:
+      Beginn (Onset):
+      Charakter:
+      Ausstrahlung:
+      Begleitsymptome:
+      Zeit/Dauer:
+      Verstärkende/lindernde Faktoren:
+      Schwere:
 
 
   - trigger: ":refill"
     word: true
     replace: |
-      Subjective:
-        {{cc}} needing to refill previously prescribed medication: MEDNAME
-        which is being prescribed for INDICATION
-        for approximately the past DURATION
+      Subjektiv:
+        {{cc}} benötigt Verlängerung eines zuvor verordneten Medikaments: MEDIKAMENT
+        welches verordnet ist bei INDIKATION
+        seit etwa DAUER
 
-        {{sp}} no concerns with how well it is working (efficacy)
-        {{sp}} no concerns with side-effects
+        {{sp}} keine Bedenken bezüglich der Wirksamkeit
+        {{sp}} keine Bedenken bezüglich Nebenwirkungen
       Plan:
-        Prescription provided to extend use of MEDNAME
-        {{pp}} continue to use medication as prescribed
-        {{pp}} follow-up with regular Family Physician 
+        Rezept zur Fortführung der Anwendung von MEDIKAMENT ausgestellt
+        {{pp}} Medikation weiter wie verordnet einnehmen
+        {{pp}} Wiedervorstellung bei Ihrem Hausarzt
 
   - trigger: ":sicknote"
     word: true
     replace: |
-      To whom this may concern,
+      Sehr geehrte Damen und Herren,
 
-      The above patient was seen and was assessed in my clinic.
-      The patient is advised to be off  work  school on:
+      der/die oben genannte Patient/in wurde in meiner Praxis untersucht und beurteilt.
+      Dem/der Patienten/in wird empfohlen, folgender Arbeit  Schule fernzubleiben am:
 
       {{mydate}}
 
-      Should you have any clarifications please don't hesitate to contact me.
+      Für Rückfragen stehe ich Ihnen gerne zur Verfügung.
 
-      Thank you very much.
+      Vielen Dank.
 
     vars:
       - name: mydate
         type: date
         params:
-          format: "%B %d, %Y"
-
+          format: "%d. %B %Y"
 
 
 

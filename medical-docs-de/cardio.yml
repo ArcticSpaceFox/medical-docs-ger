@@ -1,0 +1,117 @@
+matches:
+  - trigger: ":cp"
+    replace: "Brustschmerzen"
+    propagate_case: true
+    word: true
+
+  - trigger: ":chestpain"
+    word: true
+    replace: |
+      Subjektiv:
+        {{cc}} Brustschmerzen seit DAUER
+        {{pain}}
+        {{sp}} keine Belastungsabhängigkeit
+        {{sp}} keine Verstärkung bei tiefer Einatmung
+        {{sp}} keine Atemnot
+        {{sp}} keine Übelkeit
+        {{sp}} kein Schwitzen
+        {{sp}} keine früheren ähnlichen Episoden
+
+
+      Objektiv:
+        {{op}} Blutdruck von
+        {{op}} Herzfrequenz von
+        {{op}} kein Distress
+        {{op}} keine erhöhte Atemarbeit
+        {{op}} normale Herztöne (S1/S2) ohne Herzgeräusche oder zusätzliche Herztöne
+        {{op}} normaler, regelmäßiger Herzrhythmus
+        {{op}} gutes Atemgeräusch beidseits ohne Nebengeräusche
+        {{op}} keine Druckschmerzhaftigkeit der Brustwand
+        {{op}} kein Hautausschlag
+        {{op}} keine Schwellung (Ödem) der Unterschenkel
+        {{op}} keine Druckschmerzhaftigkeit oder Rötung der Unterschenkel
+               (kein Verdacht auf ein Blutgerinnsel (tiefe Venenthrombose))
+
+      Beurteilung:
+        {{ap}} Nicht-kardiale Brustschmerzen, nicht herz- oder lungenbedingt,
+               am ehesten ausgehend von der Brustwand
+
+      Plan:
+        {{pp}} Analgesie (wie Ibuprofen oder Paracetamol) zur Schmerzlinderung
+        {{pp}} verordnete Medikation zur Kontrolle von Säurereflux (GERD)
+               anwenden
+        {{pp}} Kontrolltermin in 2 Wochen, falls Schmerzen nicht besser werden
+        {{pp}} bei anhaltenden Schmerzen oder Atemnot umgehend Notfallversorgung aufsuchen
+
+    vars:
+      - name: pain
+        type: match
+        params:
+          trigger: ":pain"
+
+  # Ursachen für tachykarde oder bradykarde Arrhythmien (6H und 5T)
+  - trigger: ":arcause"
+    word: true
+    replace: |
+      Hypoxie
+      Hypothermie
+      Hypovolämie
+      Hypoglykämie
+      Wasserstoffion (Azidose)
+      Hypo-/Hyperkaliämie
+
+      Trauma (erhöhter Hirndruck, Hypovolämie)
+      Thrombose (pulmonal oder koronar)
+      Tamponade (kardial)
+      Spannungspneumothorax
+      Toxine
+
+  - trigger: ":wellsdvt"
+    word: true
+    replace: |
+      Wells-Score für tiefe Venenthrombose (TVT):
+        Aktive Malignität (letzte 6 Monate)             1
+        Immobilisierung mindestens 3 Tage ODER
+        Operation in den letzten 12 Wochen               1
+        Immobilisierung der unteren Extremität           1
+        Lokalisierte Druckschmerzhaftigkeit des tiefen Venensystems  1
+        Ganzes Bein geschwollen                          1
+        Wadenumfang >=3 cm größer als Gegenseite         1
+        Eindrückbares Ödem auf symptomatischer Seite begrenzt  1
+        Kollaterale oberflächliche Venen                 1
+        Vorher dokumentierte TVT                         1
+        Alternative Diagnose mindestens ebenso wahrscheinlich  -2
+
+      Score >=3 zeigt hohe Wahrscheinlichkeit einer TVT an
+
+  - trigger: ":wellspe"
+    word: true
+    replace: |
+      Wells-Score für Lungenembolie (LE):
+        Klinische Zeichen und Symptome einer TVT       3
+        Alternative Diagnose weniger wahrscheinlich als LE   3
+        Herzfrequenz >100                              1.5
+        Vorherige LE oder TVT (bestätigt)               1.5
+        Immobilisierung mindestens 3 Tage ODER
+        Operation in den letzten 4 Wochen                1.5
+        Hämoptyse (Bluthusten)                          1
+        Aktive Malignität (letzte 6 Monate)             1
+
+      Score <=4: D-Dimer bestimmen und bei negativem Ergebnis abbrechen
+      Score >=5: CTPA oder Ventilations-/Perfusionsszintigraphie durchführen
+
+  - trigger: ":perc"
+    word: true
+    replace: |
+      PERC-Kriterien zum Ausschluss einer Lungenembolie (LE):
+        Wenn die Wahrscheinlichkeit einer LE unter 15% liegt und
+        alle folgenden Kriterien zutreffen, sind keine weiteren Untersuchungen erforderlich
+
+        {{sp}} Alter <50
+        {{sp}} Puls <100/min
+        {{sp}} Sauerstoffsättigung >=95%
+        {{sp}} kein Bluthusten (Hämoptyse)
+        {{sp}} keine Östrogeneinnahme (orale Kontrazeption oder Hormonersatztherapie)
+        {{sp}} keine Operation oder Trauma mit Vollnarkose in den letzten 4 Wochen
+        {{sp}} keine vorherigen Blutgerinnsel (venöse Thromboembolie)
+        {{sp}} keine einseitige Beinschwellung

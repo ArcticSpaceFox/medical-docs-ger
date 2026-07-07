@@ -1,0 +1,35 @@
+matches:
+  # HIRI-MSM-Risikobewertungsinstrument
+  - trigger: ":preprisk"
+    word: true
+    replace: |
+      Wie alt sind Sie heute?                                      <18 Jahre    0
+                                                                18-28 Jahre     8
+                                                                29-40 Jahre     5
+                                                                41-48 Jahre     2
+                                                                >= 49 Jahre     0
+
+      Mit wie vielen Männern hatten Sie in den letzten             >10        7
+      6 Monaten Geschlechtsverkehr?                                 6-10        4
+                                                                    0-5        0
+
+      Wie viele Ihrer männlichen Sexualpartner waren                >1         8
+      HIV-positiv?                                                  1         4
+                                                                    0         0
+
+      Wie oft hatten Sie in den letzten 6 Monaten                  >=1        10
+      rezeptiven Analverkehr (Sie waren der passive Partner)         0         0
+      ohne Kondom mit einem Mann?
+
+      Wie oft hatten Sie in den letzten 6 Monaten                  >=5         6
+      insertiven Analverkehr (Sie waren der aktive Partner)         0-4         0
+      mit einem HIV-positiven Mann?
+
+      Haben Sie in den letzten 6 Monaten Methamphetamine           Ja          5
+      wie Crystal Meth oder Speed konsumiert?                       Nein        0
+
+      Haben Sie in den letzten 6 Monaten Poppers (Amylnitrit)      Ja          3
+      konsumiert?                                                   Nein        0
+
+      Ein Risikoscore von >=11 rechtfertigt eine PrEP-Indikation
+

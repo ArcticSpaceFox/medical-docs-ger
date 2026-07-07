@@ -1,0 +1,66 @@
+matches:
+  - trigger: ":strep"
+    word: true
+    replace: |
+     Subjektiv:
+        {{cc}} Halsschmerzen seit XX Tagen
+        {{sp}} kein Husten
+        {{sp}} keine vorherige Streptokokkeninfektion
+        {{sp}} kein bekannter Kontakt zu Streptokokken
+        Streptokokken-Pharyngitis ist am häufigsten bei unter 15-Jährigen und am seltensten bei über 45-Jährigen.
+
+     Objektiv:
+        {{op}} Temperatur heute von
+        {{op}} keine schmerzhaft geschwollenen Lymphknoten am Hals (zervikale Lymphadenopathie)
+        {{op}} keine Tonsillenschwellung
+        {{op}} keine weißen Beläge auf den Tonsillen (Exsudate)
+
+     Beurteilung:
+        {{ap}} akute Streptokokken-Pharyngitis (Streptokokkenangina)
+        {{ap}} akute virale Pharyngitis
+        Etwa 80 % der Halsschmerzen sind viraler Genese und bessern sich nicht
+        durch Antibiotika, da Antibiotika keine Viren abtöten
+
+     Plan:
+        Ein Rachenabstrich wurde zur Abklärung einer bakteriellen Infektion (Streptokokkenangina) eingesendet
+        {{pp}}mit der Einnahme der verordneten Antibiotika warten, bis die Infektion bestätigt ist
+        {{pp}}sofort mit der Einnahme der verordneten Antibiotika beginnen
+        {{pp}}unterstützende Maßnahmen fortsetzen (ausreichend trinken mit Elektrolytgetränken und salzigen Suppen,
+              Paracetamol und/oder Ibuprofen gegen Schmerzen, Salzwassergurgeln für den Hals, und Ruhe)
+        {{pp}}bei Verschlechterung der Symptome innerhalb von 48 Stunden trotz Behandlung erneut vorstellen
+        {{pp}}bei Atemnot den Notruf 112 wählen oder die Notaufnahme aufsuchen
+
+  - trigger: ":strepphone"
+    word: true
+    replace: |
+      TELEFONISCHE KOMMUNIKATION
+
+      Grund für den Anruf: Streptokokken-Abstrich positiv
+
+      Notizen:
+        Patient(in) über positiven Streptokokken-Abstrich informiert, soll mit der beim letzten Termin
+        verordneten Medikation beginnen.
+        Patient(in) versteht und ist einverstanden. Dankbar für den Anruf.
+        Wird sich bei weiteren Beschwerden oder ausbleibender Besserung trotz Behandlung
+        in der Praxis melden.
+
+  - trigger: ":strepscore"
+    word: true
+    replace: |
+      {{sp}} Fieber (Temperatur >38 °C)              (1 Punkt)
+      {{sp}} Tonsillenexsudate (weiße Beläge)         (1 Punkt)
+      {{sp}} kein Husten                              (1 Punkt)
+      {{sp}} geschwollene Halslymphknoten             (1 Punkt)
+             (zervikale Lymphadenopathie)
+      {{sp}} Alter 3-14 Jahre                         (1 Punkt)
+      {{sp}} Alter 15-44 Jahre                        (0 Punkte)
+      {{sp}} Alter über 44 Jahre                      (-1 Punkt)
+
+      Interpretation:
+        -1, 0, 1 Punkte - Risiko einer Streptokokkeninfektion <10 %
+            kein Antibiotikum oder Rachenabstrich erforderlich
+        2 oder 3 Punkte - Risiko einer Streptokokkeninfektion 15 % - 32 %
+            Rachenabstrich und Antibiotika bei positivem Abstrich
+        4 oder 5 Punkte - Risiko einer Streptokokkeninfektion 56 %
+            Streptokokkentestung und/oder Abstrich erwägen
+

@@ -5,91 +5,91 @@ matches:
   - trigger: ":ocp"
     word: true
     replace: |
-      Subjective:
-        {{cc}} Prescription for Oral Contraceptive Medication
+      Anamnese:
+        {{cc}} Rezept für orale Kontrazeptiva
 
-        {{sp}} no current contraception
+        {{sp}} derzeit keine Kontrazeption
 
-        {{sp}} no liver disease
-        {{sp}} no migraines
-        {{sp}} no previous cancer diagnosis
-        {{sp}} no breast abnormalities
-        {{sp}} no clotting disorders
-        {{sp}} no tobacco use
+        {{sp}} keine Lebererkrankung
+        {{sp}} keine Migräne
+        {{sp}} keine vorbekannte Krebserkrankung
+        {{sp}} keine Brustauffälligkeiten
+        {{sp}} keine Gerinnungsstörungen
+        {{sp}} kein Tabakkonsum
 
-        {{sp}} had last menstrual period on DATE
-        {{sp}} regular menstruation
-        {{sp}} no increased risk for sexually transmitted infection (STI)
-        {{sp}} had last STI screen DURATION prior
-        {{sp}} no need for pregnancy test at this time
+        {{sp}} letzte Regelblutung am DATUM
+        {{sp}} regelmäßige Menstruation
+        {{sp}} kein erhöhtes Risiko für sexuell übertragbare Infektionen (STI)
+        {{sp}} letzter STI-Test vor DAUER
+        {{sp}} derzeit keine Notwendigkeit für einen Schwangerschaftstest
 
-      Objective:
-        {{op}} current blood pressure of SBP/DBP
+      Untersuchung:
+        {{op}} aktueller Blutdruck von SBP/DBP
 
-      Assessment:
-        {{ap}} need for ongoing contraceptive medication
-        with no contraindications
+      Beurteilung:
+        {{ap}} Bedarf an fortlaufender kontrazeptiver Medikation
+        ohne Kontraindikationen
 
       Plan:
-        {{pp}} continue with previously prescribed oral contraceptive medication
-        Prescription provided for XXX
+        {{pp}} Fortführung der bisher verordneten oralen Kontrazeption
+        Rezept ausgestellt für XXX
 
-        {{pp}} reference the following links for more information:
+        {{pp}} Verweis auf folgende Links für weitere Informationen:
         https://www.sexandu.ca/
         https://www.plannedparenthood.org/learn/birth-control
 
-        {{pp}} reference the following links in case of missed doses:
+        {{pp}} Verweis auf folgende Links bei vergessener Einnahme:
         https://www.sexandu.ca/sos/
         https://www.plannedparenthood.org/online-tools/missed-birth-control-pill
 
-        {{pp}} follow-up if further concerns or questions
+        {{pp}} Wiedervorstellung bei weiteren Fragen oder Beschwerden
 
 
   - trigger: ":ffertility"
     word: true
     replace: |
-      Subjective:
-        {{cc}} failure to conceive after DURATION
+      Anamnese:
+        {{cc}} ausbleibende Konzeption nach DAUER
 
-        Menstrual History:
-          {{sp}} menstruation starting at age XX
-          {{sp}} irregular menstrual periods ranging from XX to YY days
-          {{sp}} regular menstrual periods every XX days
-          {{sp}} menstrual bleeding lasting XX days
+        Menstruationsanamnese:
+          {{sp}} Menarche im Alter von XX Jahren
+          {{sp}} unregelmäßiger Zyklus im Bereich von XX bis YY Tagen
+          {{sp}} regelmäßiger Zyklus alle XX Tage
+          {{sp}} Regelblutung von XX Tagen Dauer
 
-        Pregnancy History:
-          {{sp}} no previous pregnancies
-          {{sp}} no previous pregnancies with current partner
+        Schwangerschaftsanamnese:
+          {{sp}} keine vorausgegangenen Schwangerschaften
+          {{sp}} keine vorausgegangenen Schwangerschaften mit dem aktuellen Partner
 
-        {{sp}} vaginal intercourse every second day
-        around the time of ovulation
-        {{sp}} verified time of ovulation with ovulation kits
+        {{sp}} Geschlechtsverkehr jeden zweiten Tag
+        um den Zeitpunkt des Eisprungs
+        {{sp}} Zeitpunkt des Eisprungs mittels Ovulationstests verifiziert
 
-        {{sp}} no lactation
-        {{sp}} no nipple discharge
-        {{sp}} symptoms of PCOS (abnormal hair growth, deep voice,
-               acne, irregular menstruation)
-        {{sp}} symptoms of endometriosis (severe menstrual cramps,
-               pain with intercourse, excessive or irregular bleeding)
-        {{sp}} no hypothyroidism symptoms:
+        {{sp}} keine Laktation
+        {{sp}} keine Mamillensekretion
+        {{sp}} Symptome eines PCOS (abnorme Behaarung, tiefe Stimme,
+               Akne, unregelmäßige Menstruation)
+        {{sp}} Symptome einer Endometriose (starke Regelschmerzen,
+               Schmerzen beim Geschlechtsverkehr, übermäßige oder unregelmäßige Blutung)
+        {{sp}} keine Symptome einer Hypothyreose:
           {{hitsh}}
 
-        {{sp}} no history of pelvic inflammatory disease (PID)
-        {{sp}} no history of polycystic ovarian syndrome (PCOS)
-        {{sp}} no history of pelvic surgery
-        {{sp}} no history of pelvic radiation
-        {{sp}} no history of dilitation and curretage (D&C)
+        {{sp}} keine Vorgeschichte einer entzündlichen Beckenerkrankung (PID)
+        {{sp}} keine Vorgeschichte eines polyzystischen Ovarialsyndroms (PCOS)
+        {{sp}} keine Voroperationen im Beckenbereich
+        {{sp}} keine vorausgegangene Bestrahlung des Beckens
+        {{sp}} keine vorausgegangene Kürettage (Abrasio)
 
-        {{sp}} no previous investigations or treatments
+        {{sp}} keine vorausgegangenen Untersuchungen oder Behandlungen
 
-      Assessment:
-        {{ap}} primary female infertility
+      Beurteilung:
+        {{ap}} primäre weibliche Infertilität
 
       Plan:
-        {{pp}} complete investigations including:
-          CBC, TSH, Prolactin, FSH, LH, Progesterone, Testosterone, DHEA
-        {{pp}} follow-up when results are available
-        Referral sent to fertility clinic for further assessment
+        {{pp}} vollständige Abklärung einschließlich:
+          Blutbild, TSH, Prolaktin, FSH, LH, Progesteron, Testosteron, DHEA
+        {{pp}} Wiedervorstellung nach Vorliegen der Ergebnisse
+        Überweisung an Kinderwunschklinik zur weiteren Abklärung veranlasst
     vars:
       - name: hitsh
         type: match
@@ -99,69 +99,69 @@ matches:
   - trigger: ":menses"
     word: true
     replace: |
-       Your last menstrual period was on XXXX XX,  XXX days ago
-       Typically it will come regularly every XXXX days.
-       Your menstrual cycle has been irregular since XXXXX
-       It will last XXX days.
-       The heaviest days are days XXXX - XXXX
-       On those days, you typically would use XXXX pads/tampons in a day.
-       There is no bleeding between menstrual periods.
-       There is no bleeding after intercourse.
-       There is significant cramping at the beginning of your period.
-       There is no significant pain with your periods.
+       Ihre letzte Regelblutung war am XXXX XX, vor XXX Tagen
+       Üblicherweise tritt sie regelmäßig alle XXXX Tage ein.
+       Ihr Zyklus ist seit XXXXX unregelmäßig
+       Sie dauert XXX Tage.
+       Die stärksten Tage sind die Tage XXXX - XXXX
+       An diesen Tagen benötigen Sie üblicherweise XXXX Binden/Tampons pro Tag.
+       Es besteht keine Zwischenblutung zwischen den Regelblutungen.
+       Es besteht keine Blutung nach dem Geschlechtsverkehr.
+       Es besteht ein deutliches Krampfen zu Beginn der Menstruation.
+       Es bestehen keine wesentlichen Schmerzen während der Menstruation.
 
   - trigger: ":aub"
     word: true
     replace: |
-       Your main concern today is irregular menstrual bleeding.
+       Ihr Hauptanliegen heute ist eine unregelmäßige Regelblutung.
 
        {{menses}}
 
-       Your weight has been stable.
-       You have no increased stress.
-       You have no recent illness.
-       You have not been increasing your amount of exercise.
-       You have not had any trauma to your pelvic area.
+       Ihr Gewicht ist stabil geblieben.
+       Sie haben keinen erhöhten Stress.
+       Sie hatten keine kürzliche Erkrankung.
+       Sie haben Ihr Ausmaß an körperlicher Aktivität nicht gesteigert.
+       Sie hatten kein Trauma im Beckenbereich.
 
-       Your current method of contraception is
-       You do not believe you could be pregnant because
-       Your last vaginal intercourse was   ago
-       Your last PAP (cervical cancer screen) was
-       and it was normal.
+       Ihre aktuelle Verhütungsmethode ist
+       Sie halten eine Schwangerschaft für unwahrscheinlich, weil
+       Ihr letzter Geschlechtsverkehr war vor
+       Ihr letzter PAP-Abstrich (Zervixkarzinom-Screening) war
+       und war unauffällig.
 
-       Your last STI (sexually transmitted infection) screen was
-       and it was negative.
-       You have no lower abdominal pain, fever, or abnormal vaginal discharge.
+       Ihr letzter STI-Test (sexuell übertragbare Infektion) war
+       und war negativ.
+       Sie haben keine Unterbauchschmerzen, kein Fieber und keinen abnormen vaginalen Ausfluss.
 
-       You have no changes in bladder or bowel function.
-       You have no milky discharge from the breasts (galactorrhea)
-       You have no heat or cold intolerance.
-       You have no abnormal hair growth (hirsutism).
-       You have no hot flashes.
+       Sie haben keine Veränderungen der Blasen- oder Darmfunktion.
+       Sie haben keinen milchigen Ausfluss aus der Brust (Galaktorrhoe)
+       Sie haben keine Hitze- oder Kälteintoleranz.
+       Sie haben keine abnorme Behaarung (Hirsutismus).
+       Sie haben keine Hitzewallungen.
 
-       You are very certain your bleeding is only coming from the vagina.
+       Sie sind sich sehr sicher, dass die Blutung ausschließlich aus der Scheide stammt.
 
-       You have never been diagnosed with any conditions of the
-       uterus such as fibroids or polyps.
-       You have never had pelvic surgery, such as a C-section.
-       You have no other issues with bleeding such as excessive bleeding
-       with dental work or frequent nose bleeds.
+       Bei Ihnen wurden bisher keine Erkrankungen der
+       Gebärmutter wie Myome oder Polypen diagnostiziert.
+       Sie hatten nie eine Operation im Beckenbereich, wie z. B. einen Kaiserschnitt.
+       Sie haben keine sonstigen Blutungsprobleme wie übermäßige Blutungen
+       bei zahnärztlichen Eingriffen oder häufiges Nasenbluten.
 
-       You are not aware of any family members with irregular periods
-       or early menopause (before age 40).
-       You are not aware of any family members with cancer in the
-       pelvis such as uterine cancer or cervical cancer.
-       You are not aware of any family history of bleeding disorders,
-       thyroid disease, or celiac disease.
+       Ihnen sind keine Familienmitglieder mit unregelmäßiger Regelblutung
+       oder frühzeitiger Menopause (vor dem 40. Lebensjahr) bekannt.
+       Ihnen sind keine Familienmitglieder mit Krebserkrankungen im
+       Beckenbereich, wie Gebärmutter- oder Zervixkarzinom, bekannt.
+       Ihnen ist keine Familienanamnese für Gerinnungsstörungen,
+       Schilddrüsenerkrankungen oder Zöliakie bekannt.
 
        {{noother}}
 
-       You are experiencing irregular menstruation possibly due to
+       Bei Ihnen besteht eine unregelmäßige Menstruation, möglicherweise bedingt durch
 
-       You are advised to complete testing to clarify possible causes
-       including blood work (Beta HCG, CBC, Ferritin, TSH, Prolactin,
-       Testosterone, 17-hydroxyprogesterone, FSH, LH, Estradiol, INR, PTT)
-       and a pelvic ultrasound.
+       Es wird empfohlen, weitere Untersuchungen zur Abklärung möglicher Ursachen
+       durchzuführen, einschließlich Blutuntersuchungen (Beta-HCG, Blutbild, Ferritin, TSH, Prolaktin,
+       Testosteron, 17-Hydroxyprogesteron, FSH, LH, Östradiol, INR, PTT)
+       sowie einer Becken-Ultraschalluntersuchung.
 
        {{finish}}
 
@@ -178,4 +178,3 @@ matches:
         type: match
         params:
           trigger: ":finish"
-

@@ -5,63 +5,63 @@ matches:
   - trigger: ":strep"
     word: true
     replace: |
-     Subjective:
-        {{cc}} sore throat for XX days
-        {{sp}} no cough
-        {{sp}} no previous strep
-        {{sp}} no known strep contact
-        Strep throat is most common in ages less than 15, and least common over 45.
+     Subjektiv:
+        {{cc}} Halsschmerzen seit XX Tagen
+        {{sp}} kein Husten
+        {{sp}} kein vorangegangener Streptokokkeninfekt
+        {{sp}} kein bekannter Streptokokken-Kontakt
+        Die Streptokokken-Angina ist am häufigsten bei unter 15-Jährigen und am seltensten über 45 Jahren.
 
-     Objective:
-        {{op}} temperature today of
-        {{op}} no tender swollen lymph nodes in the neck (anterior cervical lymphadenopathy)
-        {{op}} no tonsillar swelling
-        {{op}} no tonsillar white spots (exudates)
+     Objektiv:
+        {{op}} heutige Temperatur von
+        {{op}} keine druckschmerzhaften geschwollenen Halslymphknoten (zervikale Lymphadenopathie)
+        {{op}} keine Tonsillenschwellung
+        {{op}} keine weißen Beläge auf den Tonsillen (Exsudate)
 
-     Assessment:
-        {{ap}} Acute Streptococcal Pharyngitis (Strep Throat)
-        {{ap}} Acute Viral Pharyngitis
-        Approximately 80% of sore throats are viral in origin and do not improve
-        with antibiotics, since antibiotics do not kill viruses
+     Beurteilung:
+        {{ap}} Akute Streptokokken-Pharyngitis (Streptokokken-Angina)
+        {{ap}} Akute virale Pharyngitis
+        Etwa 80% der Halsschmerzen sind viraler Genese und bessern sich nicht
+        durch Antibiotika, da Antibiotika keine Viren abtöten
 
      Plan:
-        A throat swab was sent to check for a bacterial infection (strep throat)
-        {{pp}}wait until infection is confirmed before taking prescribed antibiotics
-        {{pp}}start taking prescribed antibiotics immediately
-        {{pp}}continue supportive management (hydrate with gatorade and salty soups,
-              tylenol and/or advil for pain, salt gargles for throat, and rest)
-        {{pp}}seek reassessment if worsening symptoms in 48 hours despite treatment
-        {{pp}}call 911 or go to ED if trouble breathing
+        Ein Rachenabstrich wurde zur Abklärung einer bakteriellen Infektion (Streptokokken-Angina) eingesandt
+        {{pp}}mit der Einnahme der verordneten Antibiotika warten, bis die Infektion bestätigt ist
+        {{pp}}sofort mit der Einnahme der verordneten Antibiotika beginnen
+        {{pp}}unterstützende Maßnahmen fortführen (Flüssigkeitszufuhr mit isotonischen Getränken und salzigen Suppen,
+              Paracetamol und/oder Ibuprofen bei Schmerzen, Salzwassergurgeln, Ruhe)
+        {{pp}}Wiedervorstellung bei Verschlechterung der Symptome innerhalb von 48 Stunden trotz Behandlung
+        {{pp}}Notruf 112 wählen oder Notaufnahme aufsuchen bei Atembeschwerden
 
   - trigger: ":strepphone"
     word: true
     replace: |
-      PHONE COMMUNICATION
+      TELEFONKONTAKT
 
-      Reason for call: Strep swab positive
+      Grund des Anrufs: Streptokokken-Abstrich positiv
 
-      Notes:
-        Informed strep swab positive and should start prescription given last visit.
-        Patient understands and agreeable.  Grateful for call.
-        Will contact clinic if further concerns, not improving despite treatment.
+      Notizen:
+        Über positiven Streptokokken-Abstrich informiert, Beginn der beim letzten Besuch verordneten Medikation empfohlen.
+        Patient/in versteht und ist einverstanden. Dankbar für den Anruf.
+        Wird sich bei weiteren Bedenken oder ausbleibender Besserung trotz Behandlung melden.
 
   - trigger: ":strepscore"
     word: true
     replace: |
-      {{sp}} fever  (temperature >38C)            (1 point)
-      {{sp}} tonsillar exudates (white spots)     (1 point)
-      {{sp}} no cough                             (1 point)
-      {{sp}} swollen glands in neck               (1 point)
-             (anterior cervical lymphadenopathy)
-      {{sp}} age of 3-14 years                    (1 point)
-      {{sp}} age of 15-44 years                   (0 point)
-      {{sp}} age of over 44 years                 (-1 point)
+      {{sp}} Fieber  (Temperatur >38°C)             (1 Punkt)
+      {{sp}} Tonsillenexsudate (weiße Flecken)      (1 Punkt)
+      {{sp}} kein Husten                            (1 Punkt)
+      {{sp}} geschwollene Halslymphknoten           (1 Punkt)
+             (zervikale Lymphadenopathie)
+      {{sp}} Alter 3-14 Jahre                       (1 Punkt)
+      {{sp}} Alter 15-44 Jahre                      (0 Punkte)
+      {{sp}} Alter über 44 Jahre                    (-1 Punkt)
 
       Interpretation:
-        -1, 0, 1 points - risk of strep infection <10%
-            no antibiotic or throat culture necessary
-        2 or 3 points - risk of strep 15% - 32%
-            throat culture and antibiotics if culture is positive
-        4 or 5 points - risk of strep 56%
-            consider strep testing and/or culture
+        -1, 0, 1 Punkte - Streptokokken-Risiko <10%
+            weder Antibiotikum noch Rachenabstrich erforderlich
+        2 oder 3 Punkte - Streptokokken-Risiko 15% - 32%
+            Rachenabstrich und Antibiotika bei positivem Abstrich
+        4 oder 5 Punkte - Streptokokken-Risiko 56%
+            Streptokokken-Testung und/oder Abstrich erwägen
 

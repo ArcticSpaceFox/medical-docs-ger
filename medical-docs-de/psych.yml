@@ -1,0 +1,330 @@
+matches:
+  - trigger: ":mse"
+    word: true
+    replace: |
+      Psychopathologischer Befund:
+        {{op}} legere Kleidung, unauffällige Körperpflege und Hygiene
+        {{op}} ruhig und kooperativ
+        {{op}} keine ungewöhnlichen Bewegungen oder psychomotorischen Auffälligkeiten
+        {{op}} normales Sprechtempo, normale Sprachmelodie und Lautstärke ohne Rededrang
+        {{op}} normale Bandbreite des emotionalen Ausdrucks (Affekt)
+        {{op}} angegebene Stimmung unauffällig (euthym)
+        {{op}} zielgerichtete und logische Denkprozesse
+        {{op}} Denkinhalt frei von Wahnvorstellungen und Fixierungen
+        {{op}} keine suizidalen oder fremdaggressiven Gedanken
+        {{op}} keine Halluzinationen während des Gesprächs
+        {{op}} Orientierung zu Zeit, Ort und Person erhalten
+        {{op}} normales Gedächtnis und normale Aufmerksamkeit
+        {{op}} gute Einsichts- und Urteilsfähigkeit
+
+  - trigger: ":psylink"
+    word: true
+    replace: |
+      {{pp}} auf folgende Links verweisen:
+
+      https://psychhealthandsafety.org/asw
+      https://cmha.bc.ca/
+      https://moodgym.com.au/
+      https://www.anxietycanada.com/
+      https://bouncebackbc.ca/
+      https://www.keltyskey.com/
+
+  # einige Links speziell zu Beratungsangeboten in British Columbia
+  - trigger: ":psylinkbc"
+    word: true
+    replace: |
+      {{pp}} siehe untenstehende Links, um eine Beratungsgruppe oder Therapeut(in) zu vereinbaren.
+      Normalerweise ist Einzeltherapie eine Selbstzahlerleistung und eine ärztliche Überweisung ist nicht erforderlich.
+      Vancouver Coastal Health bietet kostenlose Gruppentherapie an, hierfür ist eine ärztliche Überweisung erforderlich.
+
+      https://counsellingbc.com/
+      https://www.psychologists.bc.ca/find_psychologist
+      https://divisionsbc.ca/sites/default/files/inline-files/NEW_2019%20-%2003%20-%20CBT%20BROCHURE%20FOR%20PATIENTS%20%28HOME%20PRINTER%29.pdf
+
+  - trigger: ":psymed"
+    word: true
+    replace: |
+      Medikamente können bei Angst und Depression manchmal hilfreich sein.
+      Um wirksam zu sein, müssen sie einmal täglich, jeden Tag, eingenommen werden.
+      Sie benötigen in der Regel mehrere Wochen, bis eine deutliche Wirkung eintritt.
+      Sie werden in der Regel für mindestens 9 bis 12 Monate fortgeführt.
+      Häufigere Nebenwirkungen sind unter anderem Übelkeit, Kopfschmerzen, Schlafstörungen,
+      sexuelle Funktionsstörungen, Schwitzen und Mundtrockenheit.
+      Zu Beginn der Behandlung kann vorübergehend eine verstärkte Angst auftreten,
+      und in seltenen Fällen eine Zunahme suizidaler Gedanken.
+      Bei zunehmenden suizidalen Gedanken ist es wichtig, umgehend Hilfe in Anspruch zu nehmen.
+
+  - trigger: ":risksuicide"
+    word: true
+    replace: |
+      {{sp}} kein männliches Geschlecht
+      {{sp}} kein Alter über 60 oder unter 18 Jahren
+      {{sp}} keine Depression
+      {{sp}} keine früheren Suizidversuche
+      {{sp}} kein Alkoholmissbrauch
+      {{sp}} kein Verlust des rationalen Denkens
+      {{sp}} kein Suizid in der Familie
+      {{sp}} kein ausgearbeiteter Plan
+      {{sp}} kein Mangel an sozialer Unterstützung
+      {{sp}} keine schwere Erkrankung oder therapierefraktäre Schmerzen
+
+  - trigger: ":sxgad"
+    word: true
+    replace: |
+      {{sp}} kein Gefühl der Leere im Kopf
+      {{sp}} keine erhöhte Erschöpfung
+      {{sp}} keine Schlafstörung
+      {{sp}} kein Gefühl starker Erregung oder Nervosität
+      {{sp}} keine erhöhte Reizbarkeit
+      {{sp}} keine erhöhte Muskelspannung
+
+  - trigger: ":sxpanic"
+    word: true
+    replace: |
+      {{sp}} kein Schwitzen
+      {{sp}} kein Zittern
+      {{sp}} keine Unsicherheit/Schwindel
+      {{sp}} keine Derealisation
+      {{sp}} keine erhöhte Herzfrequenz
+      {{sp}} keine Übelkeit
+      {{sp}} kein Kribbeln
+      {{sp}} keine Atemnot
+      Die Symptome erreichen meist innerhalb von 10 Minuten ihren Höhepunkt.
+
+
+  - trigger: ":sxmdd"
+    word: true
+    replace: |
+      {{sp}} keine gedrückte Stimmung
+      {{sp}} keine Schlafstörung
+      {{sp}} kein vermindertes Interesse und keine verminderte Freude an Aktivitäten
+      {{sp}} keine Schuldgefühle oder Selbstvorwürfe
+      {{sp}} kein Energieverlust und keine Erschöpfung
+      {{sp}} keine Konzentrationsprobleme
+      {{sp}} keine Appetitveränderung
+      {{sp}} keine sehr verlangsamten Bewegungen und kein verlangsamtes Sprechen, oder deutlich vermehrte Unruhe
+      {{sp}} keine suizidalen Gedanken
+
+  - trigger: ":sxmania"
+    word: true
+    replace: |
+      {{sp}} keine erhöhte Ablenkbarkeit
+      {{sp}} keine erhöhte Impulsivität
+      {{sp}} kein Größenwahn
+      {{sp}} kein Gedankenrasen (Ideenflucht)
+      {{sp}} keine Zunahme zielgerichteter Aktivitäten
+      {{sp}} kein vermindertes Schlafbedürfnis
+      {{sp}} keine vermehrte Gesprächigkeit
+
+  - trigger: ":sessri"
+    word: true
+    replace: |
+      Häufige Nebenwirkungen von selektiven Serotonin-Wiederaufnahmehemmern (SSRI)
+      Antidepressiva sind unter anderem Übelkeit, Angst, Schlafstörungen,
+      Unruhe, Tremor, Kopfschmerzen und sexuelle Funktionsstörungen
+
+  - trigger: ":phq9"
+    word: true
+    replace: |
+      Fragebogen zur Depressionsschwere (PHQ-9)
+
+      Wie oft fühlten Sie sich im Verlauf der letzten 2 Wochen durch die folgenden
+      Beschwerden beeinträchtigt?
+            0 = Überhaupt nicht
+            1 = An einzelnen Tagen
+            2 = An mehr als der Hälfte der Tage
+            3 = Beinahe jeden Tag
+
+      1. Wenig Interesse oder Freude an Ihren Tätigkeiten 0 1 2 3
+
+      2. Niedergeschlagenheit, Schwermut oder Hoffnungslosigkeit 0 1 2 3
+
+      3. Schwierigkeiten, ein- oder durchzuschlafen, oder vermehrter Schlaf 0 1 2 3
+
+      4. Müdigkeit oder Gefühl, keine Energie zu haben 0 1 2 3
+
+      5. Verminderter Appetit oder übermäßiges Bedürfnis zu essen 0 1 2 3
+
+      6. Schlechte Meinung von sich selbst - oder das Gefühl, ein Versager zu sein
+      oder die Familie enttäuscht zu haben 0 1 2 3
+
+      7. Schwierigkeiten, sich auf etwas zu konzentrieren, z. B. beim Zeitungslesen
+      oder Fernsehen 0 1 2 3
+
+      8. Waren Ihre Bewegungen oder Ihre Sprache so verlangsamt, dass es auch anderen
+      auffallen würde? Oder waren Sie im Gegenteil so unruhig, dass Sie sich mehr als
+      sonst bewegten 0 1 2 3
+
+      9. Gedanken, dass Sie lieber tot wären oder sich Ihnen Gedanken, sich auf
+      irgendeine Weise selbst zu verletzen 0 1 2 3
+
+  - trigger: ":gad7"
+    word: true
+    replace: |
+      Generalisierte Angststörung 7-Item-Skala (GAD-7)
+
+      Wie oft fühlten Sie sich im Verlauf der letzten 2 Wochen durch die folgenden
+      Beschwerden beeinträchtigt?
+            0 = Überhaupt nicht
+            1 = An einzelnen Tagen
+            2 = An mehr als der Hälfte der Tage
+            3 = Beinahe jeden Tag
+
+
+      1. Nervosität, Ängstlichkeit oder Angespanntheit 0 1 2 3
+
+      2. Unfähigkeit, das Sorgen zu stoppen oder zu kontrollieren 0 1 2 3
+
+      3. Übermäßige Sorgen bezüglich verschiedener Dinge 0 1 2 3
+
+      4. Schwierigkeiten zu entspannen 0 1 2 3
+
+      5. Derartige Rastlosigkeit, dass es schwerfällt, still zu sitzen 0 1 2 3
+
+      6. Leichte Verärgerung oder Reizbarkeit 0 1 2 3
+
+      7. Angstgefühle, dass etwas Schreckliches passieren könnte 0 1 2 3
+
+      Wenn Sie eine oder mehrere dieser Beschwerden angekreuzt haben, wie sehr haben diese Ihre Arbeit,
+      Haushaltsführung oder Ihren Umgang mit anderen Menschen erschwert?
+      Überhaupt nicht erschwert __________
+      Einigermaßen erschwert _________
+      Sehr erschwert _____________
+      Äußerst erschwert _________
+
+  - trigger: ":cage"
+    word: true
+    replace: |
+      Hatten Sie jemals das Gefühl, dass Sie Ihren Alkoholkonsum verringern sollten?
+      Fühlen Sie sich durch Kritik an Ihrem Alkoholkonsum verärgert?
+      Fühlen Sie sich schuldig wegen Ihres Alkoholkonsums?
+      Brauchen Sie morgens gelegentlich einen Drink, um Ihre Nerven zu beruhigen?
+
+      Punktwert >=2 zeigt weiteren Abklärungsbedarf an
+
+  - trigger: ":sxetohwd"
+    word: true
+    replace: |
+      Symptome des Alkoholentzugs
+      Stadium 1:
+        {{sp}} kein Tremor
+        {{sp}} kein Schwitzen
+        {{sp}} keine Appetitlosigkeit
+        {{sp}} keine Diarrhoe
+        {{sp}} keine Unruhe
+      Stadium 2:
+        {{sp}} keine Halluzinationen
+      Stadium 3:
+        {{sp}} keine Krampfanfälle
+      Stadium 4: (Delirium Tremens)
+        {{sp}} keine schwere Verwirrtheit, Desorientierung
+        {{sp}} keine abnorm schnelle Herzfrequenz (Tachykardie)
+        {{sp}} kein Bluthochdruck (Hypertonie)
+        {{sp}} kein Fieber
+
+  - trigger: ":depression"
+    word: true
+    replace: |
+       Sie befinden sich zu Hause in XXXXX
+       Ihr Hauptanliegen heute ist die Besprechung einer antidepressiven medikamentösen Verordnung.
+       Sie haben seit
+       Symptome, die Sie als depressiv einordnen.
+       Diese begannen nach
+
+       Sie hatten bisher keine psychiatrischen Diagnosen.
+       Sie hatten in der Vorgeschichte keine manischen Symptome, wie z. B. Größenideen
+       (das Gefühl, etwas eindeutig Unmögliches tun zu können),
+       stark impulsives und rücksichtsloses Verhalten, oder tagelang kein Schlafbedürfnis.
+
+       Sie haben keine familiäre Vorgeschichte psychischer Erkrankungen.
+       Sie hatten bisher keine antidepressive Medikation verordnet bekommen.
+
+       {{noother}}
+
+       Wir haben heute den folgenden Fragebogen zur Erfassung depressiver Symptome ausgefüllt.
+
+       {{phq9}}
+
+       Ihr Gesamtscore beträgt XX/27, vereinbar mit einer leicht- bis mittelgradigen Depression.
+
+       Nach meinen heutigen Beobachtungen ergibt sich folgender psychopathologischer Befund:
+         Sie sind legere gekleidet, mit unauffälliger Körperpflege und Hygiene
+         Sie sind ruhig und kooperativ
+         Sie zeigen keine ungewöhnlichen Bewegungen oder psychomotorischen Auffälligkeiten
+         Sie haben normales Sprechtempo, normale Sprachmelodie und Lautstärke ohne Rededrang
+         Sie zeigen eine normale Bandbreite des emotionalen Ausdrucks (Affekt)
+         Sie geben eine unauffällige Stimmung an (euthym)
+         Sie haben zielgerichtete und logische Denkprozesse
+         Ihr Denkinhalt ist frei von Wahnvorstellungen und Fixierungen
+         Sie haben keine suizidalen oder fremdaggressiven Gedanken
+         Es zeigen sich keine erkennbaren Halluzinationen während des Gesprächs
+         Sie sind zu Zeit, Ort und Person orientiert
+         Sie haben ein normales Gedächtnis und normale Aufmerksamkeit
+         Sie zeigen eine gute Einsichts- und Urteilsfähigkeit
+
+
+       Ihre Symptome sind vereinbar mit einer leicht- bis mittelgradigen Depression.
+       Antidepressive Medikation kann Teil eines umfassenden Behandlungsplans sein,
+       und Sie möchten heute eine Medikation ausprobieren.
+
+       Es wird empfohlen, einige grundlegende Blutuntersuchungen durchzuführen, um körperliche
+       Ursachen wie eine Anämie auszuschließen, die zu Ihren Symptomen beitragen könnten.
+
+       Es wird empfohlen, mit der verordneten Medikation
+       ( ) einmal täglich zu beginnen. Es wird empfohlen, diese morgens einzunehmen,
+       aber falls sie müde macht, kann auf eine abendliche Einnahme umgestellt werden.
+       Eine Wiedervorstellung in 2 Wochen wird empfohlen, um die Verträglichkeit der Medikation
+       und erste Wirkungen zu beurteilen, wobei die volle Wirkung der Medikation
+       6-8 Wochen dauern kann.
+
+       Da die wirksamste Behandlung der Depression multimodal ist,
+       werden Sie ermutigt, auch an weiteren Dimensionen der Behandlung zu arbeiten:
+
+       Biologisch
+       Es wird empfohlen, regelmäßige Schlaf- und Aufstehzeiten einzuhalten
+       Es wird empfohlen, regelmäßige Mahlzeiten einzunehmen
+       Es wird empfohlen, regelmäßig Sport zu treiben (mindestens 30 Minuten täglich)
+       Es wird empfohlen, Substanzen wie Alkohol oder Cannabis zu reduzieren
+           und, wenn möglich, zu vermeiden
+
+       Psychologisch
+       Es wird empfohlen, eine Gesprächstherapie in Anspruch zu nehmen, um psychologische Fähigkeiten
+       aufzubauen und ein reiches, erfülltes und sinnvolles Leben zu führen
+       Sie können Angebote nutzen, um psychische Unterstützungsangebote zu finden:
+       Alberta Wide Mental Health Help Line: 1-877-303-2642
+
+       Es wird außerdem empfohlen, Selbsthilfeangebote wie folgende in Betracht zu ziehen:
+       https://www.anxietycanada.com/
+       https://thehappinesstrap.com/free-resources/
+       https://mysleepwell.ca/ (spezielle Angebote zur Schlafverbesserung)
+
+       Sozial
+       Sie werden ermutigt, Gelegenheiten zu nutzen, um sich mit Freunden und Familie
+       auszutauschen und zu engagieren.
+       Der Erhalt sozialer Beziehungen ist ein wesentlicher Bestandteil der psychischen Gesundheit.
+
+       Spirituell
+       Viele Menschen schöpfen Kraft und Resilienz aus ihrer Spiritualität.
+       Für manche ist dies eine organisierte Religion, für andere kann es eher
+       der Kontakt mit den eigenen persönlichen Werten sein.
+       Sich daran zu erinnern, was wirklich wichtig und bedeutsam ist, und sich davon
+       bei Veränderungen leiten zu lassen, kann außerordentlich kraftvoll sein.
+
+       {{finish}}
+
+       Wenn Suizidgedanken auftreten und Sie um Ihre eigene Sicherheit fürchten, oder sich anderweitig
+       in einer Krise befinden, rufen Sie bitte den Notruf 112
+       oder die Alberta Wide Mental Health Help Line: 1-877-303-2642 an
+    vars:
+      - name: noother
+        type: match
+        params:
+          trigger: ":noother"
+      - name: phq9
+        type: match
+        params:
+          trigger: ":phq9"
+      - name: finish
+        type: match
+        params:
+          trigger: ":finish"

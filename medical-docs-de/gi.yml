@@ -1,0 +1,221 @@
+matches:
+    - trigger: "ruq"
+      replace: "rechter Oberbauch"
+      propagate_case: true
+      word: true
+
+    - trigger: "rlq"
+      replace: "rechter Unterbauch"
+      propagate_case: true
+      word: true
+
+    - trigger: "llq"
+      replace: "linker Unterbauch"
+      propagate_case: true
+      word: true
+
+    - trigger: "luq"
+      replace: "linker Oberbauch"
+      propagate_case: true
+      word: true
+
+    - trigger: ":giredflag"
+      word: true
+      replace: |
+        Gastrointestinale Warnzeichen:
+          {{sp}} keine Familienanamnese für Kolonkarzinom
+          {{sp}} keine Familienanamnese für chronisch-entzündliche Darmerkrankungen
+          {{sp}} kein Blut im Stuhl, kein schwarzer, teerartiger Stuhl (Meläna)
+          {{sp}} kein Blut oder "kaffeesatzartiges" Erbrechen
+          {{sp}} keine Schluckbeschwerden (Dysphagie)
+          {{sp}} keine nächtlichen Symptome
+          {{sp}} keine progredienten Symptome
+          {{sp}} kein Beginn nach dem 50. Lebensjahr
+          {{sp}} keine Anämie
+          {{sp}} kein Gewichtsverlust
+
+          Bei Vorliegen eines der oben genannten Merkmale ist eine gastroenterologische Überweisung erforderlich
+
+    - trigger: ":ibs"
+      word: true
+      replace: |
+        Subjektiv:
+          {{cc}} rezidivierende Bauchschmerzen seit DAUER
+          {{sp}} keine Änderung der Stuhlfrequenz
+          {{sp}} keine Änderung der Stuhlform
+          {{sp}} keine Schmerzlinderung durch Stuhlgang
+
+          {{redflags}}
+
+          {{sp}} kein Blähbauch
+          {{sp}} keine Blähungen
+          {{sp}} keine Übelkeit
+          {{sp}} kein Aufstoßen
+          {{sp}} kein frühes Sättigungsgefühl
+          {{sp}} kein gastroösophagealer Reflux
+          {{sp}} keine Dyspepsie
+
+          {{sp}} keine Dysurie
+          {{sp}} kein häufiger/imperativer Harndrang
+          {{sp}} keine generalisierten muskuloskelettalen Schmerzen
+          {{sp}} keine Dysmenorrhoe
+          {{sp}} keine Dyspareunie
+          {{sp}} keine Müdigkeit
+          {{sp}} keine Angstsymptomatik
+          {{sp}} keine depressive Symptomatik
+
+          Medikamente, die die Symptome möglicherweise verschlechtern:
+          keine Abführmittel/Antazida
+          keine PPI (Protonenpumpenhemmer)
+          keine ASS/NSAR
+          keine Eisen-/Kalzium-/Magnesiumpräparate
+          keine Kalziumkanalblocker
+          keine Antidepressiva
+          keine Opioide
+          keine Diuretika,
+          keine pflanzlichen Präparate
+
+        Objektiv:
+          {{op}} keine abdominellen Raumforderungen
+          {{op}} keine abdominelle Druckschmerzhaftigkeit
+          {{op}} keine Abwehrspannung
+          {{op}} normale Darmgeräusche
+
+        Beurteilung:
+          {{ap}} Reizdarmsyndrom (RDS), diarrhödominant, obstipationsdominant, gemischter Typ
+
+          ROM-IV-Kriterien für das Reizdarmsyndrom (RDS):
+            1. Rezidivierende Bauchschmerzen seit >= 3 Monaten, >= 1 Tag pro Woche
+            2. Verbunden mit einer Änderung der Stuhlfrequenz und/oder -form
+            3. UND Schmerzlinderung durch Stuhlgang.
+
+          Weitere Abklärung ist jedoch erforderlich, um andere mögliche Ursachen nicht zu übersehen.
+
+        Plan:
+          {{pp}} weitere Untersuchungen gemäß beiliegender Laboranforderung vervollständigen
+            Blutbild, Ferritin, Zöliakie-Screening
+
+            Diarrhödominant:
+              CRP, Albumin, Elektrolyte
+              Stuhl: C. diff, Parasitologie (O&P), Leukozyten, pH-Wert, Fetttropfen, Elastase
+
+            Obstipationsdominant:
+              TSH, Elektrolyte, ionisiertes Kalzium
+
+            Gemischter Typ: keine weiteren Untersuchungen
+
+          {{fu}}
+          {{snet}}
+
+      vars:
+      - name: redflags
+        type: match
+        params:
+          trigger: ":giredflag"
+
+      - name: fu
+        type: match
+        params:
+          trigger: ":fuwr"
+
+      - name: snet
+        type: match
+        params:
+          trigger: ":snet"
+
+    - trigger: ":ibsmgt"
+      word: true
+      replace: |
+        Allgemeine Behandlung des Reizdarmsyndroms:
+        {{pp}} Stressreduktion
+        {{pp}} regelmäßige körperliche Bewegung
+        {{pp}} Schlafstörungen behandeln
+        {{pp}} psychische Beschwerden behandeln
+        {{pp}} auslösende Medikamente absetzen
+        {{pp}} Probiotika versuchsweise einsetzen
+
+        Diarrhödominant:
+        {{pp}} Low-FODMAP-Diät versuchen
+        {{pp}} Loperamid erwägen
+        {{pp}} Amitriptylin (Elavil) oder Nortriptylin (Avantyl) erwägen
+        {{pp}} Gallensäurebinder erwägen
+        {{pp}} Rifaximin erwägen
+
+        Obstipationsdominant:
+        {{pp}} tägliche Flüssigkeitszufuhr erhöhen
+        {{pp}} PEG-basiertes Abführmittel einsetzen
+        {{pp}} Linaclotid erwägen
+        {{pp}} Prucaloprid erwägen
+
+        Gemischter Typ:
+        {{pp}} Low-FODMAP-Diät versuchen
+        {{pp}} Loperamid bei Bedarf erwägen
+        {{pp}} PEG-basiertes Abführmittel bei Bedarf erwägen
+
+    - trigger: ":ppistop"
+      word: true
+      replace: |
+         Um Sodbrennen zu reduzieren, wird empfohlen, Auslöser Ihrer Symptome zu meiden
+         oder zumindest zu reduzieren. Häufige Auslöser sind Rauchen, Alkohol, Kaffee,
+         Schokolade, säurehaltige, fettige oder scharfe Speisen sowie nichtsteroidale
+         Antirheumatika wie Ibuprofen, Naproxen oder Aspirin.
+         Kleinere Mahlzeiten und mindestens 3 Stunden vor dem Schlafengehen essen,
+         sowie Gewichtsabnahme und lockerere Kleidung sind ebenfalls hilfreich.
+         Das leichte Hochstellen des Kopfendes des Bettes ist eine weitere nützliche Maßnahme.
+
+         Manche Patienten können ihren Protonenpumpenhemmer (PPI) gegen Sodbrennen
+         (in Ihrem Fall XXXXXX) reduzieren oder sogar absetzen.
+         Das folgende Dokument beschreibt Strategien zum Absetzen, falls Sie an einer
+         Reduktion Ihrer Medikation interessiert sind:
+         https://www.rxfiles.ca/rxfiles/uploads/documents/Deprescribing-PPI-Patient-Tool.pdf
+         Wie darin beschrieben, kann das Absetzen dieser Medikamente gewisse Vorteile haben.
+         Wenn sie jedoch die einzige Behandlung sind, die Ihre Symptome kontrolliert,
+         sollten Sie sie weiter einnehmen.
+
+    - trigger: ":abdopain"
+      word: true
+      replace: |
+            Ihr Hauptanliegen heute sind Bauchschmerzen seit DAUER
+            {{pain}}
+
+            Sie hatten kein Erbrechen.
+            Sie hatten keine Veränderung Ihres Stuhlgangs.
+            Sie hatten kein Blut im Stuhl.
+            Sie hatten keinen schwarzen, teerartigen Stuhl (Meläna).
+
+            Sie haben keine Familienanamnese für chronisch-entzündliche Darmerkrankungen
+            wie Morbus Crohn oder Colitis ulcerosa.
+
+            {{deabdo}}
+            {{noother}}
+
+            Ihre Symptome sind vereinbar mit einer Dyspepsie (Magenverstimmung) und
+            könnten auf eine zugrunde liegende vermehrte Säureproduktion oder eine leichte
+            Magenschleimhautentzündung (Gastritis) zurückzuführen sein.
+            Weitere, weniger wahrscheinliche Möglichkeiten sind eine Leberentzündung,
+            eine beginnende Gallenblasenerkrankung oder ein Magen-/Zwölffingerdarmgeschwür.
+
+            Es wird empfohlen, Blutuntersuchungen und eine Abdomensonographie durchzuführen,
+            um eine mögliche innere Organerkrankung von Leber, Gallenblase oder Bauchspeicheldrüse auszuschließen.
+            Es wird empfohlen, mit der verordneten Medikation Pantoprazol 40 mg
+            einmal täglich, 30 Minuten vor dem morgendlichen Essen, zu beginnen.
+
+            {{finish}}
+
+      vars:
+        - name: pain
+          type: match
+          params:
+            trigger: ":pain"
+        - name: finish
+          type: match
+          params:
+            trigger: ":finish"
+        - name: noother
+          type: match
+          params:
+            trigger: ":noother"
+        - name: deabdo
+          type: match
+          params:
+            trigger: ":deabdo"

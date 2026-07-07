@@ -1,0 +1,29 @@
+matches:
+  - trigger: ":fluvac"
+    word: true
+    replace: |
+      Subjektiv:
+        {{cc}} jährliche Grippeimpfung
+        {{sp}} keine vorherigen Grippeimpfungen
+        {{sp}} keine vorherige Reaktion auf frühere Grippeimpfungen
+        {{sp}} keine Allergie gegen Eier, Latex oder Neomycin.
+        {{sp}} keine kürzliche Erkrankung
+        Nutzen und mögliche Nebenwirkungen wurden besprochen
+
+      Objektiv:
+        Impfstoff intramuskulär verabreicht
+        in den linken Deltamuskel unter aseptischer Technik mit
+        einer 25-Gauge-Nadel, 1 Zoll Länge
+        Injektion wurde gut vertragen
+        Chargennummer und Verfallsdatum in der Akte vermerkt
+
+      Beurteilung:
+        {{ap}} Bedarf an regelmäßiger Influenza-Impfung
+
+      Plan:
+        {{pp}} 15 Minuten im Wartebereich verbleiben, um
+        eine unmittelbare schwere Reaktion auszuschließen
+        {{pp}} Merkblatt zu möglichen Nebenwirkungen aushändigen
+        {{pp}} bei Bedenken die Praxis kontaktieren, insbesondere bei
+        möglicher Infektion (zunehmende Rötung, Schmerzen,
+        Schwellung oder Eiterbildung nach 3 Tagen)

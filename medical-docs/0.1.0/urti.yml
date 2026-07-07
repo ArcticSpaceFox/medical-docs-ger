@@ -5,50 +5,49 @@ matches:
   - trigger: ":urti"
     word: true
     replace: |
-      Subjective:
-        {{cc}} cold/flu like symptoms for XX days
-        {{sp}} no sore throat
-        {{sp}} no cough
-        {{sp}} no fever
-        {{sp}} no congestion
-        {{sp}} no ear pain
-        {{sp}} no headache
-        {{sp}} no sinus pain
-        {{sp}} no dental pain
-        {{sp}} no nausea/emesis
-        {{sp}} no diarrhea
-        {{sp}} no sick contacts
-        {{sp}} no recent travel
-        {{sp}} no flu shot this year
+      Anamnese:
+        {{cc}} erkältungs-/grippeähnliche Symptome seit XX Tagen
+        {{sp}} keine Halsschmerzen
+        {{sp}} kein Husten
+        {{sp}} kein Fieber
+        {{sp}} keine verstopfte Nase
+        {{sp}} keine Ohrenschmerzen
+        {{sp}} keine Kopfschmerzen
+        {{sp}} keine Nasennebenhöhlenschmerzen
+        {{sp}} keine Zahnschmerzen
+        {{sp}} keine Übelkeit/Erbrechen
+        {{sp}} keine Diarrhoe
+        {{sp}} keine erkrankten Kontaktpersonen
+        {{sp}} keine kürzliche Reisetätigkeit
+        {{sp}} keine Grippeimpfung in diesem Jahr
 
-      Objective:
-        {{op}} normal ear drums (tympanic membranes) bilaterally
-        {{op}} normal appearing throat (oropharynx) (no redness, no swelling, no exudates)
-        {{op}} no swollen neck lymph nodes (anterior cervical lympadenopathy)
-        {{op}} clear chest (no wheezes, no crackles)
-        {{op}} no increased work of breathing
+      Untersuchungsbefund:
+        {{op}} unauffällige Trommelfelle beidseits
+        {{op}} unauffälliger Rachenbefund (Oropharynx) (keine Rötung, keine Schwellung, keine Beläge)
+        {{op}} keine geschwollenen Halslymphknoten (zervikale Lymphadenopathie)
+        {{op}} unauffällige Lungenauskultation (kein Giemen, keine Rasselgeräusche)
+        {{op}} keine erhöhte Atemarbeit
 
-      Assessment:
-        {{ap}} Viral Upper Respiratory Infection
-           However, there are features suggestive of a bacterial throat infection.
+      Beurteilung:
+        {{ap}} virale Infektion der oberen Atemwege
+           Es bestehen jedoch Hinweise auf eine mögliche bakterielle Racheninfektion.
 
       Plan:
-         {{pp}} continue supportive management with fluids and rest
-         {{pp}} use tylenol/advil for comfort
-         {{pp}} use nasal saline rinses twice daily and nasal steroid spray before bed
-         {{pp}} await results of throat swab and take antibiotics only if positive
-         {{pp}} seek reassessment if increasing symptoms after 7 days
-         {{pp}} call 911 or go to ED if difficulty breathing develops
+         {{pp}} unterstützende Maßnahmen mit Flüssigkeitszufuhr und Ruhe fortführen
+         {{pp}} Paracetamol/Ibuprofen zur Linderung einnehmen
+         {{pp}} zweimal täglich Nasenspülungen mit Kochsalzlösung und ein Nasensteroidspray vor dem Schlafengehen verwenden
+         {{pp}} Ergebnis des Rachenabstrichs abwarten und Antibiotikum nur bei positivem Befund einnehmen
+         {{pp}} bei zunehmenden Symptomen nach 7 Tagen Wiedervorstellung
+         {{pp}} bei Atembeschwerden 112 anrufen oder Notaufnahme aufsuchen
 
   - trigger: ":strepphone"
     word: true
     replace: |
-      PHONE COMMUNICATION
+      TELEFONISCHE KOMMUNIKATION
 
-      Reason for call: Strep swab positive
+      Grund des Anrufs: Streptokokken-Abstrich positiv
 
-      Notes:
-        Informed strep swab positive and should start prescription given last visit.
-        Patient understands and agreeable.  Grateful for call.
-        Will contact clinic if further concerns, not improving despite treatment.
-
+      Notizen:
+        Über positiven Streptokokken-Abstrich informiert; Patient soll mit dem beim letzten Termin verordneten Rezept beginnen.
+        Patient versteht und ist einverstanden. Dankbar für den Anruf.
+        Wird sich bei der Praxis melden, falls weitere Bedenken bestehen oder trotz Behandlung keine Besserung eintritt.

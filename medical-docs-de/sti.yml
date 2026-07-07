@@ -1,0 +1,119 @@
+matches:
+  - trigger: ":sti"
+    word: true
+    replace:  |
+      Anamnese:
+        {{cc}} mögliche sexuell übertragbare Infektion (STI)
+
+        Symptome:
+        {{sp}} keine Schmerzen beim Wasserlassen
+        {{sp}} keine Läsionen, Ausschläge oder Wucherungen
+        {{sp}} kein ungewöhnlicher Ausfluss aus Penis, Vagina oder Anus
+        {{sp}} keine Hodenschmerzen
+        {{sp}} keine Unterbauchschmerzen
+        {{sp}} keine Schmerzen beim Geschlechtsverkehr
+
+        {{sp}} aktuelle Strategien zur STI-Prävention einschließlich XXXXX
+        {{sp}} aktuelle Strategien zur Schwangerschaftsverhütung einschließlich XXXXX
+        {{sp}} Sexualkontakte einschließlich oral, anal und vaginal
+
+
+        Risikofaktoren:
+        {{sp}} kein bekannter STI-Kontakt
+        {{sp}} ein bekannter STI-Kontakt, letzter Kontakt vor XXXX Tagen/Wochen
+        {{sp}} kein Geschlechtsverkehr vor dem 25. Lebensjahr
+        {{sp}} kein neuer Sexualpartner
+        {{sp}} nicht mehr als ein Sexualpartner im vergangenen Jahr
+        {{sp}} keine anonymen Sexualkontakte
+        {{sp}} kein MSM-Kontakt (Männer, die Sex mit Männern haben)
+        {{sp}} kein Kontakt mit Sexarbeiter(innen) oder deren Kunden
+        {{sp}} keine Obdachlosigkeit oder Straßenmilieu-Bezug
+        {{sp}} keine vorausgegangene sexuelle Übergriffe oder Missbrauch
+        {{sp}} keine Anwendung nicht-barrierebasierter Verhütung
+        {{sp}} kein Konsum von injizierbaren Drogen
+        {{sp}} kein Konsum sonstiger Substanzen
+        {{sp}} keine STI in der Vorgeschichte
+
+        Screening-Anamnese:
+        {{sp}} letzter STI-Test vor XXXX Monaten/Jahren
+        {{sp}} letzter PAP-Abstrich vor XXXX Monaten/Jahren
+        {{sp}} letzte Regelblutung:
+
+
+      Untersuchung:
+        {{op}} kein Gewichtsverlust
+        {{op}} kein Fieber
+        {{op}} keine vergrößerten Lymphknoten
+        {{op}} unauffälliger Befund von Mund und Rachen
+        {{op}} unauffälliger Befund der äußeren Genitalien
+        {{op}} keine skrotale Druckschmerzhaftigkeit
+        {{op}} unauffällige vaginale Untersuchung mit beleuchtetem Spekulum
+        {{op}} unauffällige bimanuelle Untersuchung ohne Uterus- oder Adnexdruckschmerz
+
+      Beurteilung:
+        {{ap}} routinemäßiges STI-Screening angefordert
+        {{ap}} Chlamydien
+        {{ap}} Gonorrhoe
+
+      Plan:
+        {{pp}} vollständige STI-Testung durchführen
+        {{pp}} Behandlung mit Azithromycin 1g und Cefixim 800mg bei vermuteter Exposition gegenüber Chlamydien und Gonorrhoe
+        {{pp}} sichere Sexualpraktiken mit konsequenter Verwendung von Barriereschutz (Kondome)
+        {{pp}} regelmäßiges STI-Screening, mindestens jährlich, bei erhöhtem Risiko häufiger
+
+  - trigger: ":hsv"
+    word: true
+    replace: |
+       Basierend auf Ihren Symptomen besteht eine hohe Wahrscheinlichkeit, dass der Hautausschlag
+       Ausdruck einer Erstinfektion mit dem Herpes-simplex-Virus ist. Der Ausschlag wird zwar
+       abheilen, jedoch verbleibt das Virus in der Regel dauerhaft im Körper
+       und verursacht mit hoher Wahrscheinlichkeit wiederkehrende Schübe eines bläschenförmigen Ausschlags.
+       Die Erstmanifestation ist jedoch meist am ausgeprägtesten, und Medikamente können auch
+       Schwere und Dauer künftiger Schübe verringern.
+
+       Es steht kein Bluttest zur Verfügung, um eine aktive
+       Herpes-simplex-Infektion (HSV) nachzuweisen. Für eine gesicherte Diagnose
+       müsste eine Vorstellung in einer Praxis mit Abstrichentnahme des Ausschlags erfolgen.
+
+       Zur Verkürzung der Dauer des aktuellen Schubs wird die Einnahme des
+       verordneten Medikaments Valaciclovir (Valtrex), 2 Kapseln (1g) zweimal täglich
+       für 10 Tage, empfohlen. Ist der Ausschlag danach nicht vollständig abgeheilt, verlängern Sie
+       die Behandlung um weitere 10 Tage.
+
+       Bei erneutem Auftreten dieses Ausschlags sollte dasselbe
+       Medikament Valaciclovir (Valtrex), 1 Kapsel (500mg) zweimal täglich für 3 Tage,
+       eingenommen werden, beginnend beim ersten Kribbeln oder Bläschen.
+
+       Zur Linderung der Beschwerden wird die Anwendung des verordneten topischen
+       Lidocain-2%-Gels bis zu viermal täglich empfohlen.
+
+       {{apprx}}
+    vars:
+      - name: apprx
+        type: match
+        params:
+          trigger: ":apprx"
+
+  - trigger: ":stitest"
+    word: true
+    replace: |
+       Es wird empfohlen, eine vollständige STI-Testung (sexuell übertragbare Infektionen)
+       durchzuführen, einschließlich Tests auf Chlamydien, Gonorrhoe, Syphilis, HIV,
+       Hepatitis B und Hepatitis C.
+       Sie werden zur Terminvereinbarung für die Testung kontaktiert.
+
+       Zu beachten ist, dass es nach einer Exposition ein kurzes diagnostisches Fenster geben kann,
+       in dem der Test negativ ausfällt, obwohl tatsächlich eine Infektion vorliegt.
+       Falls bei einem Partner eine gesicherte STI vorliegt, Ihr Test jedoch zunächst negativ ist,
+       wird eine Kontrolluntersuchung 12 Wochen nach dem letzten Kontakt empfohlen.
+
+       Grundsätzlich wird ein STI-Screening mindestens jährlich empfohlen,
+       bei mehr als einem Partner oder erhöhtem Risiko jedoch mindestens alle 6 Monate,
+       sowie zusätzlich nach jedem neuen Partner.
+
+       {{results}}
+    vars:
+      - name: results
+        type: match
+        params:
+          trigger: ":results"

@@ -1,0 +1,22 @@
+matches:
+  - trigger: ":ksprevent"
+    word: true
+    replace:  |
+      Strategien zur Vorbeugung von Nierensteinen
+
+      Ernährung
+      Flüssigkeitszufuhr erhöhen (2,5-3L/Tag, um >2L Urin pro Tag auszuscheiden)
+      Zitronensäurehaltige Früchte oder Getränke wie Zitronensaft/Orangensaft vermehrt zu sich nehmen
+      Salzzufuhr reduzieren (<2300mg Natrium/Tag)
+      Phosphorsäurehaltige Softdrinks (Colagetränke) minimieren
+      Tierisches Eiweiß auf <=2 Mahlzeiten pro Tag begrenzen, weniger als 170-225g
+      Oxalatreiche Lebensmittel wie Spinat und Rhabarber einschränken
+
+      Bewegung:
+      Moderate körperliche Aktivität und Gewichtsreduktion.
+
+      Nahrungsergänzung:
+      Vitamin B6 zur Unterstützung des Oxalatstoffwechsels
+      Fischölpräparat (möglicher Nutzen)
+      Vitamin C auf < 1000mg/Tag begrenzen
+

@@ -1,0 +1,440 @@
+matches:
+  - trigger: "S:"
+    replace: "Subjektiv:"
+    word: true
+  - trigger: "O:"
+    replace: "Objektiv:"
+    word: true
+  - trigger: "A:"
+    replace: "Beurteilung:"
+    word: true
+  - trigger: "P:"
+    replace: "Plan:"
+    word: true
+
+  - trigger: ":SOAP"
+    word: true
+    replace: |
+      Subjektiv:
+      Objektiv:
+      Beurteilung:
+      Plan:
+
+      Startzeit: {{mytime}}
+      Endzeit:
+    vars:
+      - name: mytime
+        type: date
+        params:
+          format: "%H:%M"
+
+  - trigger: ":FIFE"
+    word: true
+    replace: |
+      Gefühle: Was bereitet Ihnen am meisten Sorge? Gibt es spezifische Ängste oder Bedenken?
+      Vorstellungen: Was denken Sie, könnte die Ursache sein?
+      Funktion: Wie hat sich dies auf Ihren Alltag ausgewirkt? Worauf mussten Sie verzichten?
+      Erwartungen: Was erwarten oder erhoffen Sie sich heute von mir?
+
+  - trigger: "re"
+    replace: "rechts"
+    word: true
+
+  - trigger: "li"
+    replace: "links"
+    word: true
+
+  - trigger: "sek"
+    replace: "Sekunden"
+    word: true
+
+  - trigger: "min"
+    replace: "Minuten"
+    word: true
+
+  - trigger: "std"
+    replace: "Stunden"
+    word: true
+
+  - trigger: "wo"
+    replace: "Wochen"
+    word: true
+
+  - trigger: "mon"
+    replace: "Monate"
+    word: true
+
+  - trigger: "jhr"
+    replace: "Jahre"
+    word: true
+
+  - trigger: ":myn"
+    replace: "{{myname}}"
+    word: true
+
+  - trigger: ":mycl"
+    replace: "{{cname}}"
+    word: true
+
+  - trigger: ":myem"
+    replace: "{{myemail}}"
+    word: true
+
+  - trigger: ":myph"
+    replace: "{{myphone}}"
+    word: true
+
+  - trigger: "labanf"
+    replace: "Laboranforderung"
+    word: true
+
+  - trigger: "prn"
+    replace: "bei Bedarf"
+    word: true
+
+  - trigger: "rx"
+    replace: "Rezept"
+    word: true
+
+  - trigger: "rxhld"
+    replace: "Bitte erst nach Rücksprache mit dem Patienten einlösen"
+    word: true
+
+  - trigger: "pf"
+    replace: "Hübe"
+    word: true
+
+  - trigger: ":od"
+    replace: "einmal täglich"
+    word: true
+
+  - trigger: ":bid"
+    replace: "zweimal täglich"
+    word: true
+
+  - trigger: ":tid"
+    replace: "dreimal täglich"
+    word: true
+
+  - trigger: ":qid"
+    replace: "viermal täglich"
+    word: true
+
+  - trigger: ":qhs"
+    replace: "zur Schlafenszeit"
+    word: true
+
+  - trigger: "rr"
+    replace: "Blutdruck"
+    word: true
+
+  - trigger: ":temp"
+    replace: "Temperatur"
+    word: true
+
+  - trigger: "term"
+    replace: "Termin"
+    word: true
+
+  - trigger: "f/u"
+    replace: "Nachkontrolle"
+    word: true
+    propagate_case: true
+
+  - trigger: "wic"
+    replace: "Notfallpraxis ohne Termin"
+    word: true
+
+  - trigger: "ha"
+    replace: "Hausarzt"
+    word: true
+
+  - trigger: ":fufp"
+    replace: "{{pp}} Nachkontrolle bei Ihrem Hausarzt."
+    word: true
+
+  - trigger: "amit"
+    replace: "Amitriptylin (Saroten)"
+    word: true
+
+  - trigger: "nort"
+    replace: "Nortriptylin (Nortrilen)"
+    word: true
+
+  - trigger: "valt"
+    replace: "Valaciclovir (Valtrex)"
+    word: true
+
+  - trigger: "vrx"
+    replace: "2-4 Hübe viermal täglich bei Bedarf"
+    word: true
+
+  - trigger: "ocp"
+    replace: "orales Kontrazeptivum (Pille)"
+    word: true
+
+  - trigger: "bcp"
+    replace: "Antibabypille"
+    word: true
+
+  - trigger: "lmp"
+    replace: "letzte Menstruationsperiode (LMP)"
+    word: true
+
+  - trigger: "otc"
+    replace: "rezeptfrei"
+    word: true
+
+  - trigger: "ds"
+    replace: "Apotheke"
+    word: true
+
+  - trigger: "pn"
+    replace: "BC PharmaNet"
+    word: true
+
+  - trigger: "nc"
+    replace: "Alberta Netcare"
+    word: true
+
+  - trigger: "oeph"
+    replace: "Bei Untersuchung des vorgelegten Fotos, "
+    word: true
+
+  - trigger: ":fuwr"
+    replace: "{{pp}} Nachkontrolle, sobald die Ergebnisse vorliegen"
+    word: true
+
+  - trigger: ":life"
+    word: true
+    replace: |
+      {{pp}} eine feste Schlafenszeit und Aufstehzeit einhalten, auch an freien Tagen
+      {{pp}} regelmäßige Mahlzeiten mit einer Vielfalt an unverarbeiteten Lebensmitteln einhalten
+      {{pp}} regelmäßig körperlich aktiv sein, mit mindestens 30 Minuten pro Tag an 5 Tagen pro Woche
+      {{pp}} den Konsum von Genussmitteln, einschließlich Alkohol, reduzieren oder einstellen
+      Leitlinien empfehlen maximal 2 Getränke/Tag und 10 Getränke/Woche für Frauen sowie 3 Getränke/Tag und 15 Getränke/Woche für Männer.
+      {{pp}} Ihre Hobbys weiter pflegen
+      {{pp}} Zeit in Freundschaften und soziale Kontakte investieren
+      {{pp}} Ihre spirituelle Verbundenheit und persönlichen Werte pflegen
+
+  - trigger: ":snet"
+    word: true
+    replace: |
+      {{pp}} sich zur Nachkontrolle anmelden, falls sich die Beschwerden verschlechtern oder neue Symptome auftreten
+
+  - trigger: ":snet2"
+    word: true
+    replace: |
+       Sollte sich Ihr Beschwerdebild deutlich verändern oder Ihr Gesundheitszustand
+       sich während der Wartezeit auf die Ergebnisse verschlechtern, warten Sie bitte nicht
+       auf die Ergebnisse, sondern lassen Sie sich erneut untersuchen. Bitte suchen Sie
+       so bald wie möglich medizinische Hilfe auf, falls sich Ihr Zustand deutlich verschlechtert.
+
+  - trigger: ":finish"
+    word: true
+    replace: |
+       {{results}}
+       {{rxget}}
+       {{findfp}}
+       {{covidremind}}
+       {{snet}}
+    vars:
+      - name: results
+        type: match
+        params:
+          trigger: ":results"
+      - name: rxget
+        type: match
+        params:
+          trigger: ":rxget"
+      - name: findfp
+        type: match
+        params:
+          trigger: ":findfp"
+      - name: covidremind
+        type: match
+        params:
+          trigger: ":covidremind"
+      - name: snet
+        type: match
+        params:
+          trigger: ":snet"
+
+  # Dates
+  - trigger: ":date"
+    replace: "{{mydate}}"
+    vars:
+      - name: mydate
+        type: date
+        params:
+          format: "%d.%m.%Y"
+
+  - trigger: ":time"
+    replace: "{{mytime}}"
+    vars:
+      - name: mytime
+        type: date
+        params:
+          format: "%H:%M"
+
+  - trigger: ":phone"
+    word: true
+    replace:  |
+      TELEFONISCHE KOMMUNIKATION
+      Grund des Anrufs:
+      Notizen:
+
+
+  - trigger: "lmom"
+    replace: "{{mytime}} Angerufen, jedoch keine Antwort. Voicemail hinterlassen mit der Bitte, die Praxis bei Gelegenheit zurückzurufen."
+    word: true
+    vars:
+      - name: mytime
+        type: date
+        params:
+          format: "%H:%M"
+
+  - trigger: ":pain"
+    replace: |
+      Der Schmerz ist lokalisiert in
+        und strahlt aus nach
+        Der Schmerz geht einher mit Übelkeit Erbrechen Schwitzen Atemnot
+        Er besteht seit
+        und begann als
+        Die Symptome werden besser  bleiben gleich  werden schlechter
+        Er ist konstant intermittierend
+        Der Schmerz ist morgens besser  abends  gleichbleibend im Tagesverlauf
+        Er tritt in der Regel etwa X-mal täglich auf
+        Wenn er auftritt, dauert jede Episode
+        Der Charakter des Schmerzes ist
+        Die Intensität beträgt X von 10 (wobei 10 der stärkste vorstellbare Schmerz ist)
+        Der Schmerz verschlimmert sich bei
+        Der Schmerz bessert sich bei
+        Bisher versuchte Behandlungen umfassen
+
+  - trigger: ":PQRST"
+    word: true
+    replace: |
+      Provokation, Linderung - Was löst den Schmerz aus?
+                   Was macht ihn besser oder schlechter?
+      Qualität - Wie fühlt er sich genau an? (stechend, dumpf, scharf, brennend, drückend)
+      Radiation - Ist der Schmerz lokal begrenzt oder strahlt er aus?
+      Schwere - Wie stark ist er? (Skala 1 - 10)
+                 Wie stark beeinträchtigt er Ihr Leben?
+      Zeitverlauf - Ist er ständig vorhanden oder kommt und geht er?
+               Wann beginnt er und wie lange hält er an?
+               Wann war die letzte Schmerzmedikation?
+
+  - trigger: ":OLDCARTS"
+    word: true
+    replace: |
+      Beginn:
+      Lokalisation:
+      Dauer:
+      Charakter:
+      Verstärkende Faktoren:
+      Lindernde Faktoren:
+      Versuchte Therapien:
+      Schweregrad:
+
+  - trigger: ":SOCRATES"
+    word: true
+    replace: |
+      Ort:
+      Beginn:
+      Charakter:
+      Ausstrahlung:
+      Begleitsymptome:
+      Zeit/Dauer:
+      Verschlimmernde/lindernde Faktoren:
+      Schweregrad:
+
+
+  - trigger: ":refill"
+    word: true
+    replace: |
+      Subjektiv:
+        {{cc}} benötigt Wiederholungsrezept für bereits verordnetes Medikament: MEDIKAMENT
+        welches verordnet wird für die Indikation INDIKATION
+        seit etwa DAUER
+
+        {{sp}} keine Bedenken bezüglich der Wirksamkeit
+        {{sp}} keine Bedenken bezüglich Nebenwirkungen
+      Plan:
+        Rezept ausgestellt zur Fortführung von MEDIKAMENT
+        {{pp}} Medikament weiterhin wie verordnet einnehmen
+        {{pp}} Nachkontrolle beim Hausarzt
+
+  - trigger: ":sicknote"
+    word: true
+    replace: |
+      Sehr geehrte Damen und Herren,
+
+      der oben genannte Patient wurde in meiner Praxis untersucht und beurteilt.
+      Dem Patienten wird empfohlen, folgende Tage der Arbeit  Schule fernzubleiben:
+
+      {{mydate}}
+
+      Für Rückfragen stehe ich Ihnen gerne zur Verfügung.
+
+      Mit freundlichen Grüßen.
+
+    vars:
+      - name: mydate
+        type: date
+        params:
+          format: "%d. %B %Y"
+
+  - trigger: ":noother"
+    word: true
+    replace: |
+      Sie haben keine bekannten Allergien.
+      Sie haben keine weiteren medizinischen Vorerkrankungen.
+      Sie nehmen keine Medikamente ein (verschreibungspflichtig oder rezeptfrei).
+      Sie sind Nichtraucher.
+      Sie trinken keinen Alkohol.
+      Sie konsumieren keine anderen Substanzen wie Cannabis.
+
+  - trigger: ":refills"
+    word: true
+    replace: |
+       Ihr Hauptanliegen heute ist die Wiederholungsverordnung bereits verschriebener Medikamente:
+       1) MEDIKAMENT DOSIS HAEUFIGKEIT
+       welches verordnet wird für die Indikation INDIKATION
+       seit etwa DAUER
+
+       2) MEDIKAMENT DOSIS HAEUFIGKEIT
+       welches verordnet wird für die Indikation INDIKATION
+       seit etwa DAUER
+
+       3) MEDIKAMENT DOSIS HAEUFIGKEIT
+       welches verordnet wird für die Indikation INDIKATION
+       seit etwa DAUER
+
+       {{noother}}
+
+       Sie erscheinen wohlauf und ohne erkennbare Beeinträchtigung
+       Sie haben keine Bedenken bezüglich der Wirksamkeit dieser Medikamente
+       Sie haben keine Bedenken bezüglich Nebenwirkungen
+
+       Rezepte wurden ausgestellt zur Fortführung von:
+       MEDIKAMENTE
+
+       Es wird empfohlen, diese Medikamente weiterhin wie verordnet einzunehmen
+
+       Es wird empfohlen, sich bei Ihrem Hausarzt zur Nachkontrolle vorzustellen
+
+       {{finish}}
+    vars:
+      - name: noother
+        type: match
+        params:
+          trigger: ":noother"
+      - name: finish
+        type: match
+        params:
+          trigger: ":finish"
+
+
+
+

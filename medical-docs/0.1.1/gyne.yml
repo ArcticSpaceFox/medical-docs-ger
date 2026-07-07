@@ -5,91 +5,91 @@ matches:
   - trigger: ":ocp"
     word: true
     replace: |
-      Subjective:
-        {{cc}} Prescription for Oral Contraceptive Medication
+      Subjektiv:
+        {{cc}} Rezept für orales Kontrazeptivum
 
-        {{sp}} no current contraception
+        {{sp}} derzeit keine Kontrazeption
 
-        {{sp}} no liver disease
-        {{sp}} no migraines
-        {{sp}} no previous cancer diagnosis
-        {{sp}} no breast abnormalities
-        {{sp}} no clotting disorders
-        {{sp}} no tobacco use
+        {{sp}} keine Lebererkrankung
+        {{sp}} keine Migräne
+        {{sp}} keine vorangegangene Krebsdiagnose
+        {{sp}} keine Brustveränderungen
+        {{sp}} keine Gerinnungsstörungen
+        {{sp}} kein Tabakkonsum
 
-        {{sp}} had last menstrual period on DATE
-        {{sp}} regular menstruation
-        {{sp}} no increased risk for sexually transmitted infection (STI)
-        {{sp}} had last STI screen DURATION prior
-        {{sp}} no need for pregnancy test at this time
+        {{sp}} letzte Menstruation am DATUM
+        {{sp}} regelmäßige Menstruation
+        {{sp}} kein erhöhtes Risiko für sexuell übertragbare Infektionen (STI)
+        {{sp}} letztes STI-Screening vor DAUER
+        {{sp}} derzeit kein Bedarf für Schwangerschaftstest
 
-      Objective:
-        {{op}} current blood pressure of SBP/DBP
+      Objektiv:
+        {{op}} aktueller Blutdruck von SBP/DBP
 
-      Assessment:
-        {{ap}} need for ongoing contraceptive medication
-        with no contraindications
+      Beurteilung:
+        {{ap}} Indikation zur fortlaufenden hormonellen Kontrazeption
+        ohne Kontraindikationen
 
       Plan:
-        {{pp}} continue with previously prescribed oral contraceptive medication
-        Prescription provided for XXX
+        {{pp}} Fortführung des zuvor verordneten oralen Kontrazeptivums
+        Rezept ausgestellt für XXX
 
-        {{pp}} reference the following links for more information:
+        {{pp}} folgende Links für weitere Informationen nutzen:
         https://www.sexandu.ca/
         https://www.plannedparenthood.org/learn/birth-control
 
-        {{pp}} reference the following links in case of missed doses:
+        {{pp}} folgende Links bei vergessener Einnahme nutzen:
         https://www.sexandu.ca/sos/
         https://www.plannedparenthood.org/online-tools/missed-birth-control-pill
 
-        {{pp}} follow-up if further concerns or questions
+        {{pp}} Wiedervorstellung bei weiteren Bedenken oder Fragen
 
 
   - trigger: ":ffertility"
     word: true
     replace: |
-      Subjective:
-        {{cc}} failure to conceive after DURATION
+      Subjektiv:
+        {{cc}} unerfüllter Kinderwunsch seit DAUER
 
-        Menstrual History:
-          {{sp}} menstruation starting at age XX
-          {{sp}} irregular menstrual periods ranging from XX to YY days
-          {{sp}} regular menstrual periods every XX days
-          {{sp}} menstrual bleeding lasting XX days
+        Menstruationsanamnese:
+          {{sp}} Menarche im Alter von XX Jahren
+          {{sp}} unregelmäßige Menstruationszyklen zwischen XX und YY Tagen
+          {{sp}} regelmäßige Menstruationszyklen alle XX Tage
+          {{sp}} Menstruationsblutung dauert XX Tage
 
-        Pregnancy History:
-          {{sp}} no previous pregnancies
-          {{sp}} no previous pregnancies with current partner
+        Schwangerschaftsanamnese:
+          {{sp}} keine vorangegangenen Schwangerschaften
+          {{sp}} keine vorangegangenen Schwangerschaften mit aktuellem Partner
 
-        {{sp}} vaginal intercourse every second day
-        around the time of ovulation
-        {{sp}} verified time of ovulation with ovulation kits
+        {{sp}} Geschlechtsverkehr jeden zweiten Tag
+        um den Zeitpunkt des Eisprungs herum
+        {{sp}} Zeitpunkt des Eisprungs mittels Ovulationstests verifiziert
 
-        {{sp}} no lactation
-        {{sp}} no nipple discharge
-        {{sp}} symptoms of PCOS (abnormal hair growth, deep voice,
-               acne, irregular menstruation)
-        {{sp}} symptoms of endometriosis (severe menstrual cramps,
-               pain with intercourse, excessive or irregular bleeding)
-        {{sp}} no hypothyroidism symptoms:
+        {{sp}} keine Laktation
+        {{sp}} kein Mamillensekret
+        {{sp}} Symptome eines PCOS (abnormaler Haarwuchs, tiefe Stimme,
+               Akne, unregelmäßige Menstruation)
+        {{sp}} Symptome einer Endometriose (starke Menstruationsbeschwerden,
+               Schmerzen beim Geschlechtsverkehr, übermäßige oder unregelmäßige Blutung)
+        {{sp}} keine Symptome einer Hypothyreose:
           {{hitsh}}
 
-        {{sp}} no history of pelvic inflammatory disease (PID)
-        {{sp}} no history of polycystic ovarian syndrome (PCOS)
-        {{sp}} no history of pelvic surgery
-        {{sp}} no history of pelvic radiation
-        {{sp}} no history of dilitation and curretage (D&C)
+        {{sp}} keine entzündliche Beckenerkrankung (PID) in der Anamnese
+        {{sp}} kein polyzystisches Ovarialsyndrom (PCOS) in der Anamnese
+        {{sp}} keine Becken-Operation in der Anamnese
+        {{sp}} keine Becken-Bestrahlung in der Anamnese
+        {{sp}} keine Kürettage (D&C) in der Anamnese
 
-        {{sp}} no previous investigations or treatments
+        {{sp}} keine vorangegangenen Untersuchungen oder Behandlungen
 
-      Assessment:
-        {{ap}} primary female infertility
+      Beurteilung:
+        {{ap}} primäre Infertilität der Frau
 
       Plan:
-        {{pp}} complete investigations including:
-          CBC, TSH, Prolactin, FSH, LH, Progesterone, Testosterone, DHEA
-        {{pp}} follow-up when results are available
-        Referral sent to fertility clinic for further assessment
+        {{pp}} weitere Untersuchungen durchführen, einschließlich:
+          Blutbild, TSH, Prolaktin, FSH, LH, Progesteron, Testosteron, DHEA
+        {{pp}} Wiedervorstellung, sobald Ergebnisse vorliegen
+        Überweisung an Kinderwunschklinik zur weiteren Abklärung erfolgt
     vars:
       - name: hitsh
         type: match

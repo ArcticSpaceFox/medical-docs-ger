@@ -4,21 +4,21 @@ parent: default
 matches:
   - trigger: ":intro"
     replace: |
-      Introduction visit (Meet & Greet):
+      Erstvorstellung (Kennenlerngespräch):
 
-      Self introduction and general clinic information and policies
-      (clinic hours, walk-in appointments, after hours care, uninsured services) discussed.
+      Vorstellung und allgemeine Informationen zur Praxis sowie Praxisrichtlinien
+      (Sprechzeiten, offene Sprechstunde, Notdienst außerhalb der Sprechzeiten, nicht kassenärztliche Leistungen) besprochen.
 
-      Discussed any issues with previous family physician relationship.
+      Etwaige Probleme in der Beziehung zum vorherigen Hausarzt besprochen.
 
-      Agreement on care relationship, expectations and boundaries discussed.
-      Patient's questions answered.
+      Vereinbarung zur Behandlungsbeziehung, Erwartungen und Grenzen besprochen.
+      Fragen der Patientin/des Patienten beantwortet.
 
-      Recorded medical, medication, allergies, family, social histories.
+      Anamnese zu Vorerkrankungen, Medikation, Allergien, Familien- und Sozialanamnese erhoben.
 
       Plan:
-        Patient signed request for previous medical records and faxed to previous provider
-        Laboratory/Imaging requisition provided as needed
-        Patient to book Periodic health Exam
-        Counselled and advised when to follow-up.
+        Patientin/Patient unterschriebene Anforderung für Vorbefunde ausgehändigt, an vorherigen Behandler gefaxt
+        Labor-/Bildgebungsüberweisung nach Bedarf ausgestellt
+        Patientin/Patient soll Vorsorgeuntersuchung vereinbaren
+        Beratung erfolgt, Wiedervorstellung empfohlen.
 

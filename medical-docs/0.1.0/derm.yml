@@ -5,79 +5,78 @@ matches:
   - trigger: ":hairloss"
     word: true
     replace: |
-     Subjective:
-      {{cc}} hair loss at [location] for the past DURATION
+     Anamnese:
+      {{cc}} Haarausfall an [Lokalisation] seit DAUER
 
-     Objective:
-      {{op}} smooth localized area of complete hair loss at [location]
-      {{op}} negative hair pull test.
-      {{op}} no inflammation or scarring.
+     Untersuchungsbefund:
+      {{op}} glatter, umschriebener Bereich mit vollständigem Haarausfall an [Lokalisation]
+      {{op}} negativer Haarzupftest
+      {{op}} keine Entzündung oder Vernarbung
 
-     Assessment:
-      {{ap}} Alopecia Areata.
+     Beurteilung:
+      {{ap}} Alopecia areata
 
      Plan:
-      A referral has been sent to dermatology
+      Eine Überweisung an die Dermatologie wurde veranlasst
 
   - trigger: ":skininfection"
     word: true
     replace: |
-      Subjective:
-        {{cc}} possible skin infection for DURATION
-        The location is
-        Symptoms started after
-        {{sp}} no fever (temperature measured at home XXC)
-        {{sp}} no nausea or emesis
-        {{sp}} no diarrhea
-        {{sp}} no pain
-        {{sp}} no purulence
-        {{sp}} no swelling
-        {{sp}} no redness
-        {{sp}} no heat
-        {{sp}} no treatment to date
-        {{sp}} no progression over the past 48 hours
-        {{sp}} no proximal prosthetic joint or vascular graft
-        {{sp}} no previous skin infections
-        {{sp}} no diabetes
-        {{sp}} no immunocompromised state
-        {{sp}} no risks for MRSA (eg previous MRSA, recent hospitalization,
-               long-term care facility, hemodialysis, HIV infection,
-               lack of response to treatment without MRSA coverage)
-        {{sp}} no allergies to antibiotics
+      Anamnese:
+        {{cc}} mögliche Hautinfektion seit DAUER
+        Die Lokalisation ist
+        Die Symptome begannen nach
+        {{sp}} kein Fieber (zu Hause gemessene Temperatur XX°C)
+        {{sp}} keine Übelkeit oder Erbrechen
+        {{sp}} keine Diarrhoe
+        {{sp}} keine Schmerzen
+        {{sp}} keine Eiterbildung
+        {{sp}} keine Schwellung
+        {{sp}} keine Rötung
+        {{sp}} keine Überwärmung
+        {{sp}} bisher keine Therapie
+        {{sp}} keine Progredienz in den letzten 48 Stunden
+        {{sp}} kein proximales Gelenkimplantat oder Gefäßtransplantat
+        {{sp}} keine vorangegangenen Hautinfektionen
+        {{sp}} kein Diabetes
+        {{sp}} keine Immunsuppression
+        {{sp}} keine Risikofaktoren für MRSA (z.B. frühere MRSA-Infektion, kürzliche Hospitalisierung,
+               Langzeitpflegeeinrichtung, Hämodialyse, HIV-Infektion,
+               fehlendes Ansprechen auf Therapie ohne MRSA-Abdeckung)
+        {{sp}} keine Antibiotika-Allergien
 
-      Objective: 
-        {{op}} temperature of XXC
-        {{op}} blood pressure of XXX/YY and heart rate of XXX
-        The affected area is located at XXXX
-        and extends XXXXXXX
-        {{op}} no purulence
-        {{op}} no ulceration
-        {{op}} no abscess
-        {{op}} no erythema
-        {{op}} no warmth
-        {{op}} no tenderness
-        {{op}} no swelling
-        {{op}} no induration
-        {{op}} no clear demarcation of infection
-        {{op}} no raised erythema
+      Untersuchungsbefund:
+        {{op}} Temperatur von XX°C
+        {{op}} Blutdruck von XXX/YY und Herzfrequenz von XXX
+        Der betroffene Bereich befindet sich bei XXXX
+        und erstreckt sich XXXXXXX
+        {{op}} keine Eiterbildung
+        {{op}} keine Ulzeration
+        {{op}} kein Abszess
+        {{op}} kein Erythem
+        {{op}} keine Überwärmung
+        {{op}} keine Druckschmerzhaftigkeit
+        {{op}} keine Schwellung
+        {{op}} keine Induration
+        {{op}} keine klare Demarkation der Infektion
+        {{op}} kein erhabenes Erythem
 
-      Assessment:
-        {{ap}} Non-purulent cellulitis
-        {{ap}} Erysipelas
-        {{ap}} Skin abscess
-        {{ap}} Inflammed intradermal cyst
-        {{ap}} Paronychia
-        with NO systemic features requiring hospitalization or parenteral
-        antibiotics, and NO indication for MRSA coverage.
+      Beurteilung:
+        {{ap}} nicht-purulente Cellulitis
+        {{ap}} Erysipel
+        {{ap}} Hautabszess
+        {{ap}} entzündete intradermale Zyste
+        {{ap}} Paronychie
+        OHNE systemische Zeichen, die eine Hospitalisierung oder parenterale
+        Antibiotikatherapie erfordern würden, und OHNE Hinweis auf notwendige MRSA-Abdeckung.
 
       Plan:
-        Wound culture has been sent to guide antibiotic therapy,
-        if not improving with initial treatment.
-        {{pp}} start oral antibiotics today as prescribed
-        {{pp}} book for incision and drainage of abscess
-        {{pp}} proceed to ER for parenteral antibiotics and possible admission
-        {{pp}} keep affected area elevated
-        {{pp}} seek reassessment if no improvement after 72h,
-               worsening despite 48h antibiotics, or new systemic symptoms (fever, nausea)
-        {{pp}} go to ER if rapid progression of redness, severe nausea or high fever
-
+        Ein Wundabstrich wurde zur weiteren Steuerung der antibiotischen Therapie eingesendet,
+        sollte sich unter der initialen Behandlung keine Besserung zeigen.
+        {{pp}} heute mit oraler Antibiotikatherapie wie verordnet beginnen
+        {{pp}} Termin zur Inzision und Drainage des Abszesses vereinbaren
+        {{pp}} zur Notaufnahme für parenterale Antibiotikagabe und mögliche stationäre Aufnahme
+        {{pp}} betroffenen Bereich hochgelagert halten
+        {{pp}} Wiedervorstellung bei fehlender Besserung nach 72h,
+               Verschlechterung trotz 48h Antibiotikatherapie oder neuen systemischen Symptomen (Fieber, Übelkeit)
+        {{pp}} bei rascher Ausbreitung der Rötung, starker Übelkeit oder hohem Fieber in die Notaufnahme

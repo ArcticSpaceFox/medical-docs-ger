@@ -2,18 +2,18 @@ name: ptfacing
 parent: default
 
 matches:
-  - trigger: "ya"
-    replace: "You are at home in"
+  - trigger: "sz"
+    replace: "Sie sind zu Hause in"
     word: true
 
-  - trigger: "ym"
-    replace: "Your main concern today is"
+  - trigger: "sa"
+    replace: "Ihr Hauptanliegen heute ist"
     word: true
 
-  - trigger: "yh"
-    replace: "You have had"
+  - trigger: "sh"
+    replace: "Sie hatten"
     word: true
 
-  - trigger: "yn"
-    replace: "You have had no"
+  - trigger: "sk"
+    replace: "Sie hatten kein(e)"
     word: true

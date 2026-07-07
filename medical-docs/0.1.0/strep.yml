@@ -5,32 +5,28 @@ matches:
   - trigger: ":strep"
     word: true
     replace: |
-     Subjective:
-        {{cc}} sore throat for XX days
-        {{sp}} no cough
-        {{sp}} no previous strep
-        {{sp}} no known strep contact
-        Strep throat is most common in ages less than 15, and least common over 45.
+     Anamnese:
+        {{cc}} Halsschmerzen seit XX Tagen
+        {{sp}} kein Husten
+        {{sp}} keine vorherige Streptokokken-Infektion
+        {{sp}} kein bekannter Streptokokken-Kontakt
+        Streptokokken-Pharyngitis tritt am häufigsten unter 15 Jahren und am seltensten über 45 Jahren auf.
 
-     Objective:
-        {{op}} temperature today of
-        {{op}} no tender swollen lymph nodes in the neck (anterior cervical lymphadenopathy)
-        {{op}} no tonsillar swelling
-        {{op}} no tonsillar white spots (exudates)
+     Untersuchungsbefund:
+        {{op}} heutige Temperatur von
+        {{op}} keine schmerzhaften geschwollenen Lymphknoten am Hals (zervikale Lymphadenopathie)
+        {{op}} keine Tonsillenschwellung
+        {{op}} keine weißen Beläge auf den Tonsillen (Exsudate)
 
-     Assessment:
-        {{ap}} Acute Streptococcal Pharyngitis (Strep Throat)
+     Beurteilung:
+        {{ap}} akute Streptokokken-Pharyngitis (Streptokokken-Angina)
 
      Plan:
-        A throat swab was sent to check for a bacterial infection (strep throat)
-        {{pp}}wait until infection is confirmed before taking prescribed antibiotics
+        Ein Rachenabstrich wurde zur Abklärung einer bakteriellen Infektion (Streptokokken-Angina) eingesendet
+        {{pp}}bis zur Bestätigung der Infektion mit der Einnahme des verordneten Antibiotikums warten
         {{pp}}
-        {{pp}}start taking prescribed antibiotics immediately
+        {{pp}}verordnetes Antibiotikum sofort einnehmen
         {{pp}}
-        {{pp}}continue supportive management (tylenol,advil,rest,and fluids)
-        {{pp}}seek reassessment if worsening symptoms in 48 hours despite treatment
-        {{pp}}call 911 or go to ED if trouble breathing
-
-
-
-
+        {{pp}}unterstützende Maßnahmen fortführen (Paracetamol, Ibuprofen, Ruhe und ausreichend Flüssigkeit)
+        {{pp}}bei Verschlechterung der Symptome innerhalb von 48 Stunden trotz Behandlung Wiedervorstellung
+        {{pp}}bei Atembeschwerden 112 anrufen oder Notaufnahme aufsuchen

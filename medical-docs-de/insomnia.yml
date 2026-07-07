@@ -1,0 +1,67 @@
+matches:
+  # Schlafhygiene
+  - trigger: ":sleephy"
+    word: true
+    replace:  |
+      {{pp}} Fernseher und Computer aus dem Schlafzimmer entfernen.
+      {{pp}} ein zu heißes oder zu kaltes Schlafzimmer vermeiden.
+      {{pp}} eine ruhige, dunkle, sichere und komfortable Schlafumgebung aufrechterhalten. Lärm und Licht minimieren
+      {{pp}} das Bett und Schlafzimmer nur zum Schlafen und für Intimität nutzen.
+      {{pp}} Koffein nach dem Mittagessen und Alkohol innerhalb von 6 Stunden vor dem Schlafengehen vermeiden
+      {{pp}} Nikotin kurz vor dem Schlafengehen oder in der Nacht vermeiden
+      {{pp}} moderate körperliche Aktivität ausüben, aber intensiven Sport innerhalb von 3 Stunden vor dem Schlafengehen vermeiden
+      {{pp}} übermäßige Flüssigkeitsaufnahme oder eine schwere Abendmahlzeit vor dem Schlafengehen vermeiden
+      {{pp}} einen Wecker verwenden, um jeden Tag zur gleichen Zeit aufzustehen
+      {{pp}} nur schlafen gehen, wenn müde, auch wenn dies später als der vorgesehene Schlafplan ist.
+      {{pp}} das Bett verlassen, wenn innerhalb von 20 Minuten kein Einschlafen möglich ist - in ein anderes Zimmer gehen und entspannen. Erst wieder ins Bett gehen, wenn müde.
+      {{pp}} das Beobachten/Kontrollieren der Uhr vermeiden
+      {{pp}} übermäßiges Nickerchen tagsüber vermeiden - ein kurzes Nickerchen (15-30 Minuten) am frühen Nachmittag kann erfrischend und in Ordnung sein.
+
+  # Schlafstörungen
+  - trigger: ":insomnia"
+    word: true
+    replace:  |
+      Subjektiv:
+       {{cc}} Schlafstörungen seit DAUER
+       {{sp}} keine Einschlafstörung
+       {{sp}} keine Durchschlafstörung
+       {{sp}} keine Beeinträchtigung der Funktionsfähigkeit tagsüber
+       {{sp}} keine Bedenken hinsichtlich Autofahren oder Bedienen schwerer Maschinen
+       {{sp}} keine vorherigen Behandlungsversuche zur Schlafverbesserung
+       {{sp}} kein erkennbarer Auslöser (wie Stress, Reisen, Schichtarbeit, Depression, Angst, Schmerzen)
+       {{sp}} kein nächtlicher Husten
+       {{sp}} keine Atembeschwerden
+       {{sp}} kein nächtliches Erwachen zum Wasserlassen
+       {{sp}} keine Geräusche im Schlafzimmer (z. B. schnarchender Partner)
+       {{sp}} keine Schlafstörung durch Kinder oder Haustiere
+       {{sp}} keine unangenehme Temperatur im Schlafzimmer
+       {{sp}} kein Licht im Schlafzimmer
+       {{sp}} keine Bildschirme im Schlafzimmer
+       {{sp}} kein Nikotin spät am Tag
+       {{sp}} kein Koffein spät am Tag
+       {{sp}} kein Alkohol spät am Tag
+       {{sp}} letzte Mahlzeit des Tages um XX Uhr
+       {{sp}} regelmäßige Zubettgehzeit um XX Uhr (auch am Wochenende)
+       {{sp}} regelmäßige Aufstehzeit um XX Uhr (auch am Wochenende)
+       {{sp}} Gesamtzeit im Bett von XX Stunden
+       {{sp}} Gesamtschlafzeit von XX Stunden
+
+      Beurteilung:
+       {{ap}}  Primäre Insomnie
+       {{ap}}  Sekundäre Insomnie aufgrund von XXXX
+
+      Plan:
+        {{pp}} ein Schlaftagebuch beginnen
+        {{pp}} Verweis auf mysleepwell.ca für Strategien zur Schlafverbesserung
+        {{pp}} Lektüre von "Say Good Night to Insomnia" für Strategien zur Schlafverbesserung erwägen
+        {{pp}} Empfehlungen zur Schlafhygiene befolgen:
+        {{sleephy}}
+        Eine Überweisung zur Abklärung einer obstruktiven Schlafapnoe wurde veranlasst.
+        {{pp}} kurzfristigen, intermittierenden Einsatz eines Schlafmittels erwägen
+        {{pp}} Wiedervorstellung in 4 Wochen
+
+    vars:
+      - name: sleephy
+        type: match
+        params:
+          trigger: ":sleephy"

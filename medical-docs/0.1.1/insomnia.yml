@@ -2,66 +2,66 @@ name: insomnia
 parent: default
 
 matches:
-  # sleep hygiene
+  # Schlafhygiene
   - trigger: ":sleephy"
     word: true
     replace:  |
-      {{pp}} remove the TV and computer from the bedroom.
-      {{pp}} avoid a bedroom that is too hot or too cold.
-      {{pp}} maintain a quiet, dark, safe, and comfortable sleep environment. Minimize noise and light
-      {{pp}} use the bed and bedroom only for sleep and sex.
-      {{pp}} avoid caffeine after lunch and alcohol within 6 hours of bedtime
-      {{pp}} avoid nicotine close to bedtime or during the night
-      {{pp}} engage in moderate physical activity but avoid heavy exercise within 3 hours of bedtime
-      {{pp}} avoid consuming excessive liquids or a heavy evening meal before bedtime
-      {{pp}} use an alarm clock to get up at the same time every day
-      {{pp}} go to bed only when sleepy, even if later than prescribed sleep schedule.
-      {{pp}} get out of bed if not able to sleep within 20 minutes - go to another room and relax. Return to bed only when sleepy.
-      {{pp}} avoid watching/checking the clock
-      {{pp}} avoid excessive napping during the day - a brief nap (15-30 minutes) during the mid-afternoon can be refreshing and is okay.
+      {{pp}} Fernseher und Computer aus dem Schlafzimmer entfernen.
+      {{pp}} ein zu warmes oder zu kaltes Schlafzimmer vermeiden.
+      {{pp}} eine ruhige, dunkle, sichere und angenehme Schlafumgebung aufrechterhalten. Lärm und Licht minimieren
+      {{pp}} Bett und Schlafzimmer nur zum Schlafen und für Intimität nutzen.
+      {{pp}} Koffein nach dem Mittagessen und Alkohol innerhalb von 6 Stunden vor dem Zubettgehen vermeiden
+      {{pp}} Nikotin kurz vor dem Zubettgehen oder in der Nacht vermeiden
+      {{pp}} moderate körperliche Aktivität, jedoch intensive Belastung innerhalb von 3 Stunden vor dem Zubettgehen vermeiden
+      {{pp}} übermäßige Flüssigkeitszufuhr oder schwere Abendmahlzeiten vor dem Zubettgehen vermeiden
+      {{pp}} Wecker verwenden, um jeden Tag zur gleichen Zeit aufzustehen
+      {{pp}} nur zu Bett gehen, wenn müde, auch wenn später als geplant.
+      {{pp}} aufstehen, wenn innerhalb von 20 Minuten kein Einschlafen möglich ist - in ein anderes Zimmer gehen und entspannen. Erst bei Müdigkeit wieder zu Bett gehen.
+      {{pp}} Blick auf die Uhr vermeiden
+      {{pp}} übermäßiges Tagschlafen vermeiden - ein kurzes Nickerchen (15-30 Minuten) am frühen Nachmittag kann erholsam und unbedenklich sein.
 
-  # difficulty sleeping
+  # Schlafstörung
   - trigger: ":insomnia"
     word: true
     replace:  |
-      Subjective: 
-       {{cc}} difficulty sleeping for DURATION
-       {{sp}} no difficulty falling asleep
-       {{sp}} no difficulty staying asleep
-       {{sp}} no impact on function throughout the day
-       {{sp}} no concerns regarding driving or operating heavy machinery
-       {{sp}} no prior treatments to help sleep
-       {{sp}} no identified trigger (such as stress, travel, shift work, depression, anxiety, pain)
-       {{sp}} no nighttime cough
-       {{sp}} no difficulty breathing
-       {{sp}} no waking to urinate
-       {{sp}} no noise in bedroom (such as partner snoring)
-       {{sp}} no sleep disturbance due to children or pets
-       {{sp}} no uncomfortable temperature in bedroom
-       {{sp}} no lights in bedroom
-       {{sp}} no screens in bedroom
-       {{sp}} no nicotine late in day
-       {{sp}} no caffeine late in day
-       {{sp}} no alcohol late in day
-       {{sp}} last meal of the day at XX pm
-       {{sp}} consistent time to bed XX pm (even on weekends)
-       {{sp}} consistent time to wake XX am (even on weekends)
-       {{sp}} total time in bed of XX hours
-       {{sp}} total sleep time of XX hours
+      Subjektiv:
+       {{cc}} Schlafstörung seit DAUER
+       {{sp}} keine Einschlafschwierigkeiten
+       {{sp}} keine Durchschlafschwierigkeiten
+       {{sp}} keine Beeinträchtigung der Tagesfunktion
+       {{sp}} keine Bedenken bezüglich Autofahren oder Bedienen schwerer Maschinen
+       {{sp}} keine vorangegangenen Behandlungen zur Schlafverbesserung
+       {{sp}} kein erkennbarer Auslöser (wie Stress, Reisen, Schichtarbeit, Depression, Angst, Schmerzen)
+       {{sp}} kein nächtlicher Husten
+       {{sp}} keine Atembeschwerden
+       {{sp}} kein nächtliches Wasserlassen
+       {{sp}} kein Lärm im Schlafzimmer (z. B. schnarchender Partner)
+       {{sp}} keine Schlafstörung durch Kinder oder Haustiere
+       {{sp}} keine unangenehme Temperatur im Schlafzimmer
+       {{sp}} kein Licht im Schlafzimmer
+       {{sp}} keine Bildschirme im Schlafzimmer
+       {{sp}} kein Nikotin spät am Tag
+       {{sp}} kein Koffein spät am Tag
+       {{sp}} kein Alkohol spät am Tag
+       {{sp}} letzte Mahlzeit des Tages um XX Uhr
+       {{sp}} konstante Zubettgehzeit um XX Uhr (auch am Wochenende)
+       {{sp}} konstante Aufstehzeit um XX Uhr (auch am Wochenende)
+       {{sp}} Gesamtzeit im Bett von XX Stunden
+       {{sp}} Gesamtschlafzeit von XX Stunden
 
-      Assessment:
-       {{ap}}  Primary insomnia
-       {{ap}}  Secondary insomnia due to XXXX
+      Beurteilung:
+       {{ap}}  primäre Insomnie
+       {{ap}}  sekundäre Insomnie aufgrund von XXXX
 
       Plan:
-        {{pp}} start a sleep diary
-        {{pp}} refer to mysleepwell.ca for strategies to improve sleep
-        {{pp}} consider reading Say Good Night to Insomnia for strategies to improve sleep
-        {{pp}} follow recommendations for sleep hygiene:
+        {{pp}} Schlaftagebuch führen
+        {{pp}} Verweis auf mysleepwell.ca für Strategien zur Schlafverbesserung
+        {{pp}} Lektüre von "Say Good Night to Insomnia" für Strategien zur Schlafverbesserung erwägen
+        {{pp}} Empfehlungen zur Schlafhygiene befolgen:
         {{sleephy}}
-        A referral has been made for obstructive sleep apnea.
-        {{pp}} consider short term intermittent use of pharmacologic sleeping aid
-        {{pp}} follow-up in 4 weeks
+        Überweisung wegen obstruktiver Schlafapnoe erfolgt.
+        {{pp}} kurzfristige, intermittierende Anwendung eines pharmakologischen Schlafmittels erwägen
+        {{pp}} Wiedervorstellung in 4 Wochen
 
     vars:
       - name: sleephy

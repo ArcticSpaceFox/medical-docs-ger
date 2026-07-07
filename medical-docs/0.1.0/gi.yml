@@ -2,22 +2,22 @@ name: gi
 parent: default
 
 matches:
-    - trigger: "ruq"
-      replace: "right upper abdomen"
+    - trigger: "rob"
+      replace: "rechter Oberbauch"
       propagate_case: true
       word: true
 
-    - trigger: "rlq"
-      replace: "right lower abdomen"
+    - trigger: "rub"
+      replace: "rechter Unterbauch"
       propagate_case: true
       word: true
 
-    - trigger: "llq"
-      replace: "left lower abdomen"
+    - trigger: "lub"
+      replace: "linker Unterbauch"
       propagate_case: true
       word: true
 
-    - trigger: "luq"
-      replace: "left upper abdomen"
+    - trigger: "lob"
+      replace: "linker Oberbauch"
       propagate_case: true
       word: true

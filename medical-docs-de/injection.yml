@@ -1,0 +1,36 @@
+matches:
+  - trigger: ":injcort"
+    word: true
+    replace: |
+      Subjektiv:
+        {{cc}} Kortisoninjektion in LOCATION
+
+        Risiken und mögliche Komplikationen besprochen, einschließlich
+        fehlendem Nutzen oder nur sehr kurzfristiger Linderung,
+        Blutung und Infektion
+        Insbesondere wurde eine mögliche verstärkte
+        Schmerzsymptomatik in den ersten drei Tagen nach der Injektion
+        besprochen ("Steroid-Flare")
+
+        Einwilligung eingeholt.
+
+      Objektiv:
+        Areal lokalisiert und markiert.
+        Mehrfach mit Chlorhexidin desinfiziert.
+        Injektion mit steriler 25-Gauge-Nadel, 1,5 Zoll
+        Injizierte Medikation:
+          Kenalog 40 mg/ml (Charge:  Verfall: ) x 1 ml
+          und Lidocain 2 % ohne Adrenalin x 3 ml
+
+        Injektion gut vertragen
+        Injektionsstelle mit Pflaster abgedeckt
+        Keine unmittelbare Komplikation.
+
+      Beurteilung:
+        {{ap}} subakromiale Bursitis
+        {{ap}} Gonarthrose links
+
+      Plan:
+        {{pp}} bei Anzeichen einer Infektion umgehend wiedervorstellen
+         (verstärkte Rötung, Schmerz, Schwellung, Überwärmung nach 3 Tagen)
+

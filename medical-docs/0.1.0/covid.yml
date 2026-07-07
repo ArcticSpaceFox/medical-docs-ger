@@ -4,21 +4,21 @@ parent: default
 matches:
   - trigger: ":covidphone"
     replace: |
-      COVID PHONE COMMUNICATION
+      TELEFONISCHE KOMMUNIKATION COVID
 
-      Start Time: {{mytime}}
+      Beginnzeit: {{mytime}}
 
-      Reason for call:  In lieu of office visit due to COVID-19 concerns
+      Grund des Anrufs:  Anstelle eines Praxisbesuchs aufgrund von COVID-19-Bedenken
 
-      Notes:
-      {{sp}} no travel
-      {{sp}} no contact with recent travellers or suspected COVID-19 cases.
-      {{sp}} no symptoms of COVID (cough, fever, shortness of breath, runny nose, or sore throat)
-      that is not related to a pre-existing illness or health condition
+      Notizen:
+      {{sp}} keine Reisetätigkeit
+      {{sp}} kein Kontakt zu kürzlich Gereisten oder vermuteten COVID-19-Fällen
+      {{sp}} keine COVID-Symptome (Husten, Fieber, Atemnot, laufende Nase oder Halsschmerzen),
+      die nicht auf eine vorbestehende Erkrankung zurückzuführen sind
 
-      Recommended to continue social distancing.
+      Fortführung der sozialen Distanzierung empfohlen.
 
-      End Time:
+      Endzeit:
     vars:
     - name: mytime
       type: match
@@ -27,47 +27,47 @@ matches:
 
   - trigger: ":covidsig"
     replace: |
-      Please remember to practise social distancing.
+      Bitte denken Sie daran, weiterhin soziale Distanz zu wahren.
 
 
-      # This COVID risk assessement and monitoring is based on the COVID-19 Positive Primary Care Pathway
-      # Posted on www.specialistlink.ca
+      # Diese COVID-Risikoeinschätzung und -überwachung basiert auf dem COVID-19 Positive Primary Care Pathway
+      # Veröffentlicht auf www.specialistlink.ca
   - trigger: ":covidrisk"
     replace: |
-      COVID PHONE RISK ASSESSMENT
+      TELEFONISCHE RISIKOEINSCHÄTZUNG COVID
 
-      Start Time: {{mytime}}
+      Beginnzeit: {{mytime}}
 
-      Reason for call:  Risk stratification for presumed or confirmed COVID case
+      Grund des Anrufs:  Risikostratifizierung bei vermutetem oder bestätigtem COVID-Fall
 
-      Safety Net Check:
-        {{sp}} no social isolation
-        {{sp}} no lack of caregiver support
-        {{sp}} no inability to maintain hydration
-        {{sp}} no food/financial insecurity
-        {{sp}} no homecare
-        {{sp}} no challenges with health literacy or concerns with ability to self-manage
+      Sicherheitsnetz-Prüfung:
+        {{sp}} keine soziale Isolation
+        {{sp}} keine fehlende Unterstützung durch Betreuungspersonen
+        {{sp}} keine Unfähigkeit, die Flüssigkeitszufuhr aufrechtzuerhalten
+        {{sp}} keine Nahrungsmittel-/finanzielle Unsicherheit
+        {{sp}} keine häusliche Pflege
+        {{sp}} keine Schwierigkeiten mit Gesundheitskompetenz oder Bedenken bezüglich der Selbstversorgung
 
-      High Risk Features:
-        {{sp}} no recent discharge from tertiary care (hospital, complex care hub)
-        {{sp}} no lack of safety net
-        {{sp}} no age >70
-        {{sp}} no age >60 with medical comorbitities
-        {{sp}} no symptom deterioration
+      Hochrisikomerkmale:
+        {{sp}} keine kürzliche Entlassung aus tertiärer Versorgung (Krankenhaus, komplexe Versorgungseinrichtung)
+        {{sp}} kein fehlendes Sicherheitsnetz
+        {{sp}} kein Alter >70 Jahre
+        {{sp}} kein Alter >60 Jahre mit medizinischen Begleiterkrankungen
+        {{sp}} keine Verschlechterung der Symptome
 
-      Average Risk Features:
-        {{sp}} no age <18
-        {{sp}} no pregnancy
-        {{sp}} no absence of symptoms (but swab positive)
+      Durchschnittliche Risikomerkmale:
+        {{sp}} kein Alter <18 Jahre
+        {{sp}} keine Schwangerschaft
+        {{sp}} kein Fehlen von Symptomen (bei positivem Abstrich)
 
-      If above all negative, considered Lower Risk
+      Wenn alle oben genannten Punkte negativ sind, gilt niedriges Risiko
 
-      Overall Risk Assessment:
-         High Risk - requires daily monitoring for 14 days
-         Average Risk - requires monitoring every 2 days for 7 days
-         Lower Risk - consider self monitoring only - handout provided
+      Gesamtrisikobewertung:
+         Hohes Risiko - erfordert tägliche Überwachung für 14 Tage
+         Durchschnittliches Risiko - erfordert Überwachung alle 2 Tage für 7 Tage
+         Niedriges Risiko - Selbstüberwachung erwägen - Merkblatt ausgehändigt
 
-      End Time:
+      Endzeit:
     vars:
     - name: mytime
       type: match
@@ -76,50 +76,50 @@ matches:
 
   - trigger: ":covidredflags"
     replace: |
-      {{sp}} no severe shortness of breath at rest
-      {{sp}} no difficulty breathing
-      {{sp}} no pain or pressure in chest
-      {{sp}} no cold, clammy or pale molted skin
-      {{sp}} no new confusion
-      {{sp}} no blue lips or face
-      {{sp}} no becoming difficult to rouse
-      {{sp}} no coughing up blood
-      {{sp}} no reduced urine output
-      {{sp}} no return of cough after period of improvement (may signal development of COVID pneumonia)
-      {{sp}} no return of fever after afebrile period (may signal development of COVID pneumonia)
-      {{sp}} no low oxygen saturation (<92% if prev healthly, <90% if underlying lung condition)
-      {{sp}} no increased O2 requirements on home O2
+      {{sp}} keine schwere Atemnot in Ruhe
+      {{sp}} keine Atembeschwerden
+      {{sp}} keine Schmerzen oder Druckgefühl im Brustkorb
+      {{sp}} keine kalte, klamme oder blass-marmorierte Haut
+      {{sp}} keine neu aufgetretene Verwirrtheit
+      {{sp}} keine blauen Lippen oder blaues Gesicht
+      {{sp}} keine zunehmende Erweckbarkeitsstörung
+      {{sp}} kein Bluthusten
+      {{sp}} keine verminderte Urinausscheidung
+      {{sp}} kein erneuter Husten nach vorheriger Besserung (kann auf eine COVID-Pneumonie hinweisen)
+      {{sp}} kein erneutes Fieber nach fieberfreier Phase (kann auf eine COVID-Pneumonie hinweisen)
+      {{sp}} keine niedrige Sauerstoffsättigung (<92% bei vorher Gesunden, <90% bei zugrunde liegender Lungenerkrankung)
+      {{sp}} kein erhöhter Sauerstoffbedarf bei häuslicher O2-Therapie
 
   - trigger: ":covidmonitor"
     replace: |
-     COVID PHONE MONITORING
+     TELEFONISCHE ÜBERWACHUNG COVID
 
-      Start Time: {{mytime}}
+      Beginnzeit: {{mytime}}
 
-      Reason for call:  Monitoring for presumed or confirmed COVID case
+      Grund des Anrufs:  Überwachung bei vermutetem oder bestätigtem COVID-Fall
 
-      Previous Risk Stratification:  High  Average  Lower
+      Vorherige Risikostratifizierung:  Hoch  Durchschnittlich  Niedrig
 
-      {{sp}} overall been feeling  worse  unchanged  better
+      {{sp}} insgesamt fühlt sich  schlechter  unverändert  besser
 
-      If not worse, breathing assessment questionnaire was completed:
-        How is your breathing?
-        Is it worse today than yesterday?
-        What does your breathing prevent you from doing?
+      Falls nicht schlechter, wurde ein Atem-Beurteilungsfragebogen ausgefüllt:
+        Wie ist Ihre Atmung?
+        Ist sie heute schlechter als gestern?
+        Was verhindert Ihre Atmung, dass Sie tun können?
 
-      Overall worse or breathing questions positive, so red flags were checked:
+      Insgesamt schlechter oder Atemfragen positiv, daher wurden Warnzeichen überprüft:
 
-      {{sp}} red flags, and need urgent or emergent referral
-      {{sp}} no red flags, but since symptoms are worsening, now considered High Risk
-      Overall not worse and breathing questions negative, so will continue to monitor
-      High Risk      - every 24h for total of 14 days
-      Average Risk   - every 48h for total of  7 days
-      Lower Risk     - consider self monitoring, using self-monitoring checklist
+      {{sp}} Warnzeichen vorhanden, daher dringende oder notfallmäßige Überweisung erforderlich
+      {{sp}} keine Warnzeichen, aber da sich die Symptome verschlechtern, wird nun von hohem Risiko ausgegangen
+      Insgesamt nicht schlechter und Atemfragen negativ, daher wird die Überwachung fortgesetzt
+      Hohes Risiko      - alle 24h für insgesamt 14 Tage
+      Durchschnittliches Risiko   - alle 48h für insgesamt 7 Tage
+      Niedriges Risiko     - Selbstüberwachung anhand der Selbstüberwachungs-Checkliste erwägen
 
-      Must isolate for a minimum of 10 days from symptom onset
-      or when symptoms are gone, whichever is longer.
+      Isolation für mindestens 10 Tage ab Symptombeginn erforderlich
+      oder bis die Symptome abgeklungen sind, je nachdem, was länger dauert.
 
-      End Time:
+      Endzeit:
     vars:
     - name: mytime
       type: match

@@ -3,109 +3,109 @@ parent: default
 
 matches:
     - trigger: "ruq"
-      replace: "right upper abdomen"
+      replace: "rechter Oberbauch"
       propagate_case: true
       word: true
 
     - trigger: "rlq"
-      replace: "right lower abdomen"
+      replace: "rechter Unterbauch"
       propagate_case: true
       word: true
 
     - trigger: "llq"
-      replace: "left lower abdomen"
+      replace: "linker Unterbauch"
       propagate_case: true
       word: true
 
     - trigger: "luq"
-      replace: "left upper abdomen"
+      replace: "linker Oberbauch"
       propagate_case: true
       word: true
 
     - trigger: ":giredflag"
       word: true
       replace: |
-        Gastrointestinal Red Flags:
-          {{sp}} no family history of colon cancer
-          {{sp}} no family history of inflammatory bowel disease
-          {{sp}} no blood in stool, or black, tarry stools (melena)
-          {{sp}} no blood or "coffee grounds" in vomit
-          {{sp}} no difficulty swallowing (dysphagia)
-          {{sp}} no nocturnal symptoms
-          {{sp}} no progressive symptoms
-          {{sp}} no onset after age 50
-          {{sp}} no anemia
-          {{sp}} no weight loss
+        Gastrointestinale Warnzeichen:
+          {{sp}} keine Familienanamnese von Kolonkarzinom
+          {{sp}} keine Familienanamnese von chronisch-entzündlicher Darmerkrankung
+          {{sp}} kein Blut im Stuhl oder schwarzer, teerartiger Stuhl (Meläna)
+          {{sp}} kein Blut oder "Kaffeesatz" im Erbrochenen
+          {{sp}} keine Schluckbeschwerden (Dysphagie)
+          {{sp}} keine nächtlichen Symptome
+          {{sp}} keine progredienten Symptome
+          {{sp}} kein Beginn nach dem 50. Lebensjahr
+          {{sp}} keine Anämie
+          {{sp}} kein Gewichtsverlust
 
-          Any of the above features requires a referral to gastroenterology
+          Bei Vorliegen eines der oben genannten Merkmale ist eine Überweisung zur Gastroenterologie erforderlich
 
     - trigger: ":ibs"
       word: true
       replace: |
-        Subjective:
-          {{cc}} recurrent abdominal pain for the past DURATION
-          {{sp}} no change in frequency of stool
-          {{sp}} no change in form of stool
-          {{sp}} no relief of pain by defecation
+        Subjektiv:
+          {{cc}} rezidivierende Bauchschmerzen seit DAUER
+          {{sp}} keine Veränderung der Stuhlfrequenz
+          {{sp}} keine Veränderung der Stuhlform
+          {{sp}} keine Erleichterung der Schmerzen durch Defäkation
 
           {{redflags}}
 
-          {{sp}} no bloating
-          {{sp}} no flatulence
-          {{sp}} no nausea
-          {{sp}} no burping
-          {{sp}} no early satiety
-          {{sp}} no gastroesophageal reflux
-          {{sp}} no dyspepsia
+          {{sp}} kein Blähbauch
+          {{sp}} keine Flatulenz
+          {{sp}} keine Übelkeit
+          {{sp}} kein Aufstoßen
+          {{sp}} kein frühes Sättigungsgefühl
+          {{sp}} kein gastroösophagealer Reflux
+          {{sp}} keine Dyspepsie
 
-          {{sp}} no dysuria
-          {{sp}} no frequent/urgent urination
-          {{sp}} no widespread musculoskeletal pain
-          {{sp}} no dysmenorrhea
-          {{sp}} no dyspareunia
-          {{sp}} no fatigue
-          {{sp}} no anxiety
-          {{sp}} no depression
+          {{sp}} keine Dysurie
+          {{sp}} kein häufiger/imperativer Harndrang
+          {{sp}} keine generalisierten muskuloskelettalen Schmerzen
+          {{sp}} keine Dysmenorrhoe
+          {{sp}} keine Dyspareunie
+          {{sp}} keine Müdigkeit
+          {{sp}} keine Angstsymptomatik
+          {{sp}} keine depressive Symptomatik
 
-          Medications that may be worsening symptoms:
-          no laxatives/antacids
-          no PPI (proton pump inhibitors)
-          no ASA/NSAIDs
-          no iron/calcium/magnesium supplements
-          no calcium channel blockers
-          no antidepressants
-          no opioids
-          no diuretics,
-          no herbal products
+          Medikamente, die die Symptome verschlimmern könnten:
+          keine Abführmittel/Antazida
+          keine PPI (Protonenpumpenhemmer)
+          keine ASS/NSAR
+          keine Eisen-/Kalzium-/Magnesiumpräparate
+          keine Kalziumkanalblocker
+          keine Antidepressiva
+          keine Opioide
+          keine Diuretika,
+          keine pflanzlichen Präparate
 
-        Objective:
-          {{op}} no abdominal masses
-          {{op}} no abdominal tenderness
-          {{op}} no abdominal guarding (tensing with pain)
-          {{op}} normal bowel sounds
+        Objektiv:
+          {{op}} keine abdominellen Resistenzen
+          {{op}} keine abdominelle Druckschmerzhaftigkeit
+          {{op}} keine Abwehrspannung
+          {{op}} normale Darmgeräusche
 
-        Assessment:
-          {{ap}} Irritable Bowel Syndrome (IBS), diarrhea predominant, constipation predominant, mixed
+        Beurteilung:
+          {{ap}} Reizdarmsyndrom (RDS), diarrhoe-prädominant, obstipations-prädominant, gemischt
 
-          ROME IV Criteria for Irritable Bowel Syndrome (IBS):
-            1. Recurrent abdo pain >=3 months >=1 day per week
-            2. Associated with change in frequency and/or form of stool
-            3. AND pain relieved by defecation.
+          ROM-IV-Kriterien für das Reizdarmsyndrom (RDS):
+            1. Rezidivierende Bauchschmerzen >=3 Monate, >=1 Tag pro Woche
+            2. Assoziiert mit Veränderung der Stuhlfrequenz und/oder -form
+            3. UND Schmerzlinderung durch Defäkation.
 
-          However, additional testing is required to ensure other possible causes are not missed.
+          Weitere Abklärung ist jedoch erforderlich, um andere mögliche Ursachen nicht zu übersehen.
 
         Plan:
-          {{pp}} complete further investigations according to the Laboratory Requistion provided
-            CBC, ferritin, celiac screen
+          {{pp}} weitere Untersuchungen gemäß bereitgestellter Laboranforderung durchführen
+            Blutbild, Ferritin, Zöliakie-Screening
 
-            Diarrhea predominant:
-              CRP, albumin, electrolytes
-              Stool: C.diff, O&P, leuks, pH, fat globules, elastase
+            Diarrhoe-prädominant:
+              CRP, Albumin, Elektrolyte
+              Stuhl: C.diff, Ova & Parasiten, Leukozyten, pH, Fettkügelchen, Elastase
 
-            Constipation predominant:
-              TSH, electrolytes, ionized calcium
+            Obstipations-prädominant:
+              TSH, Elektrolyte, ionisiertes Kalzium
 
-            Mixed:  no additional investigations
+            Gemischt:  keine weiteren Untersuchungen
 
           {{fu}}
           {{snet}}
@@ -129,31 +129,31 @@ matches:
     - trigger: ":ibsmgt"
       word: true
       replace: |
-        General management of IBS:
-        {{pp}} reduce stress
-        {{pp}} engage in regular exercise
-        {{pp}} treat sleep issues
-        {{pp}} treat psychological issues
-        {{pp}} stop offending medications
-        {{pp}} trial probiotics
+        Allgemeines Management des Reizdarmsyndroms:
+        {{pp}} Stress reduzieren
+        {{pp}} regelmäßige körperliche Bewegung
+        {{pp}} Schlafprobleme behandeln
+        {{pp}} psychische Probleme behandeln
+        {{pp}} auslösende Medikamente absetzen
+        {{pp}} Probiotika versuchsweise einsetzen
 
-        Diarrhea predominant:
-        {{pp}} trial a FODMAPs diet
-        {{pp}} consider loperamide
-        {{pp}} consider Amitriptyline (Elavil) or Nortriptyline (Avantyl)
-        {{pp}} consider a bile acid sequestrants
-        {{pp}} consider Rifaximin
+        Diarrhoe-prädominant:
+        {{pp}} FODMAP-Diät versuchsweise einsetzen
+        {{pp}} Loperamid erwägen
+        {{pp}} Amitriptylin (Saroten) oder Nortriptylin (Nortrilen) erwägen
+        {{pp}} Gallensäurebinder erwägen
+        {{pp}} Rifaximin erwägen
 
-        Constipation predominant:
-        {{pp}} increase daily fluid intake
-        {{pp}} use a PEG-based laxative
-        {{pp}} consider Linaclotide
-        {{pp}} consider Prucalopride
+        Obstipations-prädominant:
+        {{pp}} tägliche Flüssigkeitszufuhr erhöhen
+        {{pp}} PEG-basiertes Abführmittel verwenden
+        {{pp}} Linaclotid erwägen
+        {{pp}} Prucaloprid erwägen
 
-        Mixed:
-        {{pp}} trial a FODMAPs diet
-        {{pp}} consider loperamide as needed
-        {{pp}} consider PEG-based laxative as needed
+        Gemischt:
+        {{pp}} FODMAP-Diät versuchsweise einsetzen
+        {{pp}} Loperamid bei Bedarf erwägen
+        {{pp}} PEG-basiertes Abführmittel bei Bedarf erwägen
 
 
 
