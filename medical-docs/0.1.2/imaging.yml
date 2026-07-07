@@ -3,30 +3,30 @@ parent: default
 
 matches:
   - trigger: "xr"
-    replace: "x-ray"
+    replace: "Röntgenaufnahme"
     propagate_case: true
     word: true
 
   - trigger: "cxr"
-    replace: "chest X-ray"
+    replace: "Röntgen-Thorax"
     propagate_case: true
     word: true
 
   - trigger: "u/s"
-    replace: "ultrasound"
+    replace: "Ultraschall"
     propagate_case: true
     word: true
 
   - trigger: "mammo"
-    replace: "mammogram"
+    replace: "Mammographie"
     propagate_case: true
     word: true
 
   - trigger: "bmd"
-    replace: "bone mineral density"
+    replace: "Knochendichte"
     propagate_case: true
     word: true
 
   - trigger: "fit test"
-    replace: "FIT test (colon cancer screen)"
+    replace: "FIT-Test (Darmkrebs-Screening)"
     word: true

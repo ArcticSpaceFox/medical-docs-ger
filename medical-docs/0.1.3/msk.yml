@@ -5,34 +5,34 @@ matches:
   - trigger: ":rice"
     word: true
     replace: |
-       You are advised to obtain a splint to support your XXXXX and allow rest.
-       You are advised to apply ice packs to the affected area for 20-30 minutes
-       every 3-4 hours for 2-3 days until the pain goes away.
-       You are advised to use elevate the affected area to reduce swelling.
-       You are advised to use topical anti-inflammatory medication as prescribed
-       (Diclofenac 10% Gel applied as needed 4 times daily) for pain relief
-       You are advised to take anti-inflammatory medication as prescribed
-       (Naproxen 250mg 1-2 tabs as needed every 24 hours) for pain relief
-       You are advised to use over the counter anti-inflammatory medication
-       such as ibuprofen or naproxen for pain relief
+       Es wird empfohlen, eine Schiene zur Unterstützung von XXXXX zu besorgen und die Stelle ruhigzustellen.
+       Es wird empfohlen, für 20-30 Minuten alle 3-4 Stunden über 2-3 Tage
+       Eisbeutel auf die betroffene Stelle aufzulegen, bis der Schmerz nachlässt.
+       Es wird empfohlen, die betroffene Stelle hochzulagern, um die Schwellung zu reduzieren.
+       Es wird empfohlen, wie verordnet ein topisches entzündungshemmendes Medikament zu verwenden
+       (Diclofenac 10% Gel bei Bedarf 4-mal täglich aufgetragen) zur Schmerzlinderung
+       Es wird empfohlen, wie verordnet ein entzündungshemmendes Medikament einzunehmen
+       (Naproxen 250mg 1-2 Tabletten bei Bedarf alle 24 Stunden) zur Schmerzlinderung
+       Es wird empfohlen, ein frei verkäufliches entzündungshemmendes Medikament
+       wie Ibuprofen oder Naproxen zur Schmerzlinderung zu verwenden
 
   - trigger: ":xray"
     word: true
     replace: |
-       You are advised to obtain an xray of your XXXXX.  You will be contacted
-       to arrange the details. Once your tests are completed and results are available,
-       you will hear from us.
+       Es wird empfohlen, eine Röntgenaufnahme von XXXXX anfertigen zu lassen. Sie werden
+       kontaktiert, um die Details zu vereinbaren. Sobald die Untersuchungen abgeschlossen
+       sind und die Ergebnisse vorliegen, werden Sie von uns hören.
 
-       If you have not received notification of your results from us
-       WITHIN 2 DAYS of completing your tests, please contact us:
-         Email: {{myemail}}
-         Phone: {{myphone}}
+       Sollten Sie INNERHALB VON 2 TAGEN nach Abschluss der Untersuchungen keine
+       Benachrichtigung über Ihre Ergebnisse von uns erhalten haben, kontaktieren Sie uns bitte:
+         E-Mail: {{myemail}}
+         Telefon: {{myphone}}
 
   - trigger: ":physio"
     word: true
     replace: |
-       You are advised to refer to the following handout materials detailing
-       stretches and exercises to guide your recovery:
+       Es wird empfohlen, sich auf folgende Informationsmaterialien mit Dehn- und
+       Übungsanleitungen zur Unterstützung Ihrer Genesung zu beziehen:
        https://www.primarycaresportsmedicine.com/wp-content/uploads/2016/12/WRIST-WRIST-SPRAIN.pdf
 
        https://www.primarycaresportsmedicine.com/wp-content/uploads/2016/12/WRIST-WRIST-TENDONITIS.pdf
@@ -41,39 +41,39 @@ matches:
 
        http://www.primarycaresportsmedicine.com/wp-content/uploads/2016/12/BACK-LOW-BACK-PAIN.pdf
 
-       If feasible, you are advised to consult a physiotherapist to help
-       guide your rehabilitation and reduce the chance of repeat injury.
-       A referral for physiotherapy will be sent to you to help with an
-       insurance claim if necessary.
+       Falls möglich, wird empfohlen, einen Physiotherapeuten zu konsultieren, um
+       Ihre Rehabilitation zu unterstützen und das Risiko einer erneuten Verletzung zu verringern.
+       Eine Überweisung zur Physiotherapie wird Ihnen zugesandt, um bei einem
+       Versicherungsanspruch gegebenenfalls zu helfen.
 
   - trigger: ":wrist"
     word: true
     replace: |
-       Your main concern today is RIGHT LEFT wrist pain which started about
-       This is not a work related condition.
-       You have no previous injuries to your wrist.
+       Ihr Hauptanliegen heute sind RECHTS LINKS Handgelenkschmerzen, die vor etwa
+       begonnen haben. Es handelt sich nicht um eine arbeitsbedingte Erkrankung.
+       Sie hatten keine vorherigen Verletzungen des Handgelenks.
 
        {{pain}}
 
        {{noother}}
 
-       Your wrist is not swollen.
-       Your wrist is not bruised.       
-       Your wrist has full range of motion.
+       Ihr Handgelenk ist nicht geschwollen.
+       Ihr Handgelenk weist keine Hämatome auf.
+       Ihr Handgelenk hat vollen Bewegungsumfang.
 
-       Your wrist has reduced range of motion.
-       Extension is limited by about 10 degrees compared to the opposite side.
-       Flexion is limited by about 10 degrees compared to the opposite side.
-       Radial deviation is limited by about 10 degrees compared to the opposite side.
-       Ulnar deviation is limited by about 10 degrees compared to the opposite side.
+       Ihr Handgelenk hat einen eingeschränkten Bewegungsumfang.
+       Die Extension ist im Vergleich zur Gegenseite um etwa 10 Grad eingeschränkt.
+       Die Flexion ist im Vergleich zur Gegenseite um etwa 10 Grad eingeschränkt.
+       Die Radialabduktion ist im Vergleich zur Gegenseite um etwa 10 Grad eingeschränkt.
+       Die Ulnarabduktion ist im Vergleich zur Gegenseite um etwa 10 Grad eingeschränkt.
 
-       There is no pain with resisted extension
-       There is no pain with resisted flexion
+       Es besteht kein Schmerz bei Extension gegen Widerstand
+       Es besteht kein Schmerz bei Flexion gegen Widerstand
 
-       Your history and symptoms are most consistent with a RIGHT LEFT wrist sprain.
-       Your history and symptoms are most consistent with a RIGHT LEFT wrist tendonitis.
-       Your history and symptoms are most consistent with a RIGHT LEFT De Quervain's Tenosynovitis.
-       Given the history, there is also concern for a possible fracture of the wrist bones.
+       Anamnese und Symptomatik sind am ehesten mit einer RECHTS LINKS Handgelenkzerrung vereinbar.
+       Anamnese und Symptomatik sind am ehesten mit einer RECHTS LINKS Handgelenk-Tendinitis vereinbar.
+       Anamnese und Symptomatik sind am ehesten mit einer RECHTS LINKS De-Quervain-Tenosynovitis vereinbar.
+       Angesichts der Anamnese besteht auch der Verdacht auf eine mögliche Fraktur der Handwurzelknochen.
 
        {{xray}}
 
@@ -111,28 +111,28 @@ matches:
   - trigger: ":hernia"
     word: true
     replace: |
-       Your main concern today is a hernia which is becoming more painful
-       You first noticed a bulge around the navel (umbilicus) about XX   ago
-       It has gradually worsened and has become more painful in the past XX
-       Your pain is XX/10 at rest and becomes XX/10 when you bend down.
-       The bulge is tender to touch.
-       There is no color change or bowel changes.
+       Ihr Hauptanliegen heute ist ein Leistenbruch/Hernie, der zunehmend schmerzhafter wird
+       Sie haben erstmals vor etwa XX eine Vorwölbung um den Bauchnabel (Nabel) bemerkt
+       Sie hat sich allmählich verschlechtert und ist in den letzten XX schmerzhafter geworden
+       Ihr Schmerz beträgt in Ruhe XX/10 und steigt beim Bücken auf XX/10.
+       Die Vorwölbung ist druckempfindlich.
+       Es besteht keine Farbveränderung oder Stuhlgangsveränderung.
 
-       Your height is XX cm and weight is XX kg
-       for a body mass index (BMI) of XX
+       Ihre Größe beträgt XX cm und Ihr Gewicht XX kg
+       für einen Body-Mass-Index (BMI) von XX
 
-       On exam, you have a reducible bulge around your umbilicus
-       approximately XX cm in diameter with
-       no colour change or overlying skin changes.
+       Bei der Untersuchung zeigt sich eine reponible Vorwölbung um den Nabel
+       mit einem Durchmesser von etwa XX cm ohne
+       Farbveränderung oder Hautveränderungen.
 
-       You have a symptomatic umbilical hernia, that is now
-       signicantly impacting your function.
+       Sie haben eine symptomatische Nabelhernie, die nun
+       Ihre Funktionsfähigkeit erheblich beeinträchtigt.
 
        {{refer}}
 
-       In particular, if you have intense pain or the hernia changes color
-       and your bowel movements stop, please
-       call 911 or proceed immediately to the nearest Emergency Department.
+       Sollten Sie insbesondere starke Schmerzen haben, die Hernie die Farbe ändern
+       und Ihr Stuhlgang aussetzen, rufen Sie bitte
+       den Notruf oder begeben Sie sich sofort in die nächste Notaufnahme.
     vars:
       - name: noother
         type: match
@@ -146,47 +146,47 @@ matches:
   - trigger: ":gout"
     word: true
     replace: |
-       Your main concern today is a possible gout attack in LOCATION
+       Ihr Hauptanliegen heute ist ein möglicher Gichtanfall an LOKALISATION
 
-       You have had pain and swelling since 
-       There is also redness
-       It is difficult to walk because of the pain.
-       It started after
-       So far you have tried treatments with
+       Sie haben seit Schmerzen und Schwellung
+       Es besteht auch Rötung
+       Das Gehen fällt schmerzbedingt schwer.
+       Es begann nach
+       Bisher haben Sie folgende Behandlungen versucht
 
-       You have had gout for DURATION
-       The attacks or flares occur about XXX times per year
-       You have identified triggers including
-       These attacks usually affect your LEFT RIGHT GREAT TOE ANKLE
+       Sie haben seit DAUER Gicht
+       Die Anfälle bzw. Schübe treten etwa XXX Mal pro Jahr auf
+       Sie haben folgende Auslöser identifiziert
+       Diese Anfälle betreffen üblicherweise Ihre LINKE RECHTE GROSSZEHE SPRUNGGELENK
 
-       Usually your attacks are treated successfully with
+       Ihre Anfälle werden üblicherweise erfolgreich behandelt mit
 
-       This feels like your previous attacks.
+       Dies fühlt sich wie Ihre vorherigen Anfälle an.
 
        {{noother}}
 
-       Your LEFT RIGHT GREAT TOE ANKLE appears swollen, with increased redness
-       and is tender to the touch.
+       Ihre LINKE RECHTE GROSSZEHE SPRUNGGELENK erscheint geschwollen, mit verstärkter Rötung
+       und ist druckempfindlich.
 
-       Based on your history and examination, this is very likely a gout flare.
+       Basierend auf Anamnese und Untersuchung handelt es sich sehr wahrscheinlich um einen Gichtschub.
 
-       You are advised to use the prescribed medication,
-       Indomethacin 50mg as needed up to three times daily for pain relief
+       Es wird empfohlen, das verordnete Medikament zu verwenden,
+       Indometacin 50mg bei Bedarf bis zu dreimal täglich zur Schmerzlinderung
 
-       You are also advised to use the prescribed medication
-       Colchine 0.6mg twice daily until the symptoms completely resolve,
-       usually about two weeks.
+       Es wird außerdem empfohlen, das verordnete Medikament
+       Colchicin 0,6mg zweimal täglich zu verwenden, bis die Symptome vollständig abgeklungen sind,
+       üblicherweise etwa zwei Wochen.
 
-       It can sometimes be difficult to determine the trigger for gout and
-       attacks may continue despite your best efforts to avoid triggers.
-       If you are having more than three gout attacks per year, you may want to consider
-       a daily medication, such as allopurinol, to prevent gout flares.
-       Please speak with the doctor if you would like to discuss further.
+       Es kann mitunter schwierig sein, den Auslöser für Gicht zu bestimmen, und
+       Anfälle können trotz größter Bemühungen, Auslöser zu vermeiden, weiter auftreten.
+       Sollten Sie mehr als drei Gichtanfälle pro Jahr haben, sollten Sie eine
+       tägliche Dauermedikation, wie Allopurinol, zur Vorbeugung von Gichtschüben in Betracht ziehen.
+       Bitte sprechen Sie mit dem Arzt, wenn Sie dies weiter besprechen möchten.
 
        {{finish}}
 
-       If your symptoms are not improving within 3 days or you have other concerns, please
-       book for follow-up. 
+       Sollten sich Ihre Symptome innerhalb von 3 Tagen nicht bessern oder Sie weitere Bedenken haben,
+       vereinbaren Sie bitte einen Kontrolltermin.
 
     vars:
       - name: noother
@@ -197,5 +197,4 @@ matches:
         type: match
         params:
           trigger: ":finish"
-
 

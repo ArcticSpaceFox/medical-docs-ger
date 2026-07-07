@@ -3,6 +3,6 @@ parent: default
 
 matches:
   - trigger: ":cp"
-    replace: "chest pain"
+    replace: "Thoraxschmerz"
     propagate_case: true
     word: true

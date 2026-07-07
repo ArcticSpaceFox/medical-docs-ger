@@ -3,48 +3,48 @@ parent: default
 
 matches:
   - trigger: ":cp"
-    replace: "chest pain"
+    replace: "Brustschmerzen"
     propagate_case: true
     word: true
 
   - trigger: ":chestpain"
     word: true
     replace: |
-      Subjective:
-        {{cc}} chest pain for the past DURATION
+      Subjektiv:
+        {{cc}} Brustschmerzen seit DAUER
         {{pain}}
-        {{sp}} no exertional component
-        {{sp}} no worsening with deep breaths
-        {{sp}} no shortness of breath
-        {{sp}} no nausea
-        {{sp}} no sweating
-        {{sp}} no previous similar episodes
+        {{sp}} keine Belastungsabhängigkeit
+        {{sp}} keine Verstärkung bei tiefer Einatmung
+        {{sp}} keine Atemnot
+        {{sp}} keine Übelkeit
+        {{sp}} kein Schwitzen
+        {{sp}} keine früheren ähnlichen Episoden
 
 
-      Objective:
-        {{op}} blood pressure of
-        {{op}} heart rate of
-        {{op}} no distress
-        {{op}} no increased work of breathing
-        {{op}} normal heart sounds (S1/S2) with no murmurs or extra heart sounds
-        {{op}} normal regular heart rhythm
-        {{op}} good air entry to both lungs, with no abnormal sounds (adventitia)
-        {{op}} no chest wall tenderness
-        {{op}} no skin rash
-        {{op}} no swelling (edema) in lower legs
-        {{op}} no tenderness or redness in lower legs
-               (no suspicion of a blod clot (Deep Vein Thrombosis))
+      Objektiv:
+        {{op}} Blutdruck von
+        {{op}} Herzfrequenz von
+        {{op}} kein Distress
+        {{op}} keine erhöhte Atemarbeit
+        {{op}} normale Herztöne (S1/S2) ohne Herzgeräusche oder zusätzliche Herztöne
+        {{op}} normaler, regelmäßiger Herzrhythmus
+        {{op}} gutes Atemgeräusch beidseits ohne Nebengeräusche
+        {{op}} keine Druckschmerzhaftigkeit der Brustwand
+        {{op}} kein Hautausschlag
+        {{op}} keine Schwellung (Ödem) der Unterschenkel
+        {{op}} keine Druckschmerzhaftigkeit oder Rötung der Unterschenkel
+               (kein Verdacht auf ein Blutgerinnsel (tiefe Venenthrombose))
 
-      Assessment:
-        {{ap}} Non-cardiac Chest Pain, not related to heart or lungs,
-               most likely originating in chest wall
+      Beurteilung:
+        {{ap}} Nicht-kardiale Brustschmerzen, nicht herz- oder lungenbedingt,
+               am ehesten ausgehend von der Brustwand
 
       Plan:
-        {{pp}} use analgesia (such as ibuprofen or tylenol) for pain relief
-        {{pp}} use medication to control acid reflux (GERD)
-               as prescribed
-        {{pp}} follow-up in 2 weeks if pain not improving
-        {{pp}} seek emergency medical care if unremitting pain or shortness of breath
+        {{pp}} Analgesie (wie Ibuprofen oder Paracetamol) zur Schmerzlinderung
+        {{pp}} verordnete Medikation zur Kontrolle von Säurereflux (GERD)
+               anwenden
+        {{pp}} Kontrolltermin in 2 Wochen, falls Schmerzen nicht besser werden
+        {{pp}} bei anhaltenden Schmerzen oder Atemnot umgehend Notfallversorgung aufsuchen
 
     vars:
       - name: pain
@@ -52,69 +52,69 @@ matches:
         params:
           trigger: ":pain"
 
-  # Causes of tachy or brady arrythmias (6Hs and 5Ts)
+  # Ursachen für tachykarde oder bradykarde Arrhythmien (6H und 5T)
   - trigger: ":arcause"
     word: true
     replace: |
-      Hypoxia
-      Hypothermia
-      Hypovolemia
-      Hypoglycemia
-      Hydrogen ion (acidosis)
-      Hypo/Hyperkalemia
+      Hypoxie
+      Hypothermie
+      Hypovolämie
+      Hypoglykämie
+      Wasserstoffion (Azidose)
+      Hypo-/Hyperkaliämie
 
-      Trauma (increase intracranial pressure, hypovolemia)
-      Thrombosis (pulmonary or coronary)
-      Tamponade (cardiac)
-      Tension pneumothorax
-      Toxins
+      Trauma (erhöhter Hirndruck, Hypovolämie)
+      Thrombose (pulmonal oder koronar)
+      Tamponade (kardial)
+      Spannungspneumothorax
+      Toxine
 
   - trigger: ":wellsdvt"
     word: true
     replace: |
-      Wells Score for Deep Vein Thrombosis (DVT):
-        Active malignancy (past 6 months)            1
-        Immobilization at least 3 days OR
-        surgery in past 12 weeks                     1
-        Immobilization of lower extremity            1
-        Localized tenderness of deep venous system   1
-        Entire leg swollen                           1
-        Calf swelling >=3 cm larger than other side  1
-        Pitting edema confined to symptomatic side   1
-        Collateral superficial veins                 1
-        Previously documented DVT                    1
-        Alternatives diagnosis at least as likely   -2
+      Wells-Score für tiefe Venenthrombose (TVT):
+        Aktive Malignität (letzte 6 Monate)             1
+        Immobilisierung mindestens 3 Tage ODER
+        Operation in den letzten 12 Wochen               1
+        Immobilisierung der unteren Extremität           1
+        Lokalisierte Druckschmerzhaftigkeit des tiefen Venensystems  1
+        Ganzes Bein geschwollen                          1
+        Wadenumfang >=3 cm größer als Gegenseite         1
+        Eindrückbares Ödem auf symptomatischer Seite begrenzt  1
+        Kollaterale oberflächliche Venen                 1
+        Vorher dokumentierte TVT                         1
+        Alternative Diagnose mindestens ebenso wahrscheinlich  -2
 
-      Score >=3 indicates high probability of DVT
+      Score >=3 zeigt hohe Wahrscheinlichkeit einer TVT an
 
   - trigger: ":wellspe"
     word: true
     replace: |
-      Wells Score for Pulmonary Embolism (PE):
-        Clinical signs and symptoms of DVT      3
-        Alternatives less likely than PE        3
-        Heart rate >100                         1.5
-        Previous PE or DVT (confirmed)          1.5
-        Immobilization at least 3 days OR
-        surgery in past 4 weeks                 1.5
-        Hemoptysis (coughing blood)             1
-        Active malignancy (past 6 months)       1
+      Wells-Score für Lungenembolie (LE):
+        Klinische Zeichen und Symptome einer TVT       3
+        Alternative Diagnose weniger wahrscheinlich als LE   3
+        Herzfrequenz >100                              1.5
+        Vorherige LE oder TVT (bestätigt)               1.5
+        Immobilisierung mindestens 3 Tage ODER
+        Operation in den letzten 4 Wochen                1.5
+        Hämoptyse (Bluthusten)                          1
+        Aktive Malignität (letzte 6 Monate)             1
 
-      Score <=4 do d-dimer and if negative stop
-      Score >=5 do CTPA or V/Q scan
+      Score <=4: D-Dimer bestimmen und bei negativem Ergebnis abbrechen
+      Score >=5: CTPA oder Ventilations-/Perfusionsszintigraphie durchführen
 
   - trigger: ":perc"
     word: true
     replace: |
-      PERC Criteria to Rule Out Pulmonary Embolism (PE):
-        If the probability of PE is less than 15% and
-        all the following are true, no further tests required
+      PERC-Kriterien zum Ausschluss einer Lungenembolie (LE):
+        Wenn die Wahrscheinlichkeit einer LE unter 15% liegt und
+        alle folgenden Kriterien zutreffen, sind keine weiteren Untersuchungen erforderlich
 
-        {{sp}} age <50
-        {{sp}} pulse <100 bpm
-        {{sp}} oxygen saturation >=95%
-        {{sp}} no coughing up blood (hemoptysis)
-        {{sp}} no estrogen use (oral contraceptive or hormone replacement)
-        {{sp}} no surgery or trauma needing general anesthesia in past 4 weeks
-        {{sp}} no previous blood clots (venous thromboembolism)
-        {{sp}} no leg swelling on only one side
+        {{sp}} Alter <50
+        {{sp}} Puls <100/min
+        {{sp}} Sauerstoffsättigung >=95%
+        {{sp}} kein Bluthusten (Hämoptyse)
+        {{sp}} keine Östrogeneinnahme (orale Kontrazeption oder Hormonersatztherapie)
+        {{sp}} keine Operation oder Trauma mit Vollnarkose in den letzten 4 Wochen
+        {{sp}} keine vorherigen Blutgerinnsel (venöse Thromboembolie)
+        {{sp}} keine einseitige Beinschwellung

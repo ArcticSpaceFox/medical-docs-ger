@@ -5,24 +5,24 @@ matches:
   - triggers: [":hyperthyroid", ":lotsh"]
     word: true
     replace: |
-     {{sp}} no palpitations, rapid heart rate (tachycardia) or atrial fibrillation
-     {{sp}} no widened pulse pressure (>100mmHg between systolic and diastolic pressures)
-     {{sp}} no nervousness and tremor
-     {{sp}} no heat intolerance
-     {{sp}} no weight loss
-     {{sp}} no muscular weakness
-     {{sp}} no goiter
+     {{sp}} keine Palpitationen, keinen schnellen Herzschlag (Tachykardie) oder Vorhofflimmern
+     {{sp}} keine verbreiterte Blutdruckamplitude (>100mmHg zwischen systolischem und diastolischem Druck)
+     {{sp}} keine Nervosität und keinen Tremor
+     {{sp}} keine Hitzeintoleranz
+     {{sp}} keinen Gewichtsverlust
+     {{sp}} keine Muskelschwäche
+     {{sp}} keine Struma
 
   - triggers: [":hyperthyroid", ":hitsh"]
     word: true
     replace: |
-     {{sp}} no weight gain
-     {{sp}} no lethargy
-     {{sp}} no cold intolerance
-     {{sp}} no menstrual irregularities
-     {{sp}} no depression
-     {{sp}} no constipation
-     {{sp}} no dry skin
+     {{sp}} keine Gewichtszunahme
+     {{sp}} keine Lethargie
+     {{sp}} keine Kälteintoleranz
+     {{sp}} keine Menstruationsunregelmäßigkeiten
+     {{sp}} keine Depression
+     {{sp}} keine Obstipation
+     {{sp}} keine trockene Haut
 
 
 

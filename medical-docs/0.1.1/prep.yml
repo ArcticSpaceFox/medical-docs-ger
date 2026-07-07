@@ -2,38 +2,38 @@ name: prep
 parent: default
 
 matches:
-  # HIRI-MSM risk assessment tool
+  # HIRI-MSM Risikobeurteilungs-Instrument
   - trigger: ":preprisk"
     word: true
     replace: |
-      How old are you today?                                      <18 years   0
-                                                                18-28 years   8
-                                                                29-40 years   5
-                                                                41-48 years   2
-                                                                >= 49 years   0
+      Wie alt sind Sie heute?                                       <18 Jahre   0
+                                                                18-28 Jahre   8
+                                                                29-40 Jahre   5
+                                                                41-48 Jahre   2
+                                                                >= 49 Jahre   0
 
-      How many men have you had sex with in the past 6 months?     >10        7
-                                                                  6-10        4
+      Mit wie vielen Männern hatten Sie in den letzten 6 Monaten     >10        7
+      Geschlechtsverkehr?                                          6-10        4
                                                                    0-5        0
 
-      How many of your male sex partners were HIV positive?        >1         8
+      Wie viele Ihrer männlichen Sexualpartner waren HIV-positiv?    >1         8
                                                                     1         4
                                                                     0         0
 
-      In the last 6 months, how many times did you have           >=1        10
-      receptive anal sex (you were the bottom) with a man           0         0
-      without a condom?
+      Wie oft hatten Sie in den letzten 6 Monaten                  >=1        10
+      rezeptiven Analverkehr (Sie waren passiv) mit einem Mann       0         0
+      ohne Kondom?
 
-      In the last 6 months, how many times did you have           >=5         6
-      insertive anal sex (you were the top) with a man            0-4         0
-      who was HIV positive?
+      Wie oft hatten Sie in den letzten 6 Monaten                  >=5         6
+      insertiven Analverkehr (Sie waren aktiv) mit einem Mann       0-4         0
+      der HIV-positiv war?
 
-      In the last 6 months, have you used methamphetamines        Yes         5
-      such as crystal or speed?                                    No         0
+      Haben Sie in den letzten 6 Monaten Methamphetamin             Ja          5
+      wie Crystal oder Speed konsumiert?                            Nein        0
 
-      In the last 6 months, have you used poppers (amyl nitrate)? Yes         3
-                                                                   No         0
+      Haben Sie in den letzten 6 Monaten Poppers (Amylnitrit)       Ja          3
+      konsumiert?                                                   Nein        0
 
-      Risk score of >=11 warrants PrEP
+      Ein Risikoscore von >=11 rechtfertigt PrEP
 
 

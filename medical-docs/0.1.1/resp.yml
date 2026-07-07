@@ -2,12 +2,12 @@ name: resp
 parent: default
 
 matches:
-    - trigger: "sob"
-      replace: "shortness of breath"
+    - trigger: "dysp"
+      replace: "Dyspnoe"
       propagate_case: true
       word: true
 
-    - trigger: "soboe"
-      replace: "shortness of breath on exertion"
+    - trigger: "dyspba"
+      replace: "Belastungsdyspnoe"
       propagate_case: true
       word: true

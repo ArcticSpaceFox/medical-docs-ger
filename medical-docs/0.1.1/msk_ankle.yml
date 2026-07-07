@@ -4,49 +4,49 @@ parent: default
 matches:
   - trigger: ":ankle"
     replace:  |
-      Subjective:
-        {{cc}} right left ankle pain for the past DURATION
-        It started after MECHANISM
-        {{sp}} been able walk after the injury
-        {{sp}} no inability to bear weight immediately after the injury or right now (4 steps) (1)
-        {{sp}} ongoing pain in [location]
-        {{sp}} no significant ongoing pain in the midfoot (2)
-        {{sp}} no previous ankle sprains
+      Subjektiv:
+        {{cc}} rechts links Sprunggelenkschmerzen seit DAUER
+        Beginn nach MECHANISMUS
+        {{sp}} nach der Verletzung gehfähig
+        {{sp}} keine Unfähigkeit zur Belastung unmittelbar nach der Verletzung oder aktuell (4 Schritte) (1)
+        {{sp}} anhaltende Schmerzen an [Lokalisation]
+        {{sp}} keine wesentlichen anhaltenden Schmerzen im Mittelfuß (2)
+        {{sp}} keine vorangegangenen Sprunggelenksverstauchungen
 
-      Objective:
-        {{op}} no visible deformity
-        {{op}} no bruising
-        {{op}} no swelling
-        {{op}} no decreased range of motion
-        {{op}} no loss of feeling
-        {{op}} no loss of circulation
+      Objektiv:
+        {{op}} keine sichtbare Deformität
+        {{op}} kein Hämatom
+        {{op}} keine Schwellung
+        {{op}} keine eingeschränkte Beweglichkeit
+        {{op}} keine Sensibilitätsstörung
+        {{op}} keine Durchblutungsstörung
 
-        {{op}} no significant tenderness at posterior edge or tip of the lateral malleous (3)
-        {{op}} no significant tenderness at posterior edge or tip of the medial malleous  (4)
+        {{op}} kein wesentlicher Druckschmerz am posterioren Rand oder der Spitze des Malleolus lateralis (3)
+        {{op}} kein wesentlicher Druckschmerz am posterioren Rand oder der Spitze des Malleolus medialis (4)
 
-        {{op}} no significant tenderness at the navicular bone (5)
-        {{op}} no significant tenderness at the base of the 5th metatarsal (6)
+        {{op}} kein wesentlicher Druckschmerz am Os naviculare (5)
+        {{op}} kein wesentlicher Druckschmerz an der Basis des 5. Metatarsale (6)
 
-        {{op}} no other significant tenderness
-        {{op}} no pain with passive gentle inversion
-        {{op}} no pain with passive gentle eversion
-        {{op}} a negative squeeze test
-        {{op}} a negative external rotation stress test
-        {{op}} a negative anterior drawer test
-        {{op}} a negative talar tilt test
-        {{op}} a negative Thompson test
+        {{op}} kein weiterer wesentlicher Druckschmerz
+        {{op}} keine Schmerzen bei passiver sanfter Inversion
+        {{op}} keine Schmerzen bei passiver sanfter Eversion
+        {{op}} negativer Squeeze-Test
+        {{op}} negativer Außenrotationsstresstest
+        {{op}} negativer vorderer Schubladentest
+        {{op}} negativer Talar-Tilt-Test
+        {{op}} negativer Thompson-Test
 
 
-      Assessment:
-        {{ap}} a Right Left Lateral Medial ankle sprain
-        Based on the Ottawa Ankle Rules
-           malleolar pain with (1),(3) or (4)], we need to rule out an ankle fracture.
-        Based on the Ottawa Foot Rules
-           midfoot pain with (1),(5), or (6)] we need to rule out a foot fracture.
+      Beurteilung:
+        {{ap}} rechts links laterale mediale Sprunggelenksdistorsion
+        Gemäß den Ottawa Ankle Rules
+           Malleolarschmerz mit (1),(3) oder (4)] muss eine Sprunggelenksfraktur ausgeschlossen werden.
+        Gemäß den Ottawa Foot Rules
+           Mittelfußschmerz mit (1),(5) oder (6)] muss eine Fußfraktur ausgeschlossen werden.
 
       Plan:
-        {{pp}} complete an xray of the ankle and foot
-        {{pp}} rest the ankle
-        {{pp}} use ice, compression, and keep the ankle elevated
-        {{pp}} use NSAIDs (such as ibuprofen) for pain management
-        {{pp}} follow up with physiotherapy to assist in recovery
+        {{pp}} Röntgen von Sprunggelenk und Fuß durchführen
+        {{pp}} Sprunggelenk schonen
+        {{pp}} Eis, Kompression und Hochlagerung des Sprunggelenks
+        {{pp}} NSAR (z. B. Ibuprofen) zur Schmerzbehandlung
+        {{pp}} Physiotherapie zur Unterstützung der Genesung

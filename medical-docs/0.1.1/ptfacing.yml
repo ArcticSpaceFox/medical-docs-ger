@@ -3,97 +3,98 @@ parent: default
 
 matches:
   - trigger: "ya"
-    replace: "You are at home in"
+    replace: "Sie wohnen in"
     word: true
 
   - trigger: "ym"
-    replace: "Your main concern today is"
+    replace: "Ihr Hauptanliegen heute ist"
     word: true
 
   - trigger: "yfut"
-    replace: "Your main concern today is to follow-up on test results"
+    replace: "Ihr Hauptanliegen heute ist die Besprechung der Untersuchungsergebnisse"
     word: true
 
   - trigger: "yh"
-    replace: "You have had"
+    replace: "Sie hatten"
     word: true
 
   - trigger: "yn"
-    replace: "You have had no"
+    replace: "Sie hatten kein(e)"
     word: true
 
   - trigger: "yrx"
-    replace: "You are requesting a prescription for"
+    replace: "Sie bitten um ein Rezept für"
     word: true
 
   - trigger: "yw"
-    replace: "You appear well, with no apparent distress"
+    replace: "Sie wirken wohlauf, ohne erkennbaren Distress"
     word: true
 
   - trigger: "trx"
-    replace: "Please take medication(s) prescribed as directed"
+    replace: "Bitte nehmen Sie die verordneten Medikamente wie angegeben ein"
     word: true
 
   - trigger: "ymhx"
-    replace: "Your medical history significantly includes"
+    replace: "Ihre relevante Vorgeschichte umfasst"
     word: true
 
   - trigger: "yfhx"
-    replace: "Your family history significantly includes"
+    replace: "Ihre relevante Familienanamnese umfasst"
     word: true
 
   - trigger: "ymed"
-    replace: "Your current medications include"
+    replace: "Ihre aktuellen Medikamente umfassen"
     word: true
 
   - trigger: "ynhx"
-    replace: "You have no previous significant medical history, no prescription medications and no relevant family history"
+    replace: "Sie haben keine relevante Vorgeschichte, keine verordneten Medikamente und keine relevante Familienanamnese"
     word: true
 
   - trigger: "ymnd"
-    replace: "You were accompanied by your mom and dad."
+    replace: "Sie wurden von Ihrer Mutter und Ihrem Vater begleitet."
     word: true
 
   - trigger: "vutd"
-    replace: "vaccinations are up to date"
+    replace: "Impfungen sind auf dem aktuellen Stand"
     word: true
 
   - trigger: "cpl"
-    replace: "Please copy the following link into your browser:"
+    replace: "Bitte kopieren Sie den folgenden Link in Ihren Browser:"
     word: true
 
 
   - trigger: ":getrx"
     word: true
     replace: |
-      Once your prescription has been written, you will receive a
-      notification on your app.
-      You then need to acknowledge the notification and select a pharmacy
-      where the prescription will be sent.
-      You need to select the pharmacy EVERY TIME you receive a prescription.
+      Sobald Ihr Rezept ausgestellt wurde, erhalten Sie eine
+      Benachrichtigung in Ihrer App.
+      Sie müssen die Benachrichtigung dann bestätigen und eine Apotheke
+      auswählen, an die das Rezept gesendet werden soll.
+      Sie müssen JEDES MAL, wenn Sie ein Rezept erhalten, eine Apotheke auswählen.
 
   - trigger: ":results"
     word: true
     replace: |
-      Once your tests are completed and results are available,
-      you will hear from us.
-      For some tests, this will be within 2-3 DAYS of completing the tests,
-      but for other tests it will be longer.  Some blood tests take up to
-      7 WORKING DAYS and MRIs can take up to 10 WORKING DAYS.
+      Sobald Ihre Untersuchungen abgeschlossen sind und die Ergebnisse vorliegen,
+      werden wir uns bei Ihnen melden.
+      Bei manchen Untersuchungen erfolgt dies innerhalb von 2-3 TAGEN nach
+      Abschluss, bei anderen dauert es länger. Manche Bluttests benötigen bis zu
+      7 ARBEITSTAGE und MRTs können bis zu 10 ARBEITSTAGE dauern.
 
-      You will be contacted regardless of whether or not the results
-      require follow up. Please wait to be contacted about the results
-      before booking a follow up appointment.
+      Sie werden unabhängig davon kontaktiert, ob die Ergebnisse eine
+      Wiedervorstellung erfordern. Bitte warten Sie, bis wir Sie bezüglich der
+      Ergebnisse kontaktiert haben, bevor Sie einen Folgetermin vereinbaren.
 
-      If you have not received notification of your results from us
-      WITHIN 5 DAYS of completing your tests, please contact us:
-        Email: {{myemail}}
-        Phone: {{myphone}}
+      Falls Sie innerhalb von 5 TAGEN nach Abschluss Ihrer Untersuchungen
+      keine Benachrichtigung über Ihre Ergebnisse von uns erhalten haben,
+      kontaktieren Sie uns bitte:
+        E-Mail: {{myemail}}
+        Telefon: {{myphone}}
 
-      If there is a significant change in your symptoms, or decline
-      in your health while waiting for the results, please do not wait
-      for the results before being reassessed. Please seek out medical care
-      as soon as possible if there is a significant worsening of your condition.
+      Sollte sich Ihr Zustand während der Wartezeit auf die Ergebnisse
+      wesentlich verändern oder verschlechtern, warten Sie bitte nicht
+      auf die Ergebnisse, bevor Sie sich erneut untersuchen lassen. Bitte
+      suchen Sie umgehend ärztliche Hilfe auf, falls sich Ihr Zustand deutlich verschlechtert.
 
 
 

@@ -3,109 +3,109 @@ parent: default
 
 matches:
     - trigger: "ruq"
-      replace: "right upper abdomen"
+      replace: "rechter Oberbauch"
       propagate_case: true
       word: true
 
     - trigger: "rlq"
-      replace: "right lower abdomen"
+      replace: "rechter Unterbauch"
       propagate_case: true
       word: true
 
     - trigger: "llq"
-      replace: "left lower abdomen"
+      replace: "linker Unterbauch"
       propagate_case: true
       word: true
 
     - trigger: "luq"
-      replace: "left upper abdomen"
+      replace: "linker Oberbauch"
       propagate_case: true
       word: true
 
     - trigger: ":giredflag"
       word: true
       replace: |
-        Gastrointestinal Red Flags:
-          {{sp}} no family history of colon cancer
-          {{sp}} no family history of inflammatory bowel disease
-          {{sp}} no blood in stool, or black, tarry stools (melena)
-          {{sp}} no blood or "coffee grounds" in vomit
-          {{sp}} no difficulty swallowing (dysphagia)
-          {{sp}} no nocturnal symptoms
-          {{sp}} no progressive symptoms
-          {{sp}} no onset after age 50
-          {{sp}} no anemia
-          {{sp}} no weight loss
+        Gastrointestinale Warnzeichen:
+          {{sp}} keine Familienanamnese für Kolonkarzinom
+          {{sp}} keine Familienanamnese für chronisch-entzündliche Darmerkrankungen
+          {{sp}} kein Blut im Stuhl, kein schwarzer, teerartiger Stuhl (Meläna)
+          {{sp}} kein Blut oder "kaffeesatzartiges" Erbrechen
+          {{sp}} keine Schluckbeschwerden (Dysphagie)
+          {{sp}} keine nächtlichen Symptome
+          {{sp}} keine progredienten Symptome
+          {{sp}} kein Beginn nach dem 50. Lebensjahr
+          {{sp}} keine Anämie
+          {{sp}} kein Gewichtsverlust
 
-          Any of the above features requires a referral to gastroenterology
+          Bei Vorliegen eines der oben genannten Merkmale ist eine gastroenterologische Überweisung erforderlich
 
     - trigger: ":ibs"
       word: true
       replace: |
-        Subjective:
-          {{cc}} recurrent abdominal pain for the past DURATION
-          {{sp}} no change in frequency of stool
-          {{sp}} no change in form of stool
-          {{sp}} no relief of pain by defecation
+        Subjektiv:
+          {{cc}} rezidivierende Bauchschmerzen seit DAUER
+          {{sp}} keine Änderung der Stuhlfrequenz
+          {{sp}} keine Änderung der Stuhlform
+          {{sp}} keine Schmerzlinderung durch Stuhlgang
 
           {{redflags}}
 
-          {{sp}} no bloating
-          {{sp}} no flatulence
-          {{sp}} no nausea
-          {{sp}} no burping
-          {{sp}} no early satiety
-          {{sp}} no gastroesophageal reflux
-          {{sp}} no dyspepsia
+          {{sp}} kein Blähbauch
+          {{sp}} keine Blähungen
+          {{sp}} keine Übelkeit
+          {{sp}} kein Aufstoßen
+          {{sp}} kein frühes Sättigungsgefühl
+          {{sp}} kein gastroösophagealer Reflux
+          {{sp}} keine Dyspepsie
 
-          {{sp}} no dysuria
-          {{sp}} no frequent/urgent urination
-          {{sp}} no widespread musculoskeletal pain
-          {{sp}} no dysmenorrhea
-          {{sp}} no dyspareunia
-          {{sp}} no fatigue
-          {{sp}} no anxiety
-          {{sp}} no depression
+          {{sp}} keine Dysurie
+          {{sp}} kein häufiger/imperativer Harndrang
+          {{sp}} keine generalisierten muskuloskelettalen Schmerzen
+          {{sp}} keine Dysmenorrhoe
+          {{sp}} keine Dyspareunie
+          {{sp}} keine Müdigkeit
+          {{sp}} keine Angstsymptomatik
+          {{sp}} keine depressive Symptomatik
 
-          Medications that may be worsening symptoms:
-          no laxatives/antacids
-          no PPI (proton pump inhibitors)
-          no ASA/NSAIDs
-          no iron/calcium/magnesium supplements
-          no calcium channel blockers
-          no antidepressants
-          no opioids
-          no diuretics,
-          no herbal products
+          Medikamente, die die Symptome möglicherweise verschlechtern:
+          keine Abführmittel/Antazida
+          keine PPI (Protonenpumpenhemmer)
+          keine ASS/NSAR
+          keine Eisen-/Kalzium-/Magnesiumpräparate
+          keine Kalziumkanalblocker
+          keine Antidepressiva
+          keine Opioide
+          keine Diuretika,
+          keine pflanzlichen Präparate
 
-        Objective:
-          {{op}} no abdominal masses
-          {{op}} no abdominal tenderness
-          {{op}} no abdominal guarding (tensing with pain)
-          {{op}} normal bowel sounds
+        Objektiv:
+          {{op}} keine abdominellen Raumforderungen
+          {{op}} keine abdominelle Druckschmerzhaftigkeit
+          {{op}} keine Abwehrspannung
+          {{op}} normale Darmgeräusche
 
-        Assessment:
-          {{ap}} Irritable Bowel Syndrome (IBS), diarrhea predominant, constipation predominant, mixed
+        Beurteilung:
+          {{ap}} Reizdarmsyndrom (RDS), diarrhödominant, obstipationsdominant, gemischter Typ
 
-          ROME IV Criteria for Irritable Bowel Syndrome (IBS):
-            1. Recurrent abdo pain >=3 months >=1 day per week
-            2. Associated with change in frequency and/or form of stool
-            3. AND pain relieved by defecation.
+          ROM-IV-Kriterien für das Reizdarmsyndrom (RDS):
+            1. Rezidivierende Bauchschmerzen seit >= 3 Monaten, >= 1 Tag pro Woche
+            2. Verbunden mit einer Änderung der Stuhlfrequenz und/oder -form
+            3. UND Schmerzlinderung durch Stuhlgang.
 
-          However, additional testing is required to ensure other possible causes are not missed.
+          Weitere Abklärung ist jedoch erforderlich, um andere mögliche Ursachen nicht zu übersehen.
 
         Plan:
-          {{pp}} complete further investigations according to the Laboratory Requistion provided
-            CBC, ferritin, celiac screen
+          {{pp}} weitere Untersuchungen gemäß beiliegender Laboranforderung vervollständigen
+            Blutbild, Ferritin, Zöliakie-Screening
 
-            Diarrhea predominant:
-              CRP, albumin, electrolytes
-              Stool: C.diff, O&P, leuks, pH, fat globules, elastase
+            Diarrhödominant:
+              CRP, Albumin, Elektrolyte
+              Stuhl: C. diff, Parasitologie (O&P), Leukozyten, pH-Wert, Fetttropfen, Elastase
 
-            Constipation predominant:
-              TSH, electrolytes, ionized calcium
+            Obstipationsdominant:
+              TSH, Elektrolyte, ionisiertes Kalzium
 
-            Mixed:  no additional investigations
+            Gemischter Typ: keine weiteren Untersuchungen
 
           {{fu}}
           {{snet}}
@@ -129,79 +129,79 @@ matches:
     - trigger: ":ibsmgt"
       word: true
       replace: |
-        General management of IBS:
-        {{pp}} reduce stress
-        {{pp}} engage in regular exercise
-        {{pp}} treat sleep issues
-        {{pp}} treat psychological issues
-        {{pp}} stop offending medications
-        {{pp}} trial probiotics
+        Allgemeine Behandlung des Reizdarmsyndroms:
+        {{pp}} Stressreduktion
+        {{pp}} regelmäßige körperliche Bewegung
+        {{pp}} Schlafstörungen behandeln
+        {{pp}} psychische Beschwerden behandeln
+        {{pp}} auslösende Medikamente absetzen
+        {{pp}} Probiotika versuchsweise einsetzen
 
-        Diarrhea predominant:
-        {{pp}} trial a FODMAPs diet
-        {{pp}} consider loperamide
-        {{pp}} consider Amitriptyline (Elavil) or Nortriptyline (Avantyl)
-        {{pp}} consider a bile acid sequestrants
-        {{pp}} consider Rifaximin
+        Diarrhödominant:
+        {{pp}} Low-FODMAP-Diät versuchen
+        {{pp}} Loperamid erwägen
+        {{pp}} Amitriptylin (Elavil) oder Nortriptylin (Avantyl) erwägen
+        {{pp}} Gallensäurebinder erwägen
+        {{pp}} Rifaximin erwägen
 
-        Constipation predominant:
-        {{pp}} increase daily fluid intake
-        {{pp}} use a PEG-based laxative
-        {{pp}} consider Linaclotide
-        {{pp}} consider Prucalopride
+        Obstipationsdominant:
+        {{pp}} tägliche Flüssigkeitszufuhr erhöhen
+        {{pp}} PEG-basiertes Abführmittel einsetzen
+        {{pp}} Linaclotid erwägen
+        {{pp}} Prucaloprid erwägen
 
-        Mixed:
-        {{pp}} trial a FODMAPs diet
-        {{pp}} consider loperamide as needed
-        {{pp}} consider PEG-based laxative as needed
+        Gemischter Typ:
+        {{pp}} Low-FODMAP-Diät versuchen
+        {{pp}} Loperamid bei Bedarf erwägen
+        {{pp}} PEG-basiertes Abführmittel bei Bedarf erwägen
 
     - trigger: ":ppistop"
       word: true
       replace: |
-         To reduce heartburn, you are advised to avoid, or at least reduce, things that
-         trigger your symptoms.  Commonly these include smoking, alcohol, coffee,
-         chocolate, foods that are acidic, fatty or spicey, and non-steroidal
-         anti-inflammatories such as ibuprofen, naproxen, or aspirin.
-         Eating smaller meals and eating at least 3 hours before bed,
-         as well as weight loss and looser clothing are also helpful.
-         Elevating the head of bed slightly is another useful strategy.
+         Um Sodbrennen zu reduzieren, wird empfohlen, Auslöser Ihrer Symptome zu meiden
+         oder zumindest zu reduzieren. Häufige Auslöser sind Rauchen, Alkohol, Kaffee,
+         Schokolade, säurehaltige, fettige oder scharfe Speisen sowie nichtsteroidale
+         Antirheumatika wie Ibuprofen, Naproxen oder Aspirin.
+         Kleinere Mahlzeiten und mindestens 3 Stunden vor dem Schlafengehen essen,
+         sowie Gewichtsabnahme und lockerere Kleidung sind ebenfalls hilfreich.
+         Das leichte Hochstellen des Kopfendes des Bettes ist eine weitere nützliche Maßnahme.
 
-         Some individuals can reduce or even stop using their proton pump inhibitor
-         (PPI) medication (in your case XXXXXX) for acid reflux (heartburn).
-         The following document outlines strategies for stopping if you would be
-         interested in reducing your medication:
+         Manche Patienten können ihren Protonenpumpenhemmer (PPI) gegen Sodbrennen
+         (in Ihrem Fall XXXXXX) reduzieren oder sogar absetzen.
+         Das folgende Dokument beschreibt Strategien zum Absetzen, falls Sie an einer
+         Reduktion Ihrer Medikation interessiert sind:
          https://www.rxfiles.ca/rxfiles/uploads/documents/Deprescribing-PPI-Patient-Tool.pdf
-         As noted, there may be certain benefits in stopping these medications.
-         However, if they are the only treatment that controls your symptoms,
-         then you should continue.
+         Wie darin beschrieben, kann das Absetzen dieser Medikamente gewisse Vorteile haben.
+         Wenn sie jedoch die einzige Behandlung sind, die Ihre Symptome kontrolliert,
+         sollten Sie sie weiter einnehmen.
 
     - trigger: ":abdopain"
       word: true
       replace: |
-            Your main concern today is stomach pains for the past DURATION
+            Ihr Hauptanliegen heute sind Bauchschmerzen seit DAUER
             {{pain}}
 
-            You have had no vomiting.
-            You have had no changes to your bowel movements.
-            You have had no blood in your stool
-            You have had no black,tarry stools (melena)
+            Sie hatten kein Erbrechen.
+            Sie hatten keine Veränderung Ihres Stuhlgangs.
+            Sie hatten kein Blut im Stuhl.
+            Sie hatten keinen schwarzen, teerartigen Stuhl (Meläna).
 
-            You have no family history of inflammatory bowel disease such as
-            Crohn's or Ulcerative Colitis.
+            Sie haben keine Familienanamnese für chronisch-entzündliche Darmerkrankungen
+            wie Morbus Crohn oder Colitis ulcerosa.
 
             {{deabdo}}
             {{noother}}
 
-            Your symptoms are consistent with dyspepsia (upset stomach) and
-            may be due to underlying excess acid production or low level stomach
-            inflammation (gastritis).
-            Other, less likely possibilities include liver inflammation,
-            early gallbladder disease or peptic ulcer disease.
+            Ihre Symptome sind vereinbar mit einer Dyspepsie (Magenverstimmung) und
+            könnten auf eine zugrunde liegende vermehrte Säureproduktion oder eine leichte
+            Magenschleimhautentzündung (Gastritis) zurückzuführen sein.
+            Weitere, weniger wahrscheinliche Möglichkeiten sind eine Leberentzündung,
+            eine beginnende Gallenblasenerkrankung oder ein Magen-/Zwölffingerdarmgeschwür.
 
-            You are advised to complete blood tests and an abdominal ultrasound to check for
-            possible internal organ disease including liver, gallbladder, or pancreas.
-            You are advised to start the prescribed medication Pantoprazole 40mg
-            once daily 30 minutes before your morning meal.
+            Es wird empfohlen, Blutuntersuchungen und eine Abdomensonographie durchzuführen,
+            um eine mögliche innere Organerkrankung von Leber, Gallenblase oder Bauchspeicheldrüse auszuschließen.
+            Es wird empfohlen, mit der verordneten Medikation Pantoprazol 40 mg
+            einmal täglich, 30 Minuten vor dem morgendlichen Essen, zu beginnen.
 
             {{finish}}
 
@@ -222,11 +222,3 @@ matches:
           type: match
           params:
             trigger: ":deabdo"
-
-
-
-
-
-
-
-

@@ -5,52 +5,52 @@ matches:
   - trigger: ":excision"
     word: true
     replace: |
-      Subjective:
-        {{cc}} excision of skin growth on LOCATION
-        {{sp}} noticed for the past DURATION
-        {{sp}} no growth
-        {{sp}} no color change
-        {{sp}} no bleeding
-        {{sp}} no pain
-        {{sp}} no itch
+      Subjektiv:
+        {{cc}} Exzision einer Hautveränderung an LOKALISATION
+        {{sp}} seit DAUER bemerkt
+        {{sp}} kein Wachstum
+        {{sp}} keine Farbveränderung
+        {{sp}} keine Blutung
+        {{sp}} keine Schmerzen
+        {{sp}} kein Juckreiz
 
-        {{sp}} no specific concerns
-        {{sp}} specific concerns including:
+        {{sp}} keine spezifischen Bedenken
+        {{sp}} spezifische Bedenken, unter anderem:
 
-        {{sp}} no personal history of skin cancer
-        {{sp}} no family history of skin cancer
+        {{sp}} keine persönliche Vorgeschichte von Hautkrebs
+        {{sp}} keine Hautkrebs-Fälle in der Familienanamnese
 
-        Risks and possible complications were discussed
-           including bleeding, infection, scarring, regrowth
-        Alternatives were discussed including no intervention
-        Expected benefits include removal of a worrisome
-        growth and diagnosis to guide further treatment
-        Consent obtained
+        Risiken und mögliche Komplikationen wurden besprochen,
+           einschließlich Blutung, Infektion, Narbenbildung, Rezidiv
+        Alternativen wurden besprochen, einschließlich Verzicht auf Intervention
+        Zu den erwarteten Vorteilen zählen die Entfernung einer
+        beunruhigenden Hautveränderung und die Diagnosestellung zur weiteren Therapieplanung
+        Einwilligung eingeholt
 
-      Objective: 
-        Sterilization with alcohol 3 times
-        followed by local infiltration with lidocaine with epinephrine 
-        Area then sterilized with chlorhexidine 3 times
-        and sterile draping applied
-        Excision performed with sterile surgical blade
-        Bleeding controlled
-        Incision sutured with sterile surgical suture/s
+      Objektiv:
+        Dreimalige Desinfektion mit Alkohol
+        anschließend lokale Infiltration mit Lidocain und Adrenalin
+        Bereich anschließend dreimal mit Chlorhexidin desinfiziert
+        und steril abgedeckt
+        Exzision mit sterilem Skalpell durchgeführt
+        Blutstillung erfolgt
+        Wundverschluss mit sterilem chirurgischem Nahtmaterial
            (Nylon 3-0 x 5)
-        Area cleansed and dressed
-        Excised tissue sent to pathology
+        Bereich gereinigt und verbunden
+        Exzidiertes Gewebe zur pathologischen Untersuchung eingesandt
 
-      Assessment:
-        {{ap}} atypical melanocytic nevus
-        {{ap}} irritated seborrheic keratosis
-        {{ap}} irritated skin tag
+      Beurteilung:
+        {{ap}} atypischer melanozytärer Nävus
+        {{ap}} irritierte seborrhoische Keratose
+        {{ap}} irritiertes Hautanhängsel (Fibroma pendulans)
 
       Plan:
-        {{pp}} await diagnostic results from pathology
-        {{pp}} keep covered and dry for next 24 hours
-        {{pp}} apply polysporin to keep moist
-        {{pp}} keep covered with bandage, replacing daily
-               or sooner if soaked with blood
-        {{pp}} return to clinic if suture removal in 7 days
-        {{pp}} return to clinic sooner if concern for infection
-           such as increasing pain, redness, warmth, swelling, or pus
+        {{pp}} Ergebnis der pathologischen Untersuchung abwarten
+        {{pp}} nächste 24 Stunden abgedeckt und trocken halten
+        {{pp}} Polysporin zur Feuchthaltung auftragen
+        {{pp}} mit Verband abdecken, täglich wechseln
+               oder früher bei Durchbluten
+        {{pp}} Wiedervorstellung zur Fadenentfernung nach 7 Tagen
+        {{pp}} frühere Wiedervorstellung bei Infektionsverdacht,
+           z. B. zunehmenden Schmerzen, Rötung, Überwärmung, Schwellung oder Eiter
 

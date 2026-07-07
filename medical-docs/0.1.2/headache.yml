@@ -5,77 +5,77 @@ matches:
   - trigger: ":headachefu"
     word: true
     replace:  |
-     {{pp}} immediately seek medical attention if:
-       Your headache comes on suddenly, quickly becomes severe,
-            or could be described as "the worst headache of your life"
-       Your headache is severe and you also have a fever or stiff neck
-       You have a seizure, personality changes or confusion, or you pass out
-       Your headache began right after you exercised or had a minor injury
-       You have weakness, numbness, or trouble seeing
+     {{pp}} umgehend ärztliche Hilfe aufsuchen, wenn:
+       Ihr Kopfschmerz plötzlich einsetzt, schnell sehr stark wird,
+            oder als "der schlimmste Kopfschmerz Ihres Lebens" beschrieben werden könnte
+       Ihr Kopfschmerz stark ist und Sie zusätzlich Fieber oder einen steifen Nacken haben
+       Sie einen Krampfanfall, Persönlichkeitsveränderungen oder Verwirrtheit haben, oder bewusstlos werden
+       Ihr Kopfschmerz unmittelbar nach körperlicher Anstrengung oder einer leichten Verletzung begann
+       Sie Schwäche, Taubheitsgefühl oder Sehstörungen haben
 
   - trigger: ":headacheredflag"
     word: true
     replace:  |
-     {{sp}} no thunderclap onset
-       {{sp}} no fever
-       {{sp}} no rash
-       {{sp}} no neck stiffness
-       {{sp}} no focal weakness
-       {{sp}} no numbness
-       {{sp}} no speech difficulties
-       {{sp}} no imbalance
-       {{sp}} no eye pain
-       {{sp}} no night sweats
-       {{sp}} no unintentional weight loss
+     {{sp}} kein schlagartiger ("Donnerschlag"-)Beginn
+       {{sp}} kein Fieber
+       {{sp}} kein Hautausschlag
+       {{sp}} keine Nackensteifigkeit
+       {{sp}} keine fokale Schwäche
+       {{sp}} keine Taubheit
+       {{sp}} keine Sprachstörungen
+       {{sp}} keine Gleichgewichtsstörungen
+       {{sp}} keine Augenschmerzen
+       {{sp}} keine Nachtschweiße
+       {{sp}} kein ungewollter Gewichtsverlust
 
   - trigger: ":headache"
     word: true
     replace:  |
-      Subjective:
-        {{cc}} headache for the past DURATION
+      Subjektiv:
+        {{cc}} Kopfschmerzen seit DAUER
 
-        Red Flags:
+        Warnzeichen:
         {{redflags}}
 
         {{pain}}
 
-        {{sp}} no aura (neurological symptoms before headache starts)
-        {{sp}} no previous head injury
-        {{sp}} no previous medical history (eg high blood pressure, diabetes, insomnia)
-        {{sp}} no analgesia overuse (>14 days/month for plain acetaminophen or NSAID,
-               >9 days/month for triptans, opioids, or combinations)
-        {{sp}} no excess alcohol consumption
+        {{sp}} keine Aura (neurologische Symptome vor Beginn des Kopfschmerzes)
+        {{sp}} keine vorherige Kopfverletzung
+        {{sp}} keine relevante Vorgeschichte (z. B. Bluthochdruck, Diabetes, Schlafstörungen)
+        {{sp}} keine Analgetika-Übergebrauch (>14 Tage/Monat bei reinem Paracetamol oder NSAR,
+               >9 Tage/Monat bei Triptanen, Opioiden oder Kombinationspräparaten)
+        {{sp}} kein übermäßiger Alkoholkonsum
 
-      Objective:
-        {{op}} normal blood pressure
-        {{op}} no fever
-        {{op}} no scalp tenderness
-        {{op}} no neck tenderness
-        {{op}} no sinus tenderness
-        {{op}} no temporomandibular joint (TMJ) clicking or tenderness
-        {{op}} normal painless range of motion of the neck
+      Objektiv:
+        {{op}} normaler Blutdruck
+        {{op}} kein Fieber
+        {{op}} keine Druckschmerzhaftigkeit der Kopfhaut
+        {{op}} keine Nackenschmerzen bei Palpation
+        {{op}} keine Druckschmerzhaftigkeit der Nasennebenhöhlen
+        {{op}} kein Klicken oder Druckschmerz im Kiefergelenk (TMG)
+        {{op}} normale schmerzfreie Beweglichkeit des Nackens
 
         {{neuroexam}}
 
-      Assessment:
-        {{ap}} Cervicogenic Headache
-        {{ap}} Migraine Headache without Aura
-        There are NO red flags
+      Beurteilung:
+        {{ap}} zervikogener Kopfschmerz
+        {{ap}} Migräne ohne Aura
+        Es liegen KEINE Warnzeichen vor
 
       Plan:
-        {{pp}} start a headache diary
-        {{pp}} decrease caffeine
-        {{pp}} increase regular exercise
-        {{pp}} maintain regular sleep and regular meals
-        {{pp}} use over the counter medication for mild attacks:
-          Tylenol 1 g PRN,  Advil 400 mg PRN, or Naproxen 550 mg PRN
-        {{pp}} use prescription medication for severe attacks:  Zolmitriptan
-        {{pp}} avoid overuse of medication: (>14 days/month for
-               acetaminophen or ibuprofen, >9 days/month for triptans)
-        {{pp}} start daily migraine prophylaxis medication: Propranolol
-        {{pp}} trial saline nasal rinse with distilled water
-               and intra-nasal corticosteroid spray
-        {{pp}} follow-up in 2 weeks to review effectiveness of treatment
+        {{pp}} ein Kopfschmerztagebuch beginnen
+        {{pp}} Koffeinkonsum reduzieren
+        {{pp}} regelmäßige körperliche Bewegung steigern
+        {{pp}} regelmäßigen Schlaf und regelmäßige Mahlzeiten einhalten
+        {{pp}} rezeptfreie Medikation bei leichten Attacken verwenden:
+          Paracetamol 1 g bei Bedarf, Ibuprofen 400 mg bei Bedarf, oder Naproxen 550 mg bei Bedarf
+        {{pp}} verschreibungspflichtige Medikation bei schweren Attacken verwenden: Zolmitriptan
+        {{pp}} Medikamentenübergebrauch vermeiden: (>14 Tage/Monat für
+               Paracetamol oder Ibuprofen, >9 Tage/Monat für Triptane)
+        {{pp}} tägliche Migräneprophylaxe beginnen: Propranolol
+        {{pp}} Kochsalz-Nasenspülung mit destilliertem Wasser
+               sowie intranasales Kortikosteroidspray versuchen
+        {{pp}} Wiedervorstellung in 2 Wochen zur Beurteilung der Behandlungswirksamkeit
 
         {{followup}}
 

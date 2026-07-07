@@ -5,145 +5,145 @@ matches:
   - trigger: ":hairloss"
     word: true
     replace: |
-     Subjective:
-      {{cc}} hair loss at [location] for the past DURATION
+     Subjektiv:
+      {{cc}} Haarausfall an [Lokalisation] seit DAUER
 
-     Objective:
-      {{op}} smooth localized area of complete hair loss at [location]
-      {{op}} negative hair pull test.
-      {{op}} no inflammation or scarring.
+     Objektiv:
+      {{op}} glatt begrenzter, umschriebener Bereich mit vollständigem Haarausfall an [Lokalisation]
+      {{op}} negativer Haarzugtest.
+      {{op}} keine Entzündung oder Vernarbung.
 
-     Assessment:
-      {{ap}} Alopecia Areata.
+     Beurteilung:
+      {{ap}} Alopecia areata.
 
      Plan:
-      A referral has been sent to dermatology
+      Überweisung an die Dermatologie erfolgt
 
   - trigger: ":skininfection"
     word: true
     replace: |
-      Subjective:
-        {{cc}} possible skin infection for DURATION
-        The location is
-        Symptoms started after
-        {{sp}} no fever (temperature measured at home XXC)
-        {{sp}} no nausea or emesis
-        {{sp}} no diarrhea
-        {{sp}} no pain
-        {{sp}} no purulence
-        {{sp}} no swelling
-        {{sp}} no redness
-        {{sp}} no heat
-        {{sp}} no treatment to date
-        {{sp}} no progression over the past 48 hours
-        {{sp}} no proximal prosthetic joint or vascular graft
-        {{sp}} no previous skin infections
-        {{sp}} no diabetes
-        {{sp}} no immunocompromised state
-        {{sp}} no risks for MRSA (eg previous MRSA, recent hospitalization,
-               long-term care facility, hemodialysis, HIV infection,
-               lack of response to treatment without MRSA coverage)
-        {{sp}} no allergies to antibiotics
+      Subjektiv:
+        {{cc}} möglicher Hautinfekt seit DAUER
+        Die Lokalisation ist
+        Symptome begannen nach
+        {{sp}} kein Fieber (zu Hause gemessene Temperatur XXC)
+        {{sp}} keine Übelkeit oder Erbrechen
+        {{sp}} kein Durchfall
+        {{sp}} keine Schmerzen
+        {{sp}} keine Eiterentleerung
+        {{sp}} keine Schwellung
+        {{sp}} keine Rötung
+        {{sp}} keine Überwärmung
+        {{sp}} keine Behandlung bisher
+        {{sp}} keine Progredienz in den letzten 48 Stunden
+        {{sp}} kein proximales Gelenkimplantat oder Gefäßprothese
+        {{sp}} keine vorangegangenen Hautinfektionen
+        {{sp}} kein Diabetes
+        {{sp}} keine Immunsuppression
+        {{sp}} keine Risikofaktoren für MRSA (z. B. vorangegangenes MRSA, kürzlicher Krankenhausaufenthalt,
+               Pflegeeinrichtung, Hämodialyse, HIV-Infektion,
+               fehlendes Ansprechen auf Therapie ohne MRSA-Abdeckung)
+        {{sp}} keine Antibiotikaallergien
 
-      Objective: 
-        {{op}} temperature of XXC
-        {{op}} blood pressure of XXX/YY and heart rate of XXX
-        The affected area is located at XXXX
-        and extends XXXXXXX
-        {{op}} no purulence
-        {{op}} no ulceration
-        {{op}} no abscess
-        {{op}} no erythema
-        {{op}} no warmth
-        {{op}} no tenderness
-        {{op}} no swelling
-        {{op}} no induration
-        {{op}} no clear demarcation of infection
-        {{op}} no raised erythema
+      Objektiv:
+        {{op}} Temperatur von XXC
+        {{op}} Blutdruck von XXX/YY und Herzfrequenz von XXX
+        Der betroffene Bereich ist lokalisiert an XXXX
+        und erstreckt sich XXXXXXX
+        {{op}} keine Eiterentleerung
+        {{op}} keine Ulzeration
+        {{op}} kein Abszess
+        {{op}} kein Erythem
+        {{op}} keine Überwärmung
+        {{op}} keine Druckschmerzhaftigkeit
+        {{op}} keine Schwellung
+        {{op}} keine Induration
+        {{op}} keine klare Abgrenzung der Infektion
+        {{op}} kein erhabenes Erythem
 
-      Assessment:
-        {{ap}} Non-purulent cellulitis
-        {{ap}} Erysipelas
-        {{ap}} Skin abscess
-        {{ap}} Inflammed intradermal cyst
-        {{ap}} Paronychia
-        with NO systemic features requiring hospitalization or parenteral
-        antibiotics, and NO indication for MRSA coverage.
+      Beurteilung:
+        {{ap}} nicht-eitrige Cellulitis
+        {{ap}} Erysipel
+        {{ap}} Hautabszess
+        {{ap}} entzündete intradermale Zyste
+        {{ap}} Paronychie
+        ohne systemische Merkmale, die eine Hospitalisierung oder parenterale
+        Antibiotika erfordern würden, und OHNE Indikation für MRSA-Abdeckung.
 
       Plan:
-        Wound culture has been sent to guide antibiotic therapy,
-        if not improving with initial treatment.
-        {{pp}} start oral antibiotics today as prescribed
-        {{pp}} book for incision and drainage of abscess
-        {{pp}} proceed to ER for parenteral antibiotics and possible admission
-        {{pp}} keep affected area elevated
-        {{pp}} seek reassessment if no improvement after 72h,
-               worsening despite 48h antibiotics, or new systemic symptoms (fever, nausea)
-        {{pp}} go to ER if rapid progression of redness, severe nausea or high fever
+        Wundabstrich zur Steuerung der Antibiotikatherapie eingesandt,
+        falls unter Initialtherapie keine Besserung eintritt.
+        {{pp}} orale Antibiotikatherapie heute wie verordnet beginnen
+        {{pp}} Termin zur Inzision und Drainage des Abszesses vereinbaren
+        {{pp}} zur Notaufnahme zur parenteralen Antibiotikagabe und ggf. stationärer Aufnahme
+        {{pp}} betroffenen Bereich hochgelagert halten
+        {{pp}} Wiedervorstellung bei fehlender Besserung nach 72h,
+               Verschlechterung trotz 48h Antibiotikatherapie oder neuen systemischen Symptomen (Fieber, Übelkeit)
+        {{pp}} bei rascher Progredienz der Rötung, schwerer Übelkeit oder hohem Fieber Notaufnahme aufsuchen
 
   - trigger: ":eczemamgt"
     word: true
     replace: |
-      Eczema Care Instructions:
-      1. Bathing
-        a. Not about frequency but duration. Must be between 5-15 minutes.
-        b. Warm – lukewarm/moderate warm
-        c. Do not wipe dry – Pat dry only. Leave some moisture on skin
+      Pflegeanleitung bei Ekzem:
+      1. Baden
+        a. Nicht die Häufigkeit, sondern die Dauer ist entscheidend. Zwischen 5-15 Minuten.
+        b. Warm – lauwarm/mäßig warm
+        c. Nicht trockenreiben – nur trocken tupfen. Etwas Feuchtigkeit auf der Haut belassen
 
-      2. Do not use soap – use hypoallergenic baby wash once a week only (e.g. Cetaphil, Cerave, Avene, Aveeno)
+      2. Keine Seife verwenden – nur einmal pro Woche hypoallergene Baby-Waschlotion (z. B. Cetaphil, Cerave, Avène, Aveeno)
 
-      3. If needs medicated cream (Steroid (Betamethasone, Hydrocortisone, Mometasone etc.) or Tacrolimus base Cream(Protopic/Elidel) ) – apply as first layer.
-        a. Steroid must be used consecutively daily, then stop when controlled
-           (do not use intermittently).
-        b. Maximum daily use is 2 weeks
-        c. After 2 weeks use of steroids must have 1-2 weeks of break
-           then can resume using this again.
-        d. Tacrolimus based meds can be used indefinitely until complete control.
-        e. Minimize direct sun exposure when on medicated creams.
+      3. Bei Bedarf einer medizinischen Creme (Steroid (Betamethason, Hydrocortison, Mometason etc.) oder Tacrolimus-Basis-Creme (Protopic/Elidel)) – als erste Schicht auftragen.
+        a. Steroid muss an aufeinanderfolgenden Tagen angewendet werden, dann bei Kontrolle absetzen
+           (nicht intermittierend anwenden).
+        b. Maximale Anwendungsdauer 2 Wochen täglich
+        c. Nach 2 Wochen Steroidanwendung muss eine Pause von 1-2 Wochen erfolgen
+           bevor die Anwendung erneut aufgenommen werden kann.
+        d. Tacrolimus-basierte Präparate können bis zur vollständigen Kontrolle unbegrenzt angewendet werden.
+        e. Direkte Sonnenexposition unter medizinischen Cremes minimieren.
 
-      4. Apply moisturizing creams (Cerave Cream, Vaseline Creamy, Avene Cream) – avoid lotions (has alcohol usually which dries the skin more)
+      4. Feuchtigkeitscremes auftragen (Cerave Creme, Vaseline Creamy, Avène Creme) – Lotionen meiden (enthalten meist Alkohol, der die Haut zusätzlich austrocknet)
 
-      5. Add extra layer of Petroleum Jelly (Vaseline). Must be used at flare up and may be used in maintenance phase well.
+      5. Zusätzliche Schicht Vaseline auftragen. Bei Schub anzuwenden und kann auch in der Erhaltungsphase verwendet werden.
 
-      6. Maintenance – once Eczema is controlled NEVER STOP using moisturizer (e.g. Cerave) that works best for you.
+      6. Erhaltungstherapie – sobald das Ekzem kontrolliert ist, NIEMALS mit der für Sie am besten wirksamen Feuchtigkeitscreme (z. B. Cerave) aufhören.
 
-      7. RELAPSE IS VERY HIGH IF YOU STOP MAINTENANCE!
+      7. DAS RÜCKFALLRISIKO IST SEHR HOCH, WENN SIE DIE ERHALTUNGSTHERAPIE ABSETZEN!
 
-      8. Improve moisture with use of humidifier, increase fluids, healthy diet (more fruits and veggies).
+      8. Feuchtigkeit verbessern durch Luftbefeuchter, erhöhte Flüssigkeitszufuhr, gesunde Ernährung (mehr Obst und Gemüse).
 
 
   - trigger: ":shingles"
     word: true
     replace: |
-      Subjective:
-        {{cc}} rash concerning for possible shingles for the past DURATION
-        The rash location is LOCATION
-        {{sp}} no pain
-        {{sp}} no blisters
-        {{sp}} no previous similar rash
-        {{sp}} no previous diagnosed shingles
-        {{sp}} no previous shingles vaccine (Shingrix or Zostavax)
-        {{sp}} no previous chicken pox
+      Subjektiv:
+        {{cc}} Hautausschlag mit Verdacht auf Gürtelrose seit DAUER
+        Die Lokalisation des Ausschlags ist LOKALISATION
+        {{sp}} keine Schmerzen
+        {{sp}} keine Bläschen
+        {{sp}} kein vorangegangener ähnlicher Ausschlag
+        {{sp}} keine vorangegangene diagnostizierte Gürtelrose
+        {{sp}} keine vorangegangene Gürtelrose-Impfung (Shingrix oder Zostavax)
+        {{sp}} keine vorangegangenen Windpocken
 
-      Objective:
-        {{op}} unilateral (on one side of body) multiple vesicles on erythematous base at LOCATION
+      Objektiv:
+        {{op}} unilaterale (auf einer Körperseite) multiple Bläschen auf erythematösem Grund an LOKALISATION
 
-      Assessment:
-        {{ap}} Shingles (Herpes Zoster)
+      Beurteilung:
+        {{ap}} Gürtelrose (Herpes Zoster)
 
       Plan:
-        {{pp}} take valacyclovir for 7 days (1g three times daily)
-        {{pp}} take acetaminophen (Tylenol) as needed for pain
-        {{pp}} follow-up if not responding to treatment or other concerns
+        {{pp}} Valaciclovir für 7 Tage einnehmen (1g dreimal täglich)
+        {{pp}} Paracetamol bei Bedarf gegen Schmerzen einnehmen
+        {{pp}} Wiedervorstellung bei fehlendem Ansprechen auf die Therapie oder weiteren Beschwerden
 
   - trigger: ":rxmastitis"
     word: true
     replace: |
-      Compound prescription: Mupirocin ointment 2% (15g)
-                             + Betamethasone ointment 0.1% (15g)
-                             + Miconazole powder to 2%
-      Apply to to affected areas twice daily
-      Wrap with saran wrap for maximum absorption if possible
+      Rezeptur: Mupirocin-Salbe 2% (15g)
+                             + Betamethason-Salbe 0,1% (15g)
+                             + Miconazol-Puder auf 2%
+      Auf betroffene Bereiche zweimal täglich auftragen
+      Zur maximalen Absorption nach Möglichkeit mit Frischhaltefolie umwickeln
 
 
 

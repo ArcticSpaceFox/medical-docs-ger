@@ -5,25 +5,25 @@ matches:
   - trigger: ":mse"
     word: true
     replace: |
-      Mental Status Exam:
-        {{op}} casual dress, normal grooming and hygiene
-        {{op}} calm and cooperative
-        {{op}} no unusual movements or psychomotor changes
-        {{op}} normal rate, tone, and volume of speech without pressure
-        {{op}} normal range of emotional expression (affect)
-        {{op}} normal stated mood (euthymic)
-        {{op}} goal directed and logical thought processes
-        {{op}} thought content free of delusions and fixations
-        {{op}} no suicidal or homocidal thoughts
-        {{op}} no hallucinations during interview
-        {{op}} orientation to time, place, and person intact
-        {{op}} normal memory and attention
-        {{op}} good insight and judgement
+      Psychopathologischer Befund:
+        {{op}} legere Kleidung, unauffällige Körperpflege und Hygiene
+        {{op}} ruhig und kooperativ
+        {{op}} keine ungewöhnlichen Bewegungen oder psychomotorischen Auffälligkeiten
+        {{op}} normale Sprechgeschwindigkeit, -tonlage und -lautstärke, kein Rededrang
+        {{op}} unauffälliger Affekt
+        {{op}} angegebene Stimmung ausgeglichen (euthym)
+        {{op}} zielgerichteter und logischer Gedankengang
+        {{op}} Gedankeninhalt frei von Wahn und fixen Ideen
+        {{op}} keine suizidalen oder fremdaggressiven Gedanken
+        {{op}} keine Halluzinationen während des Gesprächs
+        {{op}} Orientierung zu Zeit, Ort und Person erhalten
+        {{op}} unauffälliges Gedächtnis und unauffällige Aufmerksamkeit
+        {{op}} gute Einsichts- und Urteilsfähigkeit
 
   - trigger: ":psylink"
     word: true
     replace: |
-      {{pp}} refer to the following links:
+      {{pp}} Verweis auf folgende Links:
 
       https://psychhealthandsafety.org/asw
       https://cmha.bc.ca/
@@ -32,13 +32,13 @@ matches:
       https://bouncebackbc.ca/
       https://www.keltyskey.com/
 
-  # some links specific to counselling resources in British Columbia
+  # einige Links speziell zu Beratungsangeboten in British Columbia
   - trigger: ":psylinkbc"
     word: true
     replace: |
-      {{pp}} see the links below to arrange a counselling group or therapist.
-      Normally one-on-one therapy is private pay and a physician referral is not required.
-      Vancouver Coastal Health offers free group therapy and this requires a physician referral.
+      {{pp}} siehe untenstehende Links zur Vermittlung einer Beratungsgruppe oder eines Therapeuten.
+      Einzeltherapie ist in der Regel selbst zu bezahlen, eine ärztliche Überweisung ist nicht erforderlich.
+      Vancouver Coastal Health bietet kostenlose Gruppentherapie an, hierfür ist eine ärztliche Überweisung erforderlich.
 
       https://counsellingbc.com/
       https://www.psychologists.bc.ca/find_psychologist
@@ -47,181 +47,181 @@ matches:
   - trigger: ":psymed"
     word: true
     replace: |
-      Medications can sometimes be helpful for anxiety and depression.
-      To be effective, they must be taken once daily, every day.
-      They usually take several weeks to start having a significant effect.
-      They are usually continued for at least 9 to 12 months.
-      Some more common side effects include nausea, headache, sleep disturbance,
-      sexual dysfunction, sweating and dry mouth.
-      When first starting, they may cause a temporary increase in anxiety,
-      and rarely an increase in suicidal thinking.
-      If suicidal thoughts are increasing, it is important to seek help immediately.
+      Medikamente können bei Angst und Depression manchmal hilfreich sein.
+      Um wirksam zu sein, müssen sie einmal täglich, jeden Tag eingenommen werden.
+      Bis zu einem spürbaren Effekt vergehen üblicherweise mehrere Wochen.
+      Sie werden in der Regel für mindestens 9 bis 12 Monate fortgeführt.
+      Häufigere Nebenwirkungen sind Übelkeit, Kopfschmerzen, Schlafstörungen,
+      sexuelle Funktionsstörungen, Schwitzen und Mundtrockenheit.
+      Zu Beginn kann es zu einer vorübergehenden Zunahme der Angst kommen,
+      selten auch zu vermehrten suizidalen Gedanken.
+      Bei zunehmenden suizidalen Gedanken ist es wichtig, umgehend Hilfe zu suchen.
 
   - trigger: ":risksuicide"
     word: true
     replace: |
-      {{sp}} no male sex
-      {{sp}} no age over 60 or under 18
-      {{sp}} no depression
-      {{sp}} no previous attempts
-      {{sp}} no alcohol abuse
-      {{sp}} no loss of rational thinking
-      {{sp}} no suicide in the family
-      {{sp}} no organized plan
-      {{sp}} no lack of social supports
-      {{sp}} no serious illness or intractable pain
+      {{sp}} kein männliches Geschlecht
+      {{sp}} kein Alter über 60 oder unter 18
+      {{sp}} keine Depression
+      {{sp}} keine vorangegangenen Suizidversuche
+      {{sp}} kein Alkoholmissbrauch
+      {{sp}} kein Verlust des rationalen Denkens
+      {{sp}} kein Suizid in der Familie
+      {{sp}} kein konkreter Plan
+      {{sp}} kein Mangel an sozialer Unterstützung
+      {{sp}} keine schwere Erkrankung oder therapierefraktäre Schmerzen
 
   - trigger: ":sxgad"
     word: true
     replace: |
-      {{sp}} no feeling of mind going blank
-      {{sp}} no increased fatigue
-      {{sp}} no sleep disturbance
-      {{sp}} no feeling of being very excited or nervous
-      {{sp}} no increased irritability
-      {{sp}} no increased muscle tension
+      {{sp}} kein Gefühl der geistigen Leere
+      {{sp}} keine vermehrte Erschöpfung
+      {{sp}} keine Schlafstörung
+      {{sp}} kein Gefühl starker Erregung oder Nervosität
+      {{sp}} keine vermehrte Reizbarkeit
+      {{sp}} keine vermehrte Muskelspannung
 
   - trigger: ":sxpanic"
     word: true
     replace: |
-      {{sp}} no sweating
-      {{sp}} no trembling
-      {{sp}} no unsteadiness
-      {{sp}} no derealization
-      {{sp}} no excessive heart rate
-      {{sp}} no nausea
-      {{sp}} no tingling
-      {{sp}} no shortness of breath
-      Symptoms usually peak within 10 minutes.
+      {{sp}} kein Schwitzen
+      {{sp}} kein Zittern
+      {{sp}} keine Unsicherheit/Schwankschwindel
+      {{sp}} keine Derealisation
+      {{sp}} keine erhöhte Herzfrequenz
+      {{sp}} keine Übelkeit
+      {{sp}} kein Kribbeln
+      {{sp}} keine Atemnot
+      Die Symptome erreichen üblicherweise innerhalb von 10 Minuten ihr Maximum.
 
 
   - trigger: ":sxmdd"
     word: true
     replace: |
-      {{sp}} no depressed mood
-      {{sp}} no sleep disturbance
-      {{sp}} no reduced interest and pleasure in doing things
-      {{sp}} no guilt and self blame
-      {{sp}} no loss of energy and fatigue
-      {{sp}} no concentration problems
-      {{sp}} no appetite change
-      {{sp}} no moving and speaking very slowly, or moving much more than usual
-      {{sp}} no suicidal thoughts
+      {{sp}} keine gedrückte Stimmung
+      {{sp}} keine Schlafstörung
+      {{sp}} kein vermindertes Interesse oder verminderte Freude an Aktivitäten
+      {{sp}} keine Schuldgefühle oder Selbstvorwürfe
+      {{sp}} kein Energieverlust und keine Erschöpfung
+      {{sp}} keine Konzentrationsprobleme
+      {{sp}} keine Appetitveränderung
+      {{sp}} keine sehr langsamen Bewegungen und kein sehr langsames Sprechen, oder deutlich mehr Bewegung als üblich
+      {{sp}} keine suizidalen Gedanken
 
   - trigger: ":sxmania"
     word: true
     replace: |
-      {{sp}} no increased distractibility
-      {{sp}} no increased impulsivity
-      {{sp}} no grandiosity
-      {{sp}} no flight of ideas
-      {{sp}} no increase in goal directed activities
-      {{sp}} no decreased need for sleep
-      {{sp}} no increase in talkativeness
+      {{sp}} keine vermehrte Ablenkbarkeit
+      {{sp}} keine vermehrte Impulsivität
+      {{sp}} kein Größenwahn
+      {{sp}} kein Gedankenrasen
+      {{sp}} keine vermehrten zielgerichteten Aktivitäten
+      {{sp}} kein vermindertes Schlafbedürfnis
+      {{sp}} keine vermehrte Gesprächigkeit
 
   - trigger: ":sessri"
     word: true
     replace: |
-      Common side-effects of selective seratonin reuptake inhibitor (SSRI)
-      anti-depressant medications include nausea, anxiety, insomnia,
-      agitation, tremor, headache and sexual dysfunction
+      Häufige Nebenwirkungen selektiver Serotonin-Wiederaufnahmehemmer (SSRI)
+      als Antidepressiva umfassen Übelkeit, Angst, Schlaflosigkeit,
+      Unruhe, Tremor, Kopfschmerzen und sexuelle Funktionsstörungen
 
   - trigger: ":phq9"
     word: true
     replace: |
-      Patient Health Questionnaire (PHQ-9)
+      Gesundheitsfragebogen für Patienten (PHQ-9)
 
-      Over the last 2 weeks, how often have you been bothered by any of the
-      following problems?
-            0 = Not at all
-            1 = Several days
-            2 = More than half the days
-            3 = Nearly every day
+      Wie oft fühlten Sie sich im Verlauf der letzten 2 Wochen durch die folgenden
+      Beschwerden beeinträchtigt?
+            0 = Überhaupt nicht
+            1 = An einzelnen Tagen
+            2 = An mehr als der Hälfte der Tage
+            3 = Beinahe jeden Tag
 
-      1. Little interest or pleasure in doing things 0 1 2 3
+      1. Wenig Interesse oder Freude an Ihren Tätigkeiten 0 1 2 3
 
-      2. Feeling down, depressed, or hopeless 0 1 2 3
+      2. Niedergeschlagenheit, Schwermut oder Hoffnungslosigkeit 0 1 2 3
 
-      3. Trouble falling or staying asleep, or sleeping too much 0 1 2 3
+      3. Schwierigkeiten ein- oder durchzuschlafen, oder übermäßiges Schlafbedürfnis 0 1 2 3
 
-      4. Feeling tired or having little energy 0 1 2 3
+      4. Müdigkeit oder Gefühl, keine Energie zu haben 0 1 2 3
 
-      5. Poor appetite or overeating 0 1 2 3
+      5. Verminderter Appetit oder übermäßiges Bedürfnis zu essen 0 1 2 3
 
-      6. Feeling bad about yourself – or that you are a failure or have let
-      yourself or your family down 0 1 2 3
+      6. Schlechte Meinung von sich selbst – Gefühl, ein Versager zu sein oder
+      die Familie enttäuscht zu haben 0 1 2 3
 
-      7. Trouble concentrating on things, such as reading the newspaper or
-      watching television 0 1 2 3
+      7. Schwierigkeiten, sich auf etwas zu konzentrieren, z. B. beim Zeitungslesen
+      oder Fernsehen 0 1 2 3
 
-      8. Moving or speaking so slowly that other people could have noticed?
-      Or the opposite – being so fidgety or restless that you have been
-      moving around a lot more than usual  0 1 2 3
+      8. So langsame Bewegungen oder Sprache, dass es anderen aufgefallen sein könnte?
+      Oder im Gegenteil – so nervös oder zappelig, dass Sie
+      erheblich mehr umhergegangen sind als üblich  0 1 2 3
 
-      9. Thoughts that you would be better off dead or of hurting yourself in
-      some way 0 1 2 3
+      9. Gedanken, dass Sie lieber tot wären oder sich in irgendeiner Weise
+      selbst verletzen möchten 0 1 2 3
 
   - trigger: ":gad7"
     word: true
     replace: |
-      Generalized Anxiety Disorder 7-item (GAD-7) scale
+      Generalisierte Angststörung 7-Item-Skala (GAD-7)
 
-      Over the last 2 weeks, how often have you been bothered by any of the
-      following problems?
-            0 = Not at all
-            1 = Several days
-            2 = More than half the days
-            3 = Nearly every day
+      Wie oft fühlten Sie sich im Verlauf der letzten 2 Wochen durch die folgenden
+      Beschwerden beeinträchtigt?
+            0 = Überhaupt nicht
+            1 = An einzelnen Tagen
+            2 = An mehr als der Hälfte der Tage
+            3 = Beinahe jeden Tag
 
 
-      1. Feeling nervous, anxious, or on edge 0 1 2 3
+      1. Nervosität, Ängstlichkeit oder Anspannung 0 1 2 3
 
-      2. Not being able to stop or control worrying 0 1 2 3
+      2. Unfähigkeit, Sorgen zu stoppen oder zu kontrollieren 0 1 2 3
 
-      3. Worrying too much about different things 0 1 2 3
+      3. Übermäßige Sorgen bezüglich verschiedener Dinge 0 1 2 3
 
-      4. Trouble relaxing 0 1 2 3
+      4. Schwierigkeiten zu entspannen 0 1 2 3
 
-      5. Being so restless that it's hard to sit still 0 1 2 3
+      5. Derartige Unruhe, dass Stillsitzen schwerfällt 0 1 2 3
 
-      6. Becoming easily annoyed or irritable 0 1 2 3
+      6. Leichte Reizbarkeit oder Verärgerung 0 1 2 3
 
-      7. Feeling afraid as if something awful might happen 0 1 2 3
+      7. Gefühl der Angst, als könnte etwas Schreckliches passieren 0 1 2 3
 
-      If you checked off any problems, how difficult have these made it for you to do your work, take
-      care of things at home, or get along with other people?
-      Not difficult at all __________
-      Somewhat difficult _________
-      Very difficult _____________
-      Extremely difficult _________
+      Falls Sie eine der Beschwerden angekreuzt haben: Wie sehr haben diese Beschwerden
+      Ihre Arbeit, häuslichen Aufgaben oder den Umgang mit anderen Menschen erschwert?
+      Überhaupt nicht erschwert __________
+      Etwas erschwert _________
+      Stark erschwert _____________
+      Äußerst stark erschwert _________
 
   - trigger: ":cage"
     word: true
     replace: |
-      Have you ever felt you needed to cut down your drinking?
-      Are you annoyed by people criticizing your drinking
-      Do you feel guilty about your drinking
-      Do you every need a drink in the morning to steady your nerves?
+      Hatten Sie jemals das Gefühl, Ihren Alkoholkonsum einschränken zu sollen?
+      Fühlen Sie sich durch Kritik an Ihrem Alkoholkonsum verärgert?
+      Haben Sie Schuldgefühle wegen Ihres Alkoholkonsums?
+      Benötigen Sie morgens gelegentlich einen Drink, um die Nerven zu beruhigen?
 
-      Score >=2 indicates further investigation needed
+      Score >=2 spricht für weitere Abklärungsbedürftigkeit
 
   - trigger: ":sxetohwd"
     word: true
     replace: |
-      Symptoms of Alcohol Withdrawal
-      Stage 1:
-        {{sp}} no tremor
-        {{sp}} no sweating
-        {{sp}} no anorexia
-        {{sp}} no diarrhea
-        {{sp}} no agitation
-      Stage 2:
-        {{sp}} no hallucinations
-      Stage 3:
-        {{sp}} no seizures
-      Stage 4: (Delirium Tremens)
-        {{sp}} no severe confusion, disorientation
-        {{sp}} no abnormally fast heart rate (tachycardia)
-        {{sp}} no high blood pressure (hypertension)
-        {{sp}} no fever
+      Symptome des Alkoholentzugs
+      Stadium 1:
+        {{sp}} kein Tremor
+        {{sp}} kein Schwitzen
+        {{sp}} keine Appetitlosigkeit
+        {{sp}} kein Durchfall
+        {{sp}} keine Unruhe
+      Stadium 2:
+        {{sp}} keine Halluzinationen
+      Stadium 3:
+        {{sp}} keine Krampfanfälle
+      Stadium 4: (Delirium tremens)
+        {{sp}} keine schwere Verwirrtheit, Desorientierung
+        {{sp}} keine abnorm schnelle Herzfrequenz (Tachykardie)
+        {{sp}} kein Bluthochdruck (Hypertonie)
+        {{sp}} kein Fieber
 

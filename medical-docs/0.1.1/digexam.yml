@@ -5,47 +5,47 @@ matches:
   - trigger: ":depain"
     word: true
     replace: |
-      {{op}} no distressed appearance
-      {{op}} normal level of alertness
-      {{op}} normal ability to mobilize
-      {{op}} normal ability to mobilize to toilet
+      {{op}} kein Erscheinungsbild von Distress
+      {{op}} normale Wachheit
+      {{op}} normale Mobilisationsfähigkeit
+      {{op}} normale Fähigkeit, zur Toilette zu mobilisieren
 
   - trigger: ":demental"
     word: true
     replace: |
-      {{op}} normal eye contact
-      {{op}} normal behavior
-      {{op}} normal expression of emotion (affect)
-      {{op}} normal appearance and grooming
-      {{op}} normal appearance of surroundings
-      {{op}} normal interactions with others 
+      {{op}} normaler Blickkontakt
+      {{op}} normales Verhalten
+      {{op}} normaler Affekt
+      {{op}} normales Erscheinungsbild und Körperpflege
+      {{op}} normales Erscheinungsbild der Umgebung
+      {{op}} normale Interaktion mit anderen
 
   - trigger: ":depeds"
     word: true
     replace: |
-      {{op}} normal alertness
-      {{op}} normal level of play
-      {{op}} normal level of interest in surroundings
-      {{op}} no apparent discomfort looking at lights
-      {{op}} normal breathing rate
-      {{op}} no increased work of breathing
-      {{op}} normal skin color
-      {{op}} no trouble looking up (no neck stiffness)
+      {{op}} normale Wachheit
+      {{op}} normales Spielverhalten
+      {{op}} normales Interesse an der Umgebung
+      {{op}} kein erkennbares Unbehagen beim Blick in Licht
+      {{op}} normale Atemfrequenz
+      {{op}} keine vermehrte Atemarbeit
+      {{op}} normale Hautfarbe
+      {{op}} keine Schwierigkeiten beim Aufblicken (kein Meningismus)
 
   - trigger: ":deresp"
     word: true
     replace: |
-      {{op}} normal ability to speak in full sentences
-      {{op}} normal rate of breathing
-      {{op}} normal rhythm of breathing
-      {{op}} normal color
-      {{op}} no increased work of breathing
-             (no accessory muscle use, no tracheal tug,
-             no subcostal/intercostal retractions)
+      {{op}} normale Fähigkeit, in ganzen Sätzen zu sprechen
+      {{op}} normale Atemfrequenz
+      {{op}} normaler Atemrhythmus
+      {{op}} normale Hautfarbe
+      {{op}} keine vermehrte Atemarbeit
+             (keine Nutzung der Atemhilfsmuskulatur, kein Trachealzug,
+             keine sub-/interkostalen Einziehungen)
 
   - trigger: ":deabdo"
     word: true
     replace: |
-      {{op}} normal ability to jump up and down
-      {{op}} no apparent pain with cough or sneeze
-      {{op}} normal ability to press own abdomen
+      {{op}} normale Fähigkeit, auf und ab zu hüpfen
+      {{op}} kein erkennbarer Schmerz bei Husten oder Niesen
+      {{op}} normale Fähigkeit, den eigenen Bauch zu drücken

@@ -5,27 +5,27 @@ matches:
   - trigger: ":rxpre"
     word: true
     replace: |
-      To Whom This May Concern,
+      Sehr geehrte Damen und Herren,
 
-      This is to confirm that that above patient was assessed and
-      due to a medical condition will benefit from:
+      hiermit wird bestätigt, dass der/die oben genannte Patient/in untersucht wurde und
+      aufgrund einer medizinischen Erkrankung von Folgendem profitieren wird:
 
   - trigger: ":rxpost"
     word: true
     replace: |
-      Should you have any questions or clarifications
-      please don't hesitate to contact me.
+      Für Rückfragen oder Klärungsbedarf
+      stehe ich Ihnen gerne zur Verfügung.
 
   - trigger: ":rxcompression"
     word: true
     replace: |
       {{rxpre}}
-      Compression stockings for both lower extremities
+      Kompressionsstrümpfe für beide unteren Extremitäten
 
-      Pressure gradient: 30-40 mmHg
-      Diagnosis: Varicose veins
-      Usage: Activities of Daily Living (ADLs) and all the time for work
-      Duration: 1 year
+      Druckgradient: 30-40 mmHg
+      Diagnose: Varikose
+      Anwendung: Aktivitäten des täglichen Lebens (ADL) sowie durchgehend bei der Arbeit
+      Dauer: 1 Jahr
 
       {{rxpost}}
 
@@ -43,11 +43,11 @@ matches:
     word: true
     replace: |
       {{rxpre}}
-      Custom made orthotics for both feet
+      Maßgefertigte Orthesen für beide Füße
 
-      Diagnosis: Plantar fasciitis, Pes Planus
-      Usage: Activities of Daily Living (ADLs) and all the time for work
-      Duration: 1 year
+      Diagnose: Plantarfasziitis, Pes planus
+      Anwendung: Aktivitäten des täglichen Lebens (ADL) sowie durchgehend bei der Arbeit
+      Dauer: 1 Jahr
 
       {{rxpost}}
 
@@ -65,12 +65,12 @@ matches:
     word: true
     replace: |
       {{rxpre}}
-      Physiotherapy
+      Physiotherapie
 
-      Diagnosis: Mechanical Lower Back Pain
+      Diagnose: Mechanischer unterer Rückenschmerz
 
       Details:
-      Please assess and treat lower back pain
+      Bitte Untersuchung und Behandlung des unteren Rückenschmerzes
 
       {{rxpost}}
 
@@ -88,12 +88,12 @@ matches:
     word: true
     replace: |
       {{rxpre}}
-      Massage Therapy
+      Massagetherapie
 
-      Diagnosis: Mechanical Lower Back Pain
+      Diagnose: Mechanischer unterer Rückenschmerz
 
       Details:
-      Please assess and treat lower back pain
+      Bitte Untersuchung und Behandlung des unteren Rückenschmerzes
 
       {{rxpost}}
 
@@ -111,12 +111,12 @@ matches:
     word: true
     replace: |
       {{rxpre}}
-      Chiropractor Treatment
+      Chiropraktische Behandlung
 
-      Diagnosis: Mechanical Lower Back Pain
+      Diagnose: Mechanischer unterer Rückenschmerz
 
       Details:
-      Please assess and treat lower back pain
+      Bitte Untersuchung und Behandlung des unteren Rückenschmerzes
 
       {{rxpost}}
 

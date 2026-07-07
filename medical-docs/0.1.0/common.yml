@@ -3,13 +3,13 @@ parent: default
 
 matches:
   - trigger: "S:"
-    replace: "Subjective:"
+    replace: "Anamnese:"
     word: true
   - trigger: "O:"
-    replace: "Objective:"
+    replace: "Untersuchungsbefund:"
     word: true
   - trigger: "A:"
-    replace: "Assessment:"
+    replace: "Beurteilung:"
     word: true
   - trigger: "P:"
     replace: "Plan:"
@@ -18,13 +18,13 @@ matches:
   - trigger: ":SOAP"
     word: true
     replace: |
-      Subjective:
-      Objective:
-      Assessment:
+      Anamnese:
+      Untersuchungsbefund:
+      Beurteilung:
       Plan:
 
-      Start Time: {{mytime}}
-      End Time:
+      Beginnzeit: {{mytime}}
+      Endzeit:
     vars:
       - name: mytime
         type: date
@@ -34,51 +34,51 @@ matches:
   - trigger: ":FIFE"
     word: true
     replace: |
-      Feelings: What are concerned most about? Specific fears or worries?
-      Ideas: What do you think might be going on?
-      Function: How has this affected you day to day? What have you given up?
-      Expectations: What do expect or hope I can do for you today?
+      Gefühle: Was beunruhigt Sie am meisten? Bestehen bestimmte Ängste oder Sorgen?
+      Vorstellungen: Was glauben Sie, könnte dahinterstecken?
+      Funktion: Wie hat sich dies auf Ihren Alltag ausgewirkt? Worauf mussten Sie verzichten?
+      Erwartungen: Was erwarten oder erhoffen Sie sich heute von mir?
 
-  - trigger: "Rt"
-    replace: "right"
+  - trigger: "re"
+    replace: "rechts"
     word: true
 
-  - trigger: "Lt"
-    replace: "left"
+  - trigger: "li"
+    replace: "links"
     word: true
 
-  - trigger: "sec"
-    replace: "seconds"
+  - trigger: "sek"
+    replace: "Sekunden"
     word: true
 
   - trigger: "min"
-    replace: "minutes"
+    replace: "Minuten"
     word: true
 
-  - trigger: "hr"
-    replace: "hours"
+  - trigger: "std"
+    replace: "Stunden"
     word: true
 
-  - trigger: "wk"
-    replace: "weeks"
+  - trigger: "wo"
+    replace: "Wochen"
     word: true
 
-  - trigger: "mo"
-    replace: "months"
+  - trigger: "mon"
+    replace: "Monate"
     word: true
 
-  - trigger: "yr"
-    replace: "years"
+  - trigger: "jr"
+    replace: "Jahre"
     word: true
 
-  # Dates
+  # Daten
   - trigger: ":date"
     replace: "{{mydate}}"
     vars:
       - name: mydate
         type: date
         params:
-          format: "%m/%d/%Y"
+          format: "%d.%m.%Y"
 
   - trigger: ":time"
     replace: "{{mytime}}"
@@ -91,13 +91,13 @@ matches:
   - trigger: ":phone"
     word: true
     replace:  |
-      PHONE COMMUNICATION
-      Reason for call: 
-      Notes:
+      TELEFONISCHE KOMMUNIKATION
+      Grund des Anrufs:
+      Notizen:
 
 
   - trigger: "lmom"
-    replace: "{{mytime}} Phoned but no answer. Left voice mail to call clinic when available."
+    replace: "{{mytime}} Angerufen, jedoch keine Antwort. Sprachnachricht hinterlassen, die Praxis zurückzurufen, sobald möglich."
     word: true
     vars:
       - name: mytime
@@ -107,62 +107,55 @@ matches:
 
   - trigger: ":pain"
     replace: |
-      The pain is located in 
-        and it radiates to 
-        The pain is associated with nausea vomitting sweating shortness of breath
-        It has been present for 
-        and started when
-        The symptoms are getting better  staying the same  getting worse
-        It is constant intermittent
-        The pain is better in the morning  evening  the same throughout the day
-        It usually occurs about X times a day
-        When it comes, each episode lasts for 
-        The character of the pain is 
-        The intensity is X out of 10 pain (where 10 is the worst pain imaginable)
-        The pain gets worse when 
-        The pain gets better when 
-        Treatments tried so far include
+      Der Schmerz ist lokalisiert in
+        und strahlt aus nach
+        Der Schmerz ist begleitet von Übelkeit Erbrechen Schwitzen Atemnot
+        Er besteht seit
+        und begann als
+        Die Symptome werden besser  bleiben gleich  werden schlechter
+        Der Schmerz ist konstant intermittierend
+        Der Schmerz ist morgens  abends  im Tagesverlauf gleich schlimm
+        Er tritt in der Regel etwa X Mal pro Tag auf
+        Wenn er auftritt, dauert jede Episode
+        Der Charakter des Schmerzes ist
+        Die Intensität beträgt X von 10 (wobei 10 dem stärksten vorstellbaren Schmerz entspricht)
+        Der Schmerz verschlimmert sich bei
+        Der Schmerz bessert sich bei
+        Bisher versuchte Therapien umfassen
 
   - trigger: ":PQRST"
     word: true
     replace: |
-      Provokes, palliates - What causes the pain?
-                   What makes it better or worse?
-      Quality - What exactly is it like? (stinging, dull, sharp, burning, crushing)
-      Radiation - Is the pain focal or does it spread anywhere?
-      Severity - How severe is it? (scale 1 - 10)
-                 How much does it affect your life?
-      TIming - Is it there all the time or does it come and go?
-               When does it start and how long does it last?
-               When was the last pain medication?
+      Provokation, Linderung - Was verursacht den Schmerz?
+                   Was macht ihn besser oder schlechter?
+      Qualität - Wie genau fühlt er sich an? (stechend, dumpf, scharf, brennend, drückend)
+      Ausstrahlung - Ist der Schmerz lokal begrenzt oder strahlt er aus?
+      Schweregrad - Wie stark ist er? (Skala 1 - 10)
+                 Wie stark beeinträchtigt er Ihr Leben?
+      Zeitlicher Verlauf - Besteht er durchgehend oder kommt und geht er?
+               Wann beginnt er und wie lange hält er an?
+               Wann wurde zuletzt ein Schmerzmittel eingenommen?
 
   - trigger: ":OLDCARTS"
     word: true
     replace: |
-      Onset:
-      Location:
-      Duration:
-      Characteristic:
-      Aggravating Factors:
-      Relieving Factors:
-      Therapies Tried:
-      Severity:
+      Beginn:
+      Lokalisation:
+      Dauer:
+      Charakter:
+      Verstärkende Faktoren:
+      Lindernde Faktoren:
+      Versuchte Therapien:
+      Schweregrad:
 
   - trigger: ":SOCRATES"
     word: true
     replace: |
-      Site:
-      Onset:
-      Character:
-      Radiates:
-      Associated Symptoms:
-      Time/duration:
-      Exacerbating/relieving factors:
-      Severity:
-
-
-
-
-
-
-
+      Lokalisation:
+      Beginn:
+      Charakter:
+      Ausstrahlung:
+      Begleitsymptome:
+      Zeit/Dauer:
+      Verstärkende/lindernde Faktoren:
+      Schweregrad:

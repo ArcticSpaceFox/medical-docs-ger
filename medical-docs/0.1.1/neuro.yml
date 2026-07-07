@@ -6,93 +6,93 @@ matches:
     word: true
     replace:  |
       Canadian Head CT Rule
-        (not for age <16, anticoag or bleeding disorder, pregnancy)
-      CT if any present:
-        Basal Skull Fracture
-        Emesis twice or more
-        Age of 65 or over
-        GCS score <15 at 2 hours after injury
-        Suspected open or depressed skull fracture
-        Signs of basal skull fracture
-           (hemotympanum, 'racoon' eyes, CSR otorrhea/rhinorrhea, Battle's sign)
-        Amnesia before impact of 30 minutes or more
-        Dangerous mechanism (pedestrian, ejected from vehicle, fall from elevation >=3 feet or 5 stairs)
+        (nicht für Alter <16, Antikoagulation oder Gerinnungsstörung, Schwangerschaft)
+      CT bei Vorliegen eines der folgenden Punkte:
+        Schädelbasisfraktur
+        Zweimaliges oder häufigeres Erbrechen
+        Alter ab 65 Jahren
+        GCS-Wert <15 zwei Stunden nach der Verletzung
+        Verdacht auf offene oder imprimierte Schädelfraktur
+        Zeichen einer Schädelbasisfraktur
+           (Hämatotympanon, "Waschbärenaugen", Liquor-Otorrhoe/-Rhinorrhoe, Battle-Zeichen)
+        Amnesie vor dem Trauma von 30 Minuten oder mehr
+        Gefährlicher Unfallmechanismus (Fußgänger angefahren, aus Fahrzeug geschleudert, Sturz aus >=1 Meter Höhe oder 5 Stufen)
 
   - trigger: ":gcs"
     word: true
     replace:  |
-      Glasgow Coma Scale
-      Eyes:
-        4: Open spontaneously
-        3: Open to speech
-        2: Open to pain
-        1: No response
+      Glasgow-Koma-Skala
+      Augenöffnung:
+        4: Spontan
+        3: Auf Ansprache
+        2: Auf Schmerzreiz
+        1: Keine Reaktion
       Verbal:
-        5: Alert and oriented
-        4: Disoriented
-        3: Inappropriate words
-        2: Unintelligible (moans)
-        1: No response
-      Motor:
-        6: Follows commands
-        5: Localizes to pain
-        4: Withdraws from pain
-        3: Decorticate
-           (stiff with bent arms, clenched fists, and legs held out straight)
-        2: Decerebrate
-           (arms and legs held straight out, toes pointed downward, and the head and neck arched backward)
-        1: No response
+        5: Orientiert
+        4: Verwirrt
+        3: Inadäquate Äußerungen
+        2: Unverständliche Laute
+        1: Keine Reaktion
+      Motorisch:
+        6: Befolgt Aufforderungen
+        5: Gezielte Schmerzabwehr
+        4: Ungezielte Schmerzabwehr
+        3: Beugesynergismen
+           (steif mit gebeugten Armen, geballten Fäusten und gestreckten Beinen)
+        2: Strecksynergismen
+           (Arme und Beine gestreckt, Zehen nach unten zeigend, Kopf und Nacken nach hinten überstreckt)
+        1: Keine Reaktion
 
   - trigger: ":neuroexam"
     word: true
     replace:  |
-      {{op}} normal level of conciousness
-        {{op}} normal exam of head, eyes, ears, nose and throat
-        {{op}} normal cranial nerve exam
-        {{op}} normal strength in upper and lower limbs
-        {{op}} normal deep tendon reflexes in upper and lower limbs
-        {{op}} normal cerebellar exam (including finger to nose, and alternating movements)
-        {{op}} normal gait, including heel to toe
-        {{op}} normal ability to retain balance with eyes closed (negative Rhomberg)
+      {{op}} normales Bewusstsein
+        {{op}} unauffälliger Kopf-, Augen-, Ohren-, Nasen- und Rachenbefund
+        {{op}} unauffälliger Hirnnervenstatus
+        {{op}} normale Kraft in oberen und unteren Extremitäten
+        {{op}} normale Muskeleigenreflexe in oberen und unteren Extremitäten
+        {{op}} unauffällige zerebelläre Untersuchung (einschließlich Finger-Nase-Versuch und Diadochokinese)
+        {{op}} normales Gangbild, einschließlich Seiltänzergang
+        {{op}} normale Fähigkeit, mit geschlossenen Augen das Gleichgewicht zu halten (negativer Romberg-Test)
 
   - trigger: ":neuroredflag"
     word: true
     replace:  |
-      {{sp}} no difficulty speaking (dysarthria)
-        {{sp}} no double vision (diplopia)
-        {{sp}} no difficulty swallowing (dysphagia)
-        {{sp}} no difficulty with precise movements like finger to nose (dysmetria)
-        {{sp}} no inability to perform rapid alternating movements (dysdiadochokinesia)
+      {{sp}} keine Sprechstörung (Dysarthrie)
+        {{sp}} keine Doppelbilder (Diplopie)
+        {{sp}} keine Schluckstörung (Dysphagie)
+        {{sp}} keine Schwierigkeiten bei präzisen Bewegungen wie dem Finger-Nase-Versuch (Dysmetrie)
+        {{sp}} keine Unfähigkeit, rasche alternierende Bewegungen auszuführen (Dysdiadochokinese)
 
 
   - trigger: ":vertigo"
     word: true
     replace:  |
-      Subjective:
-        {{cc}} dizziness for the past DURATION
-        {{sp}} a feeling like the room is spinning
-        The sensation is intermittent, lasting for XX seconds
-        {{sp}} no identified triggers - no recent sickness or cold and no trauma.
-        It is associated with nausea
-        {{sp}} no other symptoms.
+      Subjektiv:
+        {{cc}} Schwindel seit DAUER
+        {{sp}} Gefühl, als würde sich der Raum drehen
+        Die Empfindung ist intermittierend und dauert XX Sekunden
+        {{sp}} kein erkennbarer Auslöser - keine kürzliche Erkrankung oder Erkältung und kein Trauma.
+        Begleitet von Übelkeit
+        {{sp}} keine weiteren Symptome.
 
-        Red Flags:
+        Warnzeichen:
         {{neuroredflag}}
 
-      Objective:
+      Objektiv:
         {{neuroexam}}
-        {{op}} symptoms provoked by laying down quickly with head turned to one side (Dix hallpike)
-               Worse when turning to RIGHT, including dizziness, nausea, involuntary eye movements (nystagmus)
+        {{op}} Symptome werden durch rasches Hinlegen mit zur Seite gedrehtem Kopf ausgelöst (Dix-Hallpike-Manöver)
+               Stärker bei Drehung nach RECHTS, einschließlich Schwindel, Übelkeit, unwillkürlicher Augenbewegungen (Nystagmus)
 
-      Assessment:
-        {{ap}} Benign Paroxysmal Peripheral Vertigo (BPPV)
+      Beurteilung:
+        {{ap}} benigner paroxysmaler Lagerungsschwindel (BPLS)
 
       Plan:
-        {{pp}} review the educational materials provided
-        {{pp}} attempt self-treatment according to hand out provided
-        {{pp}} consider physiotherapy if ineffective.
-        {{pp}} maintain adequate hydration.
-        {{pp}} use provided prescription (betahistine) to help with symptoms as needed
+        {{pp}} bereitgestelltes Informationsmaterial durchsehen
+        {{pp}} Selbstbehandlung gemäß bereitgestelltem Merkblatt versuchen
+        {{pp}} Physiotherapie erwägen, falls unwirksam.
+        {{pp}} ausreichende Flüssigkeitszufuhr sicherstellen.
+        {{pp}} bereitgestelltes Rezept (Betahistin) bei Bedarf zur Symptomlinderung verwenden
 
     vars:
       - name: neuroexam
@@ -107,107 +107,107 @@ matches:
   - trigger: ":tremor"
     word: true
     replace:  |
-      Subjective:
-        {{cc}} tremor in LEFT HAND for DURATION
-        {{sp}} no tremor at rest
-        {{sp}} no difficulty with activities of daily living
-        {{sp}} no progressively worsening symptoms
-        {{sp}} no improvement with drinking alcohol
-        {{sp}} no previous treatment
-        {{sp}} no family history of tremor
+      Subjektiv:
+        {{cc}} Tremor der LINKEN HAND seit DAUER
+        {{sp}} kein Ruhetremor
+        {{sp}} keine Schwierigkeiten bei Alltagsaktivitäten
+        {{sp}} keine progrediente Verschlechterung der Symptome
+        {{sp}} keine Besserung durch Alkoholkonsum
+        {{sp}} keine vorangegangene Behandlung
+        {{sp}} keine Familienanamnese von Tremor
 
-      Objective:
-        Psychogenic Tremor:
-        With rapid alternating movements of the contralateral limb, the tremor is
-        BETTER WORSE UNCHANGED with fist open/close
-        BETTER WORSE UNCHANGED with forearm pronation/supination
-        BETTER WORSE UNCHANGED with foot tap on the floor
+      Objektiv:
+        Psychogener Tremor:
+        Bei raschen alternierenden Bewegungen der kontralateralen Extremität ist der Tremor
+        BESSER SCHLECHTER UNVERÄNDERT beim Öffnen/Schließen der Faust
+        BESSER SCHLECHTER UNVERÄNDERT bei Pro-/Supination des Unterarms
+        BESSER SCHLECHTER UNVERÄNDERT beim Klopfen des Fußes auf den Boden
 
-        Note: Typically parkinson disease resting tremor becomes more obvious
-         psychogenic tremor disappears, or takes on rhythm of voluntary limb (entrainment).
+        Hinweis: Typischerweise wird der Ruhetremor bei Morbus Parkinson deutlicher,
+         während der psychogene Tremor verschwindet oder den Rhythmus der willkürlichen Extremitätenbewegung annimmt (Entrainment).
 
-        Action Tremor:
-        The tremor is:
-        BETTER WORSE UNCHANGED when drawing a spiral inside another spiral,
-        BETTER WORSE UNCHANGED when joining 2 points between closely spaced straight lines
-        BETTER WORSE UNCHANGED when pouring water from one glass to another
+        Aktionstremor:
+        Der Tremor ist:
+        BESSER SCHLECHTER UNVERÄNDERT beim Zeichnen einer Spirale innerhalb einer anderen Spirale,
+        BESSER SCHLECHTER UNVERÄNDERT beim Verbinden von 2 Punkten zwischen eng beieinander liegenden geraden Linien
+        BESSER SCHLECHTER UNVERÄNDERT beim Umschütten von Wasser von einem Glas in ein anderes
 
-        Postural Tremor:
-        The tremor is:
-        BETTER WORSE UNCHANGED when arms are outstretched for 10-15s, with a loose sheet of paper on the hand(s)
+        Haltetremor:
+        Der Tremor ist:
+        BESSER SCHLECHTER UNVERÄNDERT bei ausgestreckten Armen für 10-15s, mit losem Papierblatt auf der Hand/den Händen
 
-        Kinetic Tremor
-        The tremor is:
-        BETTER WORSE UNCHANGED with nose-finger-nose movement
-        BETTER WORSE UNCHANGED with knee-heel-shin movement
+        Intentionstremor (kinetisch)
+        Der Tremor ist:
+        BESSER SCHLECHTER UNVERÄNDERT bei Nase-Finger-Nase-Bewegung
+        BESSER SCHLECHTER UNVERÄNDERT bei Knie-Hacke-Schienbein-Bewegung
 
-        Intention Tremor
-        The tremor is NOT present during target-directed movements.
-        Tremor amplitude is INCREASED DECREASED UNCHANGED as the hand approaches the target.
+        Intentionstremor
+        Der Tremor ist bei zielgerichteten Bewegungen NICHT vorhanden.
+        Die Tremoramplitude ist ZUNEHMEND ABNEHMEND UNVERÄNDERT, während sich die Hand dem Ziel nähert.
 
-        Simple Kinetic Tremor
-        The tremor is NOT present during all non-targeted movements
-        such as repeated flexion-extension of the elbow or pronation-supination
-        of the forearm.
-        There is NO increase in amplitude in the terminal phase.
+        Einfacher kinetischer Tremor
+        Der Tremor ist bei allen nicht zielgerichteten Bewegungen NICHT vorhanden,
+        wie z. B. wiederholter Flexion-Extension im Ellenbogen oder Pro-/Supination
+        des Unterarms.
+        Es kommt zu KEINER Amplitudenzunahme in der Endphase.
 
-        Task Specific Tremor
-        The tremor APPEARS WORSENS IMPROVES IS UNCHANGED with writing.
-        The tremor APPEARS WORSENS IMPROVES IS UNCHANGED with playing a musical instrument
-        The tremor APPEARS WORSENS IMPROVES IS UNCHANGED with holding a note.
+        Aufgabenspezifischer Tremor
+        Der Tremor TRITT AUF VERSCHLECHTERT SICH BESSERT SICH BLEIBT UNVERÄNDERT beim Schreiben.
+        Der Tremor TRITT AUF VERSCHLECHTERT SICH BESSERT SICH BLEIBT UNVERÄNDERT beim Musizieren
+        Der Tremor TRITT AUF VERSCHLECHTERT SICH BESSERT SICH BLEIBT UNVERÄNDERT beim Halten eines Tons.
 
-        Isometric Tremor
-        The tremor does NOT appear as a result of contraction of muscles
-        against a rigid stationary object. 
+        Isometrischer Tremor
+        Der Tremor tritt NICHT als Folge einer Muskelkontraktion
+        gegen ein starres, feststehendes Objekt auf.
 
-      Assessment:
-        There is a rhythmic, involuntary oscillation of the LEFT RIGHT UPPER LOWER limb,
-        predominantly involving the WRIST AND DISTAL PORTION OF THEN FINGERS, NOT present at rest,
-        INCREASED DECREASED UNCHANGED during activities, SLOW MODERATE FAST in frequency, 
-        MILD MODERATE SEVERE in amplitude, INCREASED DECREASED UNCHANGED by distracting movements
-        of other limbs and having NO entrainment.
+      Beurteilung:
+        Es liegt eine rhythmische, unwillkürliche Oszillation der LINKEN RECHTEN OBEREN UNTEREN Extremität vor,
+        vorwiegend das HANDGELENK UND DIE DISTALEN FINGERANTEILE betreffend, NICHT in Ruhe vorhanden,
+        ZUNEHMEND ABNEHMEND UNVERÄNDERT bei Aktivität, LANGSAM MITTEL SCHNELL in der Frequenz,
+        LEICHT MITTEL SCHWER in der Amplitude, ZUNEHMEND ABNEHMEND UNVERÄNDERT durch ablenkende Bewegungen
+        anderer Extremitäten und OHNE Entrainment.
 
-        In summary, this appears to be a RESTING ACTION tremor.
-        The tremor characteristics are most consistent with a POSTURAL KINETIC PSYCHOGENIC tremor.
-        The kinetic tremor appears to be a SIMPLE KINETIC  INTENTION  TASK SPECIFIC  ISOMETRIC tremor.
+        Zusammenfassend handelt es sich am ehesten um einen RUHE-/AKTIONS-Tremor.
+        Die Tremorcharakteristik ist am ehesten vereinbar mit einem HALTE-KINETISCHEN-PSYCHOGENEN Tremor.
+        Der kinetische Tremor erscheint als EINFACHER KINETISCHER  INTENTIONS-  AUFGABENSPEZIFISCHER  ISOMETRISCHER Tremor.
 
-        {{ap}} Benign Essential Tremor
+        {{ap}} benigner essentieller Tremor
 
       Plan:
-        {{pp}} start a trial of propranolol 
-        {{pp}} avoid using alcohol to treat
-        {{pp}} follow-up within one month to review effectiveness of treatment
+        {{pp}} Therapieversuch mit Propranolol beginnen
+        {{pp}} Alkohol nicht zur Behandlung verwenden
+        {{pp}} Wiedervorstellung innerhalb eines Monats zur Beurteilung der Wirksamkeit der Therapie
 
   - trigger: ":tremorinfo"
     word: true
     replace:  |
-        DDx:
-        Tremor: rhythmic, involuntary oscillations of a body part
-          Resting tremor: present in body part not voluntarily activated, completely
-               supported against gravity (supported on armrest of chair)
-          Action tremor: seen during voluntary activity of muscles.
-             Postural tremor: with voluntary maintenance of antigravity position
-             Kinetic tremor: present during voluntary movements
-                 Simple kinetic tremor: present during all voluntary movements
-                       that are not targeted
-                 Intention tremor: present during target-directed movements
-                       Worse as target is approached.
-                 Task-specific tremor: exacerbated by specific activity
-                 Isometric: with muscle contraction against rigid stationary object.
+        Differentialdiagnosen:
+        Tremor: rhythmische, unwillkürliche Oszillationen eines Körperteils
+          Ruhetremor: vorhanden bei nicht willkürlich aktiviertem Körperteil, vollständig
+               gegen die Schwerkraft abgestützt (z. B. auf der Armlehne eines Stuhls abgestützt)
+          Aktionstremor: bei willkürlicher Muskelaktivität sichtbar.
+             Haltetremor: bei willkürlicher Aufrechterhaltung einer Antigravitationshaltung
+             Kinetischer Tremor: während willkürlicher Bewegungen vorhanden
+                 Einfacher kinetischer Tremor: bei allen nicht zielgerichteten
+                       willkürlichen Bewegungen vorhanden
+                 Intentionstremor: bei zielgerichteten Bewegungen vorhanden
+                       Verschlechterung bei Annäherung an das Ziel.
+                 Aufgabenspezifischer Tremor: durch spezifische Tätigkeit verstärkt
+                 Isometrisch: bei Muskelkontraktion gegen ein starres, feststehendes Objekt.
 
-        Myoclonus: nonrhythmic, rapid, jerky, shocklike
-        Steriotypy: repeated and continuous complex motor acts
-        Epilepsia partialis continua: can be rhythmic, but movements
-               do NOT change with alteration in position or activity.
-        Clonus: rhythmic oscillations around a joint in response to
-                sudden passive contraction.
-                Increases in amplitude and force with passive stretching of muscles
-        Dystonia: sustained muscular contractions frequently causing
-                  twisting and abnormal posturing of a body part
-        Tic: brief, nonrhythmic, rapid movements, usually orofacial, can be suppressed
-             voluntarily with rebound increase afterward.
-        Chorea: Non-rhythmic, nonstereotyped,semipurposive,relatively slow movements
-               that flow from one part of the body to another.
+        Myoklonus: unrhythmisch, rasch, ruckartig, blitzartig
+        Stereotypie: wiederholte und kontinuierliche komplexe motorische Handlungen
+        Epilepsia partialis continua: kann rhythmisch sein, aber Bewegungen
+               ändern sich NICHT bei Positions- oder Aktivitätswechsel.
+        Klonus: rhythmische Oszillationen um ein Gelenk als Reaktion auf
+                plötzliche passive Kontraktion.
+                Zunahme von Amplitude und Kraft bei passiver Muskeldehnung
+        Dystonie: anhaltende Muskelkontraktionen, die häufig zu
+                  Verdrehung und abnormaler Haltung eines Körperteils führen
+        Tic: kurz, unrhythmisch, rasch, meist orofazial, willkürlich unterdrückbar
+             mit anschließender Rebound-Zunahme.
+        Chorea: unrhythmische, nicht stereotype, semizielgerichtete, relativ langsame Bewegungen,
+               die von einem Körperteil zum anderen fließen.
 
 
 

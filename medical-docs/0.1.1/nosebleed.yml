@@ -5,49 +5,49 @@ matches:
   - trigger: ":nosebleed"
     word: true
     replace: |
-      Subjective: 
-        {{cc}} nose bleed from RIGHT side for past DURATION
-        {{sp}} recurrent bleeds about every INTERVAL
-        lasting about DURATION
-        {{sp}} no identified triggers
-                 (trauma, nasal surgery, nasal picking, foreign body,
-                  upper respiratory tract infection, allergic rhinitis)
+      Subjektiv:
+        {{cc}} Nasenbluten aus der RECHTEN Seite seit DAUER
+        {{sp}} rezidivierende Blutungen etwa alle INTERVALL
+        mit einer Dauer von etwa DAUER
+        {{sp}} kein erkennbarer Auslöser
+                 (Trauma, Nasenoperation, Nasenbohren, Fremdkörper,
+                  Infekt der oberen Atemwege, allergische Rhinitis)
 
-        Red Flags:
-        {{sp}} no chest pain
-        {{sp}} no shortness of breath
-        {{sp}} no dizziness
+        Warnzeichen:
+        {{sp}} keine Brustschmerzen
+        {{sp}} keine Atemnot
+        {{sp}} kein Schwindel
 
-        {{sp}} no bleeding disorder
-        {{sp}} no high blood pressure
-        {{sp}} no liver cirrhosis
-        {{sp}} no coronary artery disease
-        {{sp}} no use of intranasal corticosteroid
-        {{sp}} no use of anti-platelet drugs such as
-              aspirin, clopidigrel, or ticagrelor
-        {{sp}} no use of anti-coagulants such as heparin, warfarin,
-               rivaroxaban, apixaban, edoxaban, or dabigatran
+        {{sp}} keine Gerinnungsstörung
+        {{sp}} kein Bluthochdruck
+        {{sp}} keine Leberzirrhose
+        {{sp}} keine koronare Herzkrankheit
+        {{sp}} keine Anwendung von intranasalem Kortikosteroid
+        {{sp}} keine Einnahme von Thrombozytenaggregationshemmern wie
+              Acetylsalicylsäure, Clopidogrel oder Ticagrelor
+        {{sp}} keine Einnahme von Antikoagulanzien wie Heparin, Warfarin,
+               Rivaroxaban, Apixaban, Edoxaban oder Dabigatran
 
-      Objective: 
-        {{op}} generally well appearance
-        {{op}} no bruising (ecchymosis)
-        {{op}} no rash suggestive of platelet dysfunction (petechiae)
-        {{op}} no abnormal blood vessel growth (telangiectasia)
-        {{op}} no active bleeding
-        {{op}} no evidence of recent bleeding in nose (at Kiesselbachs plexus)
-        {{op}} no blood in the mouth or throat (oropharynx)
+      Objektiv:
+        {{op}} insgesamt gutes Allgemeinbefinden
+        {{op}} kein Hämatom (Ecchymose)
+        {{op}} kein auf Thrombozytenfunktionsstörung hinweisender Hautausschlag (Petechien)
+        {{op}} keine abnormale Gefäßneubildung (Teleangiektasie)
+        {{op}} keine aktive Blutung
+        {{op}} kein Hinweis auf kürzliche Blutung in der Nase (am Locus Kiesselbachi)
+        {{op}} kein Blut im Mund oder Rachen (Oropharynx)
 
-        cotton soaked in lidocaine 2% with epi applied
-        followed by cautery using silver nitrate
+        mit Lidocain 2% mit Adrenalin getränkte Watte appliziert
+        gefolgt von Ätzung mit Silbernitrat
 
-      Assessment:
-        {{ap}} anterior nasal bleeding with no red flags
+      Beurteilung:
+        {{ap}} anteriore Nasenblutung ohne Warnzeichen
 
       Plan:
-        {{pp}} lean forward and clamp nose if active bleeding
-        {{pp}} seek medical attention if bleeding doesn't stop in 10 minutes
-        {{pp}} stop intranasal corticosteroid spray
-        {{pp}} direct nasal spray away from septum
-        {{pp}} sleep in a humidified environment
-        {{pp}} apply topical antibiotic (bactroban) in nostril using cotton swab
-        {{pp}} follow-up if symptoms worsening or other concerns
+        {{pp}} bei aktiver Blutung nach vorne beugen und Nase abklemmen
+        {{pp}} ärztliche Hilfe aufsuchen, falls die Blutung nicht innerhalb von 10 Minuten sistiert
+        {{pp}} intranasales Kortikosteroid-Spray absetzen
+        {{pp}} Nasenspray von der Nasenscheidewand weg richten
+        {{pp}} in befeuchteter Umgebung schlafen
+        {{pp}} topisches Antibiotikum (Bactroban) mit Wattestäbchen in das Nasenloch auftragen
+        {{pp}} Wiedervorstellung bei Verschlechterung der Symptome oder weiteren Bedenken

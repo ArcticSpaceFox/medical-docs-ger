@@ -5,21 +5,21 @@ matches:
   - trigger: ":ksprevent"
     word: true
     replace:  |
-      Strategies to Prevent Kidney Stones
+      Strategien zur Vorbeugung von Nierensteinen
 
-      Diet
-      Increase fluid intake (2.5-3L/day to make >2L urine per day)
-      Increase citric acid containing fruits or beverages such as lemon juice/orange juice
-      Cut salt intake (<2300mg sodium/day)
-      Minimize phosphoric acid containing soda (colas)
-      Limit animal protein to <=2 meals per day, less than 6-8 ounces
-      Limit high oxalate foods such as spinach and rhubarb
+      Ernährung
+      Flüssigkeitszufuhr erhöhen (2,5-3L/Tag, um >2L Urin pro Tag zu erzeugen)
+      Zitronensäurehaltige Früchte oder Getränke wie Zitronensaft/Orangensaft vermehrt konsumieren
+      Salzzufuhr reduzieren (<2300mg Natrium/Tag)
+      Phosphorsäurehaltige Softdrinks (Cola) minimieren
+      Tierisches Eiweiß auf <=2 Mahlzeiten pro Tag begrenzen, jeweils weniger als 170-230g
+      Oxalatreiche Lebensmittel wie Spinat und Rhabarber begrenzen
 
-      Exercise:
-      Moderate exercise and weight reduction.
+      Bewegung:
+      Moderate Bewegung und Gewichtsreduktion.
 
-      Supplements:
-      Vitamin B6 to help metabolize oxalate
-      Fish oil supplement (potential benefit)
-      Limit vitamin C to < 1000mg/day
+      Nahrungsergänzung:
+      Vitamin B6 zur Unterstützung des Oxalatstoffwechsels
+      Fischölpräparat (möglicher Nutzen)
+      Vitamin C auf < 1000mg/Tag begrenzen
 

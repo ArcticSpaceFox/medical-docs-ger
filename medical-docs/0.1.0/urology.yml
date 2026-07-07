@@ -4,173 +4,171 @@ parent: default
 matches:
   - trigger: ":delayedejac"
     replace:  |
-     Subjective:
-       {{cc}} delayed ejaculation for the past DURATION
-       {{sp}} no difficulty with ejaculation with masturbation
-       {{sp}} no difficulty with ejaculation with partner
-       {{sp}} no history of anxiety
-       {{sp}} no seratonin enhancing drugs
-         Examples: 
-           SSRI, SNRI, Bupropion, TCAs, MAOIs
-           Anti-psychotics,
-           triptans, Carbamazepine, Valproic acid, Lithium
-           Opioids,
-           Metoclopramide, Ondansetron
-           Cyclobenzaprine, Dextromethorphan
-           LSD, ecstasy, cocaine, amphetamines       
+     Anamnese:
+       {{cc}} verzögerte Ejakulation seit DAUER
+       {{sp}} keine Schwierigkeiten bei der Ejakulation bei Masturbation
+       {{sp}} keine Schwierigkeiten bei der Ejakulation mit Partner/in
+       {{sp}} keine Angststörung in der Vorgeschichte
+       {{sp}} keine serotonerg wirkenden Medikamente
+         Beispiele:
+           SSRI, SNRI, Bupropion, Trizyklika, MAO-Hemmer
+           Antipsychotika,
+           Triptane, Carbamazepin, Valproinsäure, Lithium
+           Opioide,
+           Metoclopramid, Ondansetron
+           Cyclobenzaprin, Dextromethorphan
+           LSD, Ecstasy, Kokain, Amphetamine
 
-     Assessment:
-       {{ap}} Primary Delayed Ejaculation (likely at least partly secondary to serotonergic medication]
-       Primary delayed ejaculation is difficult to treat unless directly related to a medication.
-       If a medication cause is suspected, strategies include:
-       1) Switching SSRI to vilazodone (Viibryd) or low dose vortioxetine (Trintellix)
-       2) Switching SSRI to SNRI - duloxetine (cymbalta) or levomilnacipran (Fetzima) likely best
-       3) Adding mirtazapine (Remeron) or bupropion (Wellbutrin) to an SSRI
+     Beurteilung:
+       {{ap}} primäre verzögerte Ejakulation (wahrscheinlich zumindest teilweise sekundär durch serotonerge Medikation bedingt)
+       Primäre verzögerte Ejakulation ist schwer zu behandeln, außer sie steht in direktem Zusammenhang mit einer Medikation.
+       Bei Verdacht auf medikamentöse Ursache umfassen die Strategien:
+       1) Umstellung von SSRI auf Vilazodon (Viibryd) oder niedrig dosiertes Vortioxetin (Trintellix)
+       2) Umstellung von SSRI auf SNRI - Duloxetin (Cymbalta) oder Levomilnacipran (Fetzima) vermutlich am besten geeignet
+       3) Hinzufügen von Mirtazapin (Remeron) oder Bupropion (Wellbutrin) zu einem SSRI
 
-       If not medication related, it is usually related to anxiety, and overcontrolling or obsessive personality traits.
-       Intensive counselling may be helpful.
+       Ist keine medikamentöse Ursache gegeben, steht es meist im Zusammenhang mit Angst sowie überkontrollierenden oder zwanghaften Persönlichkeitszügen.
+       Eine intensive Beratung kann hilfreich sein.
 
-       Most men are able to find specific stimuli when alone that help them reach their particularly high ejaculation threshold.
-       Having their partner mimic these techniques may allow them to ejaculate with their partner. 
+       Die meisten Männer können beim Alleinsein bestimmte Reize finden, die ihnen helfen, ihre besonders hohe Ejakulationsschwelle zu erreichen.
+       Wenn der/die Partner/in diese Techniken nachahmt, kann dies eine Ejakulation mit Partner/in ermöglichen.
 
-       Finally, a stimulant  (eg Dexedrine 5-10mg) 1 hour before sexual activity may help. 
-       If this approach is effective, one should consider screening for ADHD.
+       Schließlich kann ein Stimulans (z.B. Dexedrine 5-10mg) 1 Stunde vor sexueller Aktivität hilfreich sein.
+       Sollte dieser Ansatz wirksam sein, sollte ein ADHS-Screening in Erwägung gezogen werden.
 
      Plan:
-       {{pp}} self refer to counselling
-       {{pp}} trial a medication switch to vilazodone (Viibryd) vortioxetine (Trintellix)  duloxetine (Cymbalta) levominacipran (Fetzima)]
-       {{pp}} trial adding mirtazapine (Remeron) bupropion (Wellbutrin)
-       {{pp}} trial dexedrine 5mg, taken one hour before sexual activity
-       {{pp}} follow-up within 1 month regarding effectiveness of treatment, sooner if concerns
+       {{pp}} Selbstüberweisung zur Beratung
+       {{pp}} Versuch einer Medikamentenumstellung auf Vilazodon (Viibryd), Vortioxetin (Trintellix), Duloxetin (Cymbalta), Levomilnacipran (Fetzima)
+       {{pp}} Versuch der Zugabe von Mirtazapin (Remeron), Bupropion (Wellbutrin)
+       {{pp}} Versuch mit Dexedrine 5mg, eingenommen eine Stunde vor sexueller Aktivität
+       {{pp}} Wiedervorstellung innerhalb 1 Monats bezüglich Wirksamkeit der Behandlung, früher bei Bedenken
 
 
   - trigger: ":lowtest"
     word: true
     replace:  |
-      Subjective:
-        {{cc}} possible low testosterone
+      Anamnese:
+        {{cc}} möglicher Testosteronmangel
 
-        Sexual Symptoms:
-        {{sp}} no decreased libido
-        {{sp}} no erectile dysfunction
-        {{sp}} no decreased frequency of morning erections
-        {{sp}} no decreased performance
+        Sexuelle Symptome:
+        {{sp}} keine verminderte Libido
+        {{sp}} keine erektile Dysfunktion
+        {{sp}} keine verminderte Häufigkeit morgendlicher Erektionen
+        {{sp}} keine verminderte Leistungsfähigkeit
 
-        Somatic Symptoms:
-        {{sp}} no increased visceral body fat/obesity,
-        {{sp}} no decreased lean muscle mass,
-        {{sp}} no decreased strength,
-        {{sp}} no fatigue/loss of energy,
-        {{sp}} no decreased physical activity/ vitality,
-        {{sp}} no low bone mineral density,
-        {{sp}} no anemia,
-        {{sp}} no flushes,
-        {{sp}} no loss of facial, axillary and pubic hair/slow beard growth
-        {{sp}} no decline in general feeling of well-being
+        Somatische Symptome:
+        {{sp}} keine Zunahme des viszeralen Körperfetts/Adipositas
+        {{sp}} keine Abnahme der fettfreien Muskelmasse
+        {{sp}} keine Abnahme der Kraft
+        {{sp}} keine Müdigkeit/Energieverlust
+        {{sp}} keine verminderte körperliche Aktivität/Vitalität
+        {{sp}} keine niedrige Knochendichte
+        {{sp}} keine Anämie
+        {{sp}} keine Hitzewallungen
+        {{sp}} kein Verlust von Gesichts-, Achsel- und Schambehaarung/verlangsamtes Bartwachstum
+        {{sp}} keine Abnahme des allgemeinen Wohlbefindens
 
-        Psychological Symptoms:
-        {{sp}} no depression/depressed mood,
-        {{sp}} no mood changes,
-        {{sp}} no irritability,
-        {{sp}} no inability to concentrate
-        {{sp}} no insomnia/sleep disturbances
+        Psychische Symptome:
+        {{sp}} keine Depression/gedrückte Stimmung
+        {{sp}} keine Stimmungsschwankungen
+        {{sp}} keine Reizbarkeit
+        {{sp}} keine Konzentrationsstörung
+        {{sp}} keine Schlaflosigkeit/Schlafstörungen
 
-      Objective: 
-        {{op}} no gonadal atrophy,
-        {{op}} no decrease in pubic and facial hair, 
-        {{op}} no decrease in muscle mass, 
-        {{op}} no increase in visceral fat
+      Untersuchungsbefund:
+        {{op}} keine Gonadenatrophie
+        {{op}} keine Abnahme der Scham- und Gesichtsbehaarung
+        {{op}} keine Abnahme der Muskelmasse
+        {{op}} keine Zunahme des viszeralen Fetts
 
-      Assessment:
-        {{ap}} Testosterone Deficiency Syndrome
+      Beurteilung:
+        {{ap}} Testosteronmangel-Syndrom
 
       Plan:
-        {{pp}} complete testing for testosterone level (recommended 7 - 11am or within 3 hours of waking if shift work)
-        and related levels to confirm diagnosis and allow monitoring during treatment
-        (FSH, LH, Prolactin, SHBG, Albumin (cFT or cBAT), TSH, Ferritin (or % iron saturation), CBC, PSA)
+        {{pp}} Testosteronspiegel bestimmen lassen (empfohlen 7 - 11 Uhr oder innerhalb 3 Stunden nach dem Aufwachen bei Schichtarbeit)
+        sowie zugehörige Werte zur Bestätigung der Diagnose und zur Verlaufskontrolle während der Behandlung
+        (FSH, LH, Prolaktin, SHBG, Albumin (cFT oder cBAT), TSH, Ferritin (oder % Eisensättigung), Blutbild, PSA)
 
-  # This is a general discussion of testosterone deficiency syndrome for reference
-  # This information is not necessarily up to date or compliant with any guidelines 
+  # Dies ist eine allgemeine Übersicht zum Testosteronmangel-Syndrom als Referenz
+  # Diese Information ist nicht zwangsläufig aktuell oder leitlinienkonform
   - trigger: ":lowtestinfo"
     word: true
     replace:  |
-        Testing:
-        Testosterone 7am-11am or within 3 h of rising for shift workers
-        If borderline, use bioavailable testosterone - user pay or calculate with testosterone, SHBG, albumin
+        Testung:
+        Testosteron 7-11 Uhr oder innerhalb von 3h nach dem Aufstehen bei Schichtarbeitern
+        Bei Grenzwerten bioverfügbares Testosteron verwenden - Selbstzahlerleistung oder Berechnung mit Testosteron, SHBG, Albumin
         www.issam.ch/freetesto.htm
-        Bioavailable testosterone normal range (4.0 - 16.0)
-        If normal, do not replace as may suppress natural production and pt feels worse!
+        Normbereich bioverfügbares Testosteron (4,0 - 16,0)
+        Bei Normalwert nicht substituieren, da dies die natürliche Produktion unterdrücken kann und der Patient sich schlechter fühlt!
 
-        Additional testing FSH, LH, Prolactin, SHBG, Albumin (cFT or cBAT), TSH, Ferritin (or % iron
-        saturation), CBC, PSA
+        Zusätzliche Testung FSH, LH, Prolaktin, SHBG, Albumin (cFT oder cBAT), TSH, Ferritin (oder %
+        Eisensättigung), Blutbild, PSA
 
-        FSH, LH low indicates secondary hypogonadism
+        FSH, LH niedrig deutet auf sekundären Hypogonadismus hin
 
-        Secondary hypogonadism causes:
-        Kallmann syndrome - associated with color blindness, anosmia
-        Pituitary disorders - pituitary tumor, or treatment for tumor
-        Inflammatory disease - sarcoidosis, histiocytosis, tuberculosis
+        Ursachen des sekundären Hypogonadismus:
+        Kallmann-Syndrom - assoziiert mit Farbenblindheit, Anosmie
+        Hypophysenerkrankungen - Hypophysentumor oder Tumorbehandlung
+        Entzündliche Erkrankung - Sarkoidose, Histiozytose, Tuberkulose
         HIV/AIDS
-        Medications - opiates, hormones, glucocorticoids, ketoconazole
-        Substances - etoh, heroin
-        Obesity
-        Normal aging
-        Concurrent illness - severe OSA, liver disease, hemochromatosis, severe illness, surgery, emotional stress
+        Medikamente - Opiate, Hormone, Glukokortikoide, Ketoconazol
+        Substanzen - Alkohol, Heroin
+        Adipositas
+        Normales Altern
+        Begleiterkrankung - schwere OSA, Lebererkrankung, Hämochromatose, schwere Erkrankung, Operation, emotionaler Stress
 
-        Treatment:
-        Lifestyle: aerobic exercise and resistance training, healthy diet, sleep, stress mgt
-        Huge overlap of pre-diabetes/diabetes/metbolic syndrome, erectile dysfunction, low testosterone
-        Treatment should improve sexual function, reduce need for PDE-5 inhibitors
+        Behandlung:
+        Lebensstil: aerobes und Krafttraining, gesunde Ernährung, Schlaf, Stressmanagement
+        Große Überschneidung von Prädiabetes/Diabetes/metabolischem Syndrom, erektiler Dysfunktion, niedrigem Testosteron
+        Die Behandlung sollte die sexuelle Funktion verbessern und den Bedarf an PDE-5-Hemmern reduzieren
 
-        TRT:
-        Contraindications:   Metastatic Prostate CA, Hx of Breast Ca
-        Side effects:
-        Fertility: TRT suppresses sperm counts but fully reversible.  Either withdraw or use clomid
-        CV risk: no convincing evidence of increased risk, but conflicting studies. Some suggest protection for pts with low T to start.
-        Prostate CA: Does not cause but could enhance growth if already present
+        TRT (Testosteronersatztherapie):
+        Kontraindikationen:   Metastasiertes Prostatakarzinom, Brustkrebs in der Vorgeschichte
+        Nebenwirkungen:
+        Fertilität: TRT unterdrückt die Spermienzahl, ist jedoch vollständig reversibel. Entweder absetzen oder Clomifen verwenden
+        Kardiovaskuläres Risiko: keine überzeugende Evidenz für ein erhöhtes Risiko, aber widersprüchliche Studien. Einige legen einen protektiven Effekt bei Patienten mit niedrigem Testosteron zu Beginn nahe
+        Prostatakarzinom: verursacht es nicht, könnte aber das Wachstum fördern, falls bereits vorhanden
 
-        Delatestryl:    1ml (200mg) q2week   0.5ml (100mg) q1week
-        Testosterone Cypionate: 2ml (200mg) q2week  1ml (100mg) q1week
-        Oral has poor absorption:  Andriol 80mg bid with fatty meals, fist oil supplement, olive oil
-        Topical: Androgel/Testim starting 5g/day,  Axiron 3-6g/day (axillary application),
-                     Androderm patch 5g/qhs)
-        Intranasal: Natesto (testosterone nasal gel 4.5%) 1 actuation (5.5mg) per nostril or 2 actuations total bid (22mg/day) to start
+        Delatestryl:    1ml (200mg) alle 2 Wochen   0,5ml (100mg) wöchentlich
+        Testosteron-Cypionat: 2ml (200mg) alle 2 Wochen  1ml (100mg) wöchentlich
+        Orale Gabe hat schlechte Resorption:  Andriol 80mg zweimal täglich mit fettreichen Mahlzeiten, Fischöl-Nahrungsergänzung, Olivenöl
+        Topisch: Androgel/Testim beginnend mit 5g/Tag,  Axiron 3-6g/Tag (axilläre Anwendung),
+                     Androderm-Pflaster 5g/Nacht
+        Intranasal: Natesto (Testosteron-Nasengel 4,5%) 1 Hub (5,5mg) pro Nasenloch oder 2 Hübe gesamt zweimal täglich (22mg/Tag) zu Beginn
 
-        Monitoring
-        Prior to treatment:  Baseline DRE, 6 mo, 12mo, then annual
-        Bloodwork (CBC, LFTs, Creatinine, BG/A1C, Lipids, PSA) prior to, 3,6,12mo, then annual
+        Überwachung
+        Vor Behandlungsbeginn:  Basis-DRU, nach 6 Mon., 12 Mon., dann jährlich
+        Laborwerte (Blutbild, Leberwerte, Kreatinin, BZ/HbA1c, Lipide, PSA) vor Beginn, nach 3, 6, 12 Mon., dann jährlich
 
-        If PSA rising to greater than age cutoff or >0.75/year, stop testosterone,
-             recheck PSA and if still elevated, refer to urology (Rapid Access PSA Clinic in Calgary)
+        Bei PSA-Anstieg über den altersbezogenen Grenzwert oder >0,75/Jahr Testosteron absetzen,
+             PSA erneut kontrollieren und bei weiterhin erhöhten Werten an die Urologie überweisen (Rapid Access PSA Clinic in Calgary)
 
-        Test level for Oral/transdermal - ideally 2 hours after dose (relative peak)
-        Injectable - day prior or day of injection (trough)
-        Goal of mid range (normal is 10-29) without s/e, improved general wellbeing, and sexual health
+        Testspiegel bei oraler/transdermaler Gabe - idealerweise 2 Stunden nach Einnahme (relatives Maximum)
+        Bei Injektion - Tag vor oder Tag der Injektion (Talspiegel)
+        Ziel im mittleren Bereich (Normbereich 10-29) ohne Nebenwirkungen, mit verbessertem allgemeinen Wohlbefinden und sexueller Gesundheit
 
-        Organ system                     Benefits                     Harms
-        Erectile function/libido         Improvement                  None
-        Depression/mood/fatigue          Improvement                  Aggressive behaviour
-        Erythropoiesis                   Increase in hematocrit       Increased risk of polycythemia,
-                                                                                              embolism
-        Skeletal muscle                  Increase in fat-free mass    None
-        Bone metabolism                  Prevention of osteoporosis   None
-        Cardiovascular system            Improvement in congestive    Increased risk of thromboembolic
-                                         heart failure,               cardiovascular events
-                                         exercise capacity
+        Organsystem                      Nutzen                        Schäden
+        Erektile Funktion/Libido          Verbesserung                 Keine
+        Depression/Stimmung/Müdigkeit     Verbesserung                 Aggressives Verhalten
+        Erythropoese                      Anstieg des Hämatokrits      Erhöhtes Risiko für Polyzythämie,
+                                                                                              Embolie
+        Skelettmuskulatur                 Zunahme der fettfreien Masse  Keine
+        Knochenstoffwechsel               Prävention von Osteoporose    Keine
+        Kardiovaskuläres System           Verbesserung der Herzinsuffizienz, Erhöhtes Risiko thromboembolischer
+                                          Belastbarkeit                 kardiovaskulärer Ereignisse
 
-        Prostate
-        Benign prostatic hyperplasia   None beyond manifestations       Marginal increase in volume and
-                                       of testosterone deficiency       prostate-specific antigen level
-                                       syndrome
-        Cancer (metastatic or high risk of recurrence) Absolute contraindication
-                                                       Recurrence and rapid progression
+        Prostata
+        Benigne Prostatahyperplasie     Kein Effekt über die Manifestationen  Geringfügiger Anstieg von Volumen und
+                                        des Testosteronmangels hinaus         prostataspezifischem Antigen
+                                        hinaus
+        Karzinom (metastasiert oder hohes Rezidivrisiko) Absolute Kontraindikation
+                                                       Rezidiv und rasche Progression
 
 
-        Cancer (localized and treated)   None beyond manifestations   Potential exacerbation of subclinical
-                                                                      of testosterone deficiency syndrome
-                                                                      residual cancer
+        Karzinom (lokalisiert und behandelt)  Kein Effekt über die Manifestationen  Mögliche Verschlimmerung eines
+                                              des Testosteronmangels hinaus         subklinischen residualen Karzinoms
 
-        Testicle                        None beyond manifestations            Atrophy or impairment of 
-                                        of testosterone deficiency syndrome   spermatogenesis
+        Hoden                            Kein Effekt über die Manifestationen  Atrophie oder Beeinträchtigung
+                                        des Testosteronmangels hinaus         der Spermatogenese
 
-        Also see: CMAJ Guidelines 2015
+        Siehe auch: CMAJ Guidelines 2015

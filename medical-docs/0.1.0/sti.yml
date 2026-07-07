@@ -5,61 +5,61 @@ matches:
   - trigger: ":sti"
     word: true
     replace:  |
-      Subjective:
-        {{cc}} possible sexually transmitted infection (STI)
+      Anamnese:
+        {{cc}} möglicherweise sexuell übertragbare Infektion (STI)
 
-        Symptoms:
-        {{sp}} no pain with urination
-        {{sp}} no sores, rashes, or growths
-        {{sp}} no unusual discharge from penis, vagina, or anus
-        {{sp}} no testicular pain
-        {{sp}} no pelvic pain
-        {{sp}} no pain during sex
+        Symptome:
+        {{sp}} keine Schmerzen beim Wasserlassen
+        {{sp}} keine Geschwüre, Ausschläge oder Wucherungen
+        {{sp}} kein ungewöhnlicher Ausfluss aus Penis, Vagina oder Anus
+        {{sp}} keine Hodenschmerzen
+        {{sp}} keine Beckenschmerzen
+        {{sp}} keine Schmerzen beim Geschlechtsverkehr
 
-        {{sp}} current strategies to avoid STIs including XXXXX
-        {{sp}} current strategies to avoid pregnancy including XXXXX
-        {{sp}} sexual contact including oral, anal, and vaginal
-
-
-        High Risk Factors:
-        {{sp}} no known STI contact
-        {{sp}} a known STI contact, with last contact XXXX days/weeks ago
-        {{sp}} no sexual activity under 25 years of age
-        {{sp}} no new sexual partner
-        {{sp}} not more than one sexual partner in the past year
-        {{sp}} no anonymous sexual partnering
-        {{sp}} no MSM (Men who have Sex with Men) contact
-        {{sp}} no contact with sex workers or their clients
-        {{sp}} no homelessness or street involvementf
-        {{sp}} no previous sexual assault or abuse
-        {{sp}} no use of non-barrier contraception
-        {{sp}} no use of injection drugs
-        {{sp}} no use of other substances
-        {{sp}} no history of STI
-
-        Screening History:
-        {{sp}} most recent STI screen XXXX months/years ago
-        {{sp}} most recent PAP smear XXXX months/years ago
-        {{sp}} most recent menstrual period: 
+        {{sp}} aktuelle Strategien zur Vermeidung von STIs, einschließlich XXXXX
+        {{sp}} aktuelle Strategien zur Vermeidung einer Schwangerschaft, einschließlich XXXXX
+        {{sp}} Sexualkontakte einschließlich oral, anal und vaginal
 
 
-      Objective:
-        {{op}} no weight loss
-        {{op}} no fever
-        {{op}} no enlarged lymph nodes
-        {{op}} normal appearance of mouth and throat
-        {{op}} normal appearance of external genitalia
-        {{op}} no scrotal tenderness
-        {{op}} normal vaginal exam with illuminated speculum
-        {{op}} normal bimanual exam with no uterine or adnexal tenderness
+        Hochrisikofaktoren:
+        {{sp}} kein bekannter STI-Kontakt
+        {{sp}} bekannter STI-Kontakt, letzter Kontakt vor XXXX Tagen/Wochen
+        {{sp}} keine sexuelle Aktivität unter 25 Jahren
+        {{sp}} kein neuer Sexualpartner
+        {{sp}} nicht mehr als ein Sexualpartner im vergangenen Jahr
+        {{sp}} keine anonymen Sexualpartner
+        {{sp}} kein MSM-Kontakt (Männer, die Sex mit Männern haben)
+        {{sp}} kein Kontakt zu Sexarbeiterinnen/Sexarbeitern oder deren Kunden
+        {{sp}} keine Obdachlosigkeit oder Straßenleben
+        {{sp}} keine vorherige sexuelle Nötigung oder Missbrauch
+        {{sp}} keine Anwendung von Verhütungsmethoden ohne Barriereschutz
+        {{sp}} kein injizierender Drogenkonsum
+        {{sp}} kein Konsum anderer Substanzen
+        {{sp}} keine STI-Vorgeschichte
 
-      Assessment:
-        {{ap}} routine STI screening request
-        {{ap}} Chlamydia
-        {{ap}} Gonorrhea
+        Screening-Anamnese:
+        {{sp}} letztes STI-Screening vor XXXX Monaten/Jahren
+        {{sp}} letzter Pap-Abstrich vor XXXX Monaten/Jahren
+        {{sp}} letzte Menstruationsblutung:
+
+
+      Untersuchungsbefund:
+        {{op}} kein Gewichtsverlust
+        {{op}} kein Fieber
+        {{op}} keine vergrößerten Lymphknoten
+        {{op}} unauffälliger Mund- und Rachenbefund
+        {{op}} unauffälliger Befund der äußeren Genitalien
+        {{op}} keine skrotale Druckschmerzhaftigkeit
+        {{op}} unauffällige vaginale Untersuchung mit beleuchtetem Spekulum
+        {{op}} unauffällige bimanuelle Untersuchung ohne Uterus- oder Adnex-Druckschmerzhaftigkeit
+
+      Beurteilung:
+        {{ap}} routinemäßige STI-Screening-Anforderung
+        {{ap}} Chlamydien
+        {{ap}} Gonorrhoe
 
       Plan:
-        {{pp}} complete STI testing
-        {{pp}} treat with Azithromycin 1g and Cefixime 800mg for presumed exposure to Chlamydia and Gonorrhea
-        {{pp}} practice safe sexual practice with consistent use of barrier protection (condoms)
-        {{pp}} undergo regular STI screening, at least yearly, but more frequent if higher risk
+        {{pp}} STI-Testung durchführen
+        {{pp}} Behandlung mit Azithromycin 1g und Cefixim 800mg bei vermuteter Chlamydien- und Gonorrhoe-Exposition
+        {{pp}} sichere Sexualpraktiken mit konsequenter Verwendung von Barriereschutz (Kondome) einhalten
+        {{pp}} regelmäßiges STI-Screening durchführen lassen, mindestens jährlich, bei höherem Risiko häufiger

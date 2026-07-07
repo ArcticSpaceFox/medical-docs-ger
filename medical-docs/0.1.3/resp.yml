@@ -3,40 +3,40 @@ parent: default
 
 matches:
     - trigger: "sob"
-      replace: "shortness of breath"
+      replace: "Atemnot"
       propagate_case: true
       word: true
 
     - trigger: "soboe"
-      replace: "shortness of breath on exertion"
+      replace: "Belastungsdyspnoe"
       propagate_case: true
       word: true
 
     - trigger: ":asthma"
       word: true
       replace: |
-         Asthma is a disease that causes inflammation in the airways, narrowing the space
-         available for air to flow.
-         Ventolin is a bronchodilator, which helps to relax the muscles and open the airwarys temporarily
-         but does not address the underlying inflammation.
-         You should benefit from the addition of regular daily medications such as inhaled corticosteroids
-         to help suppress the underlying inflammation, and montelukast (Singulair) which is particularly
-         helpful for allergy induced asthma.
-         Combination puffers such as Symbicort have both a corticosteroid to help with the inflammation and
-         a bronchodilator to open th airways that is both rapid onset (close to ventolin)
-         and longer acting (compared to ventolin), so can be used effectively as a rescue inhaler as well.
+         Asthma ist eine Erkrankung, die eine Entzündung der Atemwege verursacht und dadurch den für den
+         Luftstrom verfügbaren Raum verengt.
+         Ventolin ist ein Bronchodilatator, der hilft, die Muskulatur zu entspannen und die Atemwege vorübergehend
+         zu öffnen, jedoch nicht die zugrunde liegende Entzündung behandelt.
+         Sie sollten von der zusätzlichen Einnahme regelmäßiger täglicher Medikamente wie inhalativen Kortikosteroiden
+         profitieren, um die zugrunde liegende Entzündung zu unterdrücken, sowie von Montelukast (Singulair), das
+         besonders bei allergiebedingtem Asthma hilfreich ist.
+         Kombinationspräparate wie Symbicort enthalten sowohl ein Kortikosteroid gegen die Entzündung als auch
+         einen Bronchodilatator zur Öffnung der Atemwege, der sowohl schnell wirkt (ähnlich wie Ventolin)
+         als auch länger anhält (im Vergleich zu Ventolin) und daher auch effektiv als Bedarfsspray eingesetzt werden kann.
 
-         A prescription has been provided to extend your use of:
-         Ventolin HFA 100mcg 1-2 puffs every 4 hours as needed
+         Ein Rezept wurde zur Verlängerung der Nutzung von:
+         Ventolin HFA 100 µg 1-2 Hübe alle 4 Stunden bei Bedarf ausgestellt.
 
-         In addition, prescriptions for the following medications have been provided to try to better
-         control your asthma symptoms:
-         Symbicort 200 1 puff twice daily, and as needed up to a total of 8 puffs daily
-         Montelukast (Singulair) 10mg once daily
+         Zusätzlich wurden Rezepte für die folgenden Medikamente ausgestellt, um Ihre
+         Asthmasymptome besser zu kontrollieren:
+         Symbicort 200 1 Hub zweimal täglich, sowie bei Bedarf bis zu insgesamt 8 Hüben täglich
+         Montelukast (Singulair) 10 mg einmal täglich
 
-         You may not need to take these medications the entire year, but regular daily consistent use during
-         the allergy season should help to control your symptoms.
+         Es kann sein, dass Sie diese Medikamente nicht das ganze Jahr über benötigen, aber eine regelmäßige,
+         konsequente tägliche Einnahme während der Allergiesaison sollte helfen, Ihre Symptome zu kontrollieren.
 
-         You are recommended to follow-up with your regular family physician within 30 days to review how
-         well these new medications are working and whether you wish to continue them or any dose adjustment
-         is necessary.
+         Es wird empfohlen, sich innerhalb von 30 Tagen bei Ihrem Hausarzt/Ihrer Hausärztin vorzustellen, um zu
+         überprüfen, wie gut diese neuen Medikamente wirken und ob Sie diese fortführen möchten oder eine
+         Dosisanpassung erforderlich ist.
