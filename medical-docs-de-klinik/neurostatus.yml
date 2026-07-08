@@ -62,7 +62,7 @@ matches:
       Lesen/Schreiben: erhalten
     vars:
       - name: fluessig
-        type: dummy
+        type: echo
         params:
           echo: "flüssig, keine Wortfindungsstörung, keine Paraphasien"
 
@@ -76,14 +76,14 @@ matches:
       Zähne zeigen/Grimassieren: {{zaehne}}
     vars:
       - name: stirn
-        type: dummy
+        type: echo
         params:
           echo: "seitengleich möglich"
       - name: lid
-        type: dummy
+        type: echo
         params:
           echo: "seitengleich vollständig"
       - name: zaehne
-        type: dummy
+        type: echo
         params:
           echo: "symmetrisch"

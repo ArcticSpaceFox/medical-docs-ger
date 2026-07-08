@@ -80,7 +80,7 @@ matches:
       Verlaufsparameter: Laktat-Clearance, Diurese, Vigilanz, Vitalparameter
     vars:
       - name: qsofa
-        type: dummy
+        type: echo
         params:
           echo: "__"
 
@@ -123,6 +123,6 @@ matches:
         Stationäre Überwachung mind. bis Symptomfreiheit
     vars:
       - name: pupillen
-        type: dummy
+        type: echo
         params:
           echo: "miotisch/mydriatisch/isokor"

@@ -45,39 +45,39 @@ matches:
         Wiedervorstellung bei Verschlechterung empfohlen
     vars:
       - name: art
-        type: dummy
+        type: echo
         params:
           echo: "Selbstvorstellung / Rettungsdienst / Einweisung durch Hausarzt"
       - name: rr
-        type: dummy
+        type: echo
         params:
           echo: "120/80"
       - name: hf
-        type: dummy
+        type: echo
         params:
           echo: "80"
       - name: spo2
-        type: dummy
+        type: echo
         params:
           echo: "98"
       - name: af
-        type: dummy
+        type: echo
         params:
           echo: "16"
       - name: temp
-        type: dummy
+        type: echo
         params:
           echo: "36,8"
       - name: bz
-        type: dummy
+        type: echo
         params:
           echo: "100"
       - name: gcs
-        type: dummy
+        type: echo
         params:
           echo: "15"
       - name: nrs
-        type: dummy
+        type: echo
         params:
           echo: "0"
       - name: internistat
@@ -93,11 +93,11 @@ matches:
         Leitsymptom:
     vars:
       - name: kat
-        type: dummy
+        type: echo
         params:
           echo: "rot/orange/gelb/grün/blau"
       - name: ziel
-        type: dummy
+        type: echo
         params:
           echo: "sofort/10 min/30 min/90 min/120 min"
 

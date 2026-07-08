@@ -41,11 +41,11 @@ matches:
         Reanimation beendet um Uhrzeit, Todeszeitpunkt: (falls ohne ROSC)
     vars:
       - name: auffind
-        type: dummy
+        type: echo
         params:
           echo: "leblos aufgefunden durch ANGEHÖRIGE/PASSANTEN"
       - name: beob
-        type: dummy
+        type: echo
         params:
           echo: "beobachtet/nicht beobachtet"
       - name: uhrzeit
@@ -53,15 +53,15 @@ matches:
         params:
           format: "%H:%M"
       - name: rhythmus
-        type: dummy
+        type: echo
         params:
           echo: "Kammerflimmern/pulslose VT/Asystolie/PEA"
       - name: atemweg
-        type: dummy
+        type: echo
         params:
           echo: "Beutel-Masken-Beatmung, supraglottische Atemwegshilfe, endotracheale Intubation"
       - name: rosc
-        type: dummy
+        type: echo
         params:
           echo: "ROSC erreicht/kein ROSC erreicht"
 

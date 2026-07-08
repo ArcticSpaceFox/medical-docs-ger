@@ -21,7 +21,7 @@ matches:
       Neuro: {{neurostat}}
     vars:
       - name: halsvenen
-        type: dummy
+        type: echo
         params:
           echo: "keine gestauten Halsvenen"
       - name: neurostat

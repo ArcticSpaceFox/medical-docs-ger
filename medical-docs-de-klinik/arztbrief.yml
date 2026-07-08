@@ -110,11 +110,11 @@ matches:
       Bisherige Diagnostik/Therapie:
     vars:
       - name: cc
-        type: dummy
+        type: echo
         params:
           echo: "BESCHWERDE"
       - name: dauer
-        type: dummy
+        type: echo
         params:
           echo: "ZEITRAUM"
 
@@ -126,15 +126,15 @@ matches:
       Familienanamnese:
     vars:
       - name: beruf
-        type: dummy
+        type: echo
         params:
           echo: "BERUF"
       - name: wohnsituation
-        type: dummy
+        type: echo
         params:
           echo: "lebt allein/mit Partner/in Pflegeheim"
       - name: drogen
-        type: dummy
+        type: echo
         params:
           echo: "keine Drogen"
 
