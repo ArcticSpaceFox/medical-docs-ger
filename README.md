@@ -1,6 +1,17 @@
 # medical-docs package for espanso
 An [espanso](https://espanso.org) package to help with medical documentation
 
+## German packages
+
+This repo also ships two German-language espanso packages:
+
+- [medical-docs-de](medical-docs-de/README.md) - translated ambulatory/family-medicine
+  snippets (Hausarztpraxis).
+- [medical-docs-de-klinik](medical-docs-de-klinik/README.md) - native German hospital
+  documentation snippets: Arztbrief-Aufbau, Notaufnahme-Aufnahmebefund (`:not`),
+  internistischer/neurologischer Untersuchungsbefund, and clinical scores
+  (`:nihss`, GCS, CHA2DS2-VASc, Wells, qSOFA, CURB-65, u.a.).
+
 ## Text-Expander for Medical Charting
 
 With ever increasing demands on physician time, we need to make use of

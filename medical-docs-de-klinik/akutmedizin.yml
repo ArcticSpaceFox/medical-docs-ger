@@ -1,0 +1,128 @@
+matches:
+  - trigger: ":stemi"
+    word: true
+    replace: |
+      Akutes Koronarsyndrom - Verdacht auf STEMI
+
+      Anamnese:
+        {{cc}} thorakales Druckgefühl/Vernichtungsschmerz seit ZEITPUNKT
+        Ausstrahlung: linker Arm/Kiefer/Rücken
+        Begleitsymptome: {{sp}} Übelkeit, Kaltschweißigkeit, Luftnot
+        Kardiovaskuläre Risikofaktoren: Nikotin, art. Hypertonie,
+          Diabetes mellitus, Hyperlipidämie, familiäre Belastung
+
+      12-Kanal-EKG (Zeitpunkt dokumentieren):
+        ST-Hebung in Ableitungen ___ (>=1mm Extremität/>=2mm Brustwand)
+        Spiegelbildliche ST-Senkungen in Ableitungen ___
+        Neu aufgetretener Linksschenkelblock: ja/nein
+
+      Sofortmaßnahmen (Door-to-Balloon-Zeit beachten):
+        ASS 250-500mg i.v. (sofern keine Kontraindikation)
+        P2Y12-Hemmer (Ticagrelor/Prasugrel) nach Klinikstandard
+        Unfraktioniertes Heparin nach Klinikstandard
+        O2 nur bei SpO2 <90%
+        Analgesie: Morphin titriert nach Klinikstandard
+        Sofortige Herzkatheterlabor-Anmeldung/Alarmierung
+
+      Beurteilung:
+        {{ap}} ST-Hebungsinfarkt (STEMI), Lokalisation: anterior/inferior/lateral
+        Differentialdiagnosen: NSTEMI, instabile Angina pectoris,
+          Aortendissektion, Lungenembolie, Perikarditis
+
+  - trigger: ":anaphylaxie"
+    word: true
+    replace: |
+      Anaphylaktische Reaktion
+
+      Auslöser (vermutet): NAHRUNGSMITTEL/MEDIKAMENT/INSEKTENSTICH/KONTRASTMITTEL
+      Zeitpunkt des Symptombeginns: __ Minuten nach Exposition
+
+      Schweregrad (Ring & Messmer-Klassifikation):
+        Grad I:   Haut-/Schleimhautreaktion (Urtikaria, Flush, Pruritus, Angioödem)
+        Grad II:  zusätzlich messbare, aber nicht bedrohliche
+                  kardiovaskuläre/respiratorische Reaktion
+        Grad III: Schock, Bronchospasmus, bedrohliche Atemnot
+        Grad IV:  Kreislauf-/Atemstillstand
+
+      Sofortmaßnahmen:
+        Allergenexposition beenden/entfernen
+        {{op}} Adrenalin 0,5mg i.m. anterolateraler Oberschenkel,
+          Wiederholung nach 5-10min bei fehlendem Ansprechen
+        Hochdosierte O2-Gabe, Lagerung nach hämodynamischer Situation
+          (Schocklage bei Hypotonie, sitzend bei Atemnot)
+        i.v.-Zugang, Volumengabe (kristalloid) bei Hypotonie
+        H1-Antihistaminikum i.v. (z.B. Clemastin)
+        Kortikosteroid i.v. (z.B. Prednisolon 250mg)
+        Bei Bronchospasmus: inhalatives Beta-2-Sympathomimetikum
+
+      Überwachung: mind. 6-8h stationär bei Grad >=II wegen
+      biphasischer Reaktion möglich
+
+  - trigger: ":sepsis"
+    word: true
+    replace: |
+      Verdacht auf Sepsis
+
+      Fokussuche: Pulmonal/Urogenital/Abdominell/ZNS/Haut-Weichteile/unklar
+      qSOFA: {{qsofa}} Punkte (siehe :qsofa)
+
+      Sepsis-3-Kriterien: Infektion + akute Organdysfunktion
+      (SOFA-Score-Anstieg um >=2 Punkte)
+
+      "Sepsis-Six" / Sepsis-Bundle (erste Stunde):
+        1. O2-Gabe nach Sättigung
+        2. Blutkulturen (aerob/anaerob) vor Antibiotikagabe abnehmen
+        3. Kalkulierte Breitspektrum-Antibiotikatherapie umgehend beginnen
+        4. Volumentherapie (kristalloid, initial 30ml/kg bei Hypotonie/Laktat >4)
+        5. Laktat bestimmen
+        6. Ausscheidung überwachen (Blasenkatheter bei Schock)
+
+      Verlaufsparameter: Laktat-Clearance, Diurese, Vigilanz, Vitalparameter
+    vars:
+      - name: qsofa
+        type: dummy
+        params:
+          echo: "__"
+
+  - trigger: ":schockformen"
+    word: true
+    replace: |
+      Differentialdiagnose Schockformen
+        Hypovolämisch: Blutung, Flüssigkeitsverlust (Erbrechen, Diarrhoe,
+          Verbrennung) - kalte Peripherie, tachykard, RR erniedrigt
+        Kardiogen: Pumpversagen (Infarkt, Arrhythmie, Klappenvitium) -
+          gestaute Halsvenen, Lungenödem möglich
+        Distributiv (septisch/anaphylaktisch/neurogen): periphere
+          Vasodilatation - initial warme Peripherie, Hypotonie
+        Obstruktiv: Lungenembolie, Spannungspneumothorax,
+          Perikardtamponade - gestaute Halsvenen, Hypotonie, Tachykardie
+
+  - trigger: ":intox"
+    word: true
+    replace: |
+      Verdacht auf Intoxikation
+
+      Substanz(en) (vermutet/bekannt):
+      Menge/Dosis:
+      Zeitpunkt der Einnahme:
+      Einnahmeweg: oral/i.v./inhalativ/dermal
+      Suizidalität: {{op}} Hinweise auf Suizidabsicht, {{sp}} Abschiedsbrief
+
+      Vitalparameter/Vigilanz: siehe :not
+      Pupillenstatus: {{pupillen}}
+
+      Sofortmaßnahmen:
+        Giftnotruf kontaktieren (Giftinformationszentrum), Substanz/Menge/Zeit angeben
+        {{op}} Aktivkohle erwägen (nur bei wachem Patienten,
+          Einnahme <1h, geeignete Substanz)
+        Spezifisches Antidot erwägen (siehe :antidot)
+        Symptomatische/supportive Therapie, Monitorüberwachung
+
+      Procedere:
+        {{op}} Psychiatrisches Konsil bei Suizidversuch
+        Stationäre Überwachung mind. bis Symptomfreiheit
+    vars:
+      - name: pupillen
+        type: dummy
+        params:
+          echo: "miotisch/mydriatisch/isokor"

@@ -1,0 +1,77 @@
+matches:
+  - trigger: ":notfallmedikamente"
+    word: true
+    replace: |
+      Notfallmedikamente - Standarddosierungen (Erwachsene)
+
+      Reanimation:
+        Adrenalin: 1mg unverdünnt i.v./i.o., Wdh. alle 3-5min
+        Amiodaron: 300mg i.v. nach 3. erfolgloser Defibrillation
+          (VF/pVT), ggf. weitere 150mg
+
+      Anaphylaxie:
+        Adrenalin: 0,5mg i.m. (anterolateraler Oberschenkel),
+          Wdh. nach 5-10min bei Bedarf
+        Prednisolon: 250mg i.v.
+        Clemastin: 2mg i.v.
+
+      Analgesie/Sedierung:
+        Morphin: 2-5mg i.v. fraktioniert, titriert nach Wirkung
+        Fentanyl: 0,05-0,1mg i.v. fraktioniert
+        Midazolam: 1-2mg i.v. fraktioniert
+
+      Bronchospasmus/Asthma-Exazerbation:
+        Salbutamol: 2,5-5mg inhalativ, ggf. wiederholen
+        Prednisolon: 50-100mg i.v./oral
+
+      Hypertensiver Notfall:
+        Urapidil: 12,5-25mg i.v. langsam, ggf. Perfusor 5-40mg/h
+
+      Bradykardie:
+        Atropin: 0,5mg i.v., Wdh. alle 3-5min bis max. 3mg
+
+      Krampfanfall (Status epilepticus):
+        Lorazepam: 0,1mg/kg i.v. (max. 4mg pro Gabe)
+        Alternativ Midazolam: 10mg i.m./bukkal
+
+      Opioidintoxikation:
+        Naloxon: 0,4mg i.v./i.m./intranasal, titriert, Wdh. möglich
+
+  - trigger: ":perfusor"
+    word: true
+    replace: |
+      Perfusor-Berechnung (Beispielschema)
+
+      Noradrenalin-Perfusor: 1mg/50ml (=20µg/ml)
+        Dosierung: 0,05-0,5 µg/kg/min, Steuerung nach RR (MAP-Ziel >=65mmHg)
+
+      Adrenalin-Perfusor: 1mg/50ml (=20µg/ml)
+        Dosierung: 0,01-0,5 µg/kg/min je nach Indikation (chronotrop/inotrop
+        vs. vasopressorisch)
+
+      Propofol-Perfusor: Sedierung nach Klinikstandard,
+        Dosierung nach Ramsay-/RASS-Score steuern
+
+      Formel Laufrate (ml/h):
+        Laufrate = (Dosis[µg/kg/min] x Körpergewicht[kg] x 60) / Konzentration[µg/ml]
+
+  - trigger: ":antidot"
+    word: true
+    replace: |
+      Antidota - Übersicht
+
+      Opioide            -> Naloxon
+      Benzodiazepine      -> Flumazenil (Vorsicht bei Mischintoxikation/Krampfneigung)
+      Paracetamol         -> N-Acetylcystein
+      Betablocker         -> Glukagon, hochdosiert Insulin/Glukose
+      Kalziumantagonisten -> Kalzium, hochdosiert Insulin/Glukose
+      Digitalis           -> Digitalis-Antikörper (Fab-Fragmente)
+      Kohlenmonoxid        -> Sauerstoff (100%, ggf. hyperbar)
+      Zyanid              -> Hydroxocobalamin
+      Organophosphate     -> Atropin, Obidoxim/Pralidoxim
+      Methanol/Ethylenglykol -> Fomepizol, ggf. Ethanol, Hämodialyse
+      Eisen               -> Deferoxamin
+      Heparin             -> Protamin
+      Vitamin-K-Antagonisten -> Vitamin K, PPSB
+      DOAK (Dabigatran)   -> Idarucizumab
+      DOAK (Faktor-Xa-Inhibitoren) -> Andexanet alfa (falls verfügbar), PPSB

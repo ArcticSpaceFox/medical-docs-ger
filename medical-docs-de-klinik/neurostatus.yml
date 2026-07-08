@@ -1,0 +1,89 @@
+matches:
+  - trigger: ":neurostat"
+    word: true
+    replace: |
+      Bewusstsein: wach, orientiert zu Zeit, Ort, Person, Situation
+      Meningismus: kein Meningismus, Kernig- und Brudzinski-Zeichen negativ
+      Hirnnerven:
+        N. II-IV, VI: Pupillen isokor, prompte direkte und indirekte
+          Lichtreaktion, Bulbusmotilität frei, kein Doppelbild,
+          Gesichtsfelder fingerperimetrisch intakt
+        N. V: Gesichtssensibilität beidseits erhalten, Masseterkraft
+          seitengleich
+        N. VII: keine faziale Parese, symmetrisches Mundwinkelspiel
+        N. VIII: Hörvermögen grob orientierend seitengleich
+        N. IX/X: Gaumensegel symmetrisch, mittig gehoben, Würgereflex
+          auslösbar
+        N. XI: Kopfwendung und Schulterhebung seitengleich kräftig
+        N. XII: Zunge mittig vorgestreckt, keine Atrophie, Zungenmotilität
+          frei
+      Motorik: Kraftgrad 5/5 an oberen und unteren Extremitäten,
+        kein Absinken im Armvorhalteversuch, kein Tremor,
+        keine Atrophien, unauffälliger Muskeltonus
+      Reflexe: Muskeleigenreflexe (BSR, TSR, PSR, ASR) seitengleich
+        mittellebhaft auslösbar, Babinski-Zeichen beidseits negativ
+      Sensibilität: Berührungs-, Schmerz- und Temperaturempfinden
+        sowie Lage- und Vibrationssinn an oberen und unteren
+        Extremitäten allseits intakt
+      Koordination: Finger-Nase- und Knie-Hacke-Versuch beidseits
+        sicher und zielgenau, Diadochokinese unauffällig (Eudiadochokinese)
+      Stand/Gang: Romberg-Stehversuch sicher, Gangbild sicher,
+        Blindgang und Seiltänzergang unauffällig
+      Vegetativum: keine autonomen Auffälligkeiten
+
+  - trigger: ":hirnnerven"
+    word: true
+    replace: |
+      I    Riechvermögen
+      II   Visus, Gesichtsfeld, Pupillenreaktion
+      III/IV/VI  Bulbusmotilität, Doppelbilder, Ptosis
+      V    Gesichtssensibilität, Kaumuskulatur
+      VII  Mimische Muskulatur, Geschmack vordere 2/3 Zunge
+      VIII Hören, Gleichgewicht
+      IX/X Gaumensegel, Würgereflex, Schlucken, Stimme
+      XI   M. sternocleidomastoideus, M. trapezius
+      XII  Zungenmotorik
+
+  - trigger: ":pupillen"
+    word: true
+    replace: "Pupillen isokor, mittelweit, prompte direkte und indirekte Lichtreaktion, Konvergenzreaktion regelrecht"
+
+  - trigger: ":babinski"
+    word: true
+    replace: "Babinski-Zeichen beidseits negativ (Zehen plantarflektiert bei Bestreichen des lateralen Fußrandes)"
+
+  - trigger: ":aphasie"
+    word: true
+    replace: |
+      Spontansprache: {{fluessig}}
+      Sprachverständnis: erhalten
+      Nachsprechen: erhalten
+      Benennen: erhalten
+      Lesen/Schreiben: erhalten
+    vars:
+      - name: fluessig
+        type: dummy
+        params:
+          echo: "flüssig, keine Wortfindungsstörung, keine Paraphasien"
+
+  - trigger: ":facialisparese"
+    word: true
+    replace: |
+      {{op}} zentrale Facialisparese (Stirn mitbetroffen = peripher,
+      Stirn ausgespart = zentral)
+      Stirnrunzeln: {{stirn}}
+      Lidschluss: {{lid}}
+      Zähne zeigen/Grimassieren: {{zaehne}}
+    vars:
+      - name: stirn
+        type: dummy
+        params:
+          echo: "seitengleich möglich"
+      - name: lid
+        type: dummy
+        params:
+          echo: "seitengleich vollständig"
+      - name: zaehne
+        type: dummy
+        params:
+          echo: "symmetrisch"

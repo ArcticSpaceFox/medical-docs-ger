@@ -1,0 +1,163 @@
+matches:
+  - trigger: ":not"
+    word: true
+    replace: |
+      NOTAUFNAHME - AUFNAHMEBEFUND
+
+      Vorstellungsgrund: BESCHWERDE seit ZEITRAUM
+      Vorstellungsart: {{art}}
+
+      Anamnese:
+        {{cc}} BESCHWERDE
+        Begleitsymptome:
+        {{sp}} Fieber, Schüttelfrost
+        {{sp}} Übelkeit, Erbrechen
+        Vorerkrankungen: siehe Dauermedikation
+        Allergien: keine bekannten Allergien
+
+      Vitalparameter:
+        RR: {{rr}} mmHg   HF: {{hf}} /min   SpO2: {{spo2}} %
+        AF: {{af}} /min   Temp: {{temp}} °C   BZ: {{bz}} mg/dl
+        GCS: {{gcs}}      Schmerz (NRS): {{nrs}}/10
+
+      ABCDE-Screening:
+        A - Atemweg: frei, kein Stridor
+        B - Breathing: {{sp}} Atemnot, SpO2 {{spo2}} % unter Raumluft
+        C - Circulation: Rekap-Zeit <2s, keine Zeichen der Zentralisation
+        D - Disability: GCS {{gcs}}, Pupillen isokor, prompte Lichtreaktion
+        E - Exposure: kein Exanthem, keine äußeren Verletzungen
+
+      Körperlicher Untersuchungsbefund:
+        {{internistat}}
+
+      Diagnostik:
+        Labor:
+        EKG:
+        Bildgebung:
+
+      Beurteilung:
+        Verdachtsdiagnose:
+        Differentialdiagnosen:
+
+      Procedere:
+        {{op}} stationäre Aufnahme erforderlich
+        {{op}} ambulante Weiterbehandlung möglich
+        Wiedervorstellung bei Verschlechterung empfohlen
+    vars:
+      - name: art
+        type: dummy
+        params:
+          echo: "Selbstvorstellung / Rettungsdienst / Einweisung durch Hausarzt"
+      - name: rr
+        type: dummy
+        params:
+          echo: "120/80"
+      - name: hf
+        type: dummy
+        params:
+          echo: "80"
+      - name: spo2
+        type: dummy
+        params:
+          echo: "98"
+      - name: af
+        type: dummy
+        params:
+          echo: "16"
+      - name: temp
+        type: dummy
+        params:
+          echo: "36,8"
+      - name: bz
+        type: dummy
+        params:
+          echo: "100"
+      - name: gcs
+        type: dummy
+        params:
+          echo: "15"
+      - name: nrs
+        type: dummy
+        params:
+          echo: "0"
+      - name: internistat
+        type: match
+        params:
+          trigger: ":internistat"
+
+  - trigger: ":triage"
+    word: true
+    replace: |
+      Ersteinschätzung (Manchester-Triage-System):
+        Kategorie: {{kat}} - Behandlungsziel: {{ziel}}
+        Leitsymptom:
+    vars:
+      - name: kat
+        type: dummy
+        params:
+          echo: "rot/orange/gelb/grün/blau"
+      - name: ziel
+        type: dummy
+        params:
+          echo: "sofort/10 min/30 min/90 min/120 min"
+
+  - trigger: ":abcde"
+    word: true
+    replace: |
+      A - Airway: Atemweg frei, kein Stridor, keine Fremdkörper
+      B - Breathing: Atemfrequenz, Atemmuster, Auskultation, SpO2
+      C - Circulation: Puls, Rekapillarisierungszeit, Blutdruck, Blutungszeichen
+      D - Disability: GCS, Pupillen, Blutzucker, Fokal-neurologisches Defizit
+      E - Exposure/Environment: Entkleiden, Verletzungen, Temperatur, Umgebung
+
+  - trigger: ":sampler"
+    word: true
+    replace: |
+      S - Symptome: aktuelle Beschwerden
+      A - Allergien: keine bekannten Allergien
+      M - Medikamente: Dauermedikation
+      P - Patientengeschichte/Vorerkrankungen:
+      L - Letzte Mahlzeit/orale Aufnahme:
+      E - Ereignis: Auslöser/Unfallhergang
+      R - Risikofaktoren:
+
+  - trigger: ":opqrst"
+    word: true
+    replace: |
+      O - Onset (Beginn): plötzlich/schleichend, seit ZEITPUNKT
+      P - Provocation/Palliation: Verstärkung/Linderung durch
+      Q - Quality (Charakter): stechend/dumpf/brennend/drückend
+      R - Region/Radiation: Lokalisation, Ausstrahlung
+      S - Severity (Schweregrad): NRS X/10
+      T - Time (zeitlicher Verlauf): konstant/intermittierend, Dauer
+
+  - trigger: ":schockraum"
+    word: true
+    replace: |
+      SCHOCKRAUM-ÜBERGABE (SBAR)
+      S - Situation: Patient/in NAME, ALTER Jahre, Zuweisungsgrund
+      B - Background: Vorerkrankungen, Medikation, Allergien, Unfallhergang
+      A - Assessment: Vitalparameter, ABCDE-Status, bisherige Maßnahmen
+      R - Recommendation: weiteres Vorgehen, benötigte Ressourcen
+
+  - trigger: ":entlassnotaufnahme"
+    word: true
+    replace: |
+      Entlassung aus der Notaufnahme:
+      Bei unauffälligem Verlauf und stabilem Allgemeinzustand
+      erfolgt die Entlassung nach Hause in Begleitung.
+
+      Empfehlungen:
+      - Wiedervorstellung bei Verschlechterung, Fieber >38,5°C,
+        zunehmenden Schmerzen oder neuen neurologischen Ausfällen
+      - Vorstellung beim Hausarzt zur Verlaufskontrolle in ZEITRAUM
+      - Medikation wie besprochen einnehmen
+
+  - trigger: ":aufnahmeindikation"
+    word: true
+    replace: |
+      Indikation zur stationären Aufnahme:
+      {{op}} Notwendigkeit einer kontinuierlichen Überwachung
+      {{op}} intravenöse Therapie erforderlich
+      {{op}} weiterführende Diagnostik nur stationär durchführbar
+      {{op}} unzureichende häusliche Versorgung möglich
