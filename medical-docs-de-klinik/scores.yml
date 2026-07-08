@@ -1,0 +1,164 @@
+matches:
+  - trigger: ":nihss"
+    word: true
+    replace: |
+      NIHSS (NIH Stroke Scale)      Punkte: __ / 42
+
+      1a Bewusstseinslage         [0] wach [1] benommen [2] soporös [3] Koma
+      1b Orientierungsfragen      [0] beide richtig [1] eine richtig [2] keine richtig
+      1c Aufforderungen befolgen  [0] beide befolgt [1] eine befolgt [2] keine befolgt
+      2  Blickbewegung            [0] normal [1] partielle Blickparese [2] forcierte Deviation
+      3  Gesichtsfeld             [0] kein Ausfall [1] partielle Hemianopsie [2] komplette Hemianopsie [3] beidseitige Blindheit
+      4  Faziale Parese           [0] keine [1] gering [2] partiell [3] komplett
+      5a Motorik Arm rechts       [0] kein Absinken [1] Absinken <10s [2] Anheben möglich, fällt [3] kein Anheben gegen Schwerkraft [4] keine Bewegung
+      5b Motorik Arm links        [0] kein Absinken [1] Absinken <10s [2] Anheben möglich, fällt [3] kein Anheben gegen Schwerkraft [4] keine Bewegung
+      6a Motorik Bein rechts      [0] kein Absinken [1] Absinken <5s [2] Anheben möglich, fällt [3] kein Anheben gegen Schwerkraft [4] keine Bewegung
+      6b Motorik Bein links       [0] kein Absinken [1] Absinken <5s [2] Anheben möglich, fällt [3] kein Anheben gegen Schwerkraft [4] keine Bewegung
+      7  Extremitätenataxie       [0] keine [1] in einer Extremität [2] in zwei Extremitäten
+      8  Sensibilität             [0] normal [1] leichte bis mäßige Hypästhesie [2] schwere Hypästhesie bis Anästhesie
+      9  Sprache (Aphasie)        [0] keine Aphasie [1] leichte bis mäßige Aphasie [2] schwere Aphasie [3] globale Aphasie/Mutismus
+      10 Dysarthrie               [0] normal [1] leicht bis mäßig [2] schwer/unverständlich
+      11 Neglect/Auslöschung      [0] kein Neglect [1] partieller Neglect [2] schwerer Neglect
+
+      Interpretation: <5 leichter Schlaganfall, 5-15 mittelschwerer
+      Schlaganfall, 15-20 mittelschwer bis schwer, >20 schwerer Schlaganfall.
+      Score ≥8 gilt als Hinweis auf klinisch relevantes Defizit
+      (Quelle: DSG-NIHSS-Schulungsplattform, dsg-nihss.de)
+
+  - trigger: ":gcsklinik"
+    word: true
+    replace: |
+      Glasgow Coma Scale               Punkte: __ / 15
+
+      Augenöffnung (4)
+        4 spontan   3 auf Ansprache   2 auf Schmerzreiz   1 keine Reaktion
+      Verbale Reaktion (5)
+        5 orientiert   4 verwirrt   3 inadäquate Wörter
+        2 unverständliche Laute   1 keine Reaktion
+      Motorische Reaktion (6)
+        6 befolgt Aufforderungen   5 gezielte Schmerzabwehr
+        4 ungezielte Schmerzabwehr   3 Beugesynergismen (Dekortikation)
+        2 Strecksynergismen (Dezerebration)   1 keine Reaktion
+
+  - trigger: ":chads"
+    word: true
+    replace: |
+      CHA2DS2-VASc-Score (Schlaganfallrisiko bei Vorhofflimmern)
+        C  Herzinsuffizienz/LV-Dysfunktion         1 Punkt
+        H  Hypertonie                              1 Punkt
+        A2 Alter ≥75 Jahre                         2 Punkte
+        D  Diabetes mellitus                       1 Punkt
+        S2 Schlaganfall/TIA/Thromboembolie vorher   2 Punkte
+        V  Vaskuläre Vorerkrankung (KHK, pAVK, Aortenplaque) 1 Punkt
+        A  Alter 65-74 Jahre                       1 Punkt
+        Sc Sex category (weiblich)                 1 Punkt
+      Score: __ Punkte -> Antikoagulation erwägen ab ≥1 (Männer) bzw. ≥2 (Frauen)
+
+  - trigger: ":wellsdvtklinik"
+    word: true
+    replace: |
+      Wells-Score (tiefe Beinvenenthrombose)
+        Aktive Krebserkrankung                                    1 Punkt
+        Lähmung/Immobilisation der Beine                          1 Punkt
+        Bettruhe >3 Tage oder große OP <12 Wochen                 1 Punkt
+        Schmerz entlang der tiefen Venen                          1 Punkt
+        Schwellung des gesamten Beins                              1 Punkt
+        Unterschenkelschwellung >3cm vs. Gegenseite                1 Punkt
+        Eindrückbares Ödem am symptomatischen Bein                 1 Punkt
+        Kollateralvenen (nicht varikös)                           1 Punkt
+        Frühere dokumentierte TVT                                 1 Punkt
+        Andere Diagnose mindestens ebenso wahrscheinlich          -2 Punkte
+      Score: __ Punkte -> ≤0 niedrige, 1-2 mittlere, ≥3 hohe Wahrscheinlichkeit
+
+  - trigger: ":wellspeklinik"
+    word: true
+    replace: |
+      Wells-Score (Lungenembolie)
+        Klinische Zeichen einer TVT                                3 Punkte
+        Alternative Diagnose unwahrscheinlicher als LE              3 Punkte
+        Herzfrequenz >100/min                                      1,5 Punkte
+        Immobilisation/OP in den letzten 4 Wochen                   1,5 Punkte
+        Frühere TVT/LE                                             1,5 Punkte
+        Hämoptyse                                                  1 Punkt
+        Malignom (aktiv oder palliativ behandelt)                   1 Punkt
+      Score: __ Punkte -> ≤4 LE unwahrscheinlich, >4 LE wahrscheinlich
+
+  - trigger: ":qsofa"
+    word: true
+    replace: |
+      qSOFA-Score (Sepsis-Screening)
+        Atemfrequenz ≥22/min                                      1 Punkt
+        Systolischer Blutdruck ≤100 mmHg                          1 Punkt
+        Vigilanzminderung (GCS <15)                                1 Punkt
+      Score: __ Punkte -> ≥2 Punkte: erhöhtes Risiko für ungünstigen Verlauf,
+      Sepsis-Kriterien und Fokussuche prüfen
+
+  - trigger: ":curb65"
+    word: true
+    replace: |
+      CURB-65-Score (ambulant erworbene Pneumonie)
+        C  Confusion (Verwirrtheit, neu aufgetreten)               1 Punkt
+        U  Urea/Harnstoff >7 mmol/l (BUN >19 mg/dl)                1 Punkt
+        R  Respiratory rate ≥30/min                                1 Punkt
+        B  Blood pressure: RRsyst <90 oder RRdiast ≤60 mmHg        1 Punkt
+        65 Alter ≥65 Jahre                                        1 Punkt
+      Score: __ Punkte -> 0-1 ambulante Behandlung, 2 stationäre
+      Behandlung erwägen, ≥3 schwere Pneumonie/ggf. Intensivstation
+
+  - trigger: ":nyha"
+    word: true
+    replace: |
+      NYHA-Klassifikation (Herzinsuffizienz)
+        I   keine Einschränkung der körperlichen Belastbarkeit
+        II  leichte Einschränkung, Beschwerden bei stärkerer Belastung
+        III deutliche Einschränkung, Beschwerden bei leichter Belastung
+        IV  Beschwerden bereits in Ruhe
+
+  - trigger: ":killip"
+    word: true
+    replace: |
+      Killip-Klassifikation (akuter Myokardinfarkt)
+        I   keine Zeichen der Herzinsuffizienz
+        II  Rasselgeräusche, 3. Herzton, erhöhter Venendruck
+        III Lungenödem
+        IV  kardiogener Schock
+
+  - trigger: ":glasgowblatchford"
+    word: true
+    replace: |
+      Glasgow-Blatchford-Score (obere GI-Blutung, Risikoabschätzung)
+        Harnstoff, Hämoglobin, systolischer Blutdruck, Herzfrequenz
+        ≥100/min, Meläna, Synkope, Lebererkrankung, Herzinsuffizienz
+        jeweils punktbewertet
+      Score: __ Punkte -> 0 Punkte: ambulantes Management ggf. möglich,
+      höhere Werte: stationäre Aufnahme und endoskopische Abklärung
+
+  - trigger: ":apache"
+    word: true
+    replace: |
+      APACHE II / SOFA-Score: siehe Intensivstation-Dokumentation
+      (Vitalparameter, Laborwerte, GCS, Alter, chronische Vorerkrankungen
+      fließen in die Berechnung ein)
+
+  - trigger: ":mmse"
+    word: true
+    replace: |
+      Mini-Mental-Status-Test (MMSE)          Punkte: __ / 30
+        Orientierung (Zeit/Ort): __ / 10
+        Merkfähigkeit (3 Begriffe): __ / 3
+        Aufmerksamkeit/Rechnen: __ / 5
+        Erinnerung: __ / 3
+        Sprache/Benennen/Lesen/Schreiben/Zeichnen: __ / 9
+      Interpretation: 27-30 unauffällig, 24-26 leichte kognitive
+      Störung möglich, <24 Hinweis auf demenzielles Syndrom
+
+  - trigger: ":asa"
+    word: true
+    replace: |
+      ASA-Klassifikation (präoperatives Risiko)
+        I   gesunder Patient
+        II  leichte Systemerkrankung ohne Leistungseinschränkung
+        III schwere Systemerkrankung mit Leistungseinschränkung
+        IV  schwere Systemerkrankung, ständige Lebensbedrohung
+        V   moribunder Patient, Überleben ohne OP nicht zu erwarten
+        VI  hirntoter Patient, Organentnahme

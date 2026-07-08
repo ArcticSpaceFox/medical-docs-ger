@@ -1,0 +1,158 @@
+matches:
+  - trigger: ":arztbrief"
+    word: true
+    replace: |
+      {{anrede}}
+
+      wir berichten über {{aopat}} Patienten/Patientin, {{name}}, geb. {{gebdat}},
+      der/die sich vom {{aufdat}} bis {{entldat}} in unserer {{stationaer}} Behandlung befand.
+
+      Diagnosen:
+      {{diagnosen}}
+
+      Anamnese:
+
+      Aufnahmebefund:
+
+      Verlauf und Therapie:
+
+      Beurteilung/Procedere:
+
+      {{abschluss}}
+    vars:
+      - name: anrede
+        type: match
+        params:
+          trigger: ":anrede"
+      - name: diagnosen
+        type: match
+        params:
+          trigger: ":diagnosen"
+      - name: abschluss
+        type: match
+        params:
+          trigger: ":abschluss"
+
+  - trigger: ":anrede"
+    word: true
+    replace: "Sehr geehrte Frau Kollegin, sehr geehrter Herr Kollege,"
+
+  - trigger: ":anredeanrede"
+    word: true
+    replace: "Sehr geehrte Damen und Herren,"
+
+  - trigger: ":diagnosen"
+    word: true
+    replace: |
+      1. HAUPTDIAGNOSE (ICD-10: )
+      2. Nebendiagnose (ICD-10: )
+      3. Nebendiagnose (ICD-10: )
+
+      Nebendiagnosen:
+      -
+
+  - trigger: ":epikrise"
+    word: true
+    replace: |
+      Epikrise:
+      Die Aufnahme der/des {{aopat}} Patientin/Patienten erfolgte bei
+      VORSTELLUNGSGRUND. Anamnestisch bestand
+      BESCHWERDEBILD seit ZEITRAUM.
+
+      Laborchemisch zeigte sich BEFUND. Apparativ/bildgebend
+      wurde BEFUND nachgewiesen.
+
+      Unter der eingeleiteten Therapie mit THERAPIE zeigte sich
+      im Verlauf eine BESSERUNG/STABILISIERUNG der Beschwerden.
+
+      Bei stabilem Allgemeinzustand konnte die Patientin/der Patient
+      am ENTLASSDATUM in gutem Allgemeinzustand
+      nach Hause/in die Anschlussheilbehandlung/in Ihre weitere
+      ambulante Betreuung entlassen werden.
+
+  - trigger: ":procedere"
+    word: true
+    replace: |
+      Procedere:
+      - Wiedervorstellung bei Verschlechterung des Allgemeinzustandes
+      - Fortführung der Medikation wie verordnet
+      - Ambulante Wiedervorstellung in der Praxis in ZEITRAUM
+      - Kontrolle der Laborwerte/Bildgebung in ZEITRAUM
+
+  - trigger: ":medikation"
+    word: true
+    replace: |
+      Medikation bei Entlassung:
+
+      Medikament       Dosierung    Handelsname    Indikation
+      -------------    ---------    -----------    ----------
+
+  - trigger: ":abschluss"
+    word: true
+    replace: |
+      Für Rückfragen stehen wir Ihnen jederzeit gerne zur Verfügung.
+
+      Mit freundlichen kollegialen Grüßen
+
+  - trigger: ":abschlusskurz"
+    word: true
+    replace: "Mit freundlichen kollegialen Grüßen"
+
+  - trigger: ":aopat"
+    replace: "oben genannten"
+    word: true
+
+  - trigger: ":vorstellungsgrund"
+    word: true
+    replace: |
+      Vorstellungsgrund: {{cc}} seit {{dauer}}
+      Begleitsymptome:
+      Bisherige Diagnostik/Therapie:
+    vars:
+      - name: cc
+        type: dummy
+        params:
+          echo: "BESCHWERDE"
+      - name: dauer
+        type: dummy
+        params:
+          echo: "ZEITRAUM"
+
+  - trigger: ":sozialanamnese"
+    word: true
+    replace: |
+      Sozialanamnese: {{beruf}}, {{wohnsituation}}
+      Noxen: Nikotin PACK-YEARS, Alkohol MENGE, {{drogen}}
+      Familienanamnese:
+    vars:
+      - name: beruf
+        type: dummy
+        params:
+          echo: "BERUF"
+      - name: wohnsituation
+        type: dummy
+        params:
+          echo: "lebt allein/mit Partner/in Pflegeheim"
+      - name: drogen
+        type: dummy
+        params:
+          echo: "keine Drogen"
+
+  - trigger: ":vorerkrankungen"
+    word: true
+    replace: |
+      Vorerkrankungen:
+      -
+
+      Voroperationen:
+      -
+
+      Dauermedikation:
+      -
+
+      Allergien:
+      keine bekannten Allergien
+
+  - trigger: ":gez"
+    word: true
+    replace: "gez.\n"

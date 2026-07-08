@@ -1,0 +1,82 @@
+matches:
+  - trigger: ":leichenschau"
+    word: true
+    replace: |
+      ÄRZTLICHE LEICHENSCHAU
+
+      Auffindesituation:
+        Auffindezeit:
+        Auffindeort:
+        Auffindende Person:
+
+      Sichere Todeszeichen:
+        {{op}} Totenflecke (Livores) - Lokalisation, wegdrückbar: ja/nein
+        {{op}} Totenstarre (Rigor mortis) - Ausprägung/Lösung
+        {{op}} Fäulnis
+        {{op}} mit dem Leben nicht vereinbare Verletzungen
+
+      Todeszeitschätzung: zwischen __ Uhr und __ Uhr
+
+      Todesart:
+        {{op}} natürlich
+        {{op}} nicht natürlich
+        {{op}} ungeklärt
+
+      Bei Verdacht auf nicht natürlichen Tod: unverzügliche
+      Benachrichtigung der Polizei, Leiche am Fundort belassen
+
+      Grunderkrankung(en)/vermutete Todesursache:
+        Ia (unmittelbare Todesursache):
+        Ib (Grunderkrankung, die zu Ia führte):
+        Ic (Grunderkrankung, die zu Ib führte):
+        II (weitere wesentliche Erkrankungen):
+
+  - trigger: ":sicheretodeszeichen"
+    word: true
+    replace: |
+      Sichere Todeszeichen:
+        Livores (Totenflecke) - beginnen 20-30min post mortem,
+          vollständige Umlagerbarkeit bis ca. 4h, wegdrückbar bis ca. 12-24h
+        Rigor mortis (Totenstarre) - Beginn nach 2-4h, komplett nach 6-12h,
+          Lösung nach 2-3 Tagen
+        Fäulnis-/Autolysezeichen
+        Verletzungen, die mit dem Leben nicht vereinbar sind
+          (z.B. Dekapitation, Zerstückelung)
+
+  - trigger: ":vorlaeufigetodesbescheinigung"
+    word: true
+    replace: |
+      Vorläufige Todesbescheinigung (Notarzt/Notärztin)
+
+      Personalien der/des Verstorbenen:
+      Auffindesituation und Zeitpunkt der Leichenschau:
+      Sichere Todeszeichen (siehe :sicheretodeszeichen):
+      Vermutete Todesursache:
+      Todesart: natürlich / nicht natürlich / ungeklärt
+
+      Hinweis: Notärztliche Feststellung ersetzt nicht die vollständige
+      Leichenschau durch den nachfolgend zuständigen Arzt/die Ärztin.
+      Bei nicht natürlichem oder ungeklärtem Tod: Polizei verständigen,
+      Auffindeort nicht verändern.
+
+  - trigger: ":reanimationsabbruch"
+    word: true
+    replace: |
+      Abbruch der Reanimation
+
+      Reanimationsdauer: __ Minuten ohne ROSC
+      Letzter dokumentierter Rhythmus: Asystolie
+      Reversible Ursachen (4H/HITS) ausgeschlossen/behandelt
+
+      Abbruchkriterien erfüllt:
+        {{op}} anhaltende Asystolie trotz leitliniengerechter ALS-Maßnahmen
+        {{op}} keine reversible Ursache feststellbar
+        {{op}} infauste Prognose bei bekannter Grunderkrankung
+
+      Reanimation beendet um {{uhrzeit}} Uhr, Todeszeitpunkt entsprechend.
+      Anschließend Leichenschau (siehe :leichenschau).
+    vars:
+      - name: uhrzeit
+        type: date
+        params:
+          format: "%H:%M"

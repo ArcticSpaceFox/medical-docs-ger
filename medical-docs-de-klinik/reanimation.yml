@@ -1,0 +1,91 @@
+matches:
+  - trigger: ":ample"
+    word: true
+    replace: |
+      AMPLE-Anamnese (Traumaanamnese, ATLS)
+        A  Allergien: keine bekannten Allergien
+        M  Medikamente (Dauermedikation):
+        P  Patientenvorgeschichte/Vorerkrankungen:
+        L  Letzte Mahlzeit/orale Aufnahme: ZEITPUNKT
+        E  Ereignis/Unfallhergang: HERGANG
+
+  - trigger: ":reanimation"
+    word: true
+    replace: |
+      REANIMATIONSPROTOKOLL (nach ERC-Leitlinien)
+
+      Auffindesituation: {{auffind}}
+      Kollaps beobachtet: {{beob}} um {{uhrzeit}}
+      Laienreanimation: {{op}} vor Eintreffen begonnen
+      Erster dokumentierter Rhythmus: {{rhythmus}}
+
+      Basismaßnahmen (BLS):
+        Thoraxkompressionen: 30:2, Frequenz 100-120/min, Tiefe 5-6cm
+        Frühdefibrillation nach AED-/Monitor-Analyse
+
+      Erweiterte Maßnahmen (ALS):
+        Atemwegssicherung: {{atemweg}}
+        i.v./i.o.-Zugang: gelegt
+        Adrenalin 1mg i.v./i.o. alle 3-5 Minuten
+        {{op}} Amiodaron 300mg nach 3. erfolgloser Defibrillation
+          bei defibrillierbarem Rhythmus (VF/pVT)
+        Reversible Ursachen (4H/HITS) geprüft und behandelt:
+          Hypoxie, Hypovolämie, Hyper-/Hypokaliämie/metabolisch,
+          Hypothermie, Herzbeuteltamponade, Intoxikation,
+          Thrombose (koronar/pulmonal), Spannungspneumothorax
+
+      Verlauf:
+        Reanimationsdauer: __ Minuten
+        Anzahl Defibrillationen: __
+        ROSC (Return of Spontaneous Circulation): {{rosc}} um Uhrzeit
+        Reanimation beendet um Uhrzeit, Todeszeitpunkt: (falls ohne ROSC)
+    vars:
+      - name: auffind
+        type: dummy
+        params:
+          echo: "leblos aufgefunden durch ANGEHÖRIGE/PASSANTEN"
+      - name: beob
+        type: dummy
+        params:
+          echo: "beobachtet/nicht beobachtet"
+      - name: uhrzeit
+        type: date
+        params:
+          format: "%H:%M"
+      - name: rhythmus
+        type: dummy
+        params:
+          echo: "Kammerflimmern/pulslose VT/Asystolie/PEA"
+      - name: atemweg
+        type: dummy
+        params:
+          echo: "Beutel-Masken-Beatmung, supraglottische Atemwegshilfe, endotracheale Intubation"
+      - name: rosc
+        type: dummy
+        params:
+          echo: "ROSC erreicht/kein ROSC erreicht"
+
+  - trigger: ":roscbefund"
+    word: true
+    replace: |
+      Postreanimationsbehandlung nach ROSC:
+        12-Kanal-EKG: Ausschluss STEMI
+        Zielorientierte Temperaturkontrolle (36-37,5°C), Fieber vermeiden
+        Normoxie (SpO2 94-98%) und Normokapnie anstreben
+        Blutdruckziel: MAP >65 mmHg, ggf. Vasopressoren
+        Blutzuckerkontrolle (Ziel 140-180 mg/dl)
+        Ursachenabklärung: Koronarangiographie erwägen bei kardialer Genese
+        Neurologische Prognoseeinschätzung frühestens nach 72h
+
+  - trigger: ":algorithmus"
+    word: true
+    replace: |
+      ALS-Algorithmus (vereinfacht):
+        Kein Ansprechen, keine normale Atmung -> Reanimationsteam alarmieren
+        CPR 30:2 bis Monitor/Defibrillator angeschlossen
+        Rhythmusanalyse:
+          Defibrillierbar (VF/pVT): 1x Defibrillation -> CPR 2min -> Rhythmuscheck
+          Nicht defibrillierbar (Asystolie/PEA): CPR 2min -> Rhythmuscheck
+        Adrenalin 1mg alle 3-5min (bei PEA/Asystolie so früh wie möglich)
+        Amiodaron 300mg nach 3. Schock (bei VF/pVT)
+        Reversible Ursachen (4H/HITS) suchen und behandeln

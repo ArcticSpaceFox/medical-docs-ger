@@ -1,0 +1,16 @@
+name: medical-docs-de-klinik
+title: Medical Documentation Klinik (Deutsch)
+description: Textbausteine für stationäre/klinische Dokumentation auf Deutsch - Arztbrief, Notaufnahme, Untersuchungsbefunde, Scores (NIHSS, GCS, qSOFA, CHA2DS2-VASc, Wells, CURB-65 u.a.), basierend auf gängigen deutschen Arztbrief-Konventionen (u.a. berichteguru.com, befundomat.de).
+version: 1.0.0
+author: ArcticSpaceFox
+tags:
+  - medical
+  - german
+  - deutsch
+  - klinik
+  - arztbrief
+  - notaufnahme
+  - scores
+  - documentation
+  - clinical
+homepage: https://github.com/ArcticSpaceFox/medical-docs-ger

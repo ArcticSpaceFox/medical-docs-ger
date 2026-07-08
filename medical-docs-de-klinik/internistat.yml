@@ -1,0 +1,71 @@
+matches:
+  - trigger: ":internistat"
+    word: true
+    replace: |
+      Allgemein-/Ernährungszustand: guter AZ und normalgewichtiger EZ
+      Bewusstsein: wach, orientiert zu Zeit, Ort, Person und Situation
+      Haut/Schleimhäute: rosig, warm, trocken, kein Ikterus, kein Exanthem
+      Kopf/Hals: {{halsvenen}}, keine Struma tastbar,
+        Lymphknotenstationen unauffällig
+      Cor: Herztöne rein, rhythmisch, normofrequent, keine
+        pathologischen Herzgeräusche
+      Pulmo: Vesikuläratmen beidseits, keine Rasselgeräusche,
+        kein Giemen, sonorer Klopfschall
+      Abdomen: weich, kein Druckschmerz, keine Abwehrspannung,
+        regelrechte Darmgeräusche in allen Quadranten,
+        Leber und Milz nicht vergrößert palpabel
+      Nierenlager: beidseits nicht klopfschmerzhaft
+      Wirbelsäule: gerade, nicht klopf- oder druckschmerzhaft
+      Extremitäten: frei beweglich, keine Ödeme, Pulse allseits
+        gut tastbar, keine Zeichen einer tiefen Beinvenenthrombose
+      Neuro: {{neurostat}}
+    vars:
+      - name: halsvenen
+        type: dummy
+        params:
+          echo: "keine gestauten Halsvenen"
+      - name: neurostat
+        type: match
+        params:
+          trigger: ":neurostat"
+
+  - trigger: ":cor"
+    word: true
+    replace: "Cor: Herztöne rein, rhythmisch, normofrequent, keine pathologischen Herzgeräusche"
+
+  - trigger: ":pulmo"
+    word: true
+    replace: "Pulmo: Vesikuläratmen beidseits, keine Rasselgeräusche, kein Giemen, sonorer Klopfschall"
+
+  - trigger: ":abd"
+    word: true
+    replace: |
+      Abdomen: weich, kein Druckschmerz, keine Abwehrspannung,
+      regelrechte Darmgeräusche in allen Quadranten,
+      Leber und Milz nicht vergrößert palpabel, Nierenlager
+      beidseits nicht klopfschmerzhaft
+
+  - trigger: ":haut"
+    word: true
+    replace: "Haut/Schleimhäute: rosig, warm, trocken, kein Ikterus, kein Exanthem, kein Effloreszenzen"
+
+  - trigger: ":lk"
+    word: true
+    replace: "Lymphknoten: zervikal, axillär und inguinal nicht vergrößert tastbar, keine Schilddrüsenvergrößerung"
+
+  - trigger: ":oedeme"
+    word: true
+    replace: "Keine peripheren Ödeme, keine Zeichen einer tiefen Beinvenenthrombose, Pulse allseits gut tastbar"
+
+  - trigger: ":ekgbefund"
+    word: true
+    replace: |
+      EKG: Sinusrhythmus, Indifferenztyp, Herzfrequenz FREQUENZ/min,
+      keine Erregungsrückbildungsstörung, keine ST-Streckenveränderungen,
+      normale PQ- und QT-Zeit, keine Rhythmusstörung
+
+  - trigger: ":auskult"
+    word: true
+    replace: |
+      Auskultation Herz: rein, rhythmisch, normofrequent
+      Auskultation Lunge: vesikulär, seitengleich belüftet
