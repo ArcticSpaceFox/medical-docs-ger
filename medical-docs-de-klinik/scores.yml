@@ -58,15 +58,15 @@ matches:
     word: true
     replace: |
       Wells-Score (tiefe Beinvenenthrombose)
-        Aktive Krebserkrankung                                    1 Punkt
-        Lähmung/Immobilisation der Beine                          1 Punkt
-        Bettruhe >3 Tage oder große OP <12 Wochen                 1 Punkt
-        Schmerz entlang der tiefen Venen                          1 Punkt
+        Aktive Krebserkrankung                                     1 Punkt
+        Lähmung/Immobilisation der Beine                           1 Punkt
+        Bettruhe >3 Tage oder große OP <12 Wochen                  1 Punkt
+        Schmerz entlang der tiefen Venen                           1 Punkt
         Schwellung des gesamten Beins                              1 Punkt
         Unterschenkelschwellung >3cm vs. Gegenseite                1 Punkt
         Eindrückbares Ödem am symptomatischen Bein                 1 Punkt
-        Kollateralvenen (nicht varikös)                           1 Punkt
-        Frühere dokumentierte TVT                                 1 Punkt
+        Kollateralvenen (nicht varikös)                            1 Punkt
+        Frühere dokumentierte TVT                                  1 Punkt
         Andere Diagnose mindestens ebenso wahrscheinlich          -2 Punkte
       Score: __ Punkte -> ≤0 niedrige, 1-2 mittlere, ≥3 hohe Wahrscheinlichkeit
 
@@ -75,12 +75,12 @@ matches:
     replace: |
       Wells-Score (Lungenembolie)
         Klinische Zeichen einer TVT                                3 Punkte
-        Alternative Diagnose unwahrscheinlicher als LE              3 Punkte
+        Alternative Diagnose unwahrscheinlicher als LE             3 Punkte
         Herzfrequenz >100/min                                      1,5 Punkte
-        Immobilisation/OP in den letzten 4 Wochen                   1,5 Punkte
+        Immobilisation/OP in den letzten 4 Wochen                  1,5 Punkte
         Frühere TVT/LE                                             1,5 Punkte
         Hämoptyse                                                  1 Punkt
-        Malignom (aktiv oder palliativ behandelt)                   1 Punkt
+        Malignom (aktiv oder palliativ behandelt)                  1 Punkt
       Score: __ Punkte -> ≤4 LE unwahrscheinlich, >4 LE wahrscheinlich
 
   - trigger: ":qsofa"
@@ -89,7 +89,7 @@ matches:
       qSOFA-Score (Sepsis-Screening)
         Atemfrequenz ≥22/min                                      1 Punkt
         Systolischer Blutdruck ≤100 mmHg                          1 Punkt
-        Vigilanzminderung (GCS <15)                                1 Punkt
+        Vigilanzminderung (GCS <15)                               1 Punkt
       Score: __ Punkte -> ≥2 Punkte: erhöhtes Risiko für ungünstigen Verlauf,
       Sepsis-Kriterien und Fokussuche prüfen
 
@@ -101,7 +101,7 @@ matches:
         U  Urea/Harnstoff >7 mmol/l (BUN >19 mg/dl)                1 Punkt
         R  Respiratory rate ≥30/min                                1 Punkt
         B  Blood pressure: RRsyst <90 oder RRdiast ≤60 mmHg        1 Punkt
-        65 Alter ≥65 Jahre                                        1 Punkt
+        65 Alter ≥65 Jahre                                         1 Punkt
       Score: __ Punkte -> 0-1 ambulante Behandlung, 2 stationäre
       Behandlung erwägen, ≥3 schwere Pneumonie/ggf. Intensivstation
 

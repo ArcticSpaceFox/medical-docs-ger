@@ -1,4 +1,23 @@
 matches:
+  - trigger: ":xabcde"
+    word: true
+    replace: |
+      First Look beim Betreten des Raumes: 
+      Patient sitzt auf dem Sofa, ist wach, reagiert sofort auf Ansprache, schaut uns entgegen. 
+      Keine augenscheinlichen Verletzungen, keine sichtbaren starken Blutungen, keine pathologischen Atemgeräusche aus der Distanz. Hautkolorit wirkt rosig. 
+      Erste Einschätzung: Patient nicht kritisch
+      
+      ---------------------------
+      # PRIMARY SURVEY
+      ---------------------------
+      x: Keine starke äußere Blutung erkennbar, keine spritzenden oder sickernden Wunden, kein Blut im Umfeld des Patienten. Kein Handlungsbedarf.
+      A: Patient spricht in vollständigen Sätzen, Stimme klar und ohne Heiserkeit. Mundrauminspektion mittels Diagnostikleuchte: Mundhöhle frei, keine Fremdkörper, keine Schwellungen im Mund-Rachen-Raum, keine Blutungen. Mundschleimhäute feucht und rosig, keine Zyanose. Kein Zungenbiss. Zunge wird beim Herausstrecken mittig gehalten, keine Deviation. Atemwege frei, kein Handlungsbedarf. Kein Verdacht auf eine HWS-Verletzung, daher keine manuelle Inline-Stabilisierung notwendig.
+      B: Atemfrequenz wird ausgezählt über 15 Sekunden, patient spricht nicht, Thoraxbewegungen werden beobachtet: 16 Atemzüge pro Minute, entspricht einer normalen Atemfrequenz. Atemexkursionen seitengleich, kein Einsatz der Atemhilfsmuskulatur, kein Nasenflügelatmen, kein sichtbares Einziehen intercostal oder subclaviculär. Keine obere Einflussstauung, Halsvenen nicht gestaut. Thorax bei Inspektion regelrecht geformt, keine sichtbaren Deformitäten. Palpation des Thorax anterior-posterior und lateral: stabil, kein Druckschmerz, kein Krepitieren. 4-Punkt-Auskultation: Pulmo beidseits mit vesikulärem Atemgeräusch, seitengleich belüftet, keine Nebengeräusche. Pulsoxymetrie wird angelegt, SpO2 98 Prozent unter Raumluft, periphere Pulswelle gut erkennbar. Keine Dyspnoe, kein pathologisches Atemmuster. Kein Handlungsbedarf.
+      C: Hautstatus: Haut rosig, warm und trocken, keine Blässe, keine Zyanose, kein Schweiß. Keine stehenden Hautfalten als Hinweis auf Exsikkose. Rekapillarisierungszeit am Nagelbett beidseits unter 2 Sekunden. Periphere Pulse beidseits am Radialis gut tastbar, kräftig, gleichmäßig, Frequenz 72 Schläge pro Minute. Kein Pulsdefizit. Abdomen bei Inspektion unauffällig, keine Abwehrspannung, kein Druckschmerz auf Palpation im Vier-Quadranten-Schema. Blutungsräume Abdomen, Becken und Oberschenkel unauffällig, keine Schwellung, keine Hämatome, kein Druckschmerz über dem Beckenring, Becken stabil. Kein Handlungsbedarf.
+      D: Glasgow Coma Scale: Augen öffnen spontan, 4 Punkte. Verbale Kommunikation konversationsfähig und orientiert, 5 Punkte. Motorik: befolgt Aufforderungen, 6 Punkte. GCS damit 15 von 15 Punkten. Orientierung geprüft: Patient weiß, welcher Wochentag und welcher Monat ist, nennt seinen Namen korrekt, weiß wo er sich befindet und kann das Ereignis klar schildern. Patient ist zu Zeit, Ort, Person und Situation vollständig orientiert. Pupillenkontrolle: Pupillen beidseits isokor, mittelgroß, direkte und konsensuelle Lichtreaktion beidseits prompt und regelrecht, keine Anisokorie. Quick-FAST unauffällig: keine faziale Asymmetrie, keine Armhalteinsuffizienz, keine Sprachstörung. pDMS beidseits intakt: Durchblutung regelrecht, Motorik uneingeschränkt, Sensibilität seitengleich und regelrecht. Blutzucker: 94 mg/dl. Kein Handlungsbedarf.
+      E: Patient wird situationsangepasst und soweit notwendig entkleidet. Bodycheck von Kopf bis Fuß: Schädel stabil, keine Schwellungen, keine Druckschmerzhaftigkeit, kein Hämatom. Wirbelsäule klopfschmerzfrei, keine Druck- oder Klopfdolenz zervikal, thorakal oder lumbal. Extremitäten ohne Fehlstellungen, Hämatome oder Wunden. Kein Hinweis auf vorangegangenes Trauma. Kein Schmerzempfinden des Patienten bei der Untersuchung. Keine weiteren Verletzungen oder Auffälligkeiten. Temperatur: 36,6 Grad Celsius, normotherm. SIRS-Kriterien und qSOFA negativ. Wärmeerhalt wird sichergestellt.
+      ---------------------------
+
   - trigger: ":stemi"
     word: true
     replace: |
